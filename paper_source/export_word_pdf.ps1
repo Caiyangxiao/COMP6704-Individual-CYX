@@ -1,5 +1,5 @@
 param(
-    [string]$DocumentPath = (Join-Path $PSScriptRoot '..\submission\Yangxiao Cai+26023041r.docx'),
+    [string]$DocumentPath = (Join-Path $PSScriptRoot '..\submission\CAI Yangxiao+26023041r.docx'),
     [string]$PdfPath = (Join-Path $PSScriptRoot '..\submission\_word_pages.pdf')
 )
 $ErrorActionPreference = 'Stop'

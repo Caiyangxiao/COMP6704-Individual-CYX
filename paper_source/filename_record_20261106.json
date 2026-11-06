@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-06T11:20:47.558283+00:00",
+  "scope": "Formal filename and direct-download-link revision; pre-attachment source and data checks, no numerical experiments or unit tests",
+  "author": "CAI Yangxiao",
+  "student_id": "26023041r",
+  "base_commit": "81997c686558ebec4fe1bfa0968f591ebfd0fa72",
+  "previous_filename": "Yangxiao Cai+26023041r.pdf",
+  "current_filename": "CAI Yangxiao+26023041r.pdf",
+  "current_docx_filename": "CAI Yangxiao+26023041r.docx",
+  "download_url": "https://github.com/Caiyangxiao/COMP6704-Individual-CYX/raw/refs/heads/main/submission/CAI%20Yangxiao%2B26023041r.pdf",
+  "download_publication_check": "Performed separately after actual GitHub push; this record only confirms the configured URL",
+  "readme_sha256": "f34776f67adaaf2c9b0d5ea6caad2a0f8ec062561caefee0dcf72143658e1863",
+  "readme_commands_unchanged_and_english": true,
+  "scientific_content_json_byte_identical": true,
+  "local_result_files_verified_unchanged": 242,
+  "reused_compiled_pages": {
+    "reason": "The filename revision does not change the report body or its LaTeX source fingerprint",
+    "page_count": 10,
+    "sha256": "b39525e6fbef613c51fa5f5ef82b71656106a93119eef87a6322a21d74dcc8b2",
+    "source_subject": "COMP6704 source fingerprint: ff762afd2c925787fe1178c622978707125e06271d185a7536748efd243de3ec",
+    "current_source_fingerprint_verified": true
+  },
+  "updated_active_path_sources": [
+    "paper_source/build_final_report.py",
+    "paper_source/export_word_pdf.ps1"
+  ],
+  "historical_path_records_unchanged": true,
+  "new_formal_experiment_runs": 0,
+  "new_unit_test_runs": 0,
+  "final_delivered_file_check_record": "submission/filename_file_checks.json",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

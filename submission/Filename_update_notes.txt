@@ -1,0 +1,5 @@
+Formal filename and download access update, 2026-11-06
+
+The formal PDF is now CAI Yangxiao+26023041r.pdf. The editable document uses the matching basename. The builder, Word-export default, README paths and direct PDF download link are synchronized. Prior filename and author records retain their historical scope.
+
+The scientific content and original experimental records are unchanged. The verified compiled pages are reused because only artifact names and access instructions changed. The reproducibility archive and its separate certificate are rebuilt and embedded in the renamed PDF. Current file checks are recorded in submission/filename_file_checks.json; public download verification is recorded separately after publication.

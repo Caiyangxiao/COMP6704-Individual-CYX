@@ -5,6 +5,8 @@
 **Primary direction:** Unconstrained Optimization  
 **Topic:** Stationarity, evaluation cost, and solution quality for GD, nonlinear PR+ conjugate gradient, and BFGS on nonconvex Rosenbrock and Rastrigin functions.
 
+**[Download the final report (PDF)](https://github.com/Caiyangxiao/COMP6704-Individual-CYX/raw/refs/heads/main/submission/CAI%20Yangxiao%2B26023041r.pdf)**
+
 The primary access point is the [project repository](https://github.com/Caiyangxiao/COMP6704-Individual-CYX). Begin with the `README.md` at the repository root. The ZIP embedded in the submitted PDF provides an offline snapshot of the source, original experimental data, and reproduction instructions.
 
 The saved Windows reference study contains **90 solves**: two functions, dimensions 2, 10, and 20, five paired starting points per setting, and three methods. **73/90** runs meet the gradient criterion and **26/90** meet the global-objective target; 47 meet only the gradient criterion, and 17 meet neither.
@@ -19,11 +21,11 @@ The following paths describe local build artifacts; their listing does not imply
 
 | Local build artifact | Contents |
 |---|---|
-| `submission/Yangxiao Cai+26023041r.pdf` | English report using the official NeurIPS 2025 style; at most 10 pages including references and less than 20 MB |
+| `submission/CAI Yangxiao+26023041r.pdf` | English report using the official NeurIPS 2025 style; at most 10 pages including references and less than 20 MB |
 | `submission/COMP6704_reproducibility.zip` | Runnable source, the original 90-solve data, analyses, tests, report sources, and build materials; byte-identical to the attachment with the same name in the PDF |
-| `submission/Author_name_update_notes.txt` | Notes for the current author-name revision |
+| `submission/Filename_update_notes.txt` | Notes for the current filename and download-access revision |
 | `submission/COMP6704_revision_audits.zip` | Historical audit bundle from the 2026-11-05 revision, retaining its validation, delivery, and packaging records |
-| `submission/author_file_checks.json` | Checks of the actual PDF, attachments, and files for the current author-name revision |
+| `submission/filename_file_checks.json` | Checks of the actual renamed PDF, attachments, and files for the current filename revision |
 
 `packaging_verification.json` is generated after packaging and becomes the PDF's second attachment. **It is not included in the code ZIP that it verifies.** The source archive excludes `.venv`, caches, the delivered PDF, the archive itself, old delivery directories, and additional numerical rerun directories.
 
@@ -42,12 +44,14 @@ Evidence is separated by date and purpose:
 | `audits/revision_20261105/baseline_evidence/evidence_inventory.json` | Inventory of evidence available before that revision, with its provenance and scope |
 | `paper_source/polish_record_20261106.json`, `submission/polish_file_checks.json` | Records of the earlier wording and file-rebuild revision on 2026-11-06; retained as prior revision evidence |
 | `paper_source/repository_record_20261106.json` | Historical record of the repository-access and English-documentation revision before the author-name change, including its preservation and review checks and compiled source before attachment embedding |
-| `paper_source/author_record_20261106.json` | Current pre-packaging author-name and build checks, including the compiled source before attachment embedding; included in the code ZIP |
+| `paper_source/author_record_20261106.json` | Historical author-name and build checks before the filename change, including the compiled source before attachment embedding |
+| `paper_source/filename_record_20261106.json` | Current pre-packaging filename, download-access, and build checks, including the compiled source before attachment embedding; included in the code ZIP |
 | `submission/packaging_verification.json` | Temporary extraction, membership, and hash checks for the current code ZIP; an external working record and the PDF's second attachment |
 | `submission/repository_file_checks.json` | Historical checks of the PDF, attachments, and local delivery files before the author-name change |
-| `submission/author_file_checks.json` | Checks of the actual final PDF, its attachments, and the current local delivery files after the author-name change |
+| `submission/author_file_checks.json` | Historical checks of the PDF, attachments, and delivery files after the author-name change but before the filename change |
+| `submission/filename_file_checks.json` | Checks of the actual renamed final PDF, its attachments, and the current local delivery files |
 
-The historical Windows comparison and the 2026-11-05 test results do not represent a new numerical run or cross-platform validation on 2026-11-06. The current author-name review and file checks are recorded separately in `author_record_20261106.json` and `author_file_checks.json`; the repository-access records are retained as historical evidence from before this change. Interpret each record according to its date and stated scope. The source ZIP's `archive_manifest.json` records member sizes and SHA-256 values.
+The historical Windows comparison and the 2026-11-05 test results do not represent a new numerical run or cross-platform validation on 2026-11-06. The current filename and download-access review and file checks are recorded separately in `filename_record_20261106.json` and `filename_file_checks.json`; the author-name and repository-access records are retained as historical evidence from before this change. Interpret each record according to its date and stated scope. The source ZIP's `archive_manifest.json` records member sizes and SHA-256 values.
 
 ## 2. Installation and interpreter selection
 
@@ -199,7 +203,7 @@ python paper_source/build_final_report.py --latex-pdf submission/_latex/report.p
 
 The LaTeX generator checks the saved-data provenance. The final builder checks the compiled PDF's source fingerprint, page count, file size, byte consistency of all archive members with the current project, and attachment bytes. Finalize the content, README, and pre-packaging records before packaging, then embed the code ZIP and its packaging record to avoid circular dependencies.
 
-The packager preserves original member bytes and verifies the seven original solver-related source files against their historical raw digests. If read-only validation establishes line-ending equivalence but packaging requires different original bytes, retain the discrepancy and recover trusted original bytes rather than changing the expected hash. The current packaging record does not enter its own code archive. The 2026-11-05 audit bundle and earlier 2026-11-06 polish and repository-access records remain historical; checks of the current physical files are recorded in `submission/author_file_checks.json`.
+The packager preserves original member bytes and verifies the seven original solver-related source files against their historical raw digests. If read-only validation establishes line-ending equivalence but packaging requires different original bytes, retain the discrepancy and recover trusted original bytes rather than changing the expected hash. The current packaging record does not enter its own code archive. The 2026-11-05 audit bundle and earlier 2026-11-06 polish, repository-access, and author-name records remain historical; checks of the current physical files are recorded in `submission/filename_file_checks.json`.
 
 For an independent layout preview:
 
