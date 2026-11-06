@@ -1,0 +1,205 @@
+{
+  "audited_at_client_date": "2026-11-05",
+  "scope": "Independent metadata, theory and official-template audit; no report edits",
+  "content_sha256_at_review": "de82603c31c2a8040e26a57344ce561f2ae3997181ae0b7227171f5b57195b77",
+  "references": [
+    {
+      "id": 1,
+      "status": "metadata_verified",
+      "authors": [
+        "Jorge Nocedal",
+        "Stephen J. Wright"
+      ],
+      "title": "Numerical Optimization",
+      "edition": 2,
+      "year": 2006,
+      "publisher": "Springer New York",
+      "doi": "10.1007/978-0-387-40065-5",
+      "primary_urls": [
+        "https://link.springer.com/book/10.1007/978-0-387-40065-5"
+      ],
+      "claims": "The book provides the standard unconstrained optimization, line-search, CG and quasi-Newton background. Bibliographic data and chapter coverage verified on the publisher page; full copyrighted book text was not downloaded. The report GD bound and curvature inequality were independently checked algebraically.",
+      "fix_required": false
+    },
+    {
+      "id": 2,
+      "status": "metadata_and_primary_article_verified",
+      "authors": [
+        "Larry Armijo"
+      ],
+      "title": "Minimization of functions having Lipschitz continuous first partial derivatives",
+      "year": 1966,
+      "journal": "Pacific Journal of Mathematics",
+      "volume": 16,
+      "issue": 1,
+      "pages": "1–3",
+      "doi": "10.2140/pjm.1966.16.1",
+      "primary_urls": [
+        "https://msp.org/pjm/1966/16-1/pjm-v16-n1-p01-p.pdf"
+      ],
+      "claims": "The primary article supports the historical sufficient-decrease and variable-step gradient-method attribution. Its stronger convergence statements have explicit additional assumptions; the report does not incorrectly claim those original statements for arbitrary nonconvex functions. Sentence-case versus publisher all-caps title is not a metadata error.",
+      "fix_required": false
+    },
+    {
+      "id": 3,
+      "status": "publisher_metadata_abstract_and_implementation_verified",
+      "authors": [
+        "Jean Charles Gilbert",
+        "Jorge Nocedal"
+      ],
+      "title": "Global Convergence Properties of Conjugate Gradient Methods for Optimization",
+      "year": 1992,
+      "journal": "SIAM Journal on Optimization",
+      "volume": 2,
+      "issue": 1,
+      "pages": "21–42",
+      "doi": "10.1137/0802003",
+      "primary_urls": [
+        "https://epubs.siam.org/doi/10.1137/0802003",
+        "https://raw.githubusercontent.com/scipy/scipy/v1.13.1/scipy/optimize/_optimize.py"
+      ],
+      "claims": "Publisher abstract concerns two safeguarded CG families, practical line searches and smooth nonconvex functions. It does not justify arbitrary PR+ unconditionally. SciPy source lines 1616–1650 independently confirm the PR+ truncation and extra sufficient-descent check, with sigma_3=0.01 and a gradient-tolerance exception. Current report wording is appropriately qualified.",
+      "fix_required": false
+    },
+    {
+      "id": 4,
+      "status": "publisher_index_metadata_verified",
+      "authors": [
+        "Roger Fletcher"
+      ],
+      "title": "A new approach to variable metric algorithms",
+      "year": 1970,
+      "journal": "The Computer Journal",
+      "volume": 13,
+      "issue": 3,
+      "pages": "317–322",
+      "doi": "10.1093/comjnl/13.3.317",
+      "primary_urls": [
+        "https://academic.oup.com/comjnl/article-abstract/13/3/317/345520",
+        "https://doi.org/10.1093/comjnl/13.3.317"
+      ],
+      "claims": "Author, title, year, volume, issue, pages and DOI match the publisher-indexed record. Direct page access intermittently fails, but the primary publisher search result provides the metadata and abstract. Describing it as part of the variable-metric/BFGS foundation is accurate.",
+      "fix_required": false
+    },
+    {
+      "id": 5,
+      "status": "official_bibtex_and_full_author_version_verified",
+      "authors": [
+        "Qiujiang Jin",
+        "Ruichen Jiang",
+        "Aryan Mokhtari"
+      ],
+      "title": "Non-asymptotic Global Convergence Analysis of BFGS with the Armijo-Wolfe Line Search",
+      "year": 2024,
+      "booktitle": "Advances in Neural Information Processing Systems",
+      "volume": 37,
+      "pages": "16810–16851",
+      "publisher": "Curran Associates, Inc.",
+      "doi": "10.52202/079017-0536",
+      "arxiv": "2404.16731",
+      "arxiv_revision": "v2, 2025-01-08",
+      "primary_urls": [
+        "https://proceedings.neurips.cc/paper_files/paper/23610-/bibtex",
+        "https://proceedings.neurips.cc/paper_files/paper/2024/hash/1e269abc604816c35f600ae14b354efd-Abstract-Conference.html",
+        "https://arxiv.org/html/2404.16731v2"
+      ],
+      "claims": "Assumptions 2.1–2.2 require twice differentiability, global mu-strong convexity and L-Lipschitz gradient. Hessian Lipschitz continuity (Assumption 2.3) supports stronger rates. Initial Hessian approximation is positive definite; Armijo parameter is below 1/2. Weak Wolfe is analyzed and stronger Wolfe also qualifies. Rates cannot be applied globally to these nonconvex benchmarks. Current report states that limitation correctly.",
+      "optional_improvement": "Add pages 16810–16851 and DOI 10.52202/079017-0536; preserve 2024 conference year separately from the January 2025 author-version revision.",
+      "fix_required": false
+    },
+    {
+      "id": 6,
+      "status": "publisher_full_text_verified",
+      "authors": [
+        "Florian Mannel"
+      ],
+      "title": "A Globalization of L-BFGS and the Barzilai–Borwein Method for Nonconvex Unconstrained Optimization",
+      "year": 2025,
+      "published": "2025-01-27",
+      "journal": "Journal of Optimization Theory and Applications",
+      "volume": 204,
+      "article_number": 47,
+      "doi": "10.1007/s10957-024-02565-5",
+      "primary_urls": [
+        "https://link.springer.com/article/10.1007/s10957-024-02565-5"
+      ],
+      "claims": "Theorem 4.2 gives stationary cluster points for modified LBFGSM under Assumption 4.1. Gradient-norm convergence uses stronger uniform-continuity/boundedness conditions. Theorem 4.4 additionally needs local strong convexity, locally Lipschitz gradient and calibrated cautious-update parameters; it gives q-linear objective and eventual l-step q-linear iterate/gradient behavior. These are not guarantees for ordinary SciPy full-memory BFGS. Current report makes no invalid transfer.",
+      "fix_required": false
+    },
+    {
+      "id": 7,
+      "status": "versioned_documentation_and_source_verified",
+      "author": "SciPy developers",
+      "version": "1.13.1",
+      "title": "CG/BFGS documentation and scipy/optimize/_optimize.py",
+      "primary_urls": [
+        "https://docs.scipy.org/doc/scipy-1.13.1/reference/optimize.minimize-cg.html",
+        "https://docs.scipy.org/doc/scipy-1.13.1/reference/optimize.minimize-bfgs.html",
+        "https://raw.githubusercontent.com/scipy/scipy/v1.13.1/scipy/optimize/_optimize.py"
+      ],
+      "claims": "Versioned docs support Euclidean norm selection, gtol, c1/c2, xrtol and the identity initial inverse Hessian. Source confirms CG safeguard and generic dense A1*H*A2 BFGS update. O(d^3) is a conventional dense-arithmetic inference, not an empirical scaling result; current report identifies it as such.",
+      "optional_improvement": "Include the versioned optimize tutorial in this grouped reference to support the specific Rosenbrock model and known optimum.",
+      "additional_primary_url": "https://docs.scipy.org/doc/scipy-1.13.1/tutorial/optimize.html",
+      "fix_required": false
+    },
+    {
+      "id": 8,
+      "status": "official_benchmark_page_verified",
+      "authors": [
+        "S. Surjanovic",
+        "D. Bingham"
+      ],
+      "title": "Virtual Library of Simulation Experiments: Test Functions and Datasets — Rastrigin Function",
+      "publisher": "Simon Fraser University",
+      "primary_urls": [
+        "https://www.sfu.ca/~ssurjano/rastr.html"
+      ],
+      "claims": "The cited page is specifically Rastrigin and supports the multimodal benchmark description. It is not a dedicated Rosenbrock reference. Website access-date citation without an invented publication year is acceptable. The stable sine-squared form and unique zero minimizer also follow directly from the displayed nonnegative sum.",
+      "citation_precision_improvement": "For the introduction statement about both functions, cite [7,8] after adding the SciPy Rosenbrock tutorial to [7], or cite benchmark geometry separately. Do not rely on the SFU Rosenbrock page generic unimodality description for higher-dimensional claims.",
+      "fix_required": false
+    }
+  ],
+  "overall": "All eight references are real and their supplied author/year/title/venue metadata is accurate. No invalid transfer of recent convex or modified-LBFGS theorems was found. Citation targeting and optional complete conference metadata can be improved.",
+  "precise_fixes": [
+    {
+      "severity": "citation_precision",
+      "location": "Introduction citation [1,8] on both benchmark functions",
+      "fix": "Use dedicated SciPy Rosenbrock tutorial in [7] and cite [7,8], or split the references by function. This is a targeting improvement, not evidence that either benchmark claim is false."
+    },
+    {
+      "severity": "optional_bibliography_completion",
+      "location": "Reference [5]",
+      "fix": "Add conference pages 16810–16851 and DOI 10.52202/079017-0536 from official BibTeX."
+    },
+    {
+      "severity": "format_description",
+      "location": "Current report/template claim",
+      "fix": "Current ReportLab A4/507pt-width/10.3pt/13.1pt leading layout is custom, not the official NeurIPS 2025 template. Do not label it exact NeurIPS formatting."
+    }
+  ],
+  "official_neurips_2025_template": {
+    "cfp_url": "https://neurips.cc/Conferences/2025/CallForPapers",
+    "official_zip_url": "https://media.neurips.cc/Conferences/NeurIPS2025/Styles.zip",
+    "package_date": "2025/05/01",
+    "members": [
+      "Styles/neurips_2025.sty",
+      "Styles/neurips_2025.tex",
+      "Styles/neurips_2025.pdf"
+    ],
+    "direct_sty_tex_urls": "Four plausible standalone media URLs returned 404. The canonical official source is the zip linked from the CFP; do not invent a direct file URL.",
+    "stylefiles_landing_page": "https://neurips.cc/Conferences/2025/PaperInformation/StyleFiles currently returns 404.",
+    "verified_layout": {
+      "paper": "US Letter",
+      "text_width_inches": 5.5,
+      "text_height_inches": 9,
+      "top_margin_inches": 1,
+      "body_font_points": 10,
+      "body_leading_points": 11,
+      "preferred_font": "Times New Roman / Times",
+      "title_points": 17,
+      "abstract_indent_each_side_inches": 0.5
+    },
+    "identity": "Default review mode anonymizes. A named course submission requires an author-showing option such as preprint; do not imply conference acceptance with an inappropriate camera-ready label.",
+    "course_precedence": "Course PDF encourages NeurIPS 2025 but does not mandate it. Course maximum 10 pages, PDF under 20MB, name and student ID at beginning and Canvas submission take priority. Conference-only 9-content-page/reference exemptions, 50MB and checklist rules do not replace course rules."
+  }
+}

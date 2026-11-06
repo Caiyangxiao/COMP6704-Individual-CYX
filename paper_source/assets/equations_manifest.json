@@ -1,0 +1,80 @@
+{
+  "matplotlib_version": "3.10.0",
+  "dpi": 220,
+  "base_font_size": 18.0,
+  "max_width_inches": 6.6,
+  "equations_sha256": "72b461aadda8819655da7ef95ab44c143542f1a78f0884f5a8a6231305787c25",
+  "renderer_sha256": "7dc9d0eb0aac32080e513b4d9bdf1db15c986abc25bf8ce78810cb00365c457a",
+  "assets": {
+    "models_R": {
+      "filename": "models_R.png",
+      "font_size": 18.0,
+      "width_inches": 4.802160367098722,
+      "height_inches": 0.8551136363636365,
+      "sha256": "4959597f987a9aafd1762bbbfadedc73a438c4a20ae9dae452cd1a9d584682e1"
+    },
+    "models_A": {
+      "filename": "models_A.png",
+      "font_size": 18.0,
+      "width_inches": 3.5100276117498215,
+      "height_inches": 0.8551136363636365,
+      "sha256": "0e7e58662c46bf98d3a5ce99ee9a5e86da001bcdb8ca83ebfb530fa84913e1a9"
+    },
+    "gradients_R": {
+      "filename": "gradients_R.png",
+      "font_size": 13.603049576100155,
+      "width_inches": 6.528398984966856,
+      "height_inches": 1.1154146292099436,
+      "sha256": "e3959f60989d11623b19c08c9fa693dc1e8a51ffad45e305ac506f8da72d89ac"
+    },
+    "gradients_A": {
+      "filename": "gradients_A.png",
+      "font_size": 18.0,
+      "width_inches": 3.6262677556818184,
+      "height_inches": 0.39681818181818185,
+      "sha256": "76fe9dbd801ce2f9a9fc0bbc5659a7d8173257dd34864d925fae0039c3e2e95b"
+    },
+    "gd_armijo": {
+      "filename": "gd_armijo.png",
+      "font_size": 18.0,
+      "width_inches": 4.045389071377841,
+      "height_inches": 0.8213636363636363,
+      "sha256": "1b14ef1f96bb90a9286914c23d678858f5738808046104f40b7622a18e185efb"
+    },
+    "cg": {
+      "filename": "cg.png",
+      "font_size": 18.0,
+      "width_inches": 5.4499084250710235,
+      "height_inches": 1.0690909090909093,
+      "sha256": "7b0940f53d56e7b406a083f92f0302c9250f3e7c202efd26c7fbe8e74a3984ec"
+    },
+    "wolfe": {
+      "filename": "wolfe.png",
+      "font_size": 18.0,
+      "width_inches": 4.925089488636365,
+      "height_inches": 0.8674999999999999,
+      "sha256": "507472208d10c19c5b6f3f22921a76c27d6cf004abae7818218a3dac382804c0"
+    },
+    "bfgs": {
+      "filename": "bfgs.png",
+      "font_size": 18.0,
+      "width_inches": 5.960455433238638,
+      "height_inches": 0.870681818181818,
+      "sha256": "06fb2a714dd2dd86badefbc8018b1a99b79d0866f0326d44e36a7c7a420eb8bb"
+    },
+    "curvature": {
+      "filename": "curvature.png",
+      "font_size": 18.0,
+      "width_inches": 3.7999359463778415,
+      "height_inches": 0.46034090909090897,
+      "sha256": "61bd73f6b713c36fde255e66590df0603632e7ddd311ca555ecee84b8e32b497"
+    },
+    "gd_bound": {
+      "filename": "gd_bound.png",
+      "font_size": 18.0,
+      "width_inches": 3.319323869185014,
+      "height_inches": 1.1144517045454543,
+      "sha256": "4c91cd870c37601818f3f3d1cbaa3ba4bb78d4cc7e16e6d66f1f9f65abc3e54f"
+    }
+  }
+}

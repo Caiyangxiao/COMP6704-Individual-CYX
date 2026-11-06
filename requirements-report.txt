@@ -1,0 +1,5 @@
+# Optional Word/PDF builder and PDF attachment extraction; not needed by solvers.
+python-docx==1.2.0
+reportlab==4.4.9
+Pillow==13.0.0
+pypdf==6.10.0

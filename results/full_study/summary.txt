@@ -1,0 +1,102 @@
+COMP6704 | Unconstrained Optimization | CPU experiment
+This is a reproducible benchmark run, not a universal optimizer ranking.
+Runs: 90; dimensions: [2, 10, 20]; starts per case: 5
+Stationary and global-target flags are separate offline checks.
+
+problem      method  nit     nfev     njev      f_final       grad_norm  stationary global_hit
+rosenbrock   GD      5000    51127     5001  5.06887e-05  9.20576e-03      False      False
+rosenbrock   CG        20       44       44  1.62044e-16  1.13862e-08       True       True
+rosenbrock   BFGS      26       49       49  8.49276e-15  1.62506e-07       True       True
+rosenbrock   GD      5000    49090     5001  4.63758e-06  3.36905e-03      False      False
+rosenbrock   CG        14       32       32  2.48860e-16  7.06042e-07       True       True
+rosenbrock   BFGS      12       20       20  8.98599e-21  3.85294e-09       True       True
+rosenbrock   GD      5000    50148     5001  6.66738e-06  7.12605e-03      False      False
+rosenbrock   CG        28       72       72  1.84545e-15  3.83952e-08       True       True
+rosenbrock   BFGS      31       58       58  1.33473e-17  2.71050e-08       True       True
+rosenbrock   GD      5000    49290     5001  3.35265e-06  2.50085e-03      False      False
+rosenbrock   CG        23       56       56  4.23503e-20  9.15604e-09       True       True
+rosenbrock   BFGS      19       37       37  5.59312e-19  1.38293e-08       True       True
+rosenbrock   GD      5000    49237     5001  3.72799e-06  5.31235e-03      False      False
+rosenbrock   CG        24       59       59  3.03053e-13  5.14044e-07       True       True
+rosenbrock   BFGS      25       48       48  1.03248e-15  4.25916e-07       True       True
+rosenbrock   GD      5000    53063     5001  4.98885e-04  5.33547e-02      False      False
+rosenbrock   CG       249      434      434  2.69612e-14  8.58686e-07       True       True
+rosenbrock   BFGS      85      146      146  2.53452e-17  2.10808e-07       True       True
+rosenbrock   GD      5000    53339     5001  4.14294e-04  4.30342e-02      False      False
+rosenbrock   CG       164      282      282  2.11347e-14  3.44018e-07       True       True
+rosenbrock   BFGS      60      100      100  2.80488e-18  8.07630e-08       True       True
+rosenbrock   GD      5000    53090     5001  4.93669e-04  3.52666e-02      False      False
+rosenbrock   CG       301      509      509  9.46681e-14  6.52149e-07       True       True
+rosenbrock   BFGS      70      114      114  3.07739e-17  2.47377e-07       True       True
+rosenbrock   GD      5000    53208     5001  4.63516e-04  3.23670e-02      False      False
+rosenbrock   CG       207      343      343  3.98658e+00  9.56589e-07       True      False
+rosenbrock   BFGS      80      145      145  3.98658e+00  9.63817e-07       True      False
+rosenbrock   GD      5000    53100     5001  4.90839e-04  4.57323e-02      False      False
+rosenbrock   CG       332      553      553  1.22498e-13  6.79976e-07       True       True
+rosenbrock   BFGS      58      102      102  3.98658e+00  8.78814e-08       True      False
+rosenbrock   GD      5000    53289     5001  3.53069e-03  1.86434e-01      False      False
+rosenbrock   CG       445      728      728  2.15912e-14  5.39351e-07       True       True
+rosenbrock   BFGS     134      203      203  3.98662e+00  4.44622e-07       True      False
+rosenbrock   GD      5000    53376     5001  3.38856e-03  1.45039e-01      False      False
+rosenbrock   CG       561      900      900  1.35208e-13  8.09349e-07       True       True
+rosenbrock   BFGS     105      167      167  4.28507e-16  8.90798e-07       True       True
+rosenbrock   GD      5000    53312     5001  3.51096e-03  1.23414e-01      False      False
+rosenbrock   CG       291      482      482  1.09613e-13  8.62617e-07       True       True
+rosenbrock   BFGS     110      175      175  4.73632e-18  1.02541e-07       True       True
+rosenbrock   GD      5000    53071     5001  3.99876e-03  1.26107e-01      False      False
+rosenbrock   CG       403      660      660  1.12673e-13  8.39871e-07       True       True
+rosenbrock   BFGS     118      186      186  3.72472e-16  9.12127e-07       True       True
+rosenbrock   GD      5000    53205     5001  3.66751e-03  1.19946e-01      False      False
+rosenbrock   CG       444      709      709  5.86728e-16  5.53861e-07       True       True
+rosenbrock   BFGS     105      166      166  4.47519e-17  3.05405e-07       True       True
+rastrigin    GD        36      313       37  9.94959e-01  9.96468e-07       True      False
+rastrigin    CG         9       24       24  4.97479e+00  3.79147e-10       True      False
+rastrigin    BFGS       7       10       10  7.95966e+00  3.98152e-08       True      False
+rastrigin    GD        28      249       29  4.97479e+00  9.60266e-07       True      False
+rastrigin    CG         7       19       19  9.94956e+00  2.94136e-09       True      False
+rastrigin    BFGS       7       15       15  9.94956e+00  4.55313e-07       True      False
+rastrigin    GD        33      287       34  1.29344e+01  5.55450e-07       True      False
+rastrigin    CG         7       21       21  1.69142e+01  1.12507e-07       True      False
+rastrigin    BFGS       6       16       16  1.69142e+01  5.78344e-07       True      False
+rastrigin    GD        31      276       32  1.98992e+00  6.23745e-07       True      False
+rastrigin    CG         5       11       11  3.97983e+00  1.94451e-07       True      False
+rastrigin    BFGS       6       12       12  3.97983e+00  5.71365e-09       True      False
+rastrigin    GD        29      262       30  9.94956e+00  6.94861e-07       True      False
+rastrigin    CG         4       10       10  9.94956e+00  1.00706e-07       True      False
+rastrigin    BFGS       5        9        9  9.94956e+00  2.33561e-08       True      False
+rastrigin    GD        32      288       33  3.78083e+01  5.57359e-07       True      False
+rastrigin    CG         7       19       19  3.78083e+01  9.63329e-09       True      False
+rastrigin    BFGS      17       32       32  3.78083e+01  5.74110e-07       True      False
+rastrigin    GD        35      312       36  3.78084e+01  8.01068e-07       True      False
+rastrigin    CG         6       14       14  2.38790e+01  7.77893e-08       True      False
+rastrigin    BFGS      17       43       43  2.38790e+01  3.18990e-07       True      False
+rastrigin    GD        34      305       35  2.58689e+01  6.24294e-07       True      False
+rastrigin    CG        10       24       24  2.58689e+01  6.81053e-08       True      False
+rastrigin    BFGS      20       42       42  2.58689e+01  2.12291e-07       True      False
+rastrigin    GD        34      305       35  3.58184e+01  6.50999e-07       True      False
+rastrigin    CG         9       20       20  3.58184e+01  2.43379e-08       True      False
+rastrigin    BFGS      21       36       36  3.58184e+01  5.05703e-08       True      False
+rastrigin    GD        34      305       35  2.78588e+01  7.42146e-07       True      False
+rastrigin    CG        10       19       19  2.78588e+01  1.14524e-07       True      False
+rastrigin    BFGS      23       39       39  2.78588e+01  3.28549e-08       True      False
+rastrigin    GD        33      297       34  6.06924e+01  3.61418e-07       True      False
+rastrigin    CG         7       15       15  6.06924e+01  2.52106e-08       True      False
+rastrigin    BFGS      22       94       88  6.06924e+01  2.15729e-07       True      False
+rastrigin    GD        33      293       34  1.26359e+02  7.11248e-07       True      False
+rastrigin    CG         9       18       18  6.36772e+01  6.01090e-09       True      False
+rastrigin    BFGS      33       86       86  6.26823e+01  7.21126e-07       True      False
+rastrigin    GD        34      306       35  4.17882e+01  3.53833e-07       True      False
+rastrigin    CG        10       20       20  4.17882e+01  1.77211e-07       True      False
+rastrigin    BFGS      26      117      105  4.17882e+01  8.73821e-06      False      False
+rastrigin    GD        34      305       35  6.46722e+01  9.89720e-07       True      False
+rastrigin    CG         9       19       19  6.46722e+01  5.94435e-09       True      False
+rastrigin    BFGS      21       45       45  6.46722e+01  1.00023e-06      False      False
+rastrigin    GD        35      312       36  6.96470e+01  9.82971e-07       True      False
+rastrigin    CG        11       22       22  6.96470e+01  2.50953e-09       True      False
+rastrigin    BFGS      35       79       79  6.86521e+01  3.54227e-07       True      False
+
+Raw statuses/messages: see summary.csv and runs/*.json.
+Accepted/initial/terminal events and cumulative costs: traces/*.csv.
+Initial values and all diagnostic f/gradient values are computed offline.
+Every solver evaluation, including failed final trials, is counted.
+Short CPU timing differences include logging overhead and may be noisy.

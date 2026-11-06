@@ -1,0 +1,673 @@
+{
+  "schema_version": 2,
+  "passed": true,
+  "results_directory": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\results\\full_study",
+  "validation_scope": {
+    "solver_invoked": false,
+    "reference_results_written": false,
+    "historical_experiment_started_at": "2026-11-05T20:04:35.528837+08:00",
+    "interpretation": "Saved-data consistency, historical source identity/EOL proof, and required current software versions are independent checks. Passing is not a new numerical rerun or a timing-reproduction claim."
+  },
+  "time_scope": {
+    "started_at": "2026-11-05T22:33:58.129763+08:00",
+    "finished_at": "2026-11-05T22:34:00.565327+08:00",
+    "timezone": "Asia/Shanghai",
+    "elapsed_seconds": 2.435714699793607,
+    "measures": "This read-only validation execution; excludes any solver execution."
+  },
+  "validator_source_sha256": "15c5748dd3d14588208cbb9546baf9be41c78d354b06765206d5b3d309e44118",
+  "provenance_helper_sha256": "2073c3e70e2c3270b23a8b2c7852f2f899f799d8119b7e101c4d00b4225f3c89",
+  "data_internal_integrity": {
+    "schema_version": 1,
+    "validated_at": "2026-11-05T22:33:58.129763+08:00",
+    "timezone": "Asia/Shanghai",
+    "results_directory": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\results\\full_study",
+    "validator_source_sha256": "15c5748dd3d14588208cbb9546baf9be41c78d354b06765206d5b3d309e44118",
+    "counts": {
+      "expected_runs": 90,
+      "summary_rows": 90,
+      "run_json_files": 90,
+      "trace_csv_files": 90,
+      "expected_initial_points": 30,
+      "initial_points": 30,
+      "trace_events": 80605,
+      "accepted_updates": 80425,
+      "gradient_checks": 12,
+      "gradient_checks_passed": 12
+    },
+    "demo_initial_points": {
+      "available": true,
+      "matched": 2,
+      "path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\results\\demo_2d\\initial_points.json",
+      "compared": 2
+    },
+    "result_label_totals": {
+      "solver_success": 73,
+      "stationary": 73,
+      "global_hit": 26
+    },
+    "result_label_combinations": [
+      {
+        "solver_success": false,
+        "stationary": false,
+        "global_hit": false,
+        "count": 17
+      },
+      {
+        "solver_success": true,
+        "stationary": true,
+        "global_hit": false,
+        "count": 47
+      },
+      {
+        "solver_success": true,
+        "stationary": true,
+        "global_hit": true,
+        "count": 26
+      }
+    ],
+    "termination_counts": [
+      {
+        "method": "BFGS",
+        "solver_status": 0,
+        "solver_message": "Optimization terminated successfully.",
+        "count": 28
+      },
+      {
+        "method": "BFGS",
+        "solver_status": 2,
+        "solver_message": "Desired error not necessarily achieved due to precision loss.",
+        "count": 2
+      },
+      {
+        "method": "CG",
+        "solver_status": 0,
+        "solver_message": "Optimization terminated successfully.",
+        "count": 30
+      },
+      {
+        "method": "GD",
+        "solver_status": 0,
+        "solver_message": "Gradient two-norm target reached.",
+        "count": 15
+      },
+      {
+        "method": "GD",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "count": 15
+      }
+    ],
+    "extra_terminal_evaluations": [
+      {
+        "run_id": "rastrigin_d20_s03_bfgs",
+        "additional_nfev": 58,
+        "additional_njev": 46,
+        "solver_status": 2
+      }
+    ],
+    "unsuccessful_solver_runs": [
+      {
+        "run_id": "rosenbrock_d2_s01_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 51127,
+        "njev": 5001,
+        "f_value": 5.0688651924024204e-05,
+        "gradient_norm": 0.0092057608115428,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d2_s02_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 49090,
+        "njev": 5001,
+        "f_value": 4.637582653346796e-06,
+        "gradient_norm": 0.003369051114959891,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d2_s03_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 50148,
+        "njev": 5001,
+        "f_value": 6.667376983038968e-06,
+        "gradient_norm": 0.0071260472418190985,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d2_s04_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 49290,
+        "njev": 5001,
+        "f_value": 3.3526513324159073e-06,
+        "gradient_norm": 0.002500849684249683,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d2_s05_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 49237,
+        "njev": 5001,
+        "f_value": 3.7279892037615335e-06,
+        "gradient_norm": 0.005312352781493791,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d10_s01_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 53063,
+        "njev": 5001,
+        "f_value": 0.000498884673255283,
+        "gradient_norm": 0.053354713301211866,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d10_s02_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 53339,
+        "njev": 5001,
+        "f_value": 0.0004142936618798375,
+        "gradient_norm": 0.043034248489596284,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d10_s03_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 53090,
+        "njev": 5001,
+        "f_value": 0.0004936694959361908,
+        "gradient_norm": 0.035266616951921036,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d10_s04_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 53208,
+        "njev": 5001,
+        "f_value": 0.00046351568621569197,
+        "gradient_norm": 0.03236695339457787,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d10_s05_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 53100,
+        "njev": 5001,
+        "f_value": 0.0004908390352521153,
+        "gradient_norm": 0.04573230521293345,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d20_s01_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 53289,
+        "njev": 5001,
+        "f_value": 0.0035306884122016475,
+        "gradient_norm": 0.18643420508412917,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d20_s02_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 53376,
+        "njev": 5001,
+        "f_value": 0.003388564879088025,
+        "gradient_norm": 0.14503944165122232,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d20_s03_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 53312,
+        "njev": 5001,
+        "f_value": 0.003510956040827562,
+        "gradient_norm": 0.12341418903054734,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d20_s04_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 53071,
+        "njev": 5001,
+        "f_value": 0.0039987642011307285,
+        "gradient_norm": 0.12610668393094104,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rosenbrock_d20_s05_gd",
+        "solver_status": 1,
+        "solver_message": "Maximum accepted updates reached.",
+        "nit": 5000,
+        "nfev": 53205,
+        "njev": 5001,
+        "f_value": 0.0036675097071166146,
+        "gradient_norm": 0.11994552359329035,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rastrigin_d20_s03_bfgs",
+        "solver_status": 2,
+        "solver_message": "Desired error not necessarily achieved due to precision loss.",
+        "nit": 26,
+        "nfev": 117,
+        "njev": 105,
+        "f_value": 41.78821486083217,
+        "gradient_norm": 8.738210348769578e-06,
+        "stationary": false,
+        "global_hit": false
+      },
+      {
+        "run_id": "rastrigin_d20_s04_bfgs",
+        "solver_status": 2,
+        "solver_message": "Desired error not necessarily achieved due to precision loss.",
+        "nit": 21,
+        "nfev": 45,
+        "njev": 45,
+        "f_value": 64.67220759145349,
+        "gradient_norm": 1.0002345749141817e-06,
+        "stationary": false,
+        "global_hit": false
+      }
+    ],
+    "passed": true,
+    "checks": {
+      "study_coverage": true,
+      "paired_initial_points": true,
+      "summary_consistency": true,
+      "native_evaluation_counts": true,
+      "trace_protocol": true,
+      "gd_armijo_and_budget": true,
+      "independent_final_diagnostics": true,
+      "result_classifications": true,
+      "gradient_checks": true,
+      "demo_subset": true
+    },
+    "assertions": {
+      "study_coverage": 3,
+      "paired_initial_points": 91,
+      "summary_consistency": 1710,
+      "native_evaluation_counts": 90,
+      "trace_protocol": 404105,
+      "gd_armijo_and_budget": 301980,
+      "independent_final_diagnostics": 90,
+      "result_classifications": 90,
+      "gradient_checks": 1,
+      "demo_subset": 1
+    },
+    "errors": [],
+    "warnings": []
+  },
+  "source_integrity": {
+    "passed": true,
+    "files": {
+      "cpu_optimization/__init__.py": {
+        "expected_raw_sha256": "e927c6d0dd3ead9248c9e3f814ea80198cdb9ad9482e5ac06459b624279c6a4e",
+        "actual_raw_sha256": "e927c6d0dd3ead9248c9e3f814ea80198cdb9ad9482e5ac06459b624279c6a4e",
+        "raw_comparison": {
+          "matches": true,
+          "expected_digest_valid": true
+        },
+        "byte_length": 235,
+        "line_endings": {
+          "crlf": 0,
+          "lf_only": 5,
+          "bare_cr": 0
+        },
+        "passed": true,
+        "match_kind": "byte_exact",
+        "eol_equivalence": {
+          "checked": false,
+          "proved": false,
+          "matching_variants": [],
+          "variants": {},
+          "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+        },
+        "errors": [],
+        "path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\cpu_optimization\\__init__.py",
+        "exists": true
+      },
+      "cpu_optimization/experiment.py": {
+        "expected_raw_sha256": "c9b3f653503a3bf589c8ab0f5b2c0193bb48fd7da046c0ed1109bf509e340244",
+        "actual_raw_sha256": "c9b3f653503a3bf589c8ab0f5b2c0193bb48fd7da046c0ed1109bf509e340244",
+        "raw_comparison": {
+          "matches": true,
+          "expected_digest_valid": true
+        },
+        "byte_length": 12842,
+        "line_endings": {
+          "crlf": 0,
+          "lf_only": 240,
+          "bare_cr": 0
+        },
+        "passed": true,
+        "match_kind": "byte_exact",
+        "eol_equivalence": {
+          "checked": false,
+          "proved": false,
+          "matching_variants": [],
+          "variants": {},
+          "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+        },
+        "errors": [],
+        "path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\cpu_optimization\\experiment.py",
+        "exists": true
+      },
+      "cpu_optimization/objectives.py": {
+        "expected_raw_sha256": "a719e6d965c924be7b21f5c1ef6e8bcf5c34ae08c70e4540f23af56f8f0cbddf",
+        "actual_raw_sha256": "a719e6d965c924be7b21f5c1ef6e8bcf5c34ae08c70e4540f23af56f8f0cbddf",
+        "raw_comparison": {
+          "matches": true,
+          "expected_digest_valid": true
+        },
+        "byte_length": 5569,
+        "line_endings": {
+          "crlf": 0,
+          "lf_only": 151,
+          "bare_cr": 0
+        },
+        "passed": true,
+        "match_kind": "byte_exact",
+        "eol_equivalence": {
+          "checked": false,
+          "proved": false,
+          "matching_variants": [],
+          "variants": {},
+          "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+        },
+        "errors": [],
+        "path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\cpu_optimization\\objectives.py",
+        "exists": true
+      },
+      "cpu_optimization/plotting.py": {
+        "expected_raw_sha256": "3593805a25c0f6415756084145062ad013baee71dc26deb047c046cd2e1b7b1e",
+        "actual_raw_sha256": "3593805a25c0f6415756084145062ad013baee71dc26deb047c046cd2e1b7b1e",
+        "raw_comparison": {
+          "matches": true,
+          "expected_digest_valid": true
+        },
+        "byte_length": 12163,
+        "line_endings": {
+          "crlf": 0,
+          "lf_only": 271,
+          "bare_cr": 0
+        },
+        "passed": true,
+        "match_kind": "byte_exact",
+        "eol_equivalence": {
+          "checked": false,
+          "proved": false,
+          "matching_variants": [],
+          "variants": {},
+          "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+        },
+        "errors": [],
+        "path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\cpu_optimization\\plotting.py",
+        "exists": true
+      },
+      "cpu_optimization/solvers.py": {
+        "expected_raw_sha256": "dec57377948567b2928b32116ca035e74b3e6b943048539a51dc7fc3890ac812",
+        "actual_raw_sha256": "dec57377948567b2928b32116ca035e74b3e6b943048539a51dc7fc3890ac812",
+        "raw_comparison": {
+          "matches": true,
+          "expected_digest_valid": true
+        },
+        "byte_length": 10036,
+        "line_endings": {
+          "crlf": 0,
+          "lf_only": 226,
+          "bare_cr": 0
+        },
+        "passed": true,
+        "match_kind": "byte_exact",
+        "eol_equivalence": {
+          "checked": false,
+          "proved": false,
+          "matching_variants": [],
+          "variants": {},
+          "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+        },
+        "errors": [],
+        "path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\cpu_optimization\\solvers.py",
+        "exists": true
+      },
+      "run_experiments.py": {
+        "expected_raw_sha256": "e9c6fe4196e9ce61c085d00bf26582f6fa26407c1e0088c0624c787169771a04",
+        "actual_raw_sha256": "e9c6fe4196e9ce61c085d00bf26582f6fa26407c1e0088c0624c787169771a04",
+        "raw_comparison": {
+          "matches": true,
+          "expected_digest_valid": true
+        },
+        "byte_length": 1632,
+        "line_endings": {
+          "crlf": 0,
+          "lf_only": 38,
+          "bare_cr": 0
+        },
+        "passed": true,
+        "match_kind": "byte_exact",
+        "eol_equivalence": {
+          "checked": false,
+          "proved": false,
+          "matching_variants": [],
+          "variants": {},
+          "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+        },
+        "errors": [],
+        "path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\run_experiments.py",
+        "exists": true
+      },
+      "plot_results.py": {
+        "expected_raw_sha256": "f3017d4c3354370545a80ac93f26f656192df46619a4f19b0375822ad61ede23",
+        "actual_raw_sha256": "f3017d4c3354370545a80ac93f26f656192df46619a4f19b0375822ad61ede23",
+        "raw_comparison": {
+          "matches": true,
+          "expected_digest_valid": true
+        },
+        "byte_length": 769,
+        "line_endings": {
+          "crlf": 0,
+          "lf_only": 24,
+          "bare_cr": 0
+        },
+        "passed": true,
+        "match_kind": "byte_exact",
+        "eol_equivalence": {
+          "checked": false,
+          "proved": false,
+          "matching_variants": [],
+          "variants": {},
+          "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+        },
+        "errors": [],
+        "path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\plot_results.py",
+        "exists": true
+      },
+      "scipy.optimize._optimize": {
+        "expected_raw_sha256": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+        "actual_raw_sha256": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+        "raw_comparison": {
+          "matches": true,
+          "expected_digest_valid": true
+        },
+        "byte_length": 150667,
+        "line_endings": {
+          "crlf": 4092,
+          "lf_only": 0,
+          "bare_cr": 0
+        },
+        "passed": true,
+        "match_kind": "byte_exact",
+        "eol_equivalence": {
+          "checked": false,
+          "proved": false,
+          "matching_variants": [],
+          "variants": {},
+          "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+        },
+        "errors": [],
+        "path": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\.venv\\Lib\\site-packages\\scipy\\optimize\\_optimize.py",
+        "exists": true
+      }
+    },
+    "errors": [],
+    "recorded_project_files": 7,
+    "byte_exact_files": 8,
+    "eol_equivalent_files": 0,
+    "raw_hash_mismatches": 0,
+    "policy": "Historical raw digests remain authoritative. Raw exact takes priority. Otherwise only LF/CRLF reconstructions of actual bytes whose SHA-256 equals a recorded raw digest are accepted; bare CR fallback and actual code edits are rejected."
+  },
+  "environment_match": {
+    "passed": true,
+    "required_versions": {
+      "python": {
+        "expected": "3.12.8",
+        "actual": "3.12.8",
+        "matches": true,
+        "required": true
+      },
+      "numpy": {
+        "expected": "1.26.4",
+        "actual": "1.26.4",
+        "matches": true,
+        "required": true
+      },
+      "scipy": {
+        "expected": "1.13.1",
+        "actual": "1.13.1",
+        "matches": true,
+        "required": true
+      }
+    },
+    "platform_context": {
+      "platform": {
+        "historical": "Windows-11-10.0.26200-SP0",
+        "actual": "Windows-11-10.0.26200-SP0",
+        "matches": true,
+        "required_for_source_or_data_integrity": false
+      },
+      "processor": {
+        "historical": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+        "actual": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+        "matches": true,
+        "required_for_source_or_data_integrity": false
+      },
+      "logical_cpu_count": {
+        "historical": 24,
+        "actual": 24,
+        "matches": true,
+        "required_for_source_or_data_integrity": false
+      },
+      "thread_environment": {
+        "historical": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "VECLIB_MAXIMUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "BLIS_NUM_THREADS": "1"
+        },
+        "actual": {
+          "OMP_NUM_THREADS": null,
+          "OPENBLAS_NUM_THREADS": null,
+          "MKL_NUM_THREADS": null,
+          "VECLIB_MAXIMUM_THREADS": null,
+          "NUMEXPR_NUM_THREADS": null,
+          "BLIS_NUM_THREADS": null
+        },
+        "matches": false,
+        "required_for_source_or_data_integrity": false
+      },
+      "python_build": {
+        "historical": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+        "actual": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+        "matches": true,
+        "required_for_source_or_data_integrity": false
+      }
+    },
+    "actual_environment": {
+      "python_version": "3.12.8",
+      "python_build": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+      "python_implementation": "CPython",
+      "python_executable": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\.venv\\Scripts\\python.exe",
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "matplotlib": "3.10.0",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+      "logical_cpu_count": 24,
+      "thread_environment": {
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null,
+        "BLIS_NUM_THREADS": null
+      }
+    },
+    "platform_context_identical": false,
+    "policy": "Python semantic version, NumPy and SciPy must match. OS, build, CPU and thread context are reported separately; differences do not invalidate saved data or an EOL proof and do not establish timing equivalence.",
+    "errors": []
+  },
+  "counts": {
+    "expected_runs": 90,
+    "summary_rows": 90,
+    "run_json_files": 90,
+    "trace_csv_files": 90,
+    "expected_initial_points": 30,
+    "initial_points": 30,
+    "trace_events": 80605,
+    "accepted_updates": 80425,
+    "gradient_checks": 12,
+    "gradient_checks_passed": 12
+  },
+  "result_label_totals": {
+    "solver_success": 73,
+    "stationary": 73,
+    "global_hit": 26
+  },
+  "errors": [],
+  "warnings": []
+}

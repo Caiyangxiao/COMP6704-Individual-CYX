@@ -1,0 +1,94 @@
+{
+  "archive_path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\COMP6704_reproducibility.zip",
+  "archive_sha256": "a514e2e1d5d525e82b0d7984bf1f99a26662dda8a43c0ad9358f29c2381ef6ff",
+  "archive_size_bytes": 12334163,
+  "current_verification_report_in_archive": false,
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]"
+  },
+  "full_study_metadata": {
+    "completed_runs": 90,
+    "execution_status": "completed",
+    "expected_runs": 90
+  },
+  "manifest_excludes_itself": true,
+  "numerical_reproduction": "Not performed by this packaging utility.",
+  "original_source_files_verified": 7,
+  "original_source_hashes": {
+    "cpu_optimization/__init__.py": {
+      "matches_original_run": true,
+      "sha256": "e927c6d0dd3ead9248c9e3f814ea80198cdb9ad9482e5ac06459b624279c6a4e"
+    },
+    "cpu_optimization/experiment.py": {
+      "matches_original_run": true,
+      "sha256": "c9b3f653503a3bf589c8ab0f5b2c0193bb48fd7da046c0ed1109bf509e340244"
+    },
+    "cpu_optimization/objectives.py": {
+      "matches_original_run": true,
+      "sha256": "a719e6d965c924be7b21f5c1ef6e8bcf5c34ae08c70e4540f23af56f8f0cbddf"
+    },
+    "cpu_optimization/plotting.py": {
+      "matches_original_run": true,
+      "sha256": "3593805a25c0f6415756084145062ad013baee71dc26deb047c046cd2e1b7b1e"
+    },
+    "cpu_optimization/solvers.py": {
+      "matches_original_run": true,
+      "sha256": "dec57377948567b2928b32116ca035e74b3e6b943048539a51dc7fc3890ac812"
+    },
+    "plot_results.py": {
+      "matches_original_run": true,
+      "sha256": "f3017d4c3354370545a80ac93f26f656192df46619a4f19b0375822ad61ede23"
+    },
+    "run_experiments.py": {
+      "matches_original_run": true,
+      "sha256": "e9c6fe4196e9ce61c085d00bf26582f6fa26407c1e0088c0624c787169771a04"
+    }
+  },
+  "scope": "Archive member hashes and sizes, plus historical project-source byte hashes; no numerical solves",
+  "selection": {
+    "categories": {
+      "audits": {
+        "files": 21,
+        "size_bytes": 248496
+      },
+      "configs": {
+        "files": 2,
+        "size_bytes": 913
+      },
+      "cpu_optimization": {
+        "files": 9,
+        "size_bytes": 88083
+      },
+      "paper_source": {
+        "files": 32,
+        "size_bytes": 1496380
+      },
+      "results/demo_2d": {
+        "files": 19,
+        "size_bytes": 1038543
+      },
+      "results/full_study": {
+        "files": 199,
+        "size_bytes": 30455875
+      },
+      "root": {
+        "files": 12,
+        "size_bytes": 63723
+      },
+      "tests": {
+        "files": 7,
+        "size_bytes": 41979
+      }
+    },
+    "selected_file_count": 301,
+    "source_size_bytes": 33433992,
+    "source_size_mib": 31.88513946533203
+  },
+  "status": "passed",
+  "temporary_extraction_removed": true,
+  "timezone": "Asia/Shanghai",
+  "verified_at": "2026-11-06T17:43:15.903067+08:00",
+  "verified_file_count": 301,
+  "verified_source_size_bytes": 33433992
+}

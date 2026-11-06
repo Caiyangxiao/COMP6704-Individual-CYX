@@ -1,0 +1,33 @@
+{
+  "page_count": 10,
+  "includes_references": true,
+  "pdf_bytes": 778196,
+  "pdf_under_20MB": true,
+  "embedded_archive_verified": false,
+  "page_source": "report.pdf",
+  "pdf_format": "Official NeurIPS 2025 style with a course notice",
+  "word_format": "Editable course adaptation; not an official NeurIPS Word template",
+  "compiled_source_fingerprint": "5ff73bf7f67b1d958c4927b8cd0713f03712f53f68f167dcad5ea72ae9f7e04c",
+  "files": {
+    "Yangxiao Cai+26023041r.docx": {
+      "bytes": 833937,
+      "sha256": "974a40ac30d2a7693e39320357bf3f6ea85dbf6641f3349e138f7ca3490527f9"
+    },
+    "Yangxiao Cai+26023041r.pdf": {
+      "bytes": 778196,
+      "sha256": "22506d79ef98a77213f17fd1b63d72f4022b6040117eabaeb7463b95fa3aafb9"
+    }
+  },
+  "planned_page_word_counts": [
+    462,
+    445,
+    448,
+    373,
+    373,
+    194,
+    390,
+    279,
+    562,
+    240
+  ]
+}

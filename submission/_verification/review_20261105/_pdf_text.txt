@@ -1,0 +1,549 @@
+Stationarity, Evaluation Cost, and Solution Quality
+in Nonconvex Unconstrained Optimization
+Yangxiao Cai | Student ID: 26023041r
+COMP6704 Individual Assignment, Fall 2026
+Primary direction: Unconstrained Optimization
+Abstract
+We compare Armijo gradient descent (GD), safeguarded nonlinear conjugate gra-
+dient (CG), and BFGS on Rosenbrock and Rastrigin through 90 controlled CPU
+solves. Dimensions 2, 10, and 20 each use ﬁve paired initial points and ﬁxed stop-
+ping criteria. Analytic gradients, cumulative evaluation counts, accepted iterates,
+and raw termination statuses are audited. Overall, 73/90 runs meet the gradient
+tolerance and 26/90 meet the known global-objective tolerance: 47 meet only the
+gradient criterion, while 17 meet neither. On Rosenbrock, CG and BFGS attain
+the global target in 14/15 and 12/15 cases; GD reaches the iteration cap in all
+15 cases. On Rastrigin, 43/45 runs meet the gradient tolerance, but none meets
+the global target. Endpoint diagnostics and comparisons conditional on matched
+global-target outcomes separate local convergence, evaluation cost, and ﬁnal ob-
+jective quality. This study contributes reproducible empirical evidence for these
+distinctions, without proposing a new algorithm or a universal optimizer ranking.
+The PDF embeds the complete reproducibility archive as a ﬁle attachment.
+1 Introduction and scope
+Smooth unconstrained optimization is a useful setting for studying how descent directions, line
+searches, curvature information, and stopping rules interact. It also exposes a practical ambiguity:
+software may report successful termination at a point with a small gradient even when its objective
+remains far from the global minimum. Comparing iteration counts alone can conceal both this
+difference in solution quality and the work spent rejecting trial steps.
+This individual project belongs to Unconstrained Optimization. The variables range over all of
+real Euclidean space, and the objectives are nonconvex. The group project selected the Convex
+Optimization direction; the present investigation instead studies local algorithms outside convex-
+ity. Rosenbrock supplies a curved valley and coupled coordinates, while Rastrigin supplies many
+attraction basins and separable oscillations. Both have known global objective value zero, making
+stationarity and global-objective quality independently measurable [ 7, 8].
+Three questions guide the comparison. First, which methods reach the common gradient tolerance
+within a ﬁxed accepted-update budget? Second, what function and gradient evaluation costs accom-
+pany their outcomes across dimensions and paired starts? Third, when termination is unsuccessful
+or non-global, what do the saved traces and endpoint curvature actually support? The design ﬁxes
+the implementations and settings before comparing all 90 outcomes; it retains failures and supplies
+the initial points, logs, analysis, and document sources.
+Code availability. The PDF version embeds COMP6704_reproducibility.zip as a ﬁle attachment; the same
+archive is supplied separately. Download the original PDF and use a PDF reader’s attachment panel to extract it.
+The Chinese README provides environment, veriﬁcation, and reproduction commands. No online repository
+is required to access these materials.
+COMP6704 Individual Assignment, Fall 2026. Unconstrained Optimization.
+2 Literature review and connection to the course
+Classical foundation. Nocedal and Wright [ 1] organize smooth unconstrained methods around a
+search direction and an inexact line search. Their treatment connects ﬁrst-order stationarity, descent,
+quasi-Newton curvature, and local convergence. These concepts provide the classroom framework
+here: an update can decrease the objective while remaining slow, and a necessary ﬁrst-order condi-
+tion becomes sufﬁcient for global optimality only under additional structure such as convexity. Our
+nonconvex functions deliberately remove that sufﬁciency.
+Step selection and memory. Armijo’s early work [ 2] established a sufﬁcient-decrease approach to
+choosing step lengths. GD uses the current negative gradient, making its behavior easy to audit
+but sensitive to geometry. Nonlinear CG carries information from the preceding search direction.
+Gilbert and Nocedal [ 3] analyze globally convergent CG variants with appropriate safeguards and
+line searches on smooth nonconvex problems. Such results depend on the precise variant and as-
+sumptions; they do not imply that an arbitrary Polak–Ribiere implementation or a positive β alone
+ensures descent. The PR+ implementation used here therefore warrants source-level identiﬁcation.
+Quasi-Newton methods. Fletcher’s variable-metric development [ 4] is part of the foundation of
+BFGS. BFGS learns curvature from successive displacements and gradient differences instead of
+forming an analytic Hessian. This can improve local progress, at the cost of matrix storage and
+updates. Positive-deﬁnite inverse-Hessian approximations yield descent directions in exact arith-
+metic, but neither this property nor a Wolfe line search certiﬁes a global minimizer on a nonconvex
+objective. Implementation details and ﬁnite precision remain relevant when a solver stops near its
+tolerance.
+Recent theory. Jin, Jiang, and Mokhtari [ 5] obtain explicit non-asymptotic rates for BFGS with
+Armijo–Wolfe line search under strong convexity and smoothness; additional regularity supports
+stronger rate statements. Their analysis clariﬁes the gap between qualitative convergence and ﬁnite-
+iteration performance. Strong convexity is absent globally in our tests, so these rates provide context
+rather than a theorem for the recorded runs. Mannel [ 6] studies a modiﬁed, globalized L-BFGS and
+Barzilai–Borwein framework for nonconvex unconstrained optimization, using cautious updates and
+conditions supporting stationarity of cluster points. This is a different algorithm from ordinary
+full-memory SciPy BFGS. Its relevance is that nonconvex guarantees require carefully designed
+safeguards, rather than a change of terminology.
+Source / line of work Relevance to this study Boundary of the comparison
+Armijo [2]; textbook [1] Sufﬁcient decrease; descent-lemma
+reasoning
+Finite backtracking caps can terminate early
+Gilbert–Nocedal [3] Nonlinear CG safeguards and nonconvex
+analysis
+Identify the actual PR+ implementation
+Jin et al. [ 5], 2024 Finite-time BFGS analysis with inexact
+line search
+Strong-convexity rates do not apply globally
+here
+Mannel [6], 2025 Nonconvex globalization of
+limited-memory methods
+Modiﬁed L-BFGS is not the tested full
+BFGS
+Study position. This work does not attempt to improve those algorithms or test their theorems
+under violated assumptions. Its contribution is a controlled comparison that distinguishes gradient
+success, objective quality, and evaluation cost, with explanations tied to complete traces. V ersion-
+pinned SciPy documentation and source [ 7] determine the implemented CG and BFGS behavior.
+The benchmark choice sacriﬁces application realism for known optima and transparent geometry,
+which are valuable for diagnosing misleading success labels. The later discussion separates direct
+observations, plausible mechanisms, and limitations.
+2
+3 Formal problem and objective geometry
+We solve min f (x) over x ∈ Rd, with d in {2, 10, 20}; no feasibility constraints or projections are
+imposed. Write gk = ∇f (xk), use the Euclidean norm throughout, and denote the known global
+objective by f ⋆ = 0. The two benchmark models are
+fR(x) =
+d−1∑
+i=1
+[
+100(xi+1 − x2
+i )2 + (1 − xi)2] (1)
+fA(x) =
+d∑
+i=1
+[
+x2
+i + 20 sin2(πxi)
+] (2)
+The Rastrigin expression is algebraically equivalent to 10d + ∑
+i[x2
+i − 10 cos(2πxi)] [8]. The sine-
+squared form avoids cancellation between large constants near zero. Rosenbrock uses SciPy’s rosen
+and rosen_der; Rastrigin has the analytic derivative
+[∇fA(x)]i = 2xi + 20π sin(2πxi) (3)
+For Rosenbrock, each term indexed by i contributes −400xi(xi+1 − x2
+i ) + 2(xi − 1) to derivative
+component i and 200(xi+1 − x2
+i ) to component i+1. The implementation accumulates all adjacent
+contributions. Before solving, central differences at 12 nonstationary test points check both gradi-
+ents, using hi = 10 −6 max(1, |xi|) and componentwise absolute and relative tolerances 10−5. All
+12 checks pass; those checks are outside solver evaluation counts.
+Known optima and nonconvexity. Both models are sums of nonnegative terms. Rosenbrock reaches
+zero only at the all-ones vector for d ≥ 2; Rastrigin reaches zero only at the zero vector. In two-
+dimensional Rosenbrock, the Hessian at (0,1) is diag(-398,200), so the function is not convex. This
+point is not a saddle point: its gradient is (-2,200), which is nonzero. For Rastrigin the Hessian
+is diagonal with entries 2 + 40 π2 cos(2πxi); a coordinate equal to 1/2 yields negative curvature.
+Negative curvature at an arbitrary point establishes nonconvexity, not stationarity.
+The coupled Rosenbrock valley makes curvature vary strongly with direction. Rastrigin is separable,
+yet its oscillatory terms produce many local basins; coordinatewise independence therefore does not
+make a local descent method a global solver. Both functions are smooth and coercive, so bounded
+objective sublevels are compact. Their gradients have suitable local Lipschitz bounds on bounded
+regions, but Rosenbrock’s gradient is not globally Lipschitz over all of Rd. At the two-dimensional
+Rosenbrock global minimizer, the Hessian has eigenvalues approximately 0.39936 and 1001.60064,
+giving condition number about 2508. This local ill-conditioning is consistent with slow GD progress;
+it is not a rate estimate for the full nonlinear trajectory. These distinctions matter when stating
+descent guarantees.
+4 Algorithms and implementation
+4.1 Gradient descent with Armijo backtracking
+gk = ∇f (xk), x k+1 = xk − αkgk
+f (xk − αkgk) ≤ f (xk) − c1αk∥gk∥2
+2
+(4)
+GD is implemented directly. Every iteration starts again at α0 = 1, halves the trial step with τ =
+0.5, and accepts the ﬁrst point satisfying (4), with c1 = 10−4. At most 50 reductions follow the
+initial trial, and the minimum step is 10−12. A rejected trial never updates x. Nonﬁnite values, an
+unchanged ﬂoating-point point, and an exhausted line search receive explicit failure statuses. The
+accepted-update limit is 5000; all function calls at rejected trial points still count.
+3
+4.2 Safeguarded nonlinear conjugate gradient
+p0 = −g0, p k = −gk + βPR+
+k pk−1 (k ≥ 1)
+βPR+
+k = max
+{
+0, g⊤
+k (gk − gk−1)
+g⊤
+k−1gk−1
+}
+(5)
+CG uses scipy.optimize.minimize(method=’CG’) with analytic gradients. Equation (5) is the
+PR+ direction recurrence, initialized with p0 = −g0 [3, 7]. SciPy 1.13.1 adds a sufﬁcient-descent
+acceptance check for the proposed next direction: the inner product of the next direction and gradient
+must not exceed -0.01 times the squared gradient norm, unless the gradient target is already met. PR+
+truncation alone does not guarantee this property. This safeguard is not a ﬁxed periodic restart. Both
+SciPy methods use the strong-Wolfe conditions
+f (xk+1) ≤ f (xk) + c1αkg⊤
+k pk
+|g⊤
+k+1pk| ≤ c2|g⊤
+k pk|, 0 < c 1 < c 2 < 1
+(6)
+Here 0 < c 1 = 10 −4 < c 2 = 0 .4 < 1. The same constants reduce one source of variation between
+CG and BFGS, although their search directions and internal trial sequences still differ. Function and
+gradient counts consequently remain necessary measurements.
+4.3 Full-memory BFGS
+BFGS uses scipy.optimize.minimize(method=’BFGS’), pk = −Hkgk, and H0 = I. With
+displacement sk and gradient change yk as deﬁned below, the inverse-Hessian update is [ 1, 4]
+Hk+1 = (I − ρksky⊤
+k )Hk(I − ρkyks⊤
+k ) + ρksks⊤
+k
+sk = xk+1 − xk, y k = gk+1 − gk, ρ k = (y⊤
+k sk)−1 (7)
+4.4 What the theory does and does not imply
+For GD, assume f is bounded below by finf and its gradient is L-Lipschitz with one uniform constant
+L on all relevant trial segments. Coercivity bounds accepted iterates; bounded gradients there and
+trial steps no larger than one place these segments in a compact region. Smoothness then supplies
+such a uniform L. The descent lemma makes any α ≤ 2(1 − c1)/L sufﬁcient for (4). With ideal
+unlimited backtracking from one, an accepted α is at least the lower bound below. Summing (4)
+over K updates then gives
+αlow = min
+{
+1, 2τ (1 − c1)
+L
+}
+> 0
+min
+0≤k<K
+∥gk∥2
+2 ≤ f (x0) − finf
+c1αlowK
+(8)
+Thus ideal Armijo GD has a standard O(ϵ−2) accepted-update bound for ﬁnding an iterate with
+gradient norm at most ϵ under these assumptions. This is a stationarity result, not a global-optimality
+result. The actual ﬁnite iteration, trial, and minimum-step limits can stop a run before it reaches that
+target; the asymptotic statement does not override its recorded failure.
+For a descent direction pk and an accepted strong-Wolfe step, (6) gives the curvature inequality
+s⊤
+k yk ≥ αk(1 − c2)(−g⊤
+k pk) > 0 (9)
+In exact arithmetic, (7) therefore preserves positive deﬁniteness from H0=I, even when the true
+Hessian is indeﬁnite. This curvature property does not ensure global optimality or prevent ﬁnite-
+precision failure. The strong-convexity rates in [ 5] do not apply globally here; CG convergence
+likewise requires its line-search and regularity hypotheses.
+4
+5 Experimental protocol, costs, and auditing
+Component Fixed protocol
+Design 2 functions x 3 dimensions x 5 paired starts x 3 methods = 90 solves
+Initialization Seed 20261105; PCG64 with SeedSequence([seed, objective_index, d]); coordinates uniform
+on [-2,2] for Rosenbrock and [-3,3] for Rastrigin
+Stopping Euclidean gradient norm ≤ 10−6; at most 5000 accepted updates
+SciPy options CG/BFGS: c1=10−4, c2=0.4, norm=2, gtol=10−6, maxiter=5000. BFGS: H0 = I,
+xrtol=0; default c2=0.9 is overridden. No analytic Hessian or damping.
+Arithmetic / environment float64; Python 3.12.8, NumPy 1.26.4, SciPy 1.13.1; Windows 11; sequential CPU solves;
+BLAS/OpenMP thread variables set to 1
+Hardware record Intel64 Family 6 Model 191 Stepping 2; 24 logical CPUs reported; no GPU used
+Independent outcomes Native solver status; S: ﬁnite result and ∥∇f ∥2 ≤ 10−6; G: ﬁnite result and |f − f ⋆| ≤ 10−6
+The intervals above generate initial points only; they do not constrain subsequent iterates. Each
+function-dimension pair has its own random stream, and each of its ﬁve saved starts is shared across
+methods. This pairing controls starting difﬁculty without asserting that ﬁve points represent all
+possible initializations. The two tolerances deﬁne different questions. Native solver_success and
+S happen to agree for these 90 runs, but remain distinct ﬁelds; G is a known-objective target rather
+than a mathematical certiﬁcate of exact optimality.
+Evaluation accounting. A wrapper counts every actual raw objective and gradient call made by
+a solver, including rejected line-search trials and trials in a failed terminal search. Calls avoided
+by SciPy’s cache are not invented. The wrapper counts must equal SciPy’s returned nfev/njev.
+Callbacks only copy accepted coordinates and snapshot counters; they do not reevaluate f or g. Each
+trace contains an initial event with counters zero, one event per accepted update, and a terminal
+event. Initial plot diagnostics and every recorded objective/gradient norm are ﬁlled ofﬂine from
+raw functions, outside the counters and timer. Thus the initial point can appear at nfev=0 without
+making the solver’s own initial evaluation free.
+The study records 80,605 events: 80,425 accepted updates and 180 initial/terminal events. Solver
+time covers evaluations, updates, and event capture, excluding imports, ofﬂine diagnostics, ﬁle I/O,
+and plotting. The sum of measured solver times is 26.915 s, rather than total pipeline wall time.
+Timing is secondary because these small problems are sensitive to Python, callback, and scheduling
+overhead. Figures stop at each actual endpoint; no curve is extended after termination, and log-
+display ﬂoors never change raw values.
+Method Direction / update arithmetic Solver state
+GD O(d) per direction; line-search calls additional O(d)
+PR+ CG O(d) per direction; line-search calls additional O(d)
+BFGS O(d2) direction; standard low-rank update O(d2); tested SciPy dense-product
+update O(d3)*
+O(d2)
+Table 1. Algorithmic work excludes objective/gradient calls, each O(d) for these models. *SciPy 1.13.1 forms
+A1 @ H @ A2 using generic dense products [ 7]; O(d3) uses conventional dense arithmetic, not an empirical
+scaling ﬁt. Storing K d-dimensional trace points adds O(Kd) space for every method.
+Auditing checks the saved pairings, trace structure, monotone counters, GD sufﬁcient decrease, end-
+point values, native counts, and recorded source hashes. All 28 unit tests pass, and the independent
+full-study validator passes. Complete per-start outcomes, count ranges, terminal messages, and of-
+ﬂine Hessian diagnostics accompany the paper. All runs, including failed ones, enter the summaries.
+5
+6 Results: Rosenbrock
+d Method S/G Updates
+median
+nfev
+median [range]
+njev
+median [range]
+Final f
+median [range]
+2 GD 0/0 5000 49290
+[49090, 51127]
+5001
+[5001, 5001]
+4.64 × 10−6
+[3.35 × 10−6, 5.07 × 10−5]
+2 CG 5/5 23 56
+[32, 72]
+56
+[32, 72]
+2.49 × 10−16
+[4.24 × 10−20, 3.03 × 10−13]
+2 BFGS 5/5 25 48
+[20, 58]
+48
+[20, 58]
+1.33 × 10−17
+[8.99 × 10−21, 8.49 × 10−15]
+10 GD 0/0 5000 53100
+[53063, 53339]
+5001
+[5001, 5001]
+4.91 × 10−4
+[4.14 × 10−4, 4.99 × 10−4]
+10 CG 5/4 249 434
+[282, 553]
+434
+[282, 553]
+9.47 × 10−14
+[2.11 × 10−14, 3.99]
+10 BFGS 5/3 70 114
+[100, 146]
+114
+[100, 146]
+3.08 × 10−17
+[2.80 × 10−18, 3.99]
+20 GD 0/0 5000 53289
+[53071, 53376]
+5001
+[5001, 5001]
+0.00353
+[0.00339, 0.004]
+20 CG 5/5 444 709
+[482, 900]
+709
+[482, 900]
+1.10 × 10−13
+[5.87 × 10−16, 1.35 × 10−13]
+20 BFGS 5/4 110 175
+[166, 203]
+175
+[166, 203]
+3.72 × 10−16
+[4.74 × 10−18, 3.99]
+Table 2. Rosenbrock, ﬁve starts in every row. S and G are counts out of ﬁve, not a ratio. Ranges are minima
+and maxima; failed runs remain included. Complete update and time ranges are in grouped_results.csv.
+Scientiﬁc notation is rounded only for display.
+Figure 1. Gradient norm against cumulative function evaluations for all ﬁve starts in each dimension. Colors
+denote methods; circles meet S and crosses do not. The x-axis is symlog with a linear region at zero; each
+curve stops at termination. The horizontal dashed line is 10−6.
+Budget and convergence. CG and BFGS meet the gradient threshold in all 15 Rosenbrock runs each;
+GD meets it in none. Every GD run accepts all 5000 permitted updates, with no failed line search.
+The ﬁnal gradient medians are 5.31 × 10−3, 4.30 × 10−2, and 1.26 × 10−1 at d=2,10,20, well above
+tolerance. Accepted-step medians are 1/512, 1/1024, and 1/1024, while median trial counts per
+accepted step are 10, 11, and 11. Their large function counts reﬂect repeated trial rejection as well
+as slow progress in the valley. The geometry and reset-to-one policy offer a plausible explanation;
+this study has no ablation to isolate their causal contributions.
+6
+7 Results: Rastrigin
+d Method S/G Updates
+median
+nfev
+median [range]
+njev
+median [range]
+Final f
+median [range]
+2 GD 5/0 31 276
+[249, 313]
+32
+[29, 37]
+4.97
+[0.995, 12.9]
+2 CG 5/0 7 19
+[10, 24]
+19
+[10, 24]
+9.95
+[3.98, 16.9]
+2 BFGS 5/0 6 12
+[9, 16]
+12
+[9, 16]
+9.95
+[3.98, 16.9]
+10 GD 5/0 34 305
+[288, 312]
+35
+[33, 36]
+35.8
+[25.9, 37.8]
+10 CG 5/0 9 19
+[14, 24]
+19
+[14, 24]
+27.9
+[23.9, 37.8]
+10 BFGS 5/0 20 39
+[32, 43]
+39
+[32, 43]
+27.9
+[23.9, 37.8]
+20 GD 5/0 34 305
+[293, 312]
+35
+[34, 36]
+64.7
+[41.8, 126]
+20 CG 5/0 9 19
+[15, 22]
+19
+[15, 22]
+63.7
+[41.8, 69.6]
+20 BFGS 3/0 26 86
+[45, 117]
+86
+[45, 105]
+62.7
+[41.8, 68.7]
+Table 3. Rastrigin uses the same deﬁnitions and all-run convention as Table 2. In the ﬁnal row, nfev and
+njev have equal medians but different ranges because one terminal search adds unequal function and gradient
+counts.
+Stationarity and objective quality separate sharply. GD and CG each meet S in 15/15 runs; BFGS
+meets S in 13/15. None of the 45 runs meets G. Hence 43 successful gradient tests correspond
+to non-global endpoints, not solutions with objective near zero. Across each dimension, CG uses
+fewer function evaluations than GD: medians 19,19,19 versus 276,305,305. BFGS’s corresponding
+medians are 12,39,86. These measure the cost of each observed endpoint; the different objective
+values prevent interpreting them as times to the same solution.
+The paired ﬁnal objectives in Figure 2 show how rankings depend on the outcome. At d=2, GD
+obtains a lower f than both other methods on four of the ﬁve starts, despite taking more evaluations.
+On start 1 it returns f=0.994959 with 313 function evaluations, compared with CG’s 4.974790 using
+24 and BFGS’s 7.959662 using 10. All three pass S. Thus quicker local convergence can lead to
+a less favorable basin, and a single cost ranking would conceal that tradeoff. Raw Rastrigin objec-
+tives add contributions across coordinates; their increase across dimensions alone is not evidence of
+worsening per-coordinate quality.
+7.1 The two BFGS precision-loss terminations
+20D start Updates nfev / njev Final gradient norm Final f
+3 26 117 / 105 8.73821 × 10−6 41.78821486
+4 21 45 / 45 1.00023457 × 10−6 64.67220759
+Both retain SciPy status=2 and its precision-loss message. At start 3 the last accepted event has
+counts 59/59; the terminal event adds 58 function and 46 gradient evaluations without accepting a
+new point. This directly exposes unsuccessful terminal trial work that iteration counts omit. At start
+4 there are no extra terminal calls, and the last accepted objective change rounds to zero. Its ﬁnal
+gradient norm is only 0.02346% above the threshold, but it remains a failure under the ﬁxed rule.
+Relaxing the threshold after seeing the result would change the protocol.
+The common message does not uniquely identify an internal mechanism for each run. Failed line-
+search progress and ﬁnite-precision resolution are consistent with the saved evidence, but the traces
+do not expose every internal scalar. Neither case is attributed to a wrong gradient: the independent
+derivative checks pass, and the original analytic derivatives are retained. Both outcomes are included
+in the ﬁnal row of Table 3 and shown as crosses in Figure 2.
+7
+8 Paired outcomes and endpoint interpretation
+Figure 2. All Rastrigin starts. Top: ﬁnal raw f, with faint vertical segments connecting the range of three
+outcomes for each shared start. Bottom: gradient norm against cumulative nfev, with symlog x and log y.
+Colors denote methods; circles meet S and crosses do not. Compare objective quality within each dimension
+because f is additive. Curves end at their true termination, including unsuccessful runs.
+8.1 Non-global Rosenbrock endpoints
+d / start / method Final f Gradient norm Minimum Hessian eigenvalue
+10 / 4 / CG 3.9865791123 9.56589 × 10−7 0.501273
+10 / 4 / BFGS 3.9865791123 9.63817 × 10−7 0.501273
+10 / 5 / BFGS 3.9865791123 8.78814 × 10−8 0.501273
+20 / 1 / BFGS 3.9866238543 4.44622 × 10−7 0.498755
+Table 4. The four Rosenbrock endpoints meeting S but missing G. Hessian spectra are computed ofﬂine and
+excluded from solve time and evaluation counts.
+These four endpoints explain why 30 successful Rosenbrock gradient tests yield only 26 global-
+target hits. Positive numerical Hessian eigenvalues together with small gradients support the inter-
+pretation that the solvers ﬁnish near non-global local minima. At an approximate point, those quanti-
+ties are numerical evidence, not an exact proof of a stationary local minimizer. Several methods can
+therefore converge convincingly while legitimately differing from the known global optimum. The
+contrast with GD’s 15 budget-exhausted runs also separates convergence to a different basin from
+failure to reach stationarity within the budget.
+Evaluation cost at comparable quality. BFGS’s nfev medians rise from 48 to 114 to 175, while
+CG’s rise from 56 to 434 to 709. Their global-target counts differ, so these unconditional medians
+do not establish equal-quality speedups. Restricting to paired starts where both attain G leaves 5,
+3, and 4 pairs; the median per-pair nfev(CG)/nfev(BFGS) ratios are 1.24, 2.97, and 3.91. This
+selected-subset evaluation comparison favors BFGS, but is neither a wall-time ratio nor a prediction
+for starts where one misses G. CG attains G in 14/15 runs overall versus BFGS in 12/15.
+8
+9 Discussion, limitations, and reproducibility
+Interpretation of the three questions. First, a common gradient tolerance yields a transparent local
+convergence comparison: 73/90 runs pass, with failures concentrated in Rosenbrock GD and two
+20D Rastrigin BFGS runs. Second, function and gradient counts reveal costs hidden by accepted-
+update counts; the terminal 58/46 extra calls are a concrete example. BFGS uses fewer function
+calls on Rosenbrock’s matched-global subset, whereas CG uses fewer calls than GD to its observed
+Rastrigin stationary endpoints. Third, ﬁnal f and endpoint diagnostics show that local success and
+global quality are separate: 47 runs meet S while missing G. These observations connect descent
+and curvature concepts from the course to actual solver behavior.
+Limits of the evidence. The study includes only two synthetic functions, three dimensions up to
+20, and ﬁve ﬁxed starts per setting. Its observed fractions are not estimated population success
+probabilities. Dimensions and changing random starts vary together, so trends across dimensions
+are descriptive. The experiment neither establishes asymptotic scaling nor measures the practical
+memory limit of BFGS. A single implementation and one set of line-search constants also cannot
+isolate the effects of direction, step selection, initialization, tolerance, and numerical safeguards.
+Millisecond timings do not justify a universal fastest-method claim, and conditioning cost ratios on
+both methods attaining G creates an explicitly selected subset.
+Useful follow-up work would vary GD’s initial trial-step policy under the same starts, sweep the
+stopping tolerance and iteration budget, and compare damped or limited-memory quasi-Newton
+variants using a larger test collection. Multi-start global search would address basin selection but
+would answer a different question from this ﬁxed local-method comparison. A real-data smooth ob-
+jective would improve external relevance while usually removing access to a known global optimum.
+These are future experiments, not results claimed here.
+9.1 Reproducibility and access
+The PDF attachment and separate COMP6704_reproducibility.zip contain runnable Python
+modules, pinned numerical dependencies, the full 90-run CSV/JSON data, all saved starts and re-
+solved settings, tests, tabulated analyses, provenance, and this paper’s content and build scripts.
+Plotting and analysis read saved data without rerunning solvers; the README also gives a fresh
+full-study command with a new output directory. Existing results are protected from overwrite. The
+archive manifest hashes its members, and the ﬁnal delivery records checksums and veriﬁes extrac-
+tion of the embedded archive.
+The original metadata records source hashes and the actual SciPy source version. Later analysis
+and document modules have separate provenance, preserving the historical distinction between the
+solver implementation and subsequent interpretation. Public labels are recomputed from the saved
+endpoint rather than substituted for the native status. The validator independently checks 90 run
+ﬁles, their 80,605 trace events, pairing, counters, source integrity, and GD’s accepted steps. An
+additional clean-extraction rerun compares all 90 numerical outcomes with the delivered reference;
+elapsed times and timestamps are deliberately excluded from equality checks.
+10 Conclusion
+Under the ﬁxed protocol, convergence to a small-gradient point did not imply a small global-
+objective gap. Rosenbrock favored CG and BFGS over this GD conﬁguration within the iteration
+budget, but both sometimes reached non-global near-stationary points. On Rastrigin, all global tar-
+gets were missed despite 43/45 stationarity successes; GD occasionally obtained better objective
+values while using more evaluations. The two BFGS precision-loss terminations were retained, in-
+cluding one just above tolerance. These results support separate reporting of stationarity, objective
+quality, costs, and failure modes. Conclusions remain limited to the tested functions, starts, dimen-
+sions, and implementations.
+9
+References
+[1] J. Nocedal and S. J. Wright. Numerical Optimization, 2nd ed. Springer, 2006. DOI:
+10.1007/978-0-387-40065-5. https://link.springer.com/book/10.1007/978-0-387-40065-5
+[2] L. Armijo. Minimization of functions having Lipschitz continuous ﬁrst partial derivatives. Paciﬁc
+Journal of Mathematics, 16(1):1–3, 1966.
+https://msp.org/pjm/1966/16-1/pjm-v16-n1-p01-p.pdf
+[3] J. C. Gilbert and J. Nocedal. Global convergence properties of conjugate gradient methods for
+optimization. SIAM Journal on Optimization, 2(1):21–42, 1992. DOI: 10.1137/0802003.
+https://doi.org/10.1137/0802003
+[4] R. Fletcher. A new approach to variable metric algorithms. The Computer Journal, 13(3):317–322, 1970.
+DOI: 10.1093/comjnl/13.3.317. https://doi.org/10.1093/comjnl/13.3.317
+[5] Q. Jin, R. Jiang, and A. Mokhtari. Non-asymptotic global convergence analysis of BFGS with the
+Armijo-Wolfe line search. Advances in Neural Information Processing Systems 37:16810–16851, 2024.
+DOI: 10.52202/079017-0536. Author version: arXiv:2404.16731, revised January 8, 2025.
+https://arxiv.org/abs/2404.16731
+[6] F. Mannel. A globalization of L-BFGS and the Barzilai–Borwein method for nonconvex unconstrained
+optimization. Journal of Optimization Theory and Applications, 204, Article 47, 2025. DOI:
+10.1007/s10957-024-02565-5.
+https://link.springer.com/article/10.1007/s10957-024-02565-5
+[7] SciPy developers. SciPy 1.13.1: minimize-CG and minimize-BFGS reference documentation and
+optimization tutorial; scipy/optimize/_optimize.py, tag v1.13.1. V ersion-speciﬁc implementation and
+stopping/line-search options. Accessed November 5, 2026.
+https://github.com/scipy/scipy/blob/v1.13.1/scipy/optimize/_optimize.py
+[8] S. Surjanovic and D. Bingham. Virtual Library of Simulation Experiments: Test Functions and
+Datasets—Rastrigin Function. Simon Fraser University. Accessed November 5, 2026.
+https://www.sfu.ca/~ssurjano/rastr.html
+V ersion-speciﬁc option references supporting [7]:
+CG documentation:
+https://docs.scipy.org/doc/scipy-1.13.1/reference/optimize.minimize-cg.html
+BFGS documentation:
+https://docs.scipy.org/doc/scipy-1.13.1/reference/optimize.minimize-bfgs.html
+Reproducibility materials and commands are described in Section 9.1 and the Chinese README in the PDF
+attachment. The course page limit includes this reference list. The ofﬁcial NeurIPS 2025 style is used for the
+PDF, with a course-speciﬁc notice; Word is a same-content course adaptation.
+10

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-06T17:25:52.873823+08:00",
+  "timezone": "Asia/Shanghai",
+  "scope": "Read the full current English prose and Chinese README; suggest only small wording changes to S/G terminology and evaluation-cost claims. No source prose was edited.",
+  "source_content_sha256": "87d4f73821f8f9f325aa84c0f7202d2513f266e00808e0e1b05b1bea4a62f2ba",
+  "source_readme_sha256": "e0cafbb1a6797c7e195b374589ae031d9e94f9ff1b6c20ab584c21fce370e042",
+  "overall_assessment": "Existing evidence qualifiers and platform limitations are appropriate. No broad rewrite, new experiment, mathematical change, table change, reference change or numerical-ratio change is recommended.",
+  "recommendations": [
+    {
+      "priority": "recommended",
+      "page": 7,
+      "purpose": "Name the measured quantity and avoid interpreting nfev as elapsed time.",
+      "before": "These measure the cost of each observed endpoint; the different objective values prevent interpreting them as times to the same solution.",
+      "after": "These counts describe function evaluations to the observed endpoints; differing final objective values prevent an equal-quality cost comparison.",
+      "anchor_present_at_review": true
+    },
+    {
+      "priority": "recommended",
+      "page": 8,
+      "purpose": "Keep the exact ratios while stating the shared-initial-point pairing, both-G selection, dimensions and function-evaluation denominator.",
+      "before": "Restricting to paired starts where both attain G leaves 5, 3, and 4 pairs; the median per-pair nfev(CG)/nfev(BFGS) ratios are 1.24, 2.97, and 3.91.",
+      "after": "Among pairs sharing an initial point, both methods meet G in 5, 3, and 4 pairs for d=2,10,20; the corresponding median function-evaluation ratios nfev(CG)/nfev(BFGS) are 1.24, 2.97, and 3.91.",
+      "anchor_present_at_review": true
+    },
+    {
+      "priority": "optional_small_terminology_fix",
+      "page": 7,
+      "purpose": "Avoid confusing optimization stopping criteria with the separate finite-difference gradient checks.",
+      "before": "Hence 43 successful gradient tests correspond to non-global endpoints, not solutions with objective near zero.",
+      "after": "Hence 43 runs meet the gradient tolerance while missing the global-objective target.",
+      "anchor_present_at_review": true
+    },
+    {
+      "priority": "optional_small_terminology_fix",
+      "page": 8,
+      "purpose": "Use the same terminology for the Rosenbrock count.",
+      "before": "These four endpoints explain why 30 successful Rosenbrock gradient tests yield only 26 global-target hits.",
+      "after": "These four endpoints explain why 30 Rosenbrock runs meet the gradient tolerance but only 26 meet the global-objective target.",
+      "anchor_present_at_review": true
+    }
+  ],
+  "readme_optional_clarifications": [
+    {
+      "location": "Section 6, independent outcome definitions",
+      "suggested_zh": "正文中的 S 表示公共梯度阈值达标（stationary），G 表示已知全局目标差距阈值命中（global_hit）；两者与原始 solver_success 分别记录。"
+    },
+    {
+      "location": "Section 6, cost interpretation",
+      "suggested_zh": "文中 1.24、2.97、3.91 分别对应 d=2、10、20：在相同初始点且 CG 与 BFGS 均满足 G 的 5、3、4 组配对中，它们是 nfev(CG)/nfev(BFGS) 的中位数，仅用于函数评估成本比较；迭代数与墙钟时间须另行比较。"
+    }
+  ],
+  "constraints": {
+    "user_explicit_page7_replacement_takes_priority": true,
+    "math_tables_references_unchanged": true,
+    "source_edits_applied": false,
+    "experiments_run": false,
+    "tests_run": false,
+    "web_search_performed": false
+  }
+}

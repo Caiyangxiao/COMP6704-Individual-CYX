@@ -1,0 +1,132 @@
+{
+  "edited_at": "2026-11-06T17:28:59.122013+08:00",
+  "scope": "Limited prose edits only; no experiments or changes to data, equations, plots or references.",
+  "edits": [
+    {
+      "location": "Page 7, Rastrigin start 1",
+      "before": "All three pass S. Thus quicker local convergence can lead to a less favorable basin, and a single cost ranking would conceal that tradeoff.",
+      "after": "All three methods meet the gradient criterion. For this starting point, GD achieves the lowest final objective value but requires the most function evaluations.",
+      "occurrences": 1,
+      "reason": "Exact user replacement; remove the causal implication."
+    },
+    {
+      "location": "Page 7",
+      "before": "despite taking more evaluations.",
+      "after": "despite using more function evaluations.",
+      "occurrences": 1,
+      "reason": "Specify function evaluations."
+    },
+    {
+      "location": "Page 7",
+      "before": "These measure the cost of each observed endpoint; the different objective values prevent interpreting them as times to the same solution.",
+      "after": "These counts describe function evaluations to the observed endpoints; differing final objective values prevent an equal-quality cost comparison.",
+      "occurrences": 1,
+      "reason": "Do not interpret nfev as runtime."
+    },
+    {
+      "location": "Page 7",
+      "before": "Hence 43 successful gradient tests correspond to non-global endpoints, not solutions with objective near zero.",
+      "after": "Hence 43 runs meet the gradient criterion while missing the global-objective target.",
+      "occurrences": 1,
+      "reason": "Distinguish S from derivative checks."
+    },
+    {
+      "location": "Page 8",
+      "before": "These four endpoints explain why 30 successful Rosenbrock gradient tests yield only 26 global-target hits.",
+      "after": "These four endpoints explain why 30 Rosenbrock runs meet the gradient criterion but only 26 meet the global-objective target.",
+      "occurrences": 1,
+      "reason": "Unify S/G terminology."
+    },
+    {
+      "location": "Page 8, paired ratios",
+      "before": "p(b, \"Evaluation cost at comparable quality. BFGS's nfev medians rise from 48 to 114 to 175, while CG's rise from 56 to 434 to 709. Their global-target counts differ, so these unconditional medians do not establish equal-quality speedups. Restricting to paired starts where both attain G leaves 5, 3, and 4 pairs; the median per-pair nfev(CG)/nfev(BFGS) ratios are 1.24, 2.97, and 3.91. This selected-subset evaluation comparison favors BFGS, but is neither a wall-time ratio nor a prediction for starts where one misses G. CG attains G in 14/15 runs overall versus BFGS in 12/15.\")",
+      "after": "p(b, \"Evaluation cost at comparable quality. BFGS's nfev medians rise from 48 to 114 to 175, while CG's rise from 56 to 434 to 709. Different counts of runs meeting G prevent an equal-quality comparison of these unconditional medians. Restricting to shared initial points for which both methods meet G leaves 5, 3, and 4 pairs for d=2,10,20; the median ratios of function evaluations, nfev(CG)/nfev(BFGS), are 1.24, 2.97, and 3.91. These median ratios favor BFGS in function evaluations; they do not measure wall time or describe starts where either method misses G. CG meets G in 14/15 runs overall versus BFGS in 12/15.\")",
+      "occurrences": 1,
+      "reason": "Keep shared starts, both-G selection and function-evaluation ratios explicit."
+    },
+    {
+      "location": "Page 9",
+      "before": "BFGS uses fewer function calls on Rosenbrock's matched-global subset, whereas CG uses fewer calls than GD to its observed Rastrigin stationary endpoints.",
+      "after": "The median ratios favor BFGS in function evaluations on the selected Rosenbrock pairs where both methods meet G, whereas CG uses fewer function evaluations than GD to its observed Rastrigin stationary endpoints.",
+      "occurrences": 1,
+      "reason": "Qualify the summary by the measured median ratios."
+    },
+    {
+      "location": "Abstract",
+      "before": "26/90 meet the known global-objective tolerance",
+      "after": "26/90 meet the global-objective tolerance",
+      "occurrences": 1,
+      "reason": "Remove an awkward modifier."
+    },
+    {
+      "location": "Abstract",
+      "before": "matched global-target outcomes",
+      "after": "both methods meeting the global-objective target",
+      "occurrences": 1,
+      "reason": "Use the same G terminology."
+    },
+    {
+      "location": "Abstract and conclusion",
+      "before": "global target",
+      "after": "global-objective target",
+      "occurrences": 3,
+      "reason": "Unify G terminology; leave mathematical optimum statements unchanged."
+    },
+    {
+      "location": "Page 6",
+      "before": "meet the gradient threshold",
+      "after": "meet the gradient criterion",
+      "occurrences": 1,
+      "reason": "Unify S terminology."
+    },
+    {
+      "location": "Page 9",
+      "before": "73/90 runs pass the common gradient tolerance",
+      "after": "73/90 runs meet the common gradient criterion",
+      "occurrences": 1,
+      "reason": "Unify S terminology."
+    },
+    {
+      "location": "Conclusion",
+      "before": "43/45 stationarity successes",
+      "after": "43/45 runs meeting the gradient criterion",
+      "occurrences": 1,
+      "reason": "Separate S from native solver success."
+    },
+    {
+      "location": "Conclusion",
+      "before": "while using more evaluations.",
+      "after": "while using more function evaluations.",
+      "occurrences": 1,
+      "reason": "Specify function evaluations."
+    },
+    {
+      "location": "Abstract",
+      "before": "comparisons conditional on both methods meeting the global-objective target",
+      "after": "comparisons conditional on CG and BFGS both meeting the global-objective target",
+      "occurrences": 1,
+      "reason": "Make the reference to the two selected methods unambiguous in a three-method study."
+    },
+    {
+      "location": "Page 2, study position",
+      "before": "distinguishes gradient success, objective quality, and evaluation cost",
+      "after": "distinguishes satisfaction of the gradient criterion, objective quality, and evaluation cost",
+      "occurrences": 1,
+      "reason": "Avoid conflating the gradient criterion with native solver success."
+    },
+    {
+      "location": "Page 9, outcome interpretation",
+      "before": "local success and global quality are separate",
+      "after": "meeting the gradient criterion does not imply meeting the global-objective target",
+      "occurrences": 1,
+      "reason": "Avoid conflating the gradient criterion with native solver success."
+    },
+    {
+      "location": "Page 9, reproducibility",
+      "before": "this revision's unit tests and read-only data/source checks",
+      "after": "the archived unit tests and read-only data/source checks",
+      "occurrences": 1,
+      "reason": "Do not imply that historical tests were rerun during the wording-only polish."
+    }
+  ]
+}

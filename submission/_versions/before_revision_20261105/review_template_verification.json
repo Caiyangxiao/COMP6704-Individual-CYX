@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "page_count_including_references": 10,
+  "paper_size_points": [
+    612.0,
+    792.0
+  ],
+  "official_style_sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
+  "style_byte_identical_to_official_download": true,
+  "source_fingerprint": "86cfbd941b4af9cc3c6efdf22e35f92610301f272363b6739088e96b5461fa49",
+  "latex_sha256": "c2d90504d3ff2edd49c655f3fbcb65d92d453e1fa67b4ff12ab2147bc2106281",
+  "compiled_pdf_sha256": "4af8ed6e3a618aa39b5976ee86b6661656b61fe288fb732365b9a5dbbb7a4902",
+  "compiler": "Tectonic 0.15.0 (XeTeX)",
+  "compile_log_clean_of_overflow_unresolved_citations_and_duplicate_anchors": true,
+  "unchanged_raw_reference_files": 186,
+  "unchanged_original_solver_source_files": 7,
+  "prior_full_90_reproduction_proof_still_applies_to_unchanged_numerical_inputs": true,
+  "previous_archive_sha256": "ac23c99c114b037d2ab030f775acabf10c3dbfd9d20c2befd52f875711d8f26f"
+}

@@ -1,0 +1,46 @@
+{
+  "run_id": "rastrigin_d2_s05_bfgs",
+  "start_id": 5,
+  "problem": "rastrigin",
+  "dimension": 2,
+  "method": "BFGS",
+  "x0": [
+    1.212753388260123,
+    2.9380216147849048
+  ],
+  "x_final": [
+    0.9949586375973942,
+    2.9848557010607775
+  ],
+  "f_value": 9.949560298580302,
+  "gradient_norm": 2.3356124085010616e-08,
+  "objective_gap": 9.949560298580302,
+  "nit": 5,
+  "nfev": 9,
+  "njev": 9,
+  "reported_nfev": 9,
+  "reported_njev": 9,
+  "elapsed_seconds": 0.0018633999861776829,
+  "solver_success": true,
+  "solver_status": 0,
+  "solver_message": "Optimization terminated successfully.",
+  "stationary": true,
+  "global_hit": false,
+  "finite_result": true,
+  "nonfinite_evaluations": 0,
+  "counter_consistent": true,
+  "trace_consistent": true,
+  "trace_events": 7,
+  "warnings": [],
+  "config": {
+    "gtol": 1e-06,
+    "maxiter": 5000,
+    "c1": 0.0001,
+    "c2": 0.4,
+    "alpha0": 1.0,
+    "backtrack_factor": 0.5,
+    "max_backtracks": 50,
+    "min_alpha": 1e-12,
+    "global_tolerance": 1e-06
+  }
+}

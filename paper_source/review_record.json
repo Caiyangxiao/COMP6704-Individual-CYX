@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-05T21:14:13.799230+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "content_and_protocol_review_completed",
+  "scope_zh": "课程要求、评分映射、文献与数学、源码协议和现有数值证据；最终文件物理属性另行核验。",
+  "author": {
+    "name": "Yangxiao Cai",
+    "student_id": "26023041r",
+    "direction": "Unconstrained Optimization"
+  },
+  "assignment_source": {
+    "path": "/mnt/c/Users/25244/Downloads/COMP6704_Optimization_Individual_Assignment_2026_Fall.pdf",
+    "sha256": "6b49484955c1914ae256ea83843f8042a390c0354a06b63a3a8ea75d66ac0099",
+    "pages": 3,
+    "role": "user-provided assignment requirements, distinguished from later user requests"
+  },
+  "requirements": [
+    {
+      "id": "topic",
+      "pages": [
+        1
+      ],
+      "classification": "required",
+      "quote": "you are required to choose a topic that is different from your group project.",
+      "interpretation_zh": "研究须与优化相关且与小组不同；个人为非凸无约束数值研究，小组为Convex Optimization。仅“无约束”本身不排除凸性。",
+      "mapping": [
+        "Abstract",
+        "Section 1",
+        "Section 3"
+      ]
+    },
+    {
+      "id": "synthetic_scope",
+      "pages": [
+        1
+      ],
+      "classification": "permitted_scope",
+      "quote": "evaluating its performance on real or synthetic datasets.",
+      "interpretation_zh": "允许合成问题路线；CPU、小维标准测试函数不构成格式违规。",
+      "mapping": [
+        "Sections 3–8"
+      ]
+    },
+    {
+      "id": "report_content",
+      "pages": [
+        1,
+        2
+      ],
+      "classification": "required",
+      "quote": "Abstract, Introduction, Methodology, Experimental Results and Analysis, and Conclusions.",
+      "interpretation_zh": "包含动机、相关工作、正式建模、详细方法、实验分析和结论，并联系课程概念。",
+      "mapping": [
+        "Abstract",
+        "Sections 1–10",
+        "References"
+      ]
+    },
+    {
+      "id": "algorithm_comparison",
+      "pages": [
+        2
+      ],
+      "classification": "required",
+      "quote": "you are expected to implement diverse algorithms and compare their performance (convergence rate, stability, etc.).",
+      "interpretation_zh": "自写GD并明确调用SciPy的CG/BFGS，比较迭代、调用、初值敏感性、终止和质量。原文未要求全部算法从零手写。",
+      "mapping": [
+        "Sections 4–9",
+        "cpu_optimization/solvers.py"
+      ]
+    },
+    {
+      "id": "page_limit",
+      "pages": [
+        2
+      ],
+      "classification": "required",
+      "quote": "Page limit: up to 10 pages",
+      "interpretation_zh": "未说明参考文献豁免，故按整份PDF不超过10页处理；用户另要求Word也不超过10页。最终页数须在最终构建后实测。",
+      "mapping": [
+        "paper_source/build_final_report.py",
+        "paper_source/export_word_pdf.ps1"
+      ]
+    },
+    {
+      "id": "identity",
+      "pages": [
+        2
+      ],
+      "classification": "required",
+      "quote": "Please provide your Name and Student ID at the beginning of the report.",
+      "interpretation_zh": "开头显示Yangxiao Cai、26023041r，不照搬会议匿名投稿。",
+      "mapping": [
+        "Title/author block"
+      ]
+    },
+    {
+      "id": "format_size_name",
+      "pages": [
+        2
+      ],
+      "classification": "required",
+      "quote": "Please keep the size of the uploaded file less than 20MB.",
+      "interpretation_zh": "最终提交PDF，按姓名+学号命名；本交付使用Yangxiao Cai+26023041r.pdf。内嵌ZIP计入最终PDF大小，以小于20,000,000字节作保守检查。",
+      "mapping": [
+        "submission/Yangxiao Cai+26023041r.pdf",
+        "paper_source/build_final_report.py"
+      ]
+    },
+    {
+      "id": "template",
+      "pages": [
+        2
+      ],
+      "classification": "encouraged_in_course_required_by_latest_user_request",
+      "quote": "Your report is encouraged to use the NeurIPS 2025 template.",
+      "interpretation_zh": "课程为鼓励而非强制；用户后续明确要求更新模板。采用官方未改动的NeurIPS2025 LaTeX样式，仅在主文档覆盖课程页脚。Word为可编辑适配版，非官方Word模板。课程10页/20MB/姓名学号优先于会议投稿规则。",
+      "mapping": [
+        "paper_source/template/neurips_2025.sty",
+        "paper_source/template/report.tex",
+        "paper_source/build_final_report.py"
+      ]
+    },
+    {
+      "id": "code_access",
+      "pages": [
+        3
+      ],
+      "classification": "required",
+      "quote": "The code involved in the project should be included in the report through footnotes, end of abstract, etc.",
+      "interpretation_zh": "原文未规定必须公开仓库或网络URL。摘要附近说明PDF嵌入ZIP及独立同名ZIP，最终须实际验证附件可提取且字节一致；不虚构已存在的在线仓库。",
+      "mapping": [
+        "Abstract/code availability",
+        "Section 9.1",
+        "README.md"
+      ]
+    },
+    {
+      "id": "real_world_bonus",
+      "pages": [
+        2
+      ],
+      "classification": "encouraged_bonus",
+      "quote": "Comprehensive experimentation with large-scale real-world datasets is highly encouraged and will be considered a significant plus.",
+      "interpretation_zh": "本项目未实施大规模真实数据实验，不宣称取得该项加分。",
+      "mapping": [
+        "Section 9 limitations"
+      ]
+    },
+    {
+      "id": "submission",
+      "pages": [
+        2
+      ],
+      "classification": "submission_instruction",
+      "quote": "Submission Deadline: 11:59 PM, 29 November.",
+      "interpretation_zh": "结合Fall2026为2026-11-29 23:59，以Canvas显示时间为准；提交入口Assignments/Individual Assignment。每天迟交扣20/100分，允许多次提交，仅批改最新版本。本记录不代表已在Canvas提交。",
+      "mapping": [
+        "Final submission instructions"
+      ]
+    }
+  ],
+  "weighted_rubric": [
+    {
+      "metric": "Literature Survey",
+      "weight_percent": 20,
+      "original_page": 3,
+      "sections": [
+        "2",
+        "References"
+      ],
+      "evidence": [
+        "Classical Armijo/CG/BFGS foundations",
+        "Jin et al. 2024 and Mannel 2025 with explicit scope boundaries",
+        "Version-specific SciPy source and objective provenance"
+      ],
+      "interpretation_zh": "近期强凸BFGS结论不直接套用非凸测试；改进L-BFGS不是实测普通BFGS。"
+    },
+    {
+      "metric": "Problem Formulation",
+      "weight_percent": 20,
+      "original_page": 3,
+      "sections": [
+        "1",
+        "3"
+      ],
+      "evidence": [
+        "Motivation and research questions",
+        "Unconstrained variables and explicit objectives",
+        "Known optima, analytic derivatives, nonconvexity and local geometry"
+      ],
+      "interpretation_zh": "区分梯度驻点指标与全局目标差距；使用已知最优值不等同证明每次获得全局最优。"
+    },
+    {
+      "metric": "Proposed Algorithms",
+      "weight_percent": 20,
+      "original_page": 3,
+      "sections": [
+        "4",
+        "5 / Table 1"
+      ],
+      "evidence": [
+        "Custom Armijo GD",
+        "Documented safeguarded SciPy PR+ and full-memory BFGS",
+        "Native equations, theory assumptions, state/update costs"
+      ],
+      "interpretation_zh": "区分标准高效BFGS的O(d²)更新与实际SciPy1.13.1通用稠密乘法成本；不宣称新算法。"
+    },
+    {
+      "metric": "Experimental Analysis",
+      "weight_percent": 30,
+      "original_page": 3,
+      "sections": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "evidence": [
+        "90 solves and five paired starts",
+        "Convergence/cost/quality figures and all-run ranges",
+        "Failure diagnostics, endpoint Hessians and conditional paired comparisons"
+      ],
+      "interpretation_zh": "保留全部失败；不以不同终点质量的成本比声称同等质量加速；不以五起点比例估计总体成功率。"
+    },
+    {
+      "metric": "Code Readability and Reproducibility",
+      "weight_percent": 10,
+      "original_page": 3,
+      "sections": [
+        "Abstract/code availability",
+        "9.1"
+      ],
+      "evidence": [
+        "Chinese README, fixed dependencies and configurations",
+        "28 test definitions, raw runs/traces, validation scripts",
+        "Separate source/analysis provenance and extractable ZIP delivery"
+      ],
+      "interpretation_zh": "原结果核验、独立数值复查、历史90次重跑及最终附件校验分别记录，避免混为同一证据。"
+    }
+  ],
+  "weight_sum_percent": 100,
+  "corrections": [
+    {
+      "id": "intro_citations",
+      "description_zh": "测试函数与实现出处由[1,8]纠正为[7,8]，分别对应SciPy和Rastrigin来源。",
+      "evidence": [
+        "paper_source/content.json / Section 1"
+      ]
+    },
+    {
+      "id": "jin_reference",
+      "description_zh": "Jin等2024补齐卷37、页16810–16851、DOI 10.52202/079017-0536及arXiv修订日期2025-01-08。",
+      "evidence": [
+        "paper_source/content.json / Reference 5"
+      ]
+    },
+    {
+      "id": "gd_uniform_smoothness",
+      "description_zh": "补充接受点子水平集、梯度有界及试探步不超过1导出相关线段紧性，从而得到统一Lipschitz常数L；保留理想无限回溯与实际有限预算的区别。",
+      "evidence": [
+        "Section 4.4",
+        "paper_source/equations.json / gd_bound"
+      ]
+    },
+    {
+      "id": "rosenbrock_geometry",
+      "description_zh": "补充二维最优点Hessian谱约0.39936、1001.60064，条件数约2508；明确只是局部几何解释，不冒充全程收敛率。",
+      "evidence": [
+        "Section 3",
+        "audits/final_review_20261105/numerical_claims_audit.json / geometry_diagnostics"
+      ]
+    },
+    {
+      "id": "official_template",
+      "description_zh": "官方样式文件原样保留，主TeX使用preprint,nonatbib，仅将会议页脚替换为课程信息；公式使用原生TeX。Word按版式适配，不称官方Word模板。",
+      "style_sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
+      "official_style_modified": false,
+      "evidence": [
+        "paper_source/template/template_provenance.json",
+        "paper_source/template/report.tex"
+      ]
+    },
+    {
+      "id": "figure_readability",
+      "description_zh": "主图字号基准提升为18pt，按396pt版心缩放后的基准标签约8.96pt；此值不是所有局部注释的最小字号，最终显示仍需目视检查。",
+      "base_font_points": 18,
+      "intended_width_points": 396,
+      "approx_effective_base_font_points": 8.96,
+      "all_text_minimum_claimed": false,
+      "evidence": [
+        "cpu_optimization/paper_figures.py",
+        "results/full_study/analysis/paper_figures/paper_plot_metadata.json"
+      ]
+    },
+    {
+      "id": "page_and_preview_controls",
+      "description_zh": "页数检查使用1至10页而非强制等于10页；预览输出分离，防止无附件预览覆盖正式文件；最终Word原生分页/PDF大小/附件须由交付流程核验。",
+      "evidence": [
+        "paper_source/build_final_report.py",
+        "paper_source/export_word_pdf.ps1"
+      ]
+    }
+  ],
+  "theory_source_review": {
+    "status": "reviewed",
+    "checks_zh": [
+      "Armijo下降、统一步长下界与驻点复杂度假设准确；有限预算不保证达标。",
+      "PR+截断不独自保证充分下降；SciPy的sigma=0.01接受检查与源码一致。",
+      "strong-Wolfe加下降方向给出sTy>0；不构成非凸全局最优保证。",
+      "Rosenbrock在(0,1)的负曲率证明非凸，但该点非驻点；Rastrigin Hessian公式正确。",
+      "普通BFGS、改进L-BFGS及强凸理论的适用边界明确。"
+    ],
+    "implementation": "cpu_optimization/solvers.py",
+    "version": "SciPy 1.13.1"
+  },
+  "numerical_evidence": {
+    "raw_results_unchanged": true,
+    "raw_run_and_trace_files_rehashed": 180,
+    "raw_file_hash_mismatches": 0,
+    "original_recorded_source_hashes_match": {
+      "cpu_optimization/__init__.py": true,
+      "cpu_optimization/experiment.py": true,
+      "cpu_optimization/objectives.py": true,
+      "cpu_optimization/plotting.py": true,
+      "cpu_optimization/solvers.py": true,
+      "run_experiments.py": true,
+      "plot_results.py": true
+    },
+    "independent_claim_audit": {
+      "path": "audits/final_review_20261105/numerical_claims_audit.json",
+      "sha256": "9a89b3ca0fc6db9b3545bede1ae993a49d822fa3eaf236e4af9ad33ec77c5389",
+      "status": "passed",
+      "checks_total": 782401,
+      "failed_checks": 0,
+      "issues": [],
+      "solver_invoked": false
+    },
+    "study_validator": {
+      "path": "results/full_study/analysis/validation.json",
+      "assertions_total": 708170,
+      "passed": true,
+      "errors": [],
+      "note_zh": "这708170项与另一独立复查的782401项为不同审计，不能混用。"
+    },
+    "aggregate": {
+      "runs": 90,
+      "stationary": 73,
+      "global_hit": 26,
+      "stationary_not_global": 47,
+      "neither": 17,
+      "accepted_updates": 80425,
+      "trace_events": 80605,
+      "initial_terminal_events": 180,
+      "solver_elapsed_seconds": 26.91490129986778,
+      "finite_results": 90,
+      "native_success_agrees_with_public_stationary": true
+    },
+    "historical_clean_reproduction": {
+      "path": "submission/reproduction_verification.json",
+      "status": "passed",
+      "matched_runs": 90,
+      "matched_trace_rows": 80605,
+      "difference_count": 0,
+      "preservation_reason_zh": "数值源码及原始90次数据未改变，原精确重跑证据保留；不将其误称为本轮新PDF/ZIP的物理交付核验。"
+    },
+    "tests": {
+      "definitions": 28,
+      "previous_passed_count": 28,
+      "latest_rerun_pass_not_asserted_here": true,
+      "note_zh": "本轮测试由最终交付流程再次执行，结果以其运行日志及最终核验记录为准。"
+    }
+  },
+  "remaining_limits_zh": [
+    "仅两个合成函数，维度至多20，每设置五个固定初值；不代表真实应用或全部初值。",
+    "不提出或宣称新的优化算法；贡献为受控、可解释、可复现的比较。",
+    "未实施大规模真实数据实验，不宣称该项加分。",
+    "局部数值Hessian与小梯度支持近局部极小解释，不构成精确数学证明。",
+    "计时为小问题上的辅助指标；配对成本比需结合终点质量与选定子集解释。",
+    "课程评分由教师决定，本复核不保证任何分数。"
+  ],
+  "final_delivery_constraints": {
+    "total_pages_max_including_references": 10,
+    "pdf_bytes_must_be_less_than": 20000000,
+    "pdf_filename": "Yangxiao Cai+26023041r.pdf",
+    "word_filename": "Yangxiao Cai+26023041r.docx",
+    "actual_pdf_bytes": null,
+    "actual_final_page_count": null,
+    "asserted_by_this_content_review": false,
+    "physical_checks_zh": "最终PDF大小/页数、Word原生分页与附件字节一致性，以最后生成的交付核验记录为准。"
+  },
+  "source_snapshot": {
+    "paper_source/content.json": "8028ad3feb09cdff8b69044922260db29ac776545342366f8ab9246f8dc19dbe",
+    "paper_source/build_final_report.py": "4fea43a0eabcd8d318ce3f816ac96f2281f97fbdd3595013149b5c4b12efc61c",
+    "paper_source/equations.json": "72b461aadda8819655da7ef95ab44c143542f1a78f0884f5a8a6231305787c25"
+  },
+  "external_template_reference": {
+    "official_style_archive": "https://media.neurips.cc/Conferences/NeurIPS2025/Styles.zip",
+    "official_word_template_discontinued": "https://neurips.cc/Conferences/2025/PaperInformation/NeurIPS-FAQ"
+  }
+}

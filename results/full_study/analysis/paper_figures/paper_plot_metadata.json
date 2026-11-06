@@ -1,0 +1,699 @@
+{
+  "generated_at_utc": "2026-11-05T13:01:58.915782+00:00",
+  "direction": "Unconstrained Optimization",
+  "versions": {
+    "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+    "numpy": "1.26.4",
+    "matplotlib": "3.10.0",
+    "solver_scipy": "1.13.1"
+  },
+  "source_sha256": {
+    "summary.csv": "c50d4efacbd7851ba42aac512fd212b0f5e1197e4d9c28a06a43919a3d7abc6c",
+    "config_resolved.json": "e26acdad43528a0f59ccf87dd7aceb291872cbd73ea3157f9b84124f3b80ff1c",
+    "metadata.json": "a12f287bd5f87093ccdf0f03ea33a54e512c5662f08cf89bf73e7e2e9c52b725",
+    "code/cpu_optimization/paper_figures.py": "6c8b00e6201cbc3704997d94474f5c257bb04d50431baf4520ee8a5d1a3d682b",
+    "code/make_paper_figures.py": "92c68e0d3a94b8616a42cfbaafc0df15d8a3f4875bf0775aed6da0590b7a19c0",
+    "traces/rosenbrock_d2_s01_gd.csv": "9b7fc1aee9fd7512ab2a473b0fe3c58862a59686673e5a6ffc198368b500c85e",
+    "traces/rosenbrock_d2_s01_cg.csv": "fefa2bf18be8ad239a7572af8b1488525e77dabdec49816d3b609f096ecfd041",
+    "traces/rosenbrock_d2_s01_bfgs.csv": "574f233118e6ff75f077ddd6a3cbdb488398b25f9bc172f64cbd83829c658196",
+    "traces/rosenbrock_d2_s02_gd.csv": "878dbf3dd1436c52cf4aeb2d9d2d529e1be9016b6fdc2e094c03271281640be5",
+    "traces/rosenbrock_d2_s02_cg.csv": "8af7abb8a55b92f3dd35e96f2fcb4c689b5bf7399b77914c928985ced4b823ab",
+    "traces/rosenbrock_d2_s02_bfgs.csv": "b9ff5d2719347dd80346a681d4c928248fde99f116f5c50f7ae8120b83286802",
+    "traces/rosenbrock_d2_s03_gd.csv": "cb5d764ed233411bd8223ef39fe3a3bff1bd250ec5928061157d23498a3a4a44",
+    "traces/rosenbrock_d2_s03_cg.csv": "2a6c0b1a256c296a37ffca7342a1b3317a9ed3957c402a72e9778b7666045ed6",
+    "traces/rosenbrock_d2_s03_bfgs.csv": "3e8d1f1fc5c0e1f62d05fff758e27e14bc9cee2bdefbde713620477832c73db7",
+    "traces/rosenbrock_d2_s04_gd.csv": "8d4b6c0d02635d4c9b3e3b60e41f892a7f7cf90f00c7294c65db404f02a65e40",
+    "traces/rosenbrock_d2_s04_cg.csv": "36d0ba7e810129a1bcdb7b3c74bc840af35759607e00ddebb8214daa6a6a76f4",
+    "traces/rosenbrock_d2_s04_bfgs.csv": "1a3531dd3df7f3188389b2b31dcbaa0e2a4faf26b9226a6e4d7b1ad9a10681a8",
+    "traces/rosenbrock_d2_s05_gd.csv": "4efa553b12812618162b965ff0dbcb7c019685f66b4cf660a89e12be75c7a438",
+    "traces/rosenbrock_d2_s05_cg.csv": "3b5e59c9c5ca86b0111e24b4fd1339c5a334e4c34bf93249ecfe0f399b83bf12",
+    "traces/rosenbrock_d2_s05_bfgs.csv": "18367a6fb86df9afca303a3005eef22a589e25b963d37fe35a2b948640418424",
+    "traces/rosenbrock_d10_s01_gd.csv": "f869f1c2ef5c69ca88df8ebcb5c097caeb0dd7ff0d94b41d537ec8c0a6193ef3",
+    "traces/rosenbrock_d10_s01_cg.csv": "1ebdefce255f99abddca8499cc5372f078617cdc2a4c9fbbf3fae34f117f0e39",
+    "traces/rosenbrock_d10_s01_bfgs.csv": "d5c09454cd96fe8682e902425f63f58d7e75168bf2d4838bc9afa506cedb1c41",
+    "traces/rosenbrock_d10_s02_gd.csv": "4f83f1ef1c922b7f5a42d7738d6a559f9a3c18571584ae2a38e15f1be77682ad",
+    "traces/rosenbrock_d10_s02_cg.csv": "0c028be1bb6f90e5aeaf237cbe889700bf2db98b38c9dfb045cdede6e4a6197b",
+    "traces/rosenbrock_d10_s02_bfgs.csv": "f4524656daff8b41d8f6f191feba9f7b106ef0ed6a4de3b4c8d658b4a3e6b138",
+    "traces/rosenbrock_d10_s03_gd.csv": "0b5797b72111bea6db8cb5089d0b44ee9491862185fb4dc420fabc5a289e8409",
+    "traces/rosenbrock_d10_s03_cg.csv": "8f1ce4303638bb87b7ace845ef5a5d7611d99f9abead708396f0eeef77624bac",
+    "traces/rosenbrock_d10_s03_bfgs.csv": "558592bb149c2008ff7ee78803147d0f637d5673ba2d8565a60ba59dd037df80",
+    "traces/rosenbrock_d10_s04_gd.csv": "f574be25fc8188ffebde5cb4e8aa0ef8c2b655c338a8d034e5b59566672debfc",
+    "traces/rosenbrock_d10_s04_cg.csv": "e1cf97d7c998661688d884be3e9d23eb6da49607236ad9bdb47ef38ff771e946",
+    "traces/rosenbrock_d10_s04_bfgs.csv": "9e5743d20e0a47b36f370bd883056eafd63331b54318ca57cf4a1aca1eb51278",
+    "traces/rosenbrock_d10_s05_gd.csv": "fc0efc1197f5162e77a59343d0ce4b7431589190eface4d7e6143a0630c6ffd2",
+    "traces/rosenbrock_d10_s05_cg.csv": "e663b2f959488c23cec60f7d81562eed80cac4e3e517c91583d3fcedc9cdd5f9",
+    "traces/rosenbrock_d10_s05_bfgs.csv": "48e63b6d08eb89f7d12291cc8b04d00fc39779e93e7ca4974173037c6876583f",
+    "traces/rosenbrock_d20_s01_gd.csv": "d61e974ff997e7a0c921245d5015e1d725b73419c71dd700508ab79c034fabfa",
+    "traces/rosenbrock_d20_s01_cg.csv": "e194453af49e08550d8f427d012e941f23e1bf8365c7ee9a003f2007f8f05d02",
+    "traces/rosenbrock_d20_s01_bfgs.csv": "5f3a91ae12e283e219b8d88d13b40edb9a9c1e330c3f601fb874de761f95dd83",
+    "traces/rosenbrock_d20_s02_gd.csv": "0cea3bacd17162875394794aac291fd53e4537f0e7a2e9f87b6c5a196071c428",
+    "traces/rosenbrock_d20_s02_cg.csv": "c7d6165bafb46c66f77b1c432355831352f9119fdd36463cc04015852aae8fa2",
+    "traces/rosenbrock_d20_s02_bfgs.csv": "6502808bc2b3b63b543d272211a34e53e752fe08475085dbc39365fd3432d64e",
+    "traces/rosenbrock_d20_s03_gd.csv": "3dca308519b235a9f5599b2dd0cc0ab1f3382fb569cf2b9efd5b3c779f98fbef",
+    "traces/rosenbrock_d20_s03_cg.csv": "f34738ed276f6b118e2409115d6ce881de0ff23ca857305ff85132651da428bf",
+    "traces/rosenbrock_d20_s03_bfgs.csv": "1ce645f41a5e0e583702b93354896b9880ab85429537a54b4ea7465618b37ac5",
+    "traces/rosenbrock_d20_s04_gd.csv": "6ca6cf9a58b74f39598507c95971cee7575d0ecde014bc6cf3a0a1a6a5ab9741",
+    "traces/rosenbrock_d20_s04_cg.csv": "e9a01ebb2c4511f30be2c70b167ff1113ef187604c56658cc062fca47748bdcd",
+    "traces/rosenbrock_d20_s04_bfgs.csv": "c0d06e395ae6e3392f5c8f8e5ef58318ada944b2bb39b20f1688e245ebbcd0f1",
+    "traces/rosenbrock_d20_s05_gd.csv": "37f06bd9d9cc7491d275c7a6d84329ac3e55bdb28dca6373ff0a64bd144bc79f",
+    "traces/rosenbrock_d20_s05_cg.csv": "7429b7a23676cf474c9283e731a1678f100d9644c4a04ff23d4b1c7a2ffba864",
+    "traces/rosenbrock_d20_s05_bfgs.csv": "58dd8f583ca21674243df0a0368389e25875197b7fff8bc30566a8ca77952808",
+    "traces/rastrigin_d2_s01_gd.csv": "618f2e6bedcc2b34765ed08d721613fe417acf7abbb47a56981b48c5c40397b4",
+    "traces/rastrigin_d2_s01_cg.csv": "d522ef1b4358b092415442d214b61ff8746861468acfe04169b53b417ddc24e4",
+    "traces/rastrigin_d2_s01_bfgs.csv": "05d96a2aca710ff3145419b93486777cbb9b6ce2d4fcfa3c8463033be87dce23",
+    "traces/rastrigin_d2_s02_gd.csv": "39a9bcca9f76746406af86ae2986719a85e7519d08acbc153c97b3f15e080e71",
+    "traces/rastrigin_d2_s02_cg.csv": "23ab6694650ab323e13e626bea0752f90243fd080f479b6201475fc94aeee26d",
+    "traces/rastrigin_d2_s02_bfgs.csv": "c4fa4f68c8e68f61a5337f4880d365f431bb1b4910c2c5e764f040aae982357f",
+    "traces/rastrigin_d2_s03_gd.csv": "b3d5abd4c7e3f450991688f8b364d89d1ad6a8d308dc7f171110b08e21a5aff1",
+    "traces/rastrigin_d2_s03_cg.csv": "ff6cd5350405b53b2222175783f7fbc81213c758410678e7b785053e6d5a40c3",
+    "traces/rastrigin_d2_s03_bfgs.csv": "a363b88f0370a97e2c81682accd9e768666e9172fe80d60fd073f986a39a28f4",
+    "traces/rastrigin_d2_s04_gd.csv": "b384b21af89a978593d66f8d623ed1d338f55b962de9df57f71af9bfe0749505",
+    "traces/rastrigin_d2_s04_cg.csv": "a1278939a77304329aa77391dd98baebafbb9ae96cffadae35a302927575f065",
+    "traces/rastrigin_d2_s04_bfgs.csv": "828c62ea566f2715ab533270628ac6544bd0009091254de67fab03bf6f1fa5df",
+    "traces/rastrigin_d2_s05_gd.csv": "cf873bd7096c86c317a68d447c4d443655f4094dfe7554b984fa446b371c1026",
+    "traces/rastrigin_d2_s05_cg.csv": "d4d5f0be423602150639e7bbb146982b80f66f783a7d8707b6c9fd2f7884d753",
+    "traces/rastrigin_d2_s05_bfgs.csv": "1d26f097eea1e3cd97ba91b6f592342cb0500d5c45ba91aa99e9f8b9f24becff",
+    "traces/rastrigin_d10_s01_gd.csv": "f609c33a8e575e7054286872ea1d32da42b5cf6fb42e5617cae26a6c3543bb68",
+    "traces/rastrigin_d10_s01_cg.csv": "4030fc68bb749f76f60017d2459ccdf18efc33fbf9137a966d30ec1e01900b0e",
+    "traces/rastrigin_d10_s01_bfgs.csv": "629cacee3cd23dd7a09fcb36fdab8f139cb3db11906693ea3a44e815f98638ca",
+    "traces/rastrigin_d10_s02_gd.csv": "b8ee45a492d15df8583cec99ad0a0fef9a5e49e3e5ceb4251ce01100210b3ed0",
+    "traces/rastrigin_d10_s02_cg.csv": "8bcf3b7c133b2b3ca889ce31cc340916bc80c2f2c2be87a8527dacd5dc72f2fc",
+    "traces/rastrigin_d10_s02_bfgs.csv": "f55b5d477c17162d279860de7751ea35f70abaf8e2b5da3f6cd4ff07a80ec359",
+    "traces/rastrigin_d10_s03_gd.csv": "07828cca20a800edb28f9b27ce7860d7cecd66c4f149d81d1d1cbf6fac9b85a4",
+    "traces/rastrigin_d10_s03_cg.csv": "3ce3953394477d897704b15f2e3135f351f987e7af18fc1eeeeabcd2942a04b1",
+    "traces/rastrigin_d10_s03_bfgs.csv": "753834a48cca08a71d0b0ed9ee6086319e5c028cc0a40dc0fc32016361e60515",
+    "traces/rastrigin_d10_s04_gd.csv": "a755941048c5e4eead6756d5f4cd5b795571f6e18a6aa6b3a47b77a0261b5aa5",
+    "traces/rastrigin_d10_s04_cg.csv": "1648b438f396eea8cd05a9d29a2a157eeaf502faf62531cc4b18ba4e5c2e6f2d",
+    "traces/rastrigin_d10_s04_bfgs.csv": "df926068d8c32ad775e3aecb97275d218df25d16dd4b8d2b41709e2706d08b46",
+    "traces/rastrigin_d10_s05_gd.csv": "bc2fc06119f69c6638a126d346b66fad197f0b2cf217dd4413fbdcb4827f35ef",
+    "traces/rastrigin_d10_s05_cg.csv": "cd2235d946740f8562b6323e58a7fdd1ae081b921f71501d4caba2efd12d03e7",
+    "traces/rastrigin_d10_s05_bfgs.csv": "1f16f4c6c8c11522f4761eb4cd74ec235fc025a3208c276b2afbcf1a796f0b1d",
+    "traces/rastrigin_d20_s01_gd.csv": "a8bdaefbba104557c3b4b54a4ca98db9988c1f0dacddf2eb74b341520937916b",
+    "traces/rastrigin_d20_s01_cg.csv": "c7b138aafcdf5a380cbd9ab69264da7a11030631c339ffdf2c1ecf0bfd511f55",
+    "traces/rastrigin_d20_s01_bfgs.csv": "4f5085363cf7000f9a40b76e113e1c26036b5dc90e07b3dbf031378af58dba1c",
+    "traces/rastrigin_d20_s02_gd.csv": "5c0563ff756b710f946d70b0b2926fa8f38747906b0d6e00721d0666588c3372",
+    "traces/rastrigin_d20_s02_cg.csv": "e90a4b2adaa9f974e19ae3e32075604c994596e010c4aee240880fa3b1a33542",
+    "traces/rastrigin_d20_s02_bfgs.csv": "8d2bf49e0bf3c8ed4f895fbdd5323a54f41bb68c7ab46114a5ec41468057b924",
+    "traces/rastrigin_d20_s03_gd.csv": "e6cc0a93f9e66b565bb33ba1b256eff29d34d25ced44220fa9cde1486486c93c",
+    "traces/rastrigin_d20_s03_cg.csv": "11d885ba560756aac0e874b81b92b9c9c72adcf29f6434cd191365829014583e",
+    "traces/rastrigin_d20_s03_bfgs.csv": "9bc17c80314ab46dc7106a931059f5c5269695059c334be0d2b0f7d7b7645080",
+    "traces/rastrigin_d20_s04_gd.csv": "441b054a324cbdd49d4ba4904b5a596481e6803d1bcf3599c54424236e184a01",
+    "traces/rastrigin_d20_s04_cg.csv": "c944e87d15087728e154c97006df4920769f80a2d22048446c0a267afe16427f",
+    "traces/rastrigin_d20_s04_bfgs.csv": "4927fa741cec7ce71f0150cde3ca22e708f16c61b5a44bb9a5fdcc0bc6e2ef36",
+    "traces/rastrigin_d20_s05_gd.csv": "23aebfad556057f8a5f55b356431a8065583711b8e26bfc8fc6985a93ed5118d",
+    "traces/rastrigin_d20_s05_cg.csv": "16278dfb114a4204599ea23d68edc3a2023fe92013b61d1baa00ac8c43d53066",
+    "traces/rastrigin_d20_s05_bfgs.csv": "61aa4e85b4782631e12754ba19a0b16eaa1d79c868fee5d0196217e7c8cc57d0"
+  },
+  "runs_included": 90,
+  "display_floor": 1e-16,
+  "base_font_size": 18,
+  "intended_print_width_points": 396,
+  "intended_max_height_points": {
+    "rosenbrock": 150,
+    "rastrigin": 250
+  },
+  "xscale": "symlog for nfev, linthresh=1, retaining initial zero",
+  "carry_forward": false,
+  "unsuccessful_runs_retained": true,
+  "figures": {
+    "rosenbrock": {
+      "problem": "rosenbrock",
+      "panels": {
+        "gradient_d2": {
+          "xscale": "symlog",
+          "yscale": "log",
+          "linthresh": 1,
+          "run_ids": [
+            "rosenbrock_d2_s01_gd",
+            "rosenbrock_d2_s01_cg",
+            "rosenbrock_d2_s01_bfgs",
+            "rosenbrock_d2_s02_gd",
+            "rosenbrock_d2_s02_cg",
+            "rosenbrock_d2_s02_bfgs",
+            "rosenbrock_d2_s03_gd",
+            "rosenbrock_d2_s03_cg",
+            "rosenbrock_d2_s03_bfgs",
+            "rosenbrock_d2_s04_gd",
+            "rosenbrock_d2_s04_cg",
+            "rosenbrock_d2_s04_bfgs",
+            "rosenbrock_d2_s05_gd",
+            "rosenbrock_d2_s05_cg",
+            "rosenbrock_d2_s05_bfgs"
+          ],
+          "start_ids": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gradient_tolerance": 1e-06
+        },
+        "gradient_d10": {
+          "xscale": "symlog",
+          "yscale": "log",
+          "linthresh": 1,
+          "run_ids": [
+            "rosenbrock_d10_s01_gd",
+            "rosenbrock_d10_s01_cg",
+            "rosenbrock_d10_s01_bfgs",
+            "rosenbrock_d10_s02_gd",
+            "rosenbrock_d10_s02_cg",
+            "rosenbrock_d10_s02_bfgs",
+            "rosenbrock_d10_s03_gd",
+            "rosenbrock_d10_s03_cg",
+            "rosenbrock_d10_s03_bfgs",
+            "rosenbrock_d10_s04_gd",
+            "rosenbrock_d10_s04_cg",
+            "rosenbrock_d10_s04_bfgs",
+            "rosenbrock_d10_s05_gd",
+            "rosenbrock_d10_s05_cg",
+            "rosenbrock_d10_s05_bfgs"
+          ],
+          "start_ids": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gradient_tolerance": 1e-06
+        },
+        "gradient_d20": {
+          "xscale": "symlog",
+          "yscale": "log",
+          "linthresh": 1,
+          "run_ids": [
+            "rosenbrock_d20_s01_gd",
+            "rosenbrock_d20_s01_cg",
+            "rosenbrock_d20_s01_bfgs",
+            "rosenbrock_d20_s02_gd",
+            "rosenbrock_d20_s02_cg",
+            "rosenbrock_d20_s02_bfgs",
+            "rosenbrock_d20_s03_gd",
+            "rosenbrock_d20_s03_cg",
+            "rosenbrock_d20_s03_bfgs",
+            "rosenbrock_d20_s04_gd",
+            "rosenbrock_d20_s04_cg",
+            "rosenbrock_d20_s04_bfgs",
+            "rosenbrock_d20_s05_gd",
+            "rosenbrock_d20_s05_cg",
+            "rosenbrock_d20_s05_bfgs"
+          ],
+          "start_ids": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gradient_tolerance": 1e-06
+        }
+      }
+    },
+    "rastrigin": {
+      "problem": "rastrigin",
+      "raw_objective_scale": "linear",
+      "cross_dimension_warning": "f is additive across coordinates; compare methods within each dimension",
+      "panels": {
+        "final_objective_d2": {
+          "xscale": "linear",
+          "yscale": "linear",
+          "run_ids": [
+            "rastrigin_d2_s01_gd",
+            "rastrigin_d2_s01_cg",
+            "rastrigin_d2_s01_bfgs",
+            "rastrigin_d2_s02_gd",
+            "rastrigin_d2_s02_cg",
+            "rastrigin_d2_s02_bfgs",
+            "rastrigin_d2_s03_gd",
+            "rastrigin_d2_s03_cg",
+            "rastrigin_d2_s03_bfgs",
+            "rastrigin_d2_s04_gd",
+            "rastrigin_d2_s04_cg",
+            "rastrigin_d2_s04_bfgs",
+            "rastrigin_d2_s05_gd",
+            "rastrigin_d2_s05_cg",
+            "rastrigin_d2_s05_bfgs"
+          ],
+          "nonfinite_unplottable_run_ids": [],
+          "data": [
+            {
+              "run_id": "rastrigin_d2_s01_gd",
+              "start_id": 1,
+              "method": "GD",
+              "f_value": 0.9949590570932928,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s01_cg",
+              "start_id": 1,
+              "method": "CG",
+              "f_value": 4.9747902476473795,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s01_bfgs",
+              "start_id": 1,
+              "method": "BFGS",
+              "f_value": 7.959662381108175,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s02_gd",
+              "start_id": 2,
+              "method": "GD",
+              "f_value": 4.97479024764738,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s02_cg",
+              "start_id": 2,
+              "method": "CG",
+              "f_value": 9.949560298580304,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s02_bfgs",
+              "start_id": 2,
+              "method": "BFGS",
+              "f_value": 9.949560298580304,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s03_gd",
+              "start_id": 3,
+              "method": "GD",
+              "f_value": 12.934432432041099,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s03_cg",
+              "start_id": 3,
+              "method": "CG",
+              "f_value": 16.914202849554826,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s03_bfgs",
+              "start_id": 3,
+              "method": "BFGS",
+              "f_value": 16.914202849554822,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s04_gd",
+              "start_id": 4,
+              "method": "GD",
+              "f_value": 1.9899181141865832,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s04_cg",
+              "start_id": 4,
+              "method": "CG",
+              "f_value": 3.979831190554088,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s04_bfgs",
+              "start_id": 4,
+              "method": "BFGS",
+              "f_value": 3.9798311905540875,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s05_gd",
+              "start_id": 5,
+              "method": "GD",
+              "f_value": 9.949560298580305,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s05_cg",
+              "start_id": 5,
+              "method": "CG",
+              "f_value": 9.949560298580304,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d2_s05_bfgs",
+              "start_id": 5,
+              "method": "BFGS",
+              "f_value": 9.949560298580302,
+              "stationary": true
+            }
+          ]
+        },
+        "gradient_d2": {
+          "xscale": "symlog",
+          "yscale": "log",
+          "linthresh": 1,
+          "run_ids": [
+            "rastrigin_d2_s01_gd",
+            "rastrigin_d2_s01_cg",
+            "rastrigin_d2_s01_bfgs",
+            "rastrigin_d2_s02_gd",
+            "rastrigin_d2_s02_cg",
+            "rastrigin_d2_s02_bfgs",
+            "rastrigin_d2_s03_gd",
+            "rastrigin_d2_s03_cg",
+            "rastrigin_d2_s03_bfgs",
+            "rastrigin_d2_s04_gd",
+            "rastrigin_d2_s04_cg",
+            "rastrigin_d2_s04_bfgs",
+            "rastrigin_d2_s05_gd",
+            "rastrigin_d2_s05_cg",
+            "rastrigin_d2_s05_bfgs"
+          ],
+          "start_ids": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gradient_tolerance": 1e-06
+        },
+        "final_objective_d10": {
+          "xscale": "linear",
+          "yscale": "linear",
+          "run_ids": [
+            "rastrigin_d10_s01_gd",
+            "rastrigin_d10_s01_cg",
+            "rastrigin_d10_s01_bfgs",
+            "rastrigin_d10_s02_gd",
+            "rastrigin_d10_s02_cg",
+            "rastrigin_d10_s02_bfgs",
+            "rastrigin_d10_s03_gd",
+            "rastrigin_d10_s03_cg",
+            "rastrigin_d10_s03_bfgs",
+            "rastrigin_d10_s04_gd",
+            "rastrigin_d10_s04_cg",
+            "rastrigin_d10_s04_bfgs",
+            "rastrigin_d10_s05_gd",
+            "rastrigin_d10_s05_cg",
+            "rastrigin_d10_s05_bfgs"
+          ],
+          "nonfinite_unplottable_run_ids": [],
+          "data": [
+            {
+              "run_id": "rastrigin_d10_s01_gd",
+              "start_id": 1,
+              "method": "GD",
+              "f_value": 37.80834327684909,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s01_cg",
+              "start_id": 1,
+              "method": "CG",
+              "f_value": 37.80834327684909,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s01_bfgs",
+              "start_id": 1,
+              "method": "BFGS",
+              "f_value": 37.80834327684909,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s02_gd",
+              "start_id": 2,
+              "method": "GD",
+              "f_value": 37.808363473563546,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s02_cg",
+              "start_id": 2,
+              "method": "CG",
+              "f_value": 23.878992181143605,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s02_bfgs",
+              "start_id": 2,
+              "method": "BFGS",
+              "f_value": 23.8789921811436,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s03_gd",
+              "start_id": 3,
+              "method": "GD",
+              "f_value": 25.86889009861573,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s03_cg",
+              "start_id": 3,
+              "method": "CG",
+              "f_value": 25.86889009861573,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s03_bfgs",
+              "start_id": 3,
+              "method": "BFGS",
+              "f_value": 25.86889009861573,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s04_gd",
+              "start_id": 4,
+              "method": "GD",
+              "f_value": 35.81844535937696,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s04_cg",
+              "start_id": 4,
+              "method": "CG",
+              "f_value": 35.81844535937696,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s04_bfgs",
+              "start_id": 4,
+              "method": "BFGS",
+              "f_value": 35.81844535937696,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s05_gd",
+              "start_id": 5,
+              "method": "GD",
+              "f_value": 27.858803174983237,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s05_cg",
+              "start_id": 5,
+              "method": "CG",
+              "f_value": 27.858803174983237,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d10_s05_bfgs",
+              "start_id": 5,
+              "method": "BFGS",
+              "f_value": 27.858803174983237,
+              "stationary": true
+            }
+          ]
+        },
+        "gradient_d10": {
+          "xscale": "symlog",
+          "yscale": "log",
+          "linthresh": 1,
+          "run_ids": [
+            "rastrigin_d10_s01_gd",
+            "rastrigin_d10_s01_cg",
+            "rastrigin_d10_s01_bfgs",
+            "rastrigin_d10_s02_gd",
+            "rastrigin_d10_s02_cg",
+            "rastrigin_d10_s02_bfgs",
+            "rastrigin_d10_s03_gd",
+            "rastrigin_d10_s03_cg",
+            "rastrigin_d10_s03_bfgs",
+            "rastrigin_d10_s04_gd",
+            "rastrigin_d10_s04_cg",
+            "rastrigin_d10_s04_bfgs",
+            "rastrigin_d10_s05_gd",
+            "rastrigin_d10_s05_cg",
+            "rastrigin_d10_s05_bfgs"
+          ],
+          "start_ids": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gradient_tolerance": 1e-06
+        },
+        "final_objective_d20": {
+          "xscale": "linear",
+          "yscale": "linear",
+          "run_ids": [
+            "rastrigin_d20_s01_gd",
+            "rastrigin_d20_s01_cg",
+            "rastrigin_d20_s01_bfgs",
+            "rastrigin_d20_s02_gd",
+            "rastrigin_d20_s02_cg",
+            "rastrigin_d20_s02_bfgs",
+            "rastrigin_d20_s03_gd",
+            "rastrigin_d20_s03_cg",
+            "rastrigin_d20_s03_bfgs",
+            "rastrigin_d20_s04_gd",
+            "rastrigin_d20_s04_cg",
+            "rastrigin_d20_s04_bfgs",
+            "rastrigin_d20_s05_gd",
+            "rastrigin_d20_s05_cg",
+            "rastrigin_d20_s05_bfgs"
+          ],
+          "nonfinite_unplottable_run_ids": [],
+          "data": [
+            {
+              "run_id": "rastrigin_d20_s01_gd",
+              "start_id": 1,
+              "method": "GD",
+              "f_value": 60.69235620418494,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s01_cg",
+              "start_id": 1,
+              "method": "CG",
+              "f_value": 60.69235620418495,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s01_bfgs",
+              "start_id": 1,
+              "method": "BFGS",
+              "f_value": 60.69235620418494,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s02_gd",
+              "start_id": 2,
+              "method": "GD",
+              "f_value": 126.35904586573095,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s02_cg",
+              "start_id": 2,
+              "method": "CG",
+              "f_value": 63.67723337546481,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s02_bfgs",
+              "start_id": 2,
+              "method": "BFGS",
+              "f_value": 62.682274318371526,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s03_gd",
+              "start_id": 3,
+              "method": "GD",
+              "f_value": 41.78821486083208,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s03_cg",
+              "start_id": 3,
+              "method": "CG",
+              "f_value": 41.78821486083208,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s03_bfgs",
+              "start_id": 3,
+              "method": "BFGS",
+              "f_value": 41.78821486083217,
+              "stationary": false
+            },
+            {
+              "run_id": "rastrigin_d20_s04_gd",
+              "start_id": 4,
+              "method": "GD",
+              "f_value": 64.67220759145349,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s04_cg",
+              "start_id": 4,
+              "method": "CG",
+              "f_value": 64.67220759145349,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s04_bfgs",
+              "start_id": 4,
+              "method": "BFGS",
+              "f_value": 64.67220759145349,
+              "stationary": false
+            },
+            {
+              "run_id": "rastrigin_d20_s05_gd",
+              "start_id": 5,
+              "method": "GD",
+              "f_value": 69.64701299799624,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s05_cg",
+              "start_id": 5,
+              "method": "CG",
+              "f_value": 69.64701299799624,
+              "stationary": true
+            },
+            {
+              "run_id": "rastrigin_d20_s05_bfgs",
+              "start_id": 5,
+              "method": "BFGS",
+              "f_value": 68.65205394090295,
+              "stationary": true
+            }
+          ]
+        },
+        "gradient_d20": {
+          "xscale": "symlog",
+          "yscale": "log",
+          "linthresh": 1,
+          "run_ids": [
+            "rastrigin_d20_s01_gd",
+            "rastrigin_d20_s01_cg",
+            "rastrigin_d20_s01_bfgs",
+            "rastrigin_d20_s02_gd",
+            "rastrigin_d20_s02_cg",
+            "rastrigin_d20_s02_bfgs",
+            "rastrigin_d20_s03_gd",
+            "rastrigin_d20_s03_cg",
+            "rastrigin_d20_s03_bfgs",
+            "rastrigin_d20_s04_gd",
+            "rastrigin_d20_s04_cg",
+            "rastrigin_d20_s04_bfgs",
+            "rastrigin_d20_s05_gd",
+            "rastrigin_d20_s05_cg",
+            "rastrigin_d20_s05_bfgs"
+          ],
+          "start_ids": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "gradient_tolerance": 1e-06
+        }
+      }
+    }
+  }
+}

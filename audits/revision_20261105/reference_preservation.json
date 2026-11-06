@@ -1,0 +1,11 @@
+{
+  "reference_result_files_checked": 242,
+  "reference_result_files_changed": [],
+  "original_recorded_sources_checked": 7,
+  "original_recorded_sources_changed": [],
+  "historical_validation_sha256_before": "102ef9a7d51c9e2dd8b7aec457d2bb5f8f3ac365795d2c0e7a6c286d339f6284",
+  "historical_validation_sha256_after": "102ef9a7d51c9e2dd8b7aec457d2bb5f8f3ac365795d2c0e7a6c286d339f6284",
+  "validator_exit_code": 0,
+  "solver_invoked": false,
+  "passed": true
+}

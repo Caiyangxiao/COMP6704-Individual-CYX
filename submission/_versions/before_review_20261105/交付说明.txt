@@ -1,0 +1,9 @@
+COMP6704 最终个人作业交付
+方向：Unconstrained Optimization（无约束优化）。
+正式英文报告：Yangxiao Cai+26023041r.pdf；可编辑版为同名 .docx。
+PDF 与 Word 原生分页均为10页，含参考文献；PDF 约13.2MB，小于20MB。
+完整复现包：COMP6704_reproducibility.zip；PDF内嵌附件与独立ZIP逐字节相同。
+中文README位于项目根目录及ZIP根目录。
+交付前从ZIP干净解压，28项测试、90次重跑、80605条事件的精确比较、统计/图表/文档重建全部通过。比较排除墙钟时间。
+校验明细：final_delivery_verification.json、reproduction_verification.json、clean_delivery_verification.json、packaging_verification.json、verification_logs/。
+仅PDF为课程正式正文；代码包及校验记录为复现材料。

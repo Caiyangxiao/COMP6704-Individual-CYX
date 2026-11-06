@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "pdf_pages_including_references": 10,
+  "native_word_pages": 10,
+  "pdf_bytes": 13218219,
+  "pdf_under_20MB": true,
+  "attachment_byte_identical_to_zip": true,
+  "unit_tests_passed": 28,
+  "reproduced_runs_exact": 90,
+  "reproduced_trace_events_exact": 80605,
+  "comparison_excludes_elapsed_time": true,
+  "full_pipeline_rebuilt_from_extracted_archive": true,
+  "primary_direction": "Unconstrained Optimization",
+  "final_filenames": [
+    "Yangxiao Cai+26023041r.pdf",
+    "Yangxiao Cai+26023041r.docx",
+    "COMP6704_reproducibility.zip"
+  ]
+}

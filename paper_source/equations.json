@@ -1,0 +1,39 @@
+{
+  "models_R": [
+    "$f_R(x)=\\sum_{i=1}^{d-1}\\left[100(x_{i+1}-x_i^2)^2+(1-x_i)^2\\right]$"
+  ],
+  "models_A": [
+    "$f_A(x)=\\sum_{i=1}^{d}\\left[x_i^2+20\\sin^2(\\pi x_i)\\right]$"
+  ],
+  "gradients_R": [
+    "$[\\nabla f_R(x)]_1=-400x_1(x_2-x_1^2)+2(x_1-1)$",
+    "$[\\nabla f_R(x)]_j=200(x_j-x_{j-1}^2)-400x_j(x_{j+1}-x_j^2)+2(x_j-1),\\quad 2\\leq j\\leq d-1$",
+    "$[\\nabla f_R(x)]_d=200(x_d-x_{d-1}^2)$"
+  ],
+  "gradients_A": [
+    "$[\\nabla f_A(x)]_i=2x_i+20\\pi\\sin(2\\pi x_i)$"
+  ],
+  "gd_armijo": [
+    "$g_k=\\nabla f(x_k),\\qquad x_{k+1}=x_k-\\alpha_k g_k$",
+    "$f(x_k-\\alpha_k g_k)\\leq f(x_k)-c_1\\alpha_k\\|g_k\\|_2^2$"
+  ],
+  "cg": [
+    "$p_0=-g_0,\\qquad p_k=-g_k+\\beta_k^{\\mathrm{PR+}}p_{k-1}\\quad(k\\geq1)$",
+    "$\\beta_k^{\\mathrm{PR+}}=\\max\\left\\{0,\\frac{g_k^\\top(g_k-g_{k-1})}{g_{k-1}^\\top g_{k-1}}\\right\\}$"
+  ],
+  "wolfe": [
+    "$f(x_{k+1})\\leq f(x_k)+c_1\\alpha_k g_k^\\top p_k$",
+    "$|g_{k+1}^\\top p_k|\\leq c_2|g_k^\\top p_k|,\\qquad 0<c_1<c_2<1$"
+  ],
+  "bfgs": [
+    "$H_{k+1}=(I-\\rho_k s_k y_k^\\top)H_k(I-\\rho_k y_k s_k^\\top)+\\rho_k s_k s_k^\\top$",
+    "$s_k=x_{k+1}-x_k,\\quad y_k=g_{k+1}-g_k,\\quad\\rho_k=(y_k^\\top s_k)^{-1}$"
+  ],
+  "curvature": [
+    "$s_k^\\top y_k\\geq\\alpha_k(1-c_2)(-g_k^\\top p_k)>0$"
+  ],
+  "gd_bound": [
+    "$\\alpha_{\\mathrm{low}}=\\min\\left\\{1,\\frac{2\\tau(1-c_1)}{L}\\right\\}>0$",
+    "$\\min_{0\\leq k<K}\\|g_k\\|_2^2\\leq\\frac{f(x_0)-f_{\\inf}}{c_1\\alpha_{\\mathrm{low}}K}$"
+  ]
+}

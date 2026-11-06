@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-05T22:51:20.167335+08:00",
+  "timezone": "Asia/Shanghai",
+  "scope": {
+    "document_environment": "Rendered preview of the current official-style PDF, not the final attached delivery.",
+    "method": "Actual visual inspection of the five PNG files using view_image; findings are not inferred only from extracted text.",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      9,
+      10
+    ],
+    "other_pages_reviewed_in_this_record": false,
+    "solver_invoked": false,
+    "report_sources_modified": false,
+    "new_reference_search_or_bibliographic_verification": false,
+    "attachments_or_packaging_validated": false,
+    "limits": "Preview-image review assesses visible text/formula/citation layout, not a new numerical or bibliographic verification. The only initially suspected overflow was resolved through same-image raster bounds and root-provided PDFium glyph bounds."
+  },
+  "review_record_writer_environment": {
+    "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+    "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  },
+  "document": {
+    "path": "submission/_preview/Yangxiao Cai+26023041r.pdf",
+    "sha256": "53897b5598e8318d21cde8fda718cfeed7c49e63eed7ab493342caf004be7672",
+    "size_bytes": 774421,
+    "preview_verification_path": "submission/_preview/report_verification.json",
+    "preview_verification_sha256": "ed3be95ee58d3008d7de8e369661f04c5ff112268b2ee106f48303738ca0e855",
+    "compiled_source_fingerprint": "d01955a5461c9973920ab7541436a7e18bc35f68c52c2c4ffba852c828b33b83",
+    "page_count_as_recorded": 10,
+    "pdf_format_as_recorded": "Official NeurIPS 2025 style with a course notice",
+    "attachment_names_as_recorded": []
+  },
+  "pages": [
+    {
+      "page": 1,
+      "path": "submission/_preview/_page_previews/page_01.png",
+      "sha256": "f3212b2988dabd2bc9b5e38306aa9ad7b29b3ffbd831703f9d675b84b6c60e19",
+      "size_bytes": 246139,
+      "pixels": {
+        "width": 918,
+        "height": 1188
+      },
+      "actually_viewed_with_view_image": true,
+      "status": "no_visible_issue",
+      "findings": [
+        "Title, author/ID and Unconstrained Optimization direction are legible.",
+        "Abstract explicitly scopes 73/90 to the recorded Windows reference run; 26/90 and the other preserved counts are readable.",
+        "Introduction citations [7, 8] and the single concise code-attachment entry are readable; no overlap or clipping is visible."
+      ]
+    },
+    {
+      "page": 2,
+      "path": "submission/_preview/_page_previews/page_02.png",
+      "sha256": "1046eb08863b192a96a96b8129aa45043700686144cfb8f9efb69f3bdb6096ca",
+      "size_bytes": 275321,
+      "pixels": {
+        "width": 918,
+        "height": 1188
+      },
+      "actually_viewed_with_view_image": true,
+      "status": "no_visible_issue",
+      "findings": [
+        "Literature text, the comparison table, and citations [1]–[7] are legible within the text block.",
+        "Strong-convexity assumptions for the cited BFGS rates and the distinction between modified L-BFGS and tested full-memory BFGS are visible.",
+        "No formula, table, or body-text clipping is visible."
+      ]
+    },
+    {
+      "page": 3,
+      "path": "submission/_preview/_page_previews/page_03.png",
+      "sha256": "2a20e6ff99a7a9077857beef828dfb65dc2b4b6d2cac163466869e3c4c56836f",
+      "size_bytes": 261918,
+      "pixels": {
+        "width": 918,
+        "height": 1188
+      },
+      "actually_viewed_with_view_image": true,
+      "status": "no_visible_issue",
+      "findings": [
+        "Equations (1)–(4), sum limits, superscripts and the analytic Rastrigin gradient are legible.",
+        "The Rosenbrock nonconvexity example distinguishes a nonstationary indefinite-Hessian point from a saddle point.",
+        "Gradient-check tolerances and the local-conditioning qualification are readable. The GD subsection fits above the footer without overlap."
+      ]
+    },
+    {
+      "page": 9,
+      "path": "submission/_preview/_page_previews/page_09.png",
+      "sha256": "c7d4bcb0808d626b08f1a65d728ca15823bee3cfb1424adae09d35978b3f1499",
+      "size_bytes": 279156,
+      "pixels": {
+        "width": 918,
+        "height": 1188
+      },
+      "actually_viewed_with_view_image": true,
+      "status": "no_visible_issue",
+      "findings": [
+        "73/90 is explicitly identified as the recorded Windows reference result.",
+        "Platform limits state that pinned NumPy/SciPy do not guarantee identical floating-point paths and that near-threshold classifications may vary.",
+        "The page does not state a Linux outcome count or assign a definite numerical-library cause.",
+        "Historical Windows-to-Windows comparisons are distinguished from this revision’s unit tests and read-only checks, with no claim of a new formal experiment or cross-platform identity.",
+        "Discussion, reproducibility paragraph and conclusion are legible and do not overlap."
+      ]
+    },
+    {
+      "page": 10,
+      "path": "submission/_preview/_page_previews/page_10.png",
+      "sha256": "b29fb5493e979f680f6199c2a88118af28909b54cb341003053893ad59a455d4",
+      "size_bytes": 193914,
+      "pixels": {
+        "width": 918,
+        "height": 1188
+      },
+      "actually_viewed_with_view_image": true,
+      "status": "no_visible_issue",
+      "findings": [
+        "All eight references and the two version-specific SciPy documentation links are readable.",
+        "The final note describes the official PDF style and contains no Word-version statement.",
+        "Reference [7]’s GitHub URL fits within the common right text edge; the initial apparent-overrun observation was disproved on recheck of the identical image."
+      ],
+      "recheck_evidence": {
+        "same_image_sha256": "b29fb5493e979f680f6199c2a88118af28909b54cb341003053893ad59a455d4",
+        "reopened_with_view_image": true,
+        "independent_raster_check": {
+          "method": "PIL grayscale pixels below 160, inspected line y=492..503 in x=150..819",
+          "url_line_dark_pixel_bounds": {
+            "left": 194,
+            "right": 694,
+            "top": 492,
+            "bottom": 503
+          },
+          "common_right_text_edge_pixels": 756,
+          "fits": true
+        },
+        "root_pdfium_cross_check": {
+          "provenance": "Root reviewer supplied the current PDFium glyph bounds after directly checking the same preview PDF.",
+          "url_horizontal_bounds_points": [
+            129.6507,
+            463.5765
+          ],
+          "official_text_block_horizontal_bounds_points": [
+            108.0,
+            504.0
+          ],
+          "fits": true
+        }
+      }
+    }
+  ],
+  "overall_status": "no_visible_issues_on_reviewed_pages",
+  "issues": [],
+  "resolved_observations": [
+    {
+      "id": "P10_REF7_URL_OVERFLOW",
+      "status": "withdrawn_false_positive",
+      "initial_observation": "A visual-only estimate placed the URL endpoint near x=800 px.",
+      "correction": "The identical PNG places the dark-pixel endpoint at x=694 px; PDFium glyph bounds independently fit inside the text block. The initial coordinate estimate was wrong.",
+      "source_or_data_changed": false
+    }
+  ],
+  "rechecked_at": "2026-11-05T22:53:08.953133+08:00"
+}

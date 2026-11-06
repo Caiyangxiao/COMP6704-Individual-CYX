@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-06T17:47:56.470568+08:00",
+  "scope": "2026-11-06 wording-only polish, build and delivered-file checks. Historical numerical and unit-test records were preserved, not rerun.",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "compiler": "Tectonic 0.15.0"
+  },
+  "input_pdf_sha256": "94ed077ef046e0dfcd4c22fd2bb4879343f602e9fd0619da899c8bb0463842ae",
+  "pdf_pages_including_references": 10,
+  "pdf_bytes_including_attachments": 13112291,
+  "under_20MB": true,
+  "pdf_sha256": "41f4d9fdef74cd73f7a6f99e14a1065c3d7b55674b65f7ba9e86c7bb8f19ff6b",
+  "code_zip_bytes": 12334163,
+  "code_zip_sha256": "a514e2e1d5d525e82b0d7984bf1f99a26662dda8a43c0ad9358f29c2381ef6ff",
+  "exact_page7_replacement_verified_in_final_pdf": true,
+  "page7_preceding_numerical_sentence_unchanged": true,
+  "readme_local_output_and_canvas_instructions_verified": true,
+  "all_301_archive_members_crc_manifest_verified": true,
+  "attachment_names": [
+    "COMP6704_reproducibility.zip",
+    "packaging_verification.json"
+  ],
+  "single_copy_per_attachment": true,
+  "extracted_code_zip_identical_to_supplied_zip": true,
+  "extracted_packaging_record_identical_to_local": true,
+  "current_packaging_record_outside_its_own_zip": true,
+  "all_ten_final_page_renders_identical_to_reviewed_preview": {
+    "1": {
+      "reviewed_preview_sha256": "9cf773e18f25602a37a88ae326eb15744f85a09ada7b375cd64cf0e52da580b0",
+      "final_sha256": "9cf773e18f25602a37a88ae326eb15744f85a09ada7b375cd64cf0e52da580b0",
+      "identical": true
+    },
+    "2": {
+      "reviewed_preview_sha256": "9880823b45e253a112184b7dce9f3b0281951b7f1a38adb9267009a3c52278c7",
+      "final_sha256": "9880823b45e253a112184b7dce9f3b0281951b7f1a38adb9267009a3c52278c7",
+      "identical": true
+    },
+    "3": {
+      "reviewed_preview_sha256": "2a20e6ff99a7a9077857beef828dfb65dc2b4b6d2cac163466869e3c4c56836f",
+      "final_sha256": "2a20e6ff99a7a9077857beef828dfb65dc2b4b6d2cac163466869e3c4c56836f",
+      "identical": true
+    },
+    "4": {
+      "reviewed_preview_sha256": "240c30bf0741193caa72a46f189e53e7420569f708772c7403c5d791f849ebf4",
+      "final_sha256": "240c30bf0741193caa72a46f189e53e7420569f708772c7403c5d791f849ebf4",
+      "identical": true
+    },
+    "5": {
+      "reviewed_preview_sha256": "50b99837fbb289ddf22ccbc90336a6496f8796c0e7d11e4750bc9bb7883ff8a7",
+      "final_sha256": "50b99837fbb289ddf22ccbc90336a6496f8796c0e7d11e4750bc9bb7883ff8a7",
+      "identical": true
+    },
+    "6": {
+      "reviewed_preview_sha256": "bf3e37d7505d69c4487dfe22219da90b9b28bd1d70d105305846deef1410b9da",
+      "final_sha256": "bf3e37d7505d69c4487dfe22219da90b9b28bd1d70d105305846deef1410b9da",
+      "identical": true
+    },
+    "7": {
+      "reviewed_preview_sha256": "06a6f2d77d9096d8c5f2e8f8bac75011c06e31f16d190f6c12d3cddfb355445b",
+      "final_sha256": "06a6f2d77d9096d8c5f2e8f8bac75011c06e31f16d190f6c12d3cddfb355445b",
+      "identical": true
+    },
+    "8": {
+      "reviewed_preview_sha256": "d3647acecd2d9874d06bcc57af079e08b7c9ce08287d5738be45bda9efb4f5a7",
+      "final_sha256": "d3647acecd2d9874d06bcc57af079e08b7c9ce08287d5738be45bda9efb4f5a7",
+      "identical": true
+    },
+    "9": {
+      "reviewed_preview_sha256": "7f9e8f7b4f4dcde6018c233ae14a35d7cb07f487210bf00ae6a0b09fb2186345",
+      "final_sha256": "7f9e8f7b4f4dcde6018c233ae14a35d7cb07f487210bf00ae6a0b09fb2186345",
+      "identical": true
+    },
+    "10": {
+      "reviewed_preview_sha256": "b29fb5493e979f680f6199c2a88118af28909b54cb341003053893ad59a455d4",
+      "final_sha256": "b29fb5493e979f680f6199c2a88118af28909b54cb341003053893ad59a455d4",
+      "identical": true
+    }
+  },
+  "scientific_content_preservation": {
+    "raw_reference_files_unchanged": 186,
+    "original_source_files_unchanged": 7,
+    "changed_protected_files": [],
+    "all_tables_unchanged": true,
+    "tables_2_3_4_unchanged": true,
+    "equation_definitions_and_blocks_unchanged": true,
+    "two_plot_pngs_and_figure_blocks_unchanged": true,
+    "eight_references_unchanged": true
+  },
+  "new_formal_experiment_runs": 0,
+  "new_unit_test_runs": 0,
+  "historical_fifty_test_audit_preserved": true,
+  "pre_attachment_polish_record": "paper_source/polish_record_20261106.json",
+  "pre_attachment_polish_record_sha256": "69a8c1b2be178a3cc9863a35c8c44629cd140e78d52bf6f176f2090b18f5f9a9"
+}

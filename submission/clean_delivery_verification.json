@@ -1,0 +1,150 @@
+{
+  "archive_sha256": "813dbbca5315ea8c692bf318b3b45b5c9c7383c4f3912b1ae9544c7c4573ee2e",
+  "review_scope": "Clean archive tests, raw-data audit, native-template and document rebuild; previous full 90-solve proof retained for unchanged numerical inputs.",
+  "new_full_90_solve_performed_in_review": false,
+  "previous_exact_90_run_comparison": {
+    "candidate": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\_clean_reproduction_vhye53f_\\results\\full_study_repeat01",
+    "candidate_run_files": 90,
+    "comparison_mode": "exact; no numerical tolerances",
+    "difference_count": 0,
+    "difference_details": [],
+    "difference_details_truncated": false,
+    "differences_by_category": {},
+    "environment_context": {
+      "candidate": {
+        "numpy": "1.26.4",
+        "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+        "scipy": "1.13.1"
+      },
+      "reference": {
+        "numpy": "1.26.4",
+        "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+        "scipy": "1.13.1"
+      }
+    },
+    "exact_run_outcomes_match": true,
+    "exact_trace_fields_match": true,
+    "expected_runs": 90,
+    "initial_points_match": true,
+    "metadata_policy": "Completion is checked; paths, timestamps, and other metadata are excluded from exact equality.",
+    "reference": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\_clean_reproduction_vhye53f_\\results\\full_study",
+    "reference_run_files": 90,
+    "required_outcome_fields": [
+      "x0",
+      "x_final",
+      "f_value",
+      "gradient_norm",
+      "objective_gap",
+      "nit",
+      "nfev",
+      "njev",
+      "solver_success",
+      "solver_status",
+      "solver_message",
+      "stationary",
+      "global_hit"
+    ],
+    "resolved_config_match": true,
+    "run_field_policy": "All JSON fields except elapsed_seconds are compared.",
+    "run_files_compared": 90,
+    "run_files_matching_exactly": 90,
+    "solver_invoked": false,
+    "status": "passed",
+    "trace_field_policy": "All CSV row fields except elapsed_seconds are compared, including run_id.",
+    "trace_files_compared": 90,
+    "trace_files_matching_exactly": 90,
+    "trace_rows_compared": 80605
+  },
+  "raw_and_numerical_source_preservation": {
+    "passed": true,
+    "page_count_including_references": 10,
+    "paper_size_points": [
+      612.0,
+      792.0
+    ],
+    "official_style_sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
+    "style_byte_identical_to_official_download": true,
+    "source_fingerprint": "86cfbd941b4af9cc3c6efdf22e35f92610301f272363b6739088e96b5461fa49",
+    "latex_sha256": "c2d90504d3ff2edd49c655f3fbcb65d92d453e1fa67b4ff12ab2147bc2106281",
+    "compiled_pdf_sha256": "4af8ed6e3a618aa39b5976ee86b6661656b61fe288fb732365b9a5dbbb7a4902",
+    "compiler": "Tectonic 0.15.0 (XeTeX)",
+    "compile_log_clean_of_overflow_unresolved_citations_and_duplicate_anchors": true,
+    "unchanged_raw_reference_files": 186,
+    "unchanged_original_solver_source_files": 7,
+    "prior_full_90_reproduction_proof_still_applies_to_unchanged_numerical_inputs": true,
+    "previous_archive_sha256": "ac23c99c114b037d2ab030f775acabf10c3dbfd9d20c2befd52f875711d8f26f"
+  },
+  "stages": {
+    "unit_tests": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "reference_validation": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "independent_raw_audit": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "latex_generation": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "official_template_compile": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "document_rebuild": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "standalone_template_compile": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "standalone_page_comparison": {
+      "passed": true,
+      "exit_code": 0
+    }
+  },
+  "word_document_and_styles_match_final": true,
+  "rebuilt_report": {
+    "page_count": 10,
+    "includes_references": true,
+    "pdf_bytes": 13050552,
+    "pdf_under_20MB": true,
+    "embedded_archive_verified": true,
+    "page_source": "report.pdf",
+    "pdf_format": "Official NeurIPS 2025 style with a course notice",
+    "word_format": "Editable course adaptation; not an official NeurIPS Word template",
+    "compiled_source_fingerprint": "86cfbd941b4af9cc3c6efdf22e35f92610301f272363b6739088e96b5461fa49",
+    "files": {
+      "Yangxiao Cai+26023041r.docx": {
+        "bytes": 833937,
+        "sha256": "6287af232451b64cfc7c77e7a094a847f8871017663f44ea4c9c22a996fd4399"
+      },
+      "Yangxiao Cai+26023041r.pdf": {
+        "bytes": 13050552,
+        "sha256": "7a8fe51cb88f772c16f2c27cf797b1095cceaca0b27be58f5de8fd8044b022ab"
+      },
+      "COMP6704_reproducibility.zip": {
+        "bytes": 12274213,
+        "sha256": "813dbbca5315ea8c692bf318b3b45b5c9c7383c4f3912b1ae9544c7c4573ee2e"
+      }
+    },
+    "planned_page_word_counts": [
+      462,
+      445,
+      448,
+      373,
+      373,
+      194,
+      390,
+      279,
+      562,
+      240
+    ]
+  },
+  "passed": true
+}

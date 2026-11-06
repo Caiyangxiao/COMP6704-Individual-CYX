@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-05T22:35:44.485850+08:00",
+  "capture_timezone": "Asia/Shanghai",
+  "original_sources_results_and_records_not_modified": true,
+  "new_full_90_solve_performed": false,
+  "baseline_manifest_path": "audits/revision_20261105/baseline_evidence/preservation_manifest.json",
+  "current_pdf": {
+    "size_bytes": 13050552,
+    "sha256": "47e49cbd989e99eb5f203ff1851affbd0b39cc6bba25caab7bf2c50391c21469",
+    "page_count": 10,
+    "attachments": {
+      "COMP6704_reproducibility.zip": [
+        {
+          "size_bytes": 12274213,
+          "sha256": "813dbbca5315ea8c692bf318b3b45b5c9c7383c4f3912b1ae9544c7c4573ee2e",
+          "byte_identical_to_external_code_zip": true
+        }
+      ]
+    }
+  },
+  "archives": {
+    "current": {
+      "archive": {
+        "size_bytes": 12274213,
+        "sha256": "813dbbca5315ea8c692bf318b3b45b5c9c7383c4f3912b1ae9544c7c4573ee2e"
+      },
+      "payload_files": 277,
+      "members_including_manifest": 278,
+      "manifest_members_exact": true,
+      "manifest_actual_hash_mismatches": [],
+      "protected_raw_source_historical_test_mismatches": [],
+      "historical_evidence_members": [],
+      "submission_members": []
+    },
+    "historical_reproduction_archive": {
+      "archive": {
+        "size_bytes": 12012214,
+        "sha256": "ac23c99c114b037d2ab030f775acabf10c3dbfd9d20c2befd52f875711d8f26f"
+      },
+      "payload_files": 264,
+      "members_including_manifest": 265,
+      "manifest_members_exact": true,
+      "manifest_actual_hash_mismatches": [],
+      "protected_raw_source_historical_test_mismatches": [],
+      "historical_evidence_members": [],
+      "submission_members": []
+    }
+  },
+  "historical_proof": {
+    "schema_version": 1,
+    "captured_at": "2026-11-05T22:35:44.485850+08:00",
+    "capture_timezone": "Asia/Shanghai",
+    "copies": {
+      "audits/history/windows_exact_reproduction_20261105.json": {
+        "scope": "Historical Windows exact numerical comparison, not a new solve in this revision.",
+        "original_source_path_at_capture": "submission/reproduction_verification.json",
+        "original_absolute_path_at_capture": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\submission\\reproduction_verification.json",
+        "size_bytes": 1904,
+        "sha256": "8eb14b0036c52d8869e756d51ed630f6dbc8a797748099a8005b4b7f9e349c77",
+        "copy_verified_byte_identical": true
+      },
+      "audits/history/packaging_before_revision_20261105.json": {
+        "scope": "Packaging verification for pre-revision ZIP 813dbb..., not a numerical rerun.",
+        "original_source_path_at_capture": "submission/packaging_verification.json",
+        "original_absolute_path_at_capture": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\submission\\packaging_verification.json",
+        "size_bytes": 2617,
+        "sha256": "cb730fd7d20f92453675d599c9016a10dbdc972aa1a6974038d7c1d65abdb298",
+        "copy_verified_byte_identical": true
+      }
+    },
+    "new_full_90_solve_performed_for_capture": false,
+    "historical_environment": {
+      "candidate": {
+        "numpy": "1.26.4",
+        "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+        "scipy": "1.13.1"
+      },
+      "reference": {
+        "numpy": "1.26.4",
+        "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+        "scipy": "1.13.1"
+      }
+    },
+    "historical_exact_comparison": {
+      "status": "passed",
+      "difference_count": 0,
+      "run_files_matching_exactly": 90,
+      "trace_files_matching_exactly": 90,
+      "trace_rows_compared": 80605,
+      "initial_points_match": true,
+      "resolved_config_match": true
+    },
+    "historical_candidate_path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\_clean_reproduction_vhye53f_\\results\\full_study_repeat01",
+    "historical_candidate_path_currently_available": false,
+    "historical_reference_temp_path_currently_available": false,
+    "historical_reproduction_archive_sha256": "ac23c99c114b037d2ab030f775acabf10c3dbfd9d20c2befd52f875711d8f26f",
+    "historical_reproduction_context_source_path": "submission/_versions/before_review_20261105/clean_delivery_verification.json",
+    "pre_revision_archive_sha256": "813dbbca5315ea8c692bf318b3b45b5c9c7383c4f3912b1ae9544c7c4573ee2e",
+    "pre_revision_archive_size_bytes": 12274213,
+    "preservation": {
+      "raw_reference_files_byte_identical_to_both_archives": 186,
+      "original_solver_source_files_byte_identical_to_both_archives": 7,
+      "historical_test_source_files_byte_identical_to_both_archives": 5,
+      "historical_test_methods": 28,
+      "current_static_test_method_definitions": 47,
+      "new_test_sources_since_historical_record": [
+        "tests/test_packaging.py",
+        "tests/test_source_hashes.py"
+      ],
+      "reference_counts": {
+        "runs": 90,
+        "stationary": 73,
+        "global_hit": 26,
+        "trace_events": 80605,
+        "accepted_updates": 80425
+      }
+    },
+    "linux_reproduction_claim": "No actual Linux S=72/G=26 run artifact found in targeted searched locations; no such outcome asserted.",
+    "packaging_record_policy": "NEW packaging_verification.json remains outside its own code ZIP; historical copy applies only to pre-revision archive.",
+    "limitations": [
+      "Historical candidate temporary path is currently unavailable; its original candidate files cannot be rechecked now.",
+      "Existing Windows comparison JSON/logs are retained historical evidence; capture is not a fresh 90-solve reproduction.",
+      "Historical 28-test pass record does not cover the two newly present test source files.",
+      "No cross-platform bitwise-equivalence claim."
+    ]
+  },
+  "historical_log": {
+    "progress_rows": 90,
+    "progress_stationary_true": 73,
+    "line_72_is_progress_not_total": "[72/90] rastrigin_d10_s04_bfgs: f=35.8184, |g|=5.06e-08, nit=21, nfev=36, njev=36, stationary=True"
+  },
+  "unit_logs": {
+    "unit_tests.log": {
+      "tests_reported": [
+        28
+      ],
+      "ends_ok": true
+    },
+    "review_unit_tests.log": {
+      "tests_reported": [
+        28
+      ],
+      "ends_ok": true
+    }
+  },
+  "actual_reference_counts": {
+    "runs": 90,
+    "stationary": 73,
+    "global_hit": 26,
+    "trace_events": 80605,
+    "accepted_updates": 80425
+  },
+  "current_unarchived_test_source_additions": {
+    "tests/test_packaging.py": {
+      "size_bytes": 1515,
+      "sha256": "6a2a4b55e44e50492d5685756374123b5f9017c954bb47ab83e85d109e24aae9"
+    },
+    "tests/test_source_hashes.py": {
+      "size_bytes": 14474,
+      "sha256": "1ebe83f48340362c08c6522bd6ab8bb3cf1fe6ae82c6409036eb55d679d50038"
+    }
+  },
+  "search_inventory": {
+    "workspace_filename_patterns": [
+      "*metadata*.json",
+      "*reproduc*.json",
+      "*verific*.json",
+      "*.log",
+      "*.zip",
+      "*Linux*",
+      "*linux*"
+    ],
+    "tmp_targeted_evidence_filename_scan_matches": [],
+    "tmp_task_directories": [
+      "/tmp/comp6704-tex",
+      "/tmp/comp6704_cpu_review"
+    ],
+    "tmp_cpu_review_contents": "Four formula PNGs only.",
+    "tmp_exclusions": [
+      "systemd-private-*",
+      "snap-private-tmp",
+      "codex-bwrap-synthetic-mount-targets-1000",
+      "comp6704-tex engine/cache"
+    ],
+    "downloads_targeted_matches": [
+      "C:/Users/25244/Downloads/COMP6704_Optimization_Individual_Assignment_2026_Fall.pdf",
+      "C:/Users/25244/Downloads/COMP6704_选题方案说明报告.docx"
+    ],
+    "windows_temp_matching_comp6704_reproduction_linux_top_level_names": [],
+    "connected_codex_artifacts": [],
+    "mnt_data_exists": false,
+    "linux_72_26_artifact_found": false,
+    "qualification": "Not found in these targeted readable scopes; not a global exhaustive filesystem search."
+  },
+  "current_zip_accessibility_gap": {
+    "historical_reproduction_record_inside_zip": false,
+    "current_packaging_record_inside_zip": false,
+    "readme_refers_to_external_submission_records": true,
+    "pdf_only_attachment_is_code_zip": true,
+    "consequence": "PDF/code ZIP alone do not give access to the external historical reproduction or packaging JSON."
+  },
+  "proposed_accessible_delivery_layout": {
+    "external": [
+      "submission/Yangxiao Cai+26023041r.pdf",
+      "submission/COMP6704_reproducibility.zip",
+      "submission/交付修改说明_20261105.txt",
+      "submission/packaging_verification.json"
+    ],
+    "inside_code_zip": [
+      "audits/history/windows_exact_reproduction_20261105.json",
+      "audits/history/packaging_before_revision_20261105.json",
+      "audits/history/capture_provenance_20261105.json",
+      "audits/history/README.md",
+      "audits/revision_20261105/baseline_evidence/preservation_manifest.json",
+      "audits/revision_20261105/baseline_evidence/tables_2_3_4_before.json",
+      "audits/revision_20261105/baseline_evidence/evidence_inventory.json"
+    ],
+    "pdf_attachments": [
+      "COMP6704_reproducibility.zip: same bytes as external ZIP",
+      "packaging_verification.json: same bytes as NEW external record"
+    ],
+    "new_packaging_report_never_in_its_own_zip": true
+  },
+  "checks": {
+    "current_zip_matches_packaging_record": true,
+    "historical_zip_matches_packaging_record": true,
+    "historical_clean_record_references_old_zip": true,
+    "historical_reproduction_json_matches_version_copy": true,
+    "historical_reproduction_json_matches_old_clean_comparison": true,
+    "raw_file_count_186": true,
+    "original_source_count_7": true,
+    "recorded_original_source_hashes_match_current": true,
+    "historical_test_method_count_28": true,
+    "current_all_manifest_hashes_match": true,
+    "current_all_protected_historical_bytes_match": true,
+    "current_manifest_members_exact": true,
+    "historical_reproduction_archive_all_manifest_hashes_match": true,
+    "historical_reproduction_archive_all_protected_historical_bytes_match": true,
+    "historical_reproduction_archive_manifest_members_exact": true,
+    "current_pdf_code_attachment_matches_external_zip": true,
+    "reference_counts_90_73_26_80605_80425": true,
+    "historical_log_has_complete_90_progress_rows": true,
+    "historical_and_review_unit_logs_report_28_ok": true
+  },
+  "all_checks_passed": true
+}

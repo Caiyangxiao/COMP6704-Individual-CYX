@@ -1,0 +1,46 @@
+{
+  "run_id": "rosenbrock_d2_s01_cg",
+  "start_id": 1,
+  "problem": "rosenbrock",
+  "dimension": 2,
+  "method": "CG",
+  "x0": [
+    -1.5543223636616896,
+    -0.3460368732257244
+  ],
+  "x_final": [
+    0.9999999872809386,
+    0.9999999745099392
+  ],
+  "f_value": 1.620442798606122e-16,
+  "gradient_norm": 1.1386183857532107e-08,
+  "objective_gap": 1.620442798606122e-16,
+  "nit": 20,
+  "nfev": 44,
+  "njev": 44,
+  "reported_nfev": 44,
+  "reported_njev": 44,
+  "elapsed_seconds": 0.0057171001099050045,
+  "solver_success": true,
+  "solver_status": 0,
+  "solver_message": "Optimization terminated successfully.",
+  "stationary": true,
+  "global_hit": true,
+  "finite_result": true,
+  "nonfinite_evaluations": 0,
+  "counter_consistent": true,
+  "trace_consistent": true,
+  "trace_events": 22,
+  "warnings": [],
+  "config": {
+    "gtol": 1e-06,
+    "maxiter": 5000,
+    "c1": 0.0001,
+    "c2": 0.4,
+    "alpha0": 1.0,
+    "backtrack_factor": 0.5,
+    "max_backtracks": 50,
+    "min_alpha": 1e-12,
+    "global_tolerance": 1e-06
+  }
+}

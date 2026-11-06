@@ -1,0 +1,53 @@
+{
+  "candidate": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\_clean_reproduction_vhye53f_\\results\\full_study_repeat01",
+  "candidate_run_files": 90,
+  "comparison_mode": "exact; no numerical tolerances",
+  "difference_count": 0,
+  "difference_details": [],
+  "difference_details_truncated": false,
+  "differences_by_category": {},
+  "environment_context": {
+    "candidate": {
+      "numpy": "1.26.4",
+      "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+      "scipy": "1.13.1"
+    },
+    "reference": {
+      "numpy": "1.26.4",
+      "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+      "scipy": "1.13.1"
+    }
+  },
+  "exact_run_outcomes_match": true,
+  "exact_trace_fields_match": true,
+  "expected_runs": 90,
+  "initial_points_match": true,
+  "metadata_policy": "Completion is checked; paths, timestamps, and other metadata are excluded from exact equality.",
+  "reference": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\_clean_reproduction_vhye53f_\\results\\full_study",
+  "reference_run_files": 90,
+  "required_outcome_fields": [
+    "x0",
+    "x_final",
+    "f_value",
+    "gradient_norm",
+    "objective_gap",
+    "nit",
+    "nfev",
+    "njev",
+    "solver_success",
+    "solver_status",
+    "solver_message",
+    "stationary",
+    "global_hit"
+  ],
+  "resolved_config_match": true,
+  "run_field_policy": "All JSON fields except elapsed_seconds are compared.",
+  "run_files_compared": 90,
+  "run_files_matching_exactly": 90,
+  "solver_invoked": false,
+  "status": "passed",
+  "trace_field_policy": "All CSV row fields except elapsed_seconds are compared, including run_id.",
+  "trace_files_compared": 90,
+  "trace_files_matching_exactly": 90,
+  "trace_rows_compared": 80605
+}

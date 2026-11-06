@@ -1,0 +1,12 @@
+{
+  "official_source": "https://media.neurips.cc/Conferences/NeurIPS2025/Styles.zip",
+  "retrieved_date": "2026-11-05",
+  "style_version": "2025/05/01",
+  "files": {
+    "neurips_2025.pdf": "0625078f7ef4b5ea69924812e8d91bb36f8ed24ab41e2a3f6020ad0946ae81d0",
+    "neurips_2025.sty": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
+    "neurips_2025.tex": "a95f477ae3441b6b31fa9872804f00dbe9bf6b46b41d640b35457b64ad00735e",
+    "neurips_2025_official.zip": "72032130232955b785cd622b7c52d893e3166f30a90e1e6279d0a28e8373beef"
+  },
+  "course_adaptation": "Keep official style unmodified; named author and course notice override in report.tex; <=10 pages including references and <20MB take precedence over conference submission rules."
+}

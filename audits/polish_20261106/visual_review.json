@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-06T17:38:57.117905+08:00",
+  "timezone": "Asia/Shanghai",
+  "review_method": "Actually opened and visually inspected the five original-resolution PNGs with view_image. This is a minor-polish visual review, not a numerical rerun or text-extraction-only check.",
+  "passed": true,
+  "must_fix_issues": [],
+  "scope": {
+    "reviewed_pages": [
+      1,
+      2,
+      6,
+      8,
+      9
+    ],
+    "focus": [
+      "Changed gradient-criterion/S/G wording",
+      "Shared-start and both-G conditions for selected paired function-evaluation ratios",
+      "Paragraph fit and absence of clipping/overflow, especially page 8"
+    ],
+    "excluded": [
+      "Page 7 exact user-specified replacement (reviewed separately by root)",
+      "Other pages and Word rendering",
+      "README execution, algorithms, experiments, tests and data-validation runs",
+      "Final archive/PDF byte-size or attachment verification"
+    ]
+  },
+  "preview_document": {
+    "verification_path": "submission/_preview/report_verification.json",
+    "verification_sha256": "4fea01868e9ccd8dc4e1f71a7b9d9c787cf5eb7d4087069d7bcba32a68f32d59",
+    "compiled_source_fingerprint": "1ad8650adfb43f74b0beffe57dde1b0bca50f4a5efe94ad688fde58892385eb2",
+    "page_source": "report.pdf",
+    "recorded_page_count": 10
+  },
+  "source_content_sha256": "d2ba5ea70c6152364a8ba2320a3e6b60243098af1eff2a47af1d4869eea58a00",
+  "artifacts": [
+    {
+      "page": 1,
+      "path": "submission/_preview/_page_previews/page_01.png",
+      "sha256": "9cf773e18f25602a37a88ae326eb15744f85a09ada7b375cd64cf0e52da580b0",
+      "bytes": 250566,
+      "width_pixels": 918,
+      "height_pixels": 1188,
+      "file_modified_at": "2026-11-06T17:35:23.362069+08:00"
+    },
+    {
+      "page": 2,
+      "path": "submission/_preview/_page_previews/page_02.png",
+      "sha256": "9880823b45e253a112184b7dce9f3b0281951b7f1a38adb9267009a3c52278c7",
+      "bytes": 275572,
+      "width_pixels": 918,
+      "height_pixels": 1188,
+      "file_modified_at": "2026-11-06T17:35:23.384579+08:00"
+    },
+    {
+      "page": 6,
+      "path": "submission/_preview/_page_previews/page_06.png",
+      "sha256": "bf3e37d7505d69c4487dfe22219da90b9b28bd1d70d105305846deef1410b9da",
+      "bytes": 217987,
+      "width_pixels": 918,
+      "height_pixels": 1188,
+      "file_modified_at": "2026-11-06T17:35:23.498519+08:00"
+    },
+    {
+      "page": 8,
+      "path": "submission/_preview/_page_previews/page_08.png",
+      "sha256": "d3647acecd2d9874d06bcc57af079e08b7c9ce08287d5738be45bda9efb4f5a7",
+      "bytes": 259304,
+      "width_pixels": 918,
+      "height_pixels": 1188,
+      "file_modified_at": "2026-11-06T17:35:23.579344+08:00"
+    },
+    {
+      "page": 9,
+      "path": "submission/_preview/_page_previews/page_09.png",
+      "sha256": "7f9e8f7b4f4dcde6018c233ae14a35d7cb07f487210bf00ae6a0b09fb2186345",
+      "bytes": 288538,
+      "width_pixels": 918,
+      "height_pixels": 1188,
+      "file_modified_at": "2026-11-06T17:35:23.602338+08:00"
+    }
+  ],
+  "observed_findings": [
+    {
+      "page": 1,
+      "status": "passed",
+      "observed": [
+        "The abstract retains the recorded Windows scope and visibly separates the gradient criterion from the global-objective target.",
+        "The conditional CG/BFGS wording is readable, and the 73/90, 26/90, 47 and 17 statements remain visible without clipping.",
+        "Title, author/ID, introduction and code-availability paragraph remain within the page area."
+      ]
+    },
+    {
+      "page": 2,
+      "status": "passed",
+      "observed": [
+        "The Study position paragraph now refers to satisfaction of the gradient criterion, objective quality and evaluation cost.",
+        "The revised sentence remains complete below the literature table; no overlap or overflow is visible."
+      ]
+    },
+    {
+      "page": 6,
+      "status": "passed",
+      "observed": [
+        "The budget paragraph uses meet the gradient criterion rather than an ambiguous successful gradient-test label.",
+        "The updated paragraph fits below Figure 1; table, caption and all paragraph lines remain legible and uncut."
+      ]
+    },
+    {
+      "page": 8,
+      "status": "passed",
+      "observed": [
+        "The non-global-endpoint paragraph visibly says 30 Rosenbrock runs meet the gradient criterion but only 26 meet the global-objective target.",
+        "The cost paragraph explicitly restricts to shared initial points for which both methods meet G. It shows 5, 3, and 4 pairs for d=2,10,20.",
+        "The visible ratio label is function evaluations, nfev(CG)/nfev(BFGS), with values 1.24, 2.97 and 3.91.",
+        "The following sentence explicitly states that these median ratios do not measure wall time or describe starts where either method misses G.",
+        "The closing CG 14/15 versus BFGS 12/15 statement is complete. The longer paragraph remains above the lower margin with clear space before the page number."
+      ]
+    },
+    {
+      "page": 9,
+      "status": "passed",
+      "observed": [
+        "The discussion names the selected Rosenbrock pairs where both methods meet G and describes the comparison in function evaluations.",
+        "The Windows-reference and platform-scope qualifications remain visible.",
+        "The conclusion uses runs meeting the gradient criterion for the 43/45 Rastrigin result and retains the two precision-loss cases.",
+        "Discussion, reproducibility paragraph and conclusion fit without clipping, overlap or an added page."
+      ]
+    }
+  ],
+  "visible_paired_ratio_conditions": {
+    "shared_initial_point_explicit": true,
+    "both_methods_meet_G_explicit": true,
+    "dimensions": [
+      2,
+      10,
+      20
+    ],
+    "selected_pair_counts": [
+      5,
+      3,
+      4
+    ],
+    "metric": "median nfev(CG)/nfev(BFGS) function-evaluation ratio",
+    "displayed_values": [
+      "1.24",
+      "2.97",
+      "3.91"
+    ],
+    "wall_time_exclusion_explicit": true
+  },
+  "observed_overflow": false,
+  "observed_clipping": false,
+  "source_edits_applied": false,
+  "algorithms_or_tests_executed": false,
+  "data_validation_run": false,
+  "files_written_by_this_task": [
+    "audits/polish_20261106/visual_review.json"
+  ]
+}

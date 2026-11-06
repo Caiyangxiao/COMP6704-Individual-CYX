@@ -1,0 +1,18 @@
+COMP6704 | Unconstrained Optimization | CPU experiment
+This is a reproducible benchmark run, not a universal optimizer ranking.
+Runs: 6; dimensions: [2]; starts per case: 1
+Stationary and global-target flags are separate offline checks.
+
+problem      method  nit     nfev     njev      f_final       grad_norm  stationary global_hit
+rosenbrock   GD      5000    51127     5001  5.06887e-05  9.20576e-03      False      False
+rosenbrock   CG        20       44       44  1.62044e-16  1.13862e-08       True       True
+rosenbrock   BFGS      26       49       49  8.49276e-15  1.62506e-07       True       True
+rastrigin    GD        36      313       37  9.94959e-01  9.96468e-07       True      False
+rastrigin    CG         9       24       24  4.97479e+00  3.79147e-10       True      False
+rastrigin    BFGS       7       10       10  7.95966e+00  3.98152e-08       True      False
+
+Raw statuses/messages: see summary.csv and runs/*.json.
+Accepted/initial/terminal events and cumulative costs: traces/*.csv.
+Initial values and all diagnostic f/gradient values are computed offline.
+Every solver evaluation, including failed final trials, is counted.
+Short CPU timing differences include logging overhead and may be noisy.

@@ -1,0 +1,35 @@
+{
+  "page_count": 10,
+  "includes_references": true,
+  "pdf_bytes": 13218219,
+  "pdf_under_20MB": true,
+  "embedded_archive_verified": true,
+  "page_source": "_reportlab_pages.pdf",
+  "files": {
+    "Yangxiao Cai+26023041r.docx": {
+      "bytes": 1009123,
+      "sha256": "db3cf6c2a062d147b187b8adc992cfb99875e1b51b5a13db0fd419431e493898"
+    },
+    "Yangxiao Cai+26023041r.pdf": {
+      "bytes": 13218219,
+      "sha256": "8bda297e2a2ae31800e00ce1235b356874c555362380ba7457ac4c3ad0b6d7a9"
+    },
+    "COMP6704_reproducibility.zip": {
+      "bytes": 12012214,
+      "sha256": "ac23c99c114b037d2ab030f775acabf10c3dbfd9d20c2befd52f875711d8f26f"
+    }
+  },
+  "planned_page_word_counts": [
+    462,
+    445,
+    409,
+    396,
+    373,
+    287,
+    390,
+    186,
+    562,
+    308
+  ]
+}
+

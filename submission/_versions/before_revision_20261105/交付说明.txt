@@ -1,0 +1,8 @@
+COMP6704 复核后最终交付
+方向：Unconstrained Optimization（无约束优化）。
+正式英文PDF与可编辑Word均为10页，包含参考文献。
+PDF采用未修改的官方NeurIPS2025样式，在主文档写课程说明；Word为同内容适配版。
+PDF约13.1MB，内嵌COMP6704_reproducibility.zip，与独立ZIP完全一致。
+独立模板包：COMP6704_NeurIPS2025_论文模板.zip。
+中文README位于项目根目录和完整复现包根目录；具体修正、评分映射和证据见最终复核说明.txt。
+原90次数据与7份原始源码未变；本轮独立数值审计、28项测试、干净解压文档重建及模板编译均通过。

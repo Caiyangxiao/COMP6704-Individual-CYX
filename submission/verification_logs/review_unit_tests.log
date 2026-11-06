@@ -1,0 +1,34 @@
+
+test_completed_study_produces_group_and_provenance_files (test_analysis.AnalysisTests.test_completed_study_produces_group_and_provenance_files) ... ok
+test_failed_runs_remain_in_medians_ranges_and_denominators (test_analysis.AnalysisTests.test_failed_runs_remain_in_medians_ranges_and_denominators) ... ok
+test_incomplete_study_is_rejected (test_analysis.AnalysisTests.test_incomplete_study_is_rejected) ... ok
+test_demo_points_are_a_stable_subset_of_full_study (test_experiment.ExperimentTests.test_demo_points_are_a_stable_subset_of_full_study) ... ok
+test_existing_results_are_not_silently_overwritten (test_experiment.ExperimentTests.test_existing_results_are_not_silently_overwritten) ... ok
+test_invalid_protocol_is_rejected_before_running (test_experiment.ExperimentTests.test_invalid_protocol_is_rejected_before_running) ... ok
+test_pipeline_preserves_all_runs_and_event_costs (test_experiment.ExperimentTests.test_pipeline_preserves_all_runs_and_event_costs) ... ok
+test_incorrect_gradient_fails (test_objectives.GradientDiagnosticTests.test_incorrect_gradient_fails) ... ok
+test_invalid_steps_and_nonfinite_points_are_rejected (test_objectives.GradientDiagnosticTests.test_invalid_steps_and_nonfinite_points_are_rejected) ... ok
+test_unknown_objective_and_frozen_metadata (test_objectives.GradientDiagnosticTests.test_unknown_objective_and_frozen_metadata) ... ok
+test_analytic_gradients_match_central_differences (test_objectives.ObjectiveTests.test_analytic_gradients_match_central_differences) ... ok
+test_both_functions_have_negative_directional_curvature (test_objectives.ObjectiveTests.test_both_functions_have_negative_directional_curvature) ... ok
+test_gradient_is_float64_and_input_is_unchanged (test_objectives.ObjectiveTests.test_gradient_is_float64_and_input_is_unchanged) ... ok
+test_invalid_shapes_and_dimensions_are_rejected (test_objectives.ObjectiveTests.test_invalid_shapes_and_dimensions_are_rejected) ... ok
+test_known_global_minima_and_gradients (test_objectives.ObjectiveTests.test_known_global_minima_and_gradients) ... ok
+test_rastrigin_matches_definition_away_from_minimum (test_objectives.ObjectiveTests.test_rastrigin_matches_definition_away_from_minimum) ... ok
+test_rastrigin_stays_positive_very_close_to_minimum (test_objectives.ObjectiveTests.test_rastrigin_stays_positive_very_close_to_minimum) ... ok
+test_both_benchmark_functions_run_through_all_methods (test_solvers.SolverTests.test_both_benchmark_functions_run_through_all_methods) ... ok
+test_failed_line_search_counts_trials_without_accepting_them (test_solvers.SolverTests.test_failed_line_search_counts_trials_without_accepting_them) ... ok
+test_gd_accepted_steps_satisfy_armijo_and_converge (test_solvers.SolverTests.test_gd_accepted_steps_satisfy_armijo_and_converge) ... ok
+test_global_target_can_be_hit_without_stationarity (test_solvers.SolverTests.test_global_target_can_be_hit_without_stationarity) ... ok
+test_nonfinite_trial_point_is_not_evaluated_or_accepted (test_solvers.SolverTests.test_nonfinite_trial_point_is_not_evaluated_or_accepted) ... ok
+test_one_iteration_budget_permits_exactly_one_accepted_update (test_solvers.SolverTests.test_one_iteration_budget_permits_exactly_one_accepted_update) ... ok
+test_optimal_initial_point_needs_no_update (test_solvers.SolverTests.test_optimal_initial_point_needs_no_update) ... ok
+test_rounded_zero_step_is_stagnation_rather_than_convergence (test_solvers.SolverTests.test_rounded_zero_step_is_stagnation_rather_than_convergence) ... ok
+test_scipy_native_and_wrapper_evaluation_counts_agree (test_solvers.SolverTests.test_scipy_native_and_wrapper_evaluation_counts_agree) ... ok
+test_stationarity_does_not_imply_global_target_hit (test_solvers.SolverTests.test_stationarity_does_not_imply_global_target_hit) ... ok
+test_zero_iteration_budget_only_evaluates_initial_point (test_solvers.SolverTests.test_zero_iteration_budget_only_evaluates_initial_point) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.600s
+
+OK

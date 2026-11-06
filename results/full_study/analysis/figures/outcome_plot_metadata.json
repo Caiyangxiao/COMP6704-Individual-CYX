@@ -1,0 +1,149 @@
+{
+  "matplotlib": "3.10.0",
+  "source_sha256": "920ad3c4cf70adab3b128b5984496775fbf9ab89bfa3d9a1df0a29ce89c2bcf7",
+  "summary_sha256": "c50d4efacbd7851ba42aac512fd212b0f5e1197e4d9c28a06a43919a3d7abc6c",
+  "codes": {
+    "G": "G: stationary + global target",
+    "L": "L: stationary, non-global",
+    "I": "I: iteration limit",
+    "P": "P: precision loss / line search",
+    "F": "F: other nonstationary"
+  },
+  "rows": [
+    [
+      "rosenbrock",
+      2
+    ],
+    [
+      "rosenbrock",
+      10
+    ],
+    [
+      "rosenbrock",
+      20
+    ],
+    [
+      "rastrigin",
+      2
+    ],
+    [
+      "rastrigin",
+      10
+    ],
+    [
+      "rastrigin",
+      20
+    ]
+  ],
+  "matrix": [
+    [
+      "I",
+      "I",
+      "I",
+      "I",
+      "I",
+      "G",
+      "G",
+      "G",
+      "G",
+      "G",
+      "G",
+      "G",
+      "G",
+      "G",
+      "G"
+    ],
+    [
+      "I",
+      "I",
+      "I",
+      "I",
+      "I",
+      "G",
+      "G",
+      "G",
+      "L",
+      "G",
+      "G",
+      "G",
+      "G",
+      "L",
+      "L"
+    ],
+    [
+      "I",
+      "I",
+      "I",
+      "I",
+      "I",
+      "G",
+      "G",
+      "G",
+      "G",
+      "G",
+      "L",
+      "G",
+      "G",
+      "G",
+      "G"
+    ],
+    [
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L"
+    ],
+    [
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L"
+    ],
+    [
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "L",
+      "P",
+      "P",
+      "L"
+    ]
+  ],
+  "counts": {
+    "G": 26,
+    "L": 47,
+    "I": 15,
+    "P": 2,
+    "F": 0
+  }
+}

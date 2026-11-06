@@ -1,0 +1,126 @@
+{
+  "started_at": "2026-11-05T20:04:35.528837+08:00",
+  "timezone": "Asia/Shanghai",
+  "direction": "Unconstrained Optimization",
+  "topic": "Classical methods on nonconvex test functions (CPU)",
+  "execution_status": "completed",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\.venv\\Scripts\\python.exe",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+  "logical_cpu_count": 24,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "numpy_configuration": {
+    "Compilers": {
+      "c": {
+        "name": "msvc",
+        "linker": "link",
+        "version": "19.29.30153",
+        "commands": "cl"
+      },
+      "cython": {
+        "name": "cython",
+        "linker": "cython",
+        "version": "3.0.8",
+        "commands": "cython"
+      },
+      "c++": {
+        "name": "msvc",
+        "linker": "link",
+        "version": "19.29.30153",
+        "commands": "cl"
+      }
+    },
+    "Machine Information": {
+      "host": {
+        "cpu": "x86_64",
+        "family": "x86_64",
+        "endian": "little",
+        "system": "windows"
+      },
+      "build": {
+        "cpu": "x86_64",
+        "family": "x86_64",
+        "endian": "little",
+        "system": "windows"
+      }
+    },
+    "Build Dependencies": {
+      "blas": {
+        "name": "openblas64",
+        "found": true,
+        "version": "0.3.23.dev",
+        "detection method": "pkgconfig",
+        "include directory": "/c/opt/64/include",
+        "lib directory": "/c/opt/64/lib",
+        "openblas configuration": "USE_64BITINT=1 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS= NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= SKYLAKEX MAX_THREADS=2",
+        "pc file directory": "C:/opt/64/lib/pkgconfig"
+      },
+      "lapack": {
+        "name": "dep3179274605568",
+        "found": true,
+        "version": "1.26.4",
+        "detection method": "internal",
+        "include directory": "unknown",
+        "lib directory": "unknown",
+        "openblas configuration": "unknown",
+        "pc file directory": "unknown"
+      }
+    },
+    "Python Information": {
+      "path": "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-g7slqwov\\cp312-win_amd64\\build\\venv\\Scripts\\python.exe",
+      "version": "3.12"
+    },
+    "SIMD Extensions": {
+      "baseline": [
+        "SSE",
+        "SSE2",
+        "SSE3"
+      ],
+      "found": [
+        "SSSE3",
+        "SSE41",
+        "POPCNT",
+        "SSE42",
+        "AVX",
+        "F16C",
+        "FMA3",
+        "AVX2"
+      ],
+      "not found": [
+        "AVX512F",
+        "AVX512CD",
+        "AVX512_SKX",
+        "AVX512_CLX",
+        "AVX512_CNL",
+        "AVX512_ICL"
+      ]
+    }
+  },
+  "source_sha256": {
+    "cpu_optimization/__init__.py": "e927c6d0dd3ead9248c9e3f814ea80198cdb9ad9482e5ac06459b624279c6a4e",
+    "cpu_optimization/experiment.py": "c9b3f653503a3bf589c8ab0f5b2c0193bb48fd7da046c0ed1109bf509e340244",
+    "cpu_optimization/objectives.py": "a719e6d965c924be7b21f5c1ef6e8bcf5c34ae08c70e4540f23af56f8f0cbddf",
+    "cpu_optimization/plotting.py": "3593805a25c0f6415756084145062ad013baee71dc26deb047c046cd2e1b7b1e",
+    "cpu_optimization/solvers.py": "dec57377948567b2928b32116ca035e74b3e6b943048539a51dc7fc3890ac812",
+    "run_experiments.py": "e9c6fe4196e9ce61c085d00bf26582f6fa26407c1e0088c0624c787169771a04",
+    "plot_results.py": "f3017d4c3354370545a80ac93f26f656192df46619a4f19b0375822ad61ede23"
+  },
+  "scipy_optimize_source_sha256": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+  "initialization": "PCG64 / SeedSequence([seed, objective_index, dimension])",
+  "expected_runs": 90,
+  "timing_scope": "solver call including initialization, trials and event capture; excludes offline diagnostics and file IO",
+  "bfgs_complexity_reference": "SciPy 1.13.1 uses dense matrix products in inverse-Hessian update; recheck other versions",
+  "completed_runs": 90,
+  "all_counters_consistent": true,
+  "all_traces_consistent": true
+}

@@ -1,0 +1,26 @@
+{
+  "pages": 9,
+  "planned_pages": 9,
+  "pdf_bytes": 383989,
+  "docx_bytes": 220029,
+  "tables": 9,
+  "formulas": 13,
+  "expected_tables": 9,
+  "expected_formulas": 13,
+  "page_text_lengths": [
+    899,
+    1019,
+    727,
+    835,
+    794,
+    946,
+    933,
+    1026,
+    1495
+  ],
+  "first_page_has_direction": true,
+  "has_recent_references": true,
+  "has_counter_protocol": true,
+  "has_complexity_correction": true,
+  "links": 9
+}

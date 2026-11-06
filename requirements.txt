@@ -1,0 +1,4 @@
+# Tested with Python 3.12.8. SciPy version matches the source audit in the proposal.
+numpy==1.26.4
+scipy==1.13.1
+matplotlib==3.10.0

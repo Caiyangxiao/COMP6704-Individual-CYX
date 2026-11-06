@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-11-05T21:07:31.540208+08:00",
+  "timezone": "Asia/Shanghai",
+  "results_directory": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\results\\full_study",
+  "validator_source_sha256": "005ceaf1083e2111335644f125cb8248d56acfee33036dcbbb9c955ff5abe266",
+  "counts": {
+    "expected_runs": 90,
+    "summary_rows": 90,
+    "run_json_files": 90,
+    "trace_csv_files": 90,
+    "expected_initial_points": 30,
+    "initial_points": 30,
+    "trace_events": 80605,
+    "accepted_updates": 80425,
+    "gradient_checks": 12,
+    "gradient_checks_passed": 12
+  },
+  "demo_initial_points": {
+    "available": true,
+    "matched": 2,
+    "path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\results\\demo_2d\\initial_points.json",
+    "compared": 2
+  },
+  "source_hashes": {
+    "cpu_optimization/__init__.py": {
+      "expected": "e927c6d0dd3ead9248c9e3f814ea80198cdb9ad9482e5ac06459b624279c6a4e",
+      "actual": "e927c6d0dd3ead9248c9e3f814ea80198cdb9ad9482e5ac06459b624279c6a4e",
+      "matches": true
+    },
+    "cpu_optimization/experiment.py": {
+      "expected": "c9b3f653503a3bf589c8ab0f5b2c0193bb48fd7da046c0ed1109bf509e340244",
+      "actual": "c9b3f653503a3bf589c8ab0f5b2c0193bb48fd7da046c0ed1109bf509e340244",
+      "matches": true
+    },
+    "cpu_optimization/objectives.py": {
+      "expected": "a719e6d965c924be7b21f5c1ef6e8bcf5c34ae08c70e4540f23af56f8f0cbddf",
+      "actual": "a719e6d965c924be7b21f5c1ef6e8bcf5c34ae08c70e4540f23af56f8f0cbddf",
+      "matches": true
+    },
+    "cpu_optimization/plotting.py": {
+      "expected": "3593805a25c0f6415756084145062ad013baee71dc26deb047c046cd2e1b7b1e",
+      "actual": "3593805a25c0f6415756084145062ad013baee71dc26deb047c046cd2e1b7b1e",
+      "matches": true
+    },
+    "cpu_optimization/solvers.py": {
+      "expected": "dec57377948567b2928b32116ca035e74b3e6b943048539a51dc7fc3890ac812",
+      "actual": "dec57377948567b2928b32116ca035e74b3e6b943048539a51dc7fc3890ac812",
+      "matches": true
+    },
+    "run_experiments.py": {
+      "expected": "e9c6fe4196e9ce61c085d00bf26582f6fa26407c1e0088c0624c787169771a04",
+      "actual": "e9c6fe4196e9ce61c085d00bf26582f6fa26407c1e0088c0624c787169771a04",
+      "matches": true
+    },
+    "plot_results.py": {
+      "expected": "f3017d4c3354370545a80ac93f26f656192df46619a4f19b0375822ad61ede23",
+      "actual": "f3017d4c3354370545a80ac93f26f656192df46619a4f19b0375822ad61ede23",
+      "matches": true
+    },
+    "scipy.optimize._optimize": {
+      "path": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\.venv\\Lib\\site-packages\\scipy\\optimize\\_optimize.py",
+      "expected": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+      "actual": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+      "matches": true
+    }
+  },
+  "result_label_totals": {
+    "solver_success": 73,
+    "stationary": 73,
+    "global_hit": 26
+  },
+  "result_label_combinations": [
+    {
+      "solver_success": false,
+      "stationary": false,
+      "global_hit": false,
+      "count": 17
+    },
+    {
+      "solver_success": true,
+      "stationary": true,
+      "global_hit": false,
+      "count": 47
+    },
+    {
+      "solver_success": true,
+      "stationary": true,
+      "global_hit": true,
+      "count": 26
+    }
+  ],
+  "termination_counts": [
+    {
+      "method": "BFGS",
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully.",
+      "count": 28
+    },
+    {
+      "method": "BFGS",
+      "solver_status": 2,
+      "solver_message": "Desired error not necessarily achieved due to precision loss.",
+      "count": 2
+    },
+    {
+      "method": "CG",
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully.",
+      "count": 30
+    },
+    {
+      "method": "GD",
+      "solver_status": 0,
+      "solver_message": "Gradient two-norm target reached.",
+      "count": 15
+    },
+    {
+      "method": "GD",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "count": 15
+    }
+  ],
+  "extra_terminal_evaluations": [
+    {
+      "run_id": "rastrigin_d20_s03_bfgs",
+      "additional_nfev": 58,
+      "additional_njev": 46,
+      "solver_status": 2
+    }
+  ],
+  "unsuccessful_solver_runs": [
+    {
+      "run_id": "rosenbrock_d2_s01_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 51127,
+      "njev": 5001,
+      "f_value": 5.0688651924024204e-05,
+      "gradient_norm": 0.0092057608115428,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d2_s02_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 49090,
+      "njev": 5001,
+      "f_value": 4.637582653346796e-06,
+      "gradient_norm": 0.003369051114959891,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d2_s03_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 50148,
+      "njev": 5001,
+      "f_value": 6.667376983038968e-06,
+      "gradient_norm": 0.0071260472418190985,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d2_s04_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 49290,
+      "njev": 5001,
+      "f_value": 3.3526513324159073e-06,
+      "gradient_norm": 0.002500849684249683,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d2_s05_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 49237,
+      "njev": 5001,
+      "f_value": 3.7279892037615335e-06,
+      "gradient_norm": 0.005312352781493791,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d10_s01_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 53063,
+      "njev": 5001,
+      "f_value": 0.000498884673255283,
+      "gradient_norm": 0.053354713301211866,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d10_s02_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 53339,
+      "njev": 5001,
+      "f_value": 0.0004142936618798375,
+      "gradient_norm": 0.043034248489596284,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d10_s03_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 53090,
+      "njev": 5001,
+      "f_value": 0.0004936694959361908,
+      "gradient_norm": 0.035266616951921036,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d10_s04_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 53208,
+      "njev": 5001,
+      "f_value": 0.00046351568621569197,
+      "gradient_norm": 0.03236695339457787,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d10_s05_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 53100,
+      "njev": 5001,
+      "f_value": 0.0004908390352521153,
+      "gradient_norm": 0.04573230521293345,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d20_s01_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 53289,
+      "njev": 5001,
+      "f_value": 0.0035306884122016475,
+      "gradient_norm": 0.18643420508412917,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d20_s02_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 53376,
+      "njev": 5001,
+      "f_value": 0.003388564879088025,
+      "gradient_norm": 0.14503944165122232,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d20_s03_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 53312,
+      "njev": 5001,
+      "f_value": 0.003510956040827562,
+      "gradient_norm": 0.12341418903054734,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d20_s04_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 53071,
+      "njev": 5001,
+      "f_value": 0.0039987642011307285,
+      "gradient_norm": 0.12610668393094104,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rosenbrock_d20_s05_gd",
+      "solver_status": 1,
+      "solver_message": "Maximum accepted updates reached.",
+      "nit": 5000,
+      "nfev": 53205,
+      "njev": 5001,
+      "f_value": 0.0036675097071166146,
+      "gradient_norm": 0.11994552359329035,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rastrigin_d20_s03_bfgs",
+      "solver_status": 2,
+      "solver_message": "Desired error not necessarily achieved due to precision loss.",
+      "nit": 26,
+      "nfev": 117,
+      "njev": 105,
+      "f_value": 41.78821486083217,
+      "gradient_norm": 8.738210348769578e-06,
+      "stationary": false,
+      "global_hit": false
+    },
+    {
+      "run_id": "rastrigin_d20_s04_bfgs",
+      "solver_status": 2,
+      "solver_message": "Desired error not necessarily achieved due to precision loss.",
+      "nit": 21,
+      "nfev": 45,
+      "njev": 45,
+      "f_value": 64.67220759145349,
+      "gradient_norm": 1.0002345749141817e-06,
+      "stationary": false,
+      "global_hit": false
+    }
+  ],
+  "passed": true,
+  "checks": {
+    "study_coverage": true,
+    "paired_initial_points": true,
+    "summary_consistency": true,
+    "native_evaluation_counts": true,
+    "trace_protocol": true,
+    "gd_armijo_and_budget": true,
+    "independent_final_diagnostics": true,
+    "result_classifications": true,
+    "gradient_checks": true,
+    "demo_subset": true,
+    "source_hashes": true
+  },
+  "assertions": {
+    "study_coverage": 3,
+    "paired_initial_points": 91,
+    "summary_consistency": 1710,
+    "native_evaluation_counts": 90,
+    "trace_protocol": 404105,
+    "gd_armijo_and_budget": 301980,
+    "independent_final_diagnostics": 90,
+    "result_classifications": 90,
+    "gradient_checks": 1,
+    "demo_subset": 1,
+    "source_hashes": 9
+  },
+  "errors": [],
+  "warnings": []
+}

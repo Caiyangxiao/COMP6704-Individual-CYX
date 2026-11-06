@@ -1,0 +1,119 @@
+{
+  "scope": "Installed source and in-memory LF/CRLF transformations; not a Linux numerical rerun",
+  "started_at": "2026-11-05T22:44:35.530892+08:00",
+  "recorded_at": "2026-11-05T22:44:36.172636+08:00",
+  "environment": {
+    "python_version": "3.12.8",
+    "python_build": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+    "python_implementation": "CPython",
+    "python_executable": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\.venv\\Scripts\\python.exe",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "matplotlib": "3.10.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+    "logical_cpu_count": 24,
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "BLIS_NUM_THREADS": null
+    }
+  },
+  "source_path": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\.venv\\Lib\\site-packages\\scipy\\optimize\\_optimize.py",
+  "historical_metadata_sha256": "a12f287bd5f87093ccdf0f03ea33a54e512c5662f08cf89bf73e7e2e9c52b725",
+  "historical_expected_raw_sha256": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+  "cases": {
+    "installed_raw_bytes": {
+      "expected_raw_sha256": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+      "actual_raw_sha256": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+      "raw_comparison": {
+        "matches": true,
+        "expected_digest_valid": true
+      },
+      "byte_length": 150667,
+      "line_endings": {
+        "crlf": 4092,
+        "lf_only": 0,
+        "bare_cr": 0
+      },
+      "passed": true,
+      "match_kind": "byte_exact",
+      "eol_equivalence": {
+        "checked": false,
+        "proved": false,
+        "matching_variants": [],
+        "variants": {},
+        "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+      },
+      "errors": []
+    },
+    "LF_reconstruction": {
+      "expected_raw_sha256": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+      "actual_raw_sha256": "78e059b1d535ec2e82c151238d130f10989305bbf9e53b37550e85d3f458f82a",
+      "raw_comparison": {
+        "matches": false,
+        "expected_digest_valid": true
+      },
+      "byte_length": 146575,
+      "line_endings": {
+        "crlf": 0,
+        "lf_only": 4092,
+        "bare_cr": 0
+      },
+      "passed": true,
+      "match_kind": "eol_equivalent",
+      "eol_equivalence": {
+        "checked": true,
+        "proved": true,
+        "matching_variants": [
+          "crlf_only"
+        ],
+        "variants": {
+          "lf_only": {
+            "reconstructed_actual_sha256": "78e059b1d535ec2e82c151238d130f10989305bbf9e53b37550e85d3f458f82a",
+            "byte_length": 146575,
+            "matches_historical_raw_sha256": false,
+            "transformation": "Replace each CRLF with LF; preserve every other byte."
+          },
+          "crlf_only": {
+            "reconstructed_actual_sha256": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+            "byte_length": 150667,
+            "matches_historical_raw_sha256": true,
+            "transformation": "Replace each CRLF with LF, then each LF with CRLF; preserve every other byte."
+          }
+        },
+        "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+      },
+      "errors": []
+    },
+    "CRLF_reconstruction": {
+      "expected_raw_sha256": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+      "actual_raw_sha256": "15a2bbc0ede77dfb2cdec5df03e48a58ae40f47d7bd8fc70193f56b6a363f4b8",
+      "raw_comparison": {
+        "matches": true,
+        "expected_digest_valid": true
+      },
+      "byte_length": 150667,
+      "line_endings": {
+        "crlf": 4092,
+        "lf_only": 0,
+        "bare_cr": 0
+      },
+      "passed": true,
+      "match_kind": "byte_exact",
+      "eol_equivalence": {
+        "checked": false,
+        "proved": false,
+        "matching_variants": [],
+        "variants": {},
+        "proof_basis": "A reconstructed actual-byte SHA-256 must equal the trusted historical raw SHA-256."
+      },
+      "errors": []
+    }
+  },
+  "source_file_not_modified": true,
+  "passed": true
+}

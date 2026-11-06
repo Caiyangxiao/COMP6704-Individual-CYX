@@ -1,0 +1,46 @@
+{
+  "run_id": "rosenbrock_d2_s01_bfgs",
+  "start_id": 1,
+  "problem": "rosenbrock",
+  "dimension": 2,
+  "method": "BFGS",
+  "x0": [
+    -1.5543223636616896,
+    -0.3460368732257244
+  ],
+  "x_final": [
+    1.0000000921544991,
+    1.0000001843644608
+  ],
+  "f_value": 8.492759227821982e-15,
+  "gradient_norm": 1.6250626976495358e-07,
+  "objective_gap": 8.492759227821982e-15,
+  "nit": 26,
+  "nfev": 49,
+  "njev": 49,
+  "reported_nfev": 49,
+  "reported_njev": 49,
+  "elapsed_seconds": 0.0055559000466018915,
+  "solver_success": true,
+  "solver_status": 0,
+  "solver_message": "Optimization terminated successfully.",
+  "stationary": true,
+  "global_hit": true,
+  "finite_result": true,
+  "nonfinite_evaluations": 0,
+  "counter_consistent": true,
+  "trace_consistent": true,
+  "trace_events": 28,
+  "warnings": [],
+  "config": {
+    "gtol": 1e-06,
+    "maxiter": 5000,
+    "c1": 0.0001,
+    "c2": 0.4,
+    "alpha0": 1.0,
+    "backtrack_factor": 0.5,
+    "max_backtracks": 50,
+    "min_alpha": 1e-12,
+    "global_tolerance": 1e-06
+  }
+}

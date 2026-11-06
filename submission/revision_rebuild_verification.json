@@ -1,0 +1,222 @@
+{
+  "started_at": "2026-11-05T22:58:29.981776+08:00",
+  "scope": "Fresh extracted project; same installed Windows CPU dependencies; documented tests, read-only validator and report rebuild. No formal benchmark solves.",
+  "formal_experiment_runs": 0,
+  "delivered_archive_sha256": "76be143f570a7819d7ad5bd41522508025d61bbc27fe6a2834065b3c32320077",
+  "stages": {
+    "unit_tests": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "readonly_validation": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "content_generation": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "latex_generation": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "latex_compile": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "package": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "document_rebuild": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "page_content_comparison": {
+      "exit_code": 0,
+      "passed": true
+    }
+  },
+  "fresh_tests": {
+    "schema_version": 1,
+    "scope": "Existing and source-hash unit tests; no new formal benchmark runs",
+    "started_at": "2026-11-05T22:58:36.849235+08:00",
+    "finished_at": "2026-11-05T22:58:37.894936+08:00",
+    "timezone": "Asia/Shanghai",
+    "environment": {
+      "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\.venv\\Scripts\\python.exe",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "package_versions": {
+        "numpy": "1.26.4",
+        "scipy": "1.13.1",
+        "matplotlib": "3.10.0"
+      }
+    },
+    "passed": true,
+    "tests_discovered": 50,
+    "tests_run": 50,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "test_ids": [
+      "tests.test_analysis.AnalysisTests.test_completed_study_produces_group_and_provenance_files",
+      "tests.test_analysis.AnalysisTests.test_failed_runs_remain_in_medians_ranges_and_denominators",
+      "tests.test_analysis.AnalysisTests.test_incomplete_study_is_rejected",
+      "tests.test_experiment.ExperimentTests.test_demo_points_are_a_stable_subset_of_full_study",
+      "tests.test_experiment.ExperimentTests.test_existing_results_are_not_silently_overwritten",
+      "tests.test_experiment.ExperimentTests.test_invalid_protocol_is_rejected_before_running",
+      "tests.test_experiment.ExperimentTests.test_pipeline_preserves_all_runs_and_event_costs",
+      "tests.test_objectives.GradientDiagnosticTests.test_incorrect_gradient_fails",
+      "tests.test_objectives.GradientDiagnosticTests.test_invalid_steps_and_nonfinite_points_are_rejected",
+      "tests.test_objectives.GradientDiagnosticTests.test_unknown_objective_and_frozen_metadata",
+      "tests.test_objectives.ObjectiveTests.test_analytic_gradients_match_central_differences",
+      "tests.test_objectives.ObjectiveTests.test_both_functions_have_negative_directional_curvature",
+      "tests.test_objectives.ObjectiveTests.test_gradient_is_float64_and_input_is_unchanged",
+      "tests.test_objectives.ObjectiveTests.test_invalid_shapes_and_dimensions_are_rejected",
+      "tests.test_objectives.ObjectiveTests.test_known_global_minima_and_gradients",
+      "tests.test_objectives.ObjectiveTests.test_rastrigin_matches_definition_away_from_minimum",
+      "tests.test_objectives.ObjectiveTests.test_rastrigin_stays_positive_very_close_to_minimum",
+      "tests.test_packaging.DeliverySnapshotTests.test_matching_report_snapshot_is_accepted",
+      "tests.test_packaging.DeliverySnapshotTests.test_old_archive_cannot_be_attached_to_new_report_sources",
+      "tests.test_packaging.DeliverySnapshotTests.test_required_report_source_missing_from_archive_is_rejected",
+      "tests.test_packaging.PackagingSelectionTests.test_current_report_is_excluded_but_history_remains_accessible",
+      "tests.test_packaging.PackagingSelectionTests.test_outer_delivery_records_are_not_code_archive_members",
+      "tests.test_solvers.SolverTests.test_both_benchmark_functions_run_through_all_methods",
+      "tests.test_solvers.SolverTests.test_failed_line_search_counts_trials_without_accepting_them",
+      "tests.test_solvers.SolverTests.test_gd_accepted_steps_satisfy_armijo_and_converge",
+      "tests.test_solvers.SolverTests.test_global_target_can_be_hit_without_stationarity",
+      "tests.test_solvers.SolverTests.test_nonfinite_trial_point_is_not_evaluated_or_accepted",
+      "tests.test_solvers.SolverTests.test_one_iteration_budget_permits_exactly_one_accepted_update",
+      "tests.test_solvers.SolverTests.test_optimal_initial_point_needs_no_update",
+      "tests.test_solvers.SolverTests.test_rounded_zero_step_is_stagnation_rather_than_convergence",
+      "tests.test_solvers.SolverTests.test_scipy_native_and_wrapper_evaluation_counts_agree",
+      "tests.test_solvers.SolverTests.test_stationarity_does_not_imply_global_target_hit",
+      "tests.test_solvers.SolverTests.test_zero_iteration_budget_only_evaluates_initial_point",
+      "tests.test_source_hashes.EnvironmentAndOutputTests.test_cli_refusal_does_not_validate_or_overwrite_history",
+      "tests.test_source_hashes.EnvironmentAndOutputTests.test_default_output_is_a_separate_current_audit",
+      "tests.test_source_hashes.EnvironmentAndOutputTests.test_eol_proof_does_not_replace_raw_equality",
+      "tests.test_source_hashes.EnvironmentAndOutputTests.test_matching_versions_keep_platform_differences_explicit",
+      "tests.test_source_hashes.EnvironmentAndOutputTests.test_numerical_version_mismatches_are_errors",
+      "tests.test_source_hashes.EnvironmentAndOutputTests.test_output_is_refused_inside_reference_or_any_results_directory",
+      "tests.test_source_hashes.EnvironmentAndOutputTests.test_source_or_version_failure_keeps_data_passed_and_cli_nonzero",
+      "tests.test_source_hashes.SourceHashTests.test_bare_cr_is_rejected_when_raw_bytes_differ",
+      "tests.test_source_hashes.SourceHashTests.test_bom_whitespace_and_trailing_newline_are_not_discarded",
+      "tests.test_source_hashes.SourceHashTests.test_code_edit_is_rejected_even_when_eol_also_changes",
+      "tests.test_source_hashes.SourceHashTests.test_crlf_actual_proves_identity_to_historical_lf_bytes",
+      "tests.test_source_hashes.SourceHashTests.test_exact_bytes_take_priority_over_eol_fallback",
+      "tests.test_source_hashes.SourceHashTests.test_invalid_historical_digest_cannot_be_accepted",
+      "tests.test_source_hashes.SourceHashTests.test_lf_actual_proves_identity_to_historical_crlf_bytes",
+      "tests.test_source_hashes.SourceHashTests.test_missing_file_has_no_fabricated_actual_hash",
+      "tests.test_source_hashes.SourceHashTests.test_mixed_actual_eol_requires_a_matching_reconstructed_historical_hash",
+      "tests.test_source_hashes.SourceHashTests.test_mixed_historical_eol_is_not_invented_from_an_unmatched_digest"
+    ],
+    "failure_details": [],
+    "error_details": [],
+    "test_sources": {
+      "tests/__init__.py": "3970c5e9afbc75c30a091f48a9c88652c4f7e987907575f9e1b5030d7df3429c",
+      "tests/test_analysis.py": "9287fdc8e0a7362e26e91d520bbb325d97c769c2ceda1d3115e943ffb4ef445f",
+      "tests/test_experiment.py": "7a43a195ac5532ccb2df1298091bfa1bfbf139561466e1440980cdfc9aa9a077",
+      "tests/test_objectives.py": "85ab33cd58f95c30ca53b8e31e9900dd8a2e5c9f3bf11693cef57171566e1491",
+      "tests/test_packaging.py": "3bc3c160901505a6ae872c71a0031e43eccbaaed54d67a5570e154c64f9b149c",
+      "tests/test_solvers.py": "99a324885c257f9a8bc81c65bee59b3c688b96697a74324a8f66a4ad709fa8a4",
+      "tests/test_source_hashes.py": "1ebe83f48340362c08c6522bd6ab8bb3cf1fe6ae82c6409036eb55d679d50038"
+    },
+    "runner_sha256": "aff028da13c3c113504d825617780ae8b8f3065fe9225582e6787ff6abc3ecc8"
+  },
+  "fresh_validation": {
+    "passed": true,
+    "time_scope": {
+      "started_at": "2026-11-05T22:58:38.143849+08:00",
+      "finished_at": "2026-11-05T22:58:40.385116+08:00",
+      "timezone": "Asia/Shanghai",
+      "elapsed_seconds": 2.240771000040695,
+      "measures": "This read-only validation execution; excludes any solver execution."
+    },
+    "counts": {
+      "expected_runs": 90,
+      "summary_rows": 90,
+      "run_json_files": 90,
+      "trace_csv_files": 90,
+      "expected_initial_points": 30,
+      "initial_points": 30,
+      "trace_events": 80605,
+      "accepted_updates": 80425,
+      "gradient_checks": 12,
+      "gradient_checks_passed": 12
+    },
+    "result_label_totals": {
+      "solver_success": 73,
+      "stationary": 73,
+      "global_hit": 26
+    },
+    "validation_scope": {
+      "solver_invoked": false,
+      "reference_results_written": false,
+      "historical_experiment_started_at": "2026-11-05T20:04:35.528837+08:00",
+      "interpretation": "Saved-data consistency, historical source identity/EOL proof, and required current software versions are independent checks. Passing is not a new numerical rerun or a timing-reproduction claim."
+    }
+  },
+  "rebuilt_report": {
+    "page_count": 10,
+    "includes_references": true,
+    "pdf_bytes": 13106707,
+    "pdf_under_20MB": true,
+    "embedded_archive_verified": true,
+    "page_source": "report.pdf",
+    "packaging_report_attached_separately": true,
+    "attachment_names": [
+      "COMP6704_reproducibility.zip",
+      "packaging_verification.json"
+    ],
+    "archive_sources_match_current_project": {
+      "passed": true,
+      "members_matching_current_project": 300,
+      "bytes_matching_current_project": 33415600,
+      "required_report_files": [
+        "README.md",
+        "paper_source/content.json",
+        "paper_source/equations.json",
+        "paper_source/generate_latex.py",
+        "paper_source/build_final_report.py",
+        "paper_source/template/report.tex",
+        "paper_source/template/neurips_2025.sty",
+        "provenance_integrity.py",
+        "validate_study.py",
+        "run_tests_audit.py",
+        "audits/revision_20261105/unit_tests.json"
+      ]
+    },
+    "pdf_format": "Official NeurIPS 2025 style with a course notice",
+    "word_format": "Editable course adaptation; not an official NeurIPS Word template",
+    "compiled_source_fingerprint": "d01955a5461c9973920ab7541436a7e18bc35f68c52c2c4ffba852c828b33b83",
+    "files": {
+      "Yangxiao Cai+26023041r.docx": {
+        "bytes": 833308,
+        "sha256": "3a43107845b4b791fa45d9f9402470eafe784ccafcad8cf7a8925bd312fb34bf"
+      },
+      "Yangxiao Cai+26023041r.pdf": {
+        "bytes": 13106707,
+        "sha256": "84a80d0f214a8f21af2a2f83f81eebccfe09a7d3ef25bb720dac74f7e114a04a"
+      },
+      "COMP6704_reproducibility.zip": {
+        "bytes": 12328615,
+        "sha256": "5b23d06807479e4289e675a02c5047b9e7856fbd6251b8e0c7b7a78409fbec79"
+      }
+    },
+    "planned_page_word_counts": [
+      395,
+      416,
+      448,
+      373,
+      347,
+      194,
+      392,
+      279,
+      492,
+      215
+    ]
+  },
+  "passed": true,
+  "finished_at": "2026-11-05T22:58:55.239115+08:00"
+}

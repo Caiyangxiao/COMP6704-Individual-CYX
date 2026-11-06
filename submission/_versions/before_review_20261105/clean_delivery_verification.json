@@ -1,0 +1,126 @@
+{
+  "archive_sha256": "ac23c99c114b037d2ab030f775acabf10c3dbfd9d20c2befd52f875711d8f26f",
+  "interpreter": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\.venv\\Scripts\\python.exe",
+  "stages": {
+    "unit_tests": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "reference_validation": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "full_90_reproduction": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "reproduction_validation": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "exact_numerical_comparison": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "analysis_rebuild": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "paper_figure_rebuild": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "document_rebuild": {
+      "exit_code": 0,
+      "passed": true
+    }
+  },
+  "comparison": {
+    "candidate": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\_clean_reproduction_vhye53f_\\results\\full_study_repeat01",
+    "candidate_run_files": 90,
+    "comparison_mode": "exact; no numerical tolerances",
+    "difference_count": 0,
+    "difference_details": [],
+    "difference_details_truncated": false,
+    "differences_by_category": {},
+    "environment_context": {
+      "candidate": {
+        "numpy": "1.26.4",
+        "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+        "scipy": "1.13.1"
+      },
+      "reference": {
+        "numpy": "1.26.4",
+        "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+        "scipy": "1.13.1"
+      }
+    },
+    "exact_run_outcomes_match": true,
+    "exact_trace_fields_match": true,
+    "expected_runs": 90,
+    "initial_points_match": true,
+    "metadata_policy": "Completion is checked; paths, timestamps, and other metadata are excluded from exact equality.",
+    "reference": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\_clean_reproduction_vhye53f_\\results\\full_study",
+    "reference_run_files": 90,
+    "required_outcome_fields": [
+      "x0",
+      "x_final",
+      "f_value",
+      "gradient_norm",
+      "objective_gap",
+      "nit",
+      "nfev",
+      "njev",
+      "solver_success",
+      "solver_status",
+      "solver_message",
+      "stationary",
+      "global_hit"
+    ],
+    "resolved_config_match": true,
+    "run_field_policy": "All JSON fields except elapsed_seconds are compared.",
+    "run_files_compared": 90,
+    "run_files_matching_exactly": 90,
+    "solver_invoked": false,
+    "status": "passed",
+    "trace_field_policy": "All CSV row fields except elapsed_seconds are compared, including run_id.",
+    "trace_files_compared": 90,
+    "trace_files_matching_exactly": 90,
+    "trace_rows_compared": 80605
+  },
+  "document_rebuild": {
+    "page_count": 10,
+    "includes_references": true,
+    "pdf_bytes": 13218219,
+    "pdf_under_20MB": true,
+    "embedded_archive_verified": true,
+    "page_source": "_reportlab_pages.pdf",
+    "files": {
+      "Yangxiao Cai+26023041r.docx": {
+        "bytes": 1009123,
+        "sha256": "db3cf6c2a062d147b187b8adc992cfb99875e1b51b5a13db0fd419431e493898"
+      },
+      "Yangxiao Cai+26023041r.pdf": {
+        "bytes": 13218219,
+        "sha256": "8bda297e2a2ae31800e00ce1235b356874c555362380ba7457ac4c3ad0b6d7a9"
+      },
+      "COMP6704_reproducibility.zip": {
+        "bytes": 12012214,
+        "sha256": "ac23c99c114b037d2ab030f775acabf10c3dbfd9d20c2befd52f875711d8f26f"
+      }
+    },
+    "planned_page_word_counts": [
+      462,
+      445,
+      409,
+      396,
+      373,
+      287,
+      390,
+      186,
+      562,
+      308
+    ]
+  },
+  "passed": true
+}

@@ -1,0 +1,1460 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-06T17:27:41.973261+08:00",
+  "capture_timezone": "Asia/Shanghai",
+  "scope": "Before English-only polish; source of truth is the input PDF and its embedded code ZIP. No solver or unit-test execution.",
+  "input_pdf": {
+    "path": "submission/Yangxiao Cai+26023041r.pdf",
+    "size_bytes": 13106641,
+    "sha256": "94ed077ef046e0dfcd4c22fd2bb4879343f602e9fd0619da899c8bb0463842ae",
+    "page_count": 10,
+    "abstract_text_extracted": "We compare Armijo gradient descent (GD), safeguarded nonlinear conjugate gradient (CG), and BFGS on Rosenbrock and Rastrigin through 90 controlled CPU solves. Dimensions 2, 10, and 20 each use five paired initial points and fixed stopping criteria. In the recorded Windows reference run, 73/90 runs meet the gradient tolerance and 26/90 meet the known global-objective tolerance: 47 meet only the gradient criterion, while 17 meet neither. On Rosenbrock, CG and BFGS attain the global target in 14/15 and 12/15 cases; GD reaches the iteration cap in all 15 cases. On Rastrigin, 43/45 runs meet the gradient tolerance, but none meets the global target. Endpoint diagnostics and comparisons conditional on matched global-target outcomes separate local convergence, evaluation cost, and final objective quality. Complete traces support this empirical distinction.",
+    "page_seven_text_extracted": "7 Results: Rastrigin\nd Method S/G Updates\nmedian\nnfev\nmedian [range]\nnjev\nmedian [range]\nFinal f\nmedian [range]\n2 GD 5/0 31 276\n[249, 313]\n32\n[29, 37]\n4.97\n[0.995, 12.9]\n2 CG 5/0 7 19\n[10, 24]\n19\n[10, 24]\n9.95\n[3.98, 16.9]\n2 BFGS 5/0 6 12\n[9, 16]\n12\n[9, 16]\n9.95\n[3.98, 16.9]\n10 GD 5/0 34 305\n[288, 312]\n35\n[33, 36]\n35.8\n[25.9, 37.8]\n10 CG 5/0 9 19\n[14, 24]\n19\n[14, 24]\n27.9\n[23.9, 37.8]\n10 BFGS 5/0 20 39\n[32, 43]\n39\n[32, 43]\n27.9\n[23.9, 37.8]\n20 GD 5/0 34 305\n[293, 312]\n35\n[34, 36]\n64.7\n[41.8, 126]\n20 CG 5/0 9 19\n[15, 22]\n19\n[15, 22]\n63.7\n[41.8, 69.6]\n20 BFGS 3/0 26 86\n[45, 117]\n86\n[45, 105]\n62.7\n[41.8, 68.7]\nTable 3. Rastrigin uses the same deﬁnitions and all-run convention as Table 2. In the ﬁnal row, nfev and\nnjev have equal medians but different ranges because one terminal search adds unequal function and gradient\ncounts.\nStationarity and objective quality separate sharply. GD and CG each meet S in 15/15 runs; BFGS\nmeets S in 13/15. None of the 45 runs meets G. Hence 43 successful gradient tests correspond\nto non-global endpoints, not solutions with objective near zero. Across each dimension, CG uses\nfewer function evaluations than GD: medians 19,19,19 versus 276,305,305. BFGS’s corresponding\nmedians are 12,39,86. These measure the cost of each observed endpoint; the different objective\nvalues prevent interpreting them as times to the same solution.\nThe paired ﬁnal objectives in Figure 2 show how rankings depend on the outcome. At d=2, GD\nobtains a lower f than both other methods on four of the ﬁve starts, despite taking more evaluations.\nOn start 1 it returns f=0.994959 with 313 function evaluations, compared with CG’s 4.974790 using\n24 and BFGS’s 7.959662 using 10. All three pass S. Thus quicker local convergence can lead to\na less favorable basin, and a single cost ranking would conceal that tradeoff. Raw Rastrigin objec-\ntives add contributions across coordinates; their increase across dimensions alone is not evidence of\nworsening per-coordinate quality.\n7.1 The two BFGS precision-loss terminations\n20D start Updates nfev / njev Final gradient norm Final f\n3 26 117 / 105 8.73821 × 10−6 41.78821486\n4 21 45 / 45 1.00023457 × 10−6 64.67220759\nBoth retain SciPy status=2 and its precision-loss message. At start 3 the last accepted event has\ncounts 59/59; the terminal event adds 58 function and 46 gradient evaluations without accepting a\nnew point. This directly exposes unsuccessful terminal trial work that iteration counts omit. At start\n4 there are no extra terminal calls, and the last accepted objective change rounds to zero. Its ﬁnal\ngradient norm is only 0.02346% above the threshold, but it remains a failure under the ﬁxed rule.\nRelaxing the threshold after seeing the result would change the protocol.\nThe common message does not uniquely identify an internal mechanism for each run. Failed line-\nsearch progress and ﬁnite-precision resolution are consistent with the saved evidence, but the traces\ndo not expose every internal scalar. The analytic derivations and independent checks provide no\nevidence of a gradient implementation error. Finite checks do not exclude every numerical problem.\nBoth outcomes are included in the ﬁnal row of Table 3 and shown as crosses in Figure 2.\n7"
+  },
+  "input_code_zip": {
+    "external_path": "submission/COMP6704_reproducibility.zip",
+    "size_bytes": 12328590,
+    "sha256": "76be143f570a7819d7ad5bd41522508025d61bbc27fe6a2834065b3c32320077",
+    "payload_file_count": 300,
+    "member_count_including_manifest": 301,
+    "manifest_bad_members": []
+  },
+  "attachments": {
+    "COMP6704_reproducibility.zip": [
+      {
+        "size_bytes": 12328590,
+        "sha256": "76be143f570a7819d7ad5bd41522508025d61bbc27fe6a2834065b3c32320077",
+        "external_path": "submission/COMP6704_reproducibility.zip",
+        "byte_identical_to_external": true
+      }
+    ],
+    "packaging_verification.json": [
+      {
+        "size_bytes": 3031,
+        "sha256": "db4dd12c1a05d63871c5e1646e1fe7ed86fa1e14448be07283dec2638501eedf",
+        "external_path": "submission/packaging_verification.json",
+        "byte_identical_to_external": true
+      }
+    ]
+  },
+  "input_packaging_verification": {
+    "external_path": "submission/packaging_verification.json",
+    "size_bytes": 3031,
+    "sha256": "db4dd12c1a05d63871c5e1646e1fe7ed86fa1e14448be07283dec2638501eedf",
+    "payload": {
+      "archive_path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\COMP6704_reproducibility.zip",
+      "archive_sha256": "76be143f570a7819d7ad5bd41522508025d61bbc27fe6a2834065b3c32320077",
+      "archive_size_bytes": 12328590,
+      "current_verification_report_in_archive": false,
+      "environment": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]"
+      },
+      "full_study_metadata": {
+        "completed_runs": 90,
+        "execution_status": "completed",
+        "expected_runs": 90
+      },
+      "manifest_excludes_itself": true,
+      "numerical_reproduction": "Not performed by this packaging utility.",
+      "original_source_files_verified": 7,
+      "original_source_hashes": {
+        "cpu_optimization/__init__.py": {
+          "matches_original_run": true,
+          "sha256": "e927c6d0dd3ead9248c9e3f814ea80198cdb9ad9482e5ac06459b624279c6a4e"
+        },
+        "cpu_optimization/experiment.py": {
+          "matches_original_run": true,
+          "sha256": "c9b3f653503a3bf589c8ab0f5b2c0193bb48fd7da046c0ed1109bf509e340244"
+        },
+        "cpu_optimization/objectives.py": {
+          "matches_original_run": true,
+          "sha256": "a719e6d965c924be7b21f5c1ef6e8bcf5c34ae08c70e4540f23af56f8f0cbddf"
+        },
+        "cpu_optimization/plotting.py": {
+          "matches_original_run": true,
+          "sha256": "3593805a25c0f6415756084145062ad013baee71dc26deb047c046cd2e1b7b1e"
+        },
+        "cpu_optimization/solvers.py": {
+          "matches_original_run": true,
+          "sha256": "dec57377948567b2928b32116ca035e74b3e6b943048539a51dc7fc3890ac812"
+        },
+        "plot_results.py": {
+          "matches_original_run": true,
+          "sha256": "f3017d4c3354370545a80ac93f26f656192df46619a4f19b0375822ad61ede23"
+        },
+        "run_experiments.py": {
+          "matches_original_run": true,
+          "sha256": "e9c6fe4196e9ce61c085d00bf26582f6fa26407c1e0088c0624c787169771a04"
+        }
+      },
+      "scope": "Archive member hashes and sizes, plus historical project-source byte hashes; no numerical solves",
+      "selection": {
+        "categories": {
+          "audits": {
+            "files": 21,
+            "size_bytes": 248496
+          },
+          "configs": {
+            "files": 2,
+            "size_bytes": 913
+          },
+          "cpu_optimization": {
+            "files": 9,
+            "size_bytes": 88083
+          },
+          "paper_source": {
+            "files": 31,
+            "size_bytes": 1478799
+          },
+          "results/demo_2d": {
+            "files": 19,
+            "size_bytes": 1038543
+          },
+          "results/full_study": {
+            "files": 199,
+            "size_bytes": 30455875
+          },
+          "root": {
+            "files": 12,
+            "size_bytes": 62872
+          },
+          "tests": {
+            "files": 7,
+            "size_bytes": 41979
+          }
+        },
+        "selected_file_count": 300,
+        "source_size_bytes": 33415560,
+        "source_size_mib": 31.86756134033203
+      },
+      "status": "passed",
+      "temporary_extraction_removed": true,
+      "timezone": "Asia/Shanghai",
+      "verified_at": "2026-11-05T22:55:14.565547+08:00",
+      "verified_file_count": 300,
+      "verified_source_size_bytes": 33415560
+    }
+  },
+  "current_source_alignment": {
+    "missing_files": [],
+    "different_members": [
+      "README.md"
+    ],
+    "unchanged_member_count": 299,
+    "readme_difference_is_expected_current_polish_edit": true,
+    "explanation": "Root confirmed README has already entered this polish edit. The old README baseline is the embedded ZIP member, not the edited workspace README.",
+    "input_zip_readme": {
+      "size_bytes": 17644,
+      "sha256": "ac1c4dd97326e4b76ad5079bf611f3e7ebdc6978b1c42c3c068f982af4aa24bd",
+      "raw_base64": "IyBDT01QNjcwNCDkuKrkurrkvZzkuJrvvJrml6DnuqbmnZ/kvJjljJYgQ1BVIOWunumqjAoK5aeT5ZCN77yaWWFuZ3hpYW8gQ2Fp77yb5a2m5Y+377yaMjYwMjMwNDFy44CCICAKKirkuIDnuqfmlrnlkJHvvJpVbmNvbnN0cmFpbmVkIE9wdGltaXphdGlvbu+8iOaXoOe6puadn+S8mOWMlu+8ieOAgioqICAK5Li76aKY77yaR0TjgIHpnZ7nur/mgKcgUFIrIOWFsei9reair+W6puWSjCBCRkdTIOWcqOmdnuWHuCBSb3NlbmJyb2Nr44CBUmFzdHJpZ2luIOWHveaVsOS4iueahOmpu+eCueaUtuaVm+OAgeivhOS8sOaIkOacrOS4jue7iOeCuei0qOmHj+OAggoK5L+d5a2Y55qEIFdpbmRvd3Mg5q2j5byP5a6e6aqM5YyF5ZCr5Lik5Liq5Ye95pWw44CBMu+8jzEw77yPMjAg57u044CB5q+P57uE5LqU5Liq6YWN5a+56LW354K544CB5LiJ56eN5pa55rOV77yM5YWxICoqOTAg5qyh5rGC6KejKirjgIIK5Y+C6ICD57uT5p6c5Li6ICoqNzMvOTAg6am754K56L6+5qCH44CBMjYvOTAg5YWo5bGA55uu5qCH6ZiI5YC85ZG95LitKirvvJvlj6bmnIkgNDcg5qyh5Y+q5ruh6Laz6am754K55oyH5qCH77yMMTcg5qyh5Lik6aG55Z2H5pyq5ruh6Laz44CCCuacrOi9ruS/ruiuouabtOaWsOaKpeWRiuOAgeaguOmqjOWSjOS6pOS7mOW3peWFt++8jOacquaWsOWinuaIlumHjei3kSA5MCDmrKHmraPlvI/lrp7pqozvvJvljp/lp4vnu5PmnpzjgIHliJ3lgLzjgIHphY3nva7lj4rnu5/orqHooajkv53nlZnjgIIKCiMjIDEuIOacrOi9ruS6pOS7mOS4juivgeaNrui+ueeVjAoKfCDmnIDnu4jkuqTku5jot6/lvoQgfCDlhoXlrrkgfAp8LS0tfC0tLXwKfCBgc3VibWlzc2lvbi9ZYW5neGlhbyBDYWkrMjYwMjMwNDFyLnBkZmAgfCDlrpjmlrkgTmV1cklQUyAyMDI1IOagt+W8j+eahOiLseaWh+aKpeWRiu+8jOWQq+WPguiAg+aWh+eMruS4jei2hei/hyAxMCDpobXvvIzlsI/kuo4gMjAgTUIgfAp8IGBzdWJtaXNzaW9uL0NPTVA2NzA0X3JlcHJvZHVjaWJpbGl0eS56aXBgIHwg5Y+v6L+Q6KGM5rqQ56CB44CBOTAg5qyh5Y6f5aeL57uT5p6c44CB5YiG5p6Q44CB5rWL6K+V44CB5oql5ZGK5rqQ5ZKM6YeN5bu65p2Q5paZ77yb5LiOIFBERiDkuK3nmoTlkIzlkI3pmYTku7bpgJDlrZfoioLnm7jlkIwgfAp8IGBzdWJtaXNzaW9uL+S/ruaUueivtOaYji50eHRgIHwg5pys6L2u5L+u5pS56IyD5Zu05LiO5Li76KaB5L+u5q2jIHwKfCBgc3VibWlzc2lvbi9DT01QNjcwNF9yZXZpc2lvbl9hdWRpdHMuemlwYCB8IOacrOi9ruaguOmqjOiusOW9leOAgeS6pOS7mOajgOafpeWSjOWkluWxguaJk+WMheaguOmqjOiusOW9lSB8CgpQREYg6ZmE5Lu25oGw5Li6IGBDT01QNjcwNF9yZXByb2R1Y2liaWxpdHkuemlwYCDlkowgYHBhY2thZ2luZ192ZXJpZmljYXRpb24uanNvbmDjgIIK5LiL6L295Y6f5aeLIFBERiDlkI7vvIzlj6/pgJrov4fmlK/mjIHpmYTku7bnmoTpmIXor7vlmajmj5Dlj5bvvJvmtY/op4jlmajpooTop4jlj6/og73kuI3mmL7npLrpmYTku7bjgIIKYHBhY2thZ2luZ192ZXJpZmljYXRpb24uanNvbmAg5Zyo5omT5YyF5a6M5oiQ5ZCO55Sf5oiQ77yM6ZqPIFBERiDlkozkv67orqLlrqHorqHljIXkuqTku5jvvIwqKuS4jeaUvuWFpeWug+aJgOaguOmqjOeahOS7o+eggSBaSVAg6Ieq6LqrKirjgIIK5rqQ56CB5YyF5o6S6ZmkIGAudmVudmDjgIHnvJPlrZjjgIHkuqTku5ggUERG44CBWklQIOiHqui6q+OAgeaXp+eJiOacrOebruW9leWSjOmineWklumHjei3keebruW9leOAggoK6K+B5o2u5oyJ55So6YCU5Yy65YiG77yaCgp8IOi3r+W+hCB8IOWQq+S5ieS4jumAgueUqOiMg+WbtCB8CnwtLS18LS0tfAp8IGByZXN1bHRzL2Z1bGxfc3R1ZHkvbWV0YWRhdGEuanNvbmAgfCDljp/lp4sgV2luZG93cyA5MCDmrKHmsYLop6PnmoTnjq/looPjgIHnur/nqIvjgIHliJ3lgLzmlrnlvI/lkozljp/lp4vmupDnoIEgU0hBLTI1NiB8CnwgYGF1ZGl0cy9oaXN0b3J5L3dpbmRvd3NfZXhhY3RfcmVwcm9kdWN0aW9uXzIwMjYxMTA1Lmpzb25gIHwg5Y6f5pyJIFdpbmRvd3Mg5YiwIFdpbmRvd3Mg55qEIDkwIOasoeeyvuehruavlOi+g+iusOW9le+8jOWOn+Wni+Wtl+iKguS/neeVme+8m+W9k+aXtuS4tOaXtuWAmemAieebruW9leeOsOW3suS4jeWtmOWcqCB8CnwgYGF1ZGl0cy9oaXN0b3J5L3BhY2thZ2luZ19iZWZvcmVfcmV2aXNpb25fMjAyNjExMDUuanNvbmAgfCDkv67orqLliY3nmoTmiZPljIXmoLjpqozljoblj7LorrDlvZXvvIzljp/lp4vlrZfoioLkv53nlZnvvJvkuI3nlKjkuo7or4HmmI7mnKzova7ku6PnoIHljIUgfAp8IGBhdWRpdHMvZmluYWxfcmV2aWV3XzIwMjYxMTA1L2DjgIFgcGFwZXJfc291cmNlL3Jldmlld19yZWNvcmQuanNvbmAgfCDmraTliY3lrqHpmIXlv6vnhafvvIzkv53nlZnlvZPml7bnmoTojIPlm7TjgIHmupDnoIHlk4jluIzlkozmtYvor5XmlbDph4/vvJvkuI3og73lvZPkvZzmnKzova7pgJrov4forrDlvZUgfAp8IGBhdWRpdHMvcmV2aXNpb25fMjAyNjExMDUvdW5pdF90ZXN0cy5qc29uYOOAgWAubG9nYCB8IOacrOi9ruWNleWFg+a1i+ivlee7k+aenOOAgeWunumZheaVsOmHj+OAgea1i+ivlea6kOeggeWTiOW4jOWSjOaXpeW/lyB8CnwgYGF1ZGl0cy9yZXZpc2lvbl8yMDI2MTEwNS9jdXJyZW50X3ZhbGlkYXRpb24uanNvbmAgfCDmnKzova7lj6ror7vmlbDmja7jgIHmupDnoIHlkoznjq/looPmoLjpqozvvIzkvb/nlKjnrKwgMyDoioLnmoTmlrDmoLzlvI8gfAp8IGBhdWRpdHMvcmV2aXNpb25fMjAyNjExMDUvc291cmNlX2hhc2hfcHJvYmUuanNvbmAgfCDmnKzova7mupDnoIHlrZfoioLkuI7mjaLooYznrYnku7fliKTlrprnmoTmoLjlr7norrDlvZUgfAp8IGBhdWRpdHMvcmV2aXNpb25fMjAyNjExMDUvcHJlc2VydmF0aW9uX2NoZWNrLmpzb25gIHwg5pys6L2u5Y6f5aeL57uT5p6c5LiO5Y+X5L+d5oqk57uf6K6h5p2Q5paZ55qE5L+d55WZ5qC45a+5IHwKfCBgYXVkaXRzL3JldmlzaW9uXzIwMjYxMTA1L2Jhc2VsaW5lX2V2aWRlbmNlL2V2aWRlbmNlX2ludmVudG9yeS5qc29uYCB8IOS/ruiuouWJjeWunumZheivgeaNruaWh+S7tueahOWtmOWcqOaAp+OAgeadpea6kOWSjOiMg+WbtOe0ouW8lSB8CnwgYHN1Ym1pc3Npb24vcGFja2FnaW5nX3ZlcmlmaWNhdGlvbi5qc29uYCB8IOW9k+WJjeS7o+eggSBaSVAg55qE5Li05pe26Kej5YyF44CB5oiQ5ZGY5LiO5ZOI5biM5qC46aqM77yb5aSW5bGC5bel5L2c5paH5Lu277yM5ZCM5qC35pS25YWl5L+u6K6i5a6h6K6h5YyF5ZKMIFBERiDpmYTku7YgfAoK5Y6G5Y+yIFdpbmRvd3Mg5q+U6L6D5LiN6IO95b2T5L2c5pys6L2u6YeN5paw6L+Q6KGM5oiW6Leo5bmz5Y+w6aqM6K+B44CC5b2T5YmN5qC46aqM5piv5ZCm6YCa6L+H77yM5bqU6K+75Y+W55u45bqUIEpTT07vvIwK6ICM6Z2e55So5pen5pel5b+X44CB5paH5Lu25ZCN5oiW5Y6G5Y+y6YCa6L+H5qyh5pWw5pu/5Luj44CC5rqQ56CBIFpJUCDnmoQgYGFyY2hpdmVfbWFuaWZlc3QuanNvbmAg6K6w5b2V5oiQ5ZGY5aSn5bCP5ZKMIFNIQS0yNTbjgIIKCiMjIDIuIOWuieijheS4juino+mHiuWZqAoK5bCG5Luj56CBIFpJUCDop6PljovliLDmlrDnm67lvZXvvIzov5vlhaXljIXlkKvmnKwgUkVBRE1F44CBYGNvbmZpZ3MvYOOAgWBjcHVfb3B0aW1pemF0aW9uL2Ag55qE6aG555uu5qC555uu5b2V44CCCuaJgOacieWRveS7pOWdh+S7jui/memHjOaJp+ihjOOAguato+W8j+WPguiAg+eOr+Wig+S4uiBQeXRob24gKiozLjEyLjgqKuOAgU51bVB5ICoqMS4yNi40KirjgIFTY2lQeSAqKjEuMTMuMSoq44CBTWF0cGxvdGxpYiAqKjMuMTAuMCoq44CCCmByZXF1aXJlbWVudHMtbG9jay50eHRgIOS/neWtmOWOn+eOr+Wig+S+nei1lu+8m2ByZXF1aXJlbWVudHMudHh0YCDlm7rlrprkuInkuKrkuLvopoHmlbDlgLzvvI/nu5jlm77kvp3otZbjgIIKCldpbmRvd3MgUG93ZXJTaGVsbO+8mgoKYGBgcG93ZXJzaGVsbApweXRob24gLS12ZXJzaW9uCnB5dGhvbiAtbSB2ZW52IC52ZW52Ci5cLnZlbnZcU2NyaXB0c1xweXRob24uZXhlIC1tIHBpcCBpbnN0YWxsIC1yIHJlcXVpcmVtZW50cy1sb2NrLnR4dApgYGAKCkxpbnV477yPbWFjT1PvvIzkvb/nlKjlt7Llronoo4XnmoQgUHl0aG9uIDMuMTIuOO+8mgoKYGBgYmFzaApweXRob24zLjEyIC0tdmVyc2lvbgpweXRob24zLjEyIC1tIHZlbnYgLnZlbnYKLnZlbnYvYmluL3B5dGhvbiAtbSBwaXAgaW5zdGFsbCAtciByZXF1aXJlbWVudHMtbG9jay50eHQKYGBgCgrku6XkuIsgYHB5dGhvbmAg5Z2H5oyH6K+l6Jma5ouf546v5aKD55qE6Kej6YeK5Zmo77yb5pyq5r+A5rS7546v5aKD5pe277yMV2luZG93cyDkvb/nlKgKYC5cLnZlbnZcU2NyaXB0c1xweXRob24uZXhlYO+8jExpbnV477yPbWFjT1Mg5L2/55SoIGAudmVudi9iaW4vcHl0aG9uYOOAggpXU0wg6LCD55So546w5pyJIFdpbmRvd3Mg546v5aKD5Y+v5L2/55SoIGAudmVudi9TY3JpcHRzL3B5dGhvbi5leGVg44CCCuWmgumUgeWumuS+nei1luaXoOazleWuieijhe+8jOWPr+aUueeUqCBgcmVxdWlyZW1lbnRzLnR4dGAg5bm25L+d55WZ5a6e6ZmF546v5aKD6K6w5b2V77yb54mI5pys5beu5byC6aG75Zyo5qC46aqM57uT5p6c5Lit5L2T546w44CCCuWOn+acuuWZqOeahOe7neWvuei3r+W+hOS7heS9nOadpea6kOiusOW9le+8jOS4jeaYr+i/kOihjOS+nei1luOAggoK5Zu65a6aIE51bVB577yPU2NpUHkg54mI5pys5LiN6IO95L+d6K+B5LiN5ZCM5pON5L2c57O757uf44CBUHl0aG9uIOaehOW7uuOAgeWkhOeQhuWZqOaIluaVsOWAvOW6k+WFt+acieebuOWQjOa1rueCuei3r+W+hOOAggrlvq7lsI/nrpfmnK/lt67lvILlj6/og73mlLnlj5jnur/mkJzntKLjgIHor4TkvLDmrKHmlbDlj4rkuKXmoLwgYDFlLTZgIOmYiOWAvOmZhOi/keeahOe7iOatouWIhuexu++8m+acrOmhueebruacqumalOemu+WFtuWFt+S9k+W5s+WPsOaIkOWboOOAggrnjq/looPniYjmnKzljLnphY3jgIHlt7Lkv53lrZjmlbDmja7lrozmlbTkuI7mlrDnjq/looPph43mlrDmsYLop6PkuIDoh7TvvIzmmK/kuI3lkIzor4Hmja7jgIIKCiMjIDMuIOWNleWFg+a1i+ivleS4juWPquivu+aguOmqjAoKYGBgYmFzaApweXRob24gcnVuX3Rlc3RzX2F1ZGl0LnB5IC0tb3V0cHV0IGF1ZGl0cy9sb2NhbF9jaGVjay91bml0X3Rlc3RzLmpzb24KcHl0aG9uIHZhbGlkYXRlX3N0dWR5LnB5IC0tcmVzdWx0cyByZXN1bHRzL2Z1bGxfc3R1ZHkgLS1vdXRwdXQgYXVkaXRzL2xvY2FsX2NoZWNrL2N1cnJlbnRfdmFsaWRhdGlvbi5qc29uCmBgYAoK5rWL6K+V5pWw6YeP5LulIGB1bml0X3Rlc3RzLmpzb25gIOS4reeahCAqKmB0ZXN0c19ydW5gKiog5Li65YeG77yM5ZCM5pe25qOA5p+lIGBwYXNzZWRg44CBYGZhaWx1cmVzYOOAgWBlcnJvcnNg44CBYHNraXBwZWRgIOWSjOWQjOWQjSBgLmxvZ2DjgIIK5rWL6K+V6KaG55uW5qKv5bqm44CBQXJtaWpv44CB6aKE566X5LiO5aSx6LSl54q25oCB44CB6K6h5pWw44CB6YWN5a+55Yid5YC844CB57uT5p6c5L+d5oqk77yM5Lul5Y+K5Y6f5aeL5ZOI5biM5ZKM5o2i6KGM562J5Lu35Yik5pat44CCCuWNleWFg+a1i+ivleeahOS4tOaXtuWwj+Wei+WkueWFt+S4jeWxnuS6juaWsOWinuato+W8j+WunumqjOOAggoKYHZhbGlkYXRlX3N0dWR5LnB5YCDkuI3osIPnlKjmsYLop6PlmajvvIzkuI3lhpnlhaXlj4LogIPnu5Pmnpznm67lvZXjgIIK6buY6K6k6L6T5Ye65Li6IGBhdWRpdHMvY3VycmVudF92YWxpZGF0aW9uLmpzb25g77yb5pi+5byP5oyH5a6aIGBhdWRpdHMvbG9jYWxfY2hlY2svYCDlj6/pgb/lhY3opobnm5bkuqTku5jnmoTlrqHorqHor4Hmja7jgIIK5qC46aqM5Zmo5ouS57ud5oqK6L6T5Ye65pS+5YWlIGByZXN1bHRzL2Ag5oiW5Y+X5L+d5oqk5rqQ56CB5qCR44CC5paw5oql5ZGK55qEIGBzY2hlbWFfdmVyc2lvbj0yYO+8mgoKfCDmoLjpqozln58gfCDkuLvopoHlhoXlrrkgfCDpgJrov4fmnaHku7YgfAp8LS0tfC0tLXwtLS18CnwgYGRhdGFfaW50ZXJuYWxfaW50ZWdyaXR5YCB8IDkwIOadoeaxh+aAu+OAgeWNleasoSBKU09O44CB6L2o6L+544CB5a6M5pW057uE5ZCI44CBMzAg57uE6YWN5a+56LW354K544CBMTIg6aG55qKv5bqm5qOA5p+l44CBYG5pdGDvvI/ntK/orqHorqHmlbDjgIFHRCDmm7TmlrDlj4ogQXJtaWpv44CB57uI54K56K+K5pat5ZKM54us56uL5qCH562+IHwg6K+l5Z+fIGBwYXNzZWQ9dHJ1ZWDvvIzml6DmlbDmja7plJnor68gfAp8IGBzb3VyY2VfaW50ZWdyaXR5YCB8IOWFg+aVsOaNruW3suiusOW9leeahOmhueebrua6kOeggeWPiuWuieijheeOr+Wig+eahCBTY2lQeSBgX29wdGltaXplLnB5YO+8jOS/neeVmeWOn+WniyBTSEEtMjU2IOavlOi+g+W5tuaguOWvueaNouihjOetieS7t+ivgeaYjiB8IOavj+S4quiusOW9leespuWQiOWOn+Wni+Wtl+iKguaIluW+l+WIsOS4peagvOaNouihjOetieS7t+ivgeaYju+8m+e8uuaWh+S7tuaIluecn+WunuWGheWuueW3ruW8guWdh+Wksei0pSB8CnwgYGVudmlyb25tZW50X21hdGNoYCB8IFB5dGhvbiDooaXkuIHniYjmnKzjgIFOdW1QeeOAgVNjaVB5IOS4juWOhuWPsueJiOacrOWMuemFje+8m+WPpuiusOW9leezu+e7n+OAgeaehOW7uuOAgUNQVeOAgee6v+eoi+S4iuS4i+aWhyB8IOW/hemcgOeJiOacrOWMuemFje+8m+S4iuS4i+aWh+W3ruW8guWNleWIl++8jOS4jeino+mHiuS4uuW3suWkjeeOsOaxguino+i3r+W+hOaIluiuoeaXtiB8CgrpobblsYIgYHBhc3NlZGAg5piv5LiJ5Liq5Z+f5YWo6YOo6YCa6L+H55qE5ZCI5Y+W77yM6aG25bGCIGBlcnJvcnNgIOW4puWfn+WQjeWJjee8gOOAggrns7vnu5/vvI9DUFXvvI/nur/nqIvkuIrkuIvmlofkuI3lkIzkuI3kvJrooqvlvZPkvZzljp/lp4vmlbDmja7mjZ/lnY/vvIzkvYblupTlrqHpmIUgYHBsYXRmb3JtX2NvbnRleHRg44CCCuWPquivu+aguOmqjOmAmui/h+S4jeihqOekuuWujOaIkOS6huaWsOeahCA5MCDmrKHmsYLop6PvvIzkuZ/kuI3or4HmmI7lopnpkp/ml7bpl7TkuIDoh7TjgIIKYHJlc3VsdHMvZnVsbF9zdHVkeS9hbmFseXNpcy92YWxpZGF0aW9uLmpzb25gIOiLpeWtmOWcqO+8jOaYr+S/neeVmeeahOaXp+eJiOiusOW9le+8jOS4jeiDveabv+S7o+acrOi9rui+k+WHuuOAggoK5rqQ56CB5qC46aqM6aaW5YWI5q+U6L6D5b2T5YmN5Y6f5aeL5a2X6IqC5LiO5Y6G5Y+y5Y+v5L+hIFNIQS0yNTbvvIzkv53nlZkgYHJhd19jb21wYXJpc29uYOOAggroi6XkuI3kuIDoh7TvvIzku4XlsJ3or5XnlLHlvZPliY3lrZfoioLph43lu7rnu5/kuIAgTEYg5oiWIENSTEbvvJvlj6rmnInmn5DkuKrph43lu7rnu5PmnpznmoQgU0hBLTI1NgoqKuaBsOWlveetieS6juWOhuWPsuWOn+Wni+aRmOimgSoq77yM5omN6K6w5Li6IGBlb2xfZXF1aXZhbGVudGDjgIIK6L+Z5LiN5piv5b+955Wl5omA5pyJ5ZOI5biM5beu5byC77yM5Lmf5LiN5pS55YaZ6aKE5pyf5pGY6KaB77yaQk9N44CB56m655m944CB5pyr5bC+5o2i6KGM5ZKM5Luj56CB5YaF5a655LuN5Y+X5qOA5p+l77ybCuWOn+Wni+Wtl+iKguS4jeWMuemFjeS4lOWMheWQq+WtpOeriyBDUiDml7bkuI3mjqXlj5fmjaLooYzlm57pgIDjgIJTY2lQeSDmupDnoIHkuI7lv4XpnIDniYjmnKzplJnor6/ku43kvJrkvb/nm7jlupTln5/lpLHotKXjgIIKCiMjIDQuIOS/neWtmOaVsOaNruS4juemu+e6v+WIhuaekAoKfCDot6/lvoTvvIjnm7jlr7kgYHJlc3VsdHMvZnVsbF9zdHVkeS9g77yJIHwg5YaF5a65IHwKfC0tLXwtLS18CnwgYHN1bW1hcnkuY3N2YOOAgWBydW5zL2DjgIFgdHJhY2VzL2AgfCA5MCDmrKHmsYfmgLvjgIHljZXmrKEgSlNPTiDkuI7pgJDkuovku7YgQ1NWIHwKfCBgaW5pdGlhbF9wb2ludHMuanNvbmAgfCAzMCDnu4Tlrp7pmYXotbfngrnvvIzkuInnp43mlrnms5XlhbHkuqsgfAp8IGBncmFkaWVudF9jaGVja3MuanNvbmAgfCAxMiDpobnpnZ7pqbvngrnkuK3lv4Plt67liIbmo4Dmn6UgfAp8IGBjb25maWdfcmVzb2x2ZWQuanNvbmDjgIFgbWV0YWRhdGEuanNvbmAgfCDlhrvnu5PljY/orq7jgIHljoblj7Lnjq/looPjgIHmnaXmupDlj4rlrozmiJDnirbmgIEgfAp8IGBhbmFseXNpcy9ncm91cGVkX3Jlc3VsdHMuY3N2YCB8IDE4IOe7hOe7n+iuoe+8jOS6lOi1t+eCueS4reS9jeaVsOS4juiMg+WbtO+8jOWMheWQq+Wksei0peagt+acrCB8CnwgYGFuYWx5c2lzL2luaXRpYWxfcG9pbnRfY29tcGFyaXNvbi5jc3Zg44CBYHBhaXJlZF9jb21wYXJpc29ucy5jc3ZgIHwg6YWN5a+557uI54K55Y+K5oiQ5pys5q+U6L6DIHwKfCBgYW5hbHlzaXMvcnVuX2RpYWdub3N0aWNzLmNzdmAgfCDlhajpg6jnu4jngrnjgIHmnKvmraXkuI7nprvnur/mm7Lnjofor4rmlq0gfAp8IGBhbmFseXNpcy9ub25zdGF0aW9uYXJ5X3J1bnMuY3N2YOOAgWBhbmFseXNpcy9zdGF0aW9uYXJ5X25vbl9nbG9iYWxfcnVucy5jc3ZgIHwgMTcg5qyh5pyq6L6+6am754K56ZiI5YC85Y+KIDQ3IOasoempu+eCuei+vuagh+S9huacquWRveS4reWFqOWxgOebruagh+eahOahiOS+iyB8CnwgYGFuYWx5c2lzL2FuYWx5c2lzX3N1bW1hcnkuanNvbmAgfCDlrozmlbTnsr7luqbmsYfmgLsgfAp8IGBhbmFseXNpcy9hbmFseXNpc19wcm92ZW5hbmNlLmpzb25g44CB57uY5Zu+55uu5b2V5Lit55qE5YWD5pWw5o2uIHwg5ZCO57ut5YiG5p6Q77yP5Zu+6KGo55qE5rqQ56CB44CB6L6T5YWl5ZKM5pi+56S65Y+C5pWw5p2l5rqQIHwKCuato+W8j+aVsOaNruaciSAqKjgwLDYwNSDmnaHkuovku7bjgIE4MCw0MjUg5Liq5o6l5Y+X5pu05pawKirjgIIK5Zu+56S65a+55pWw5LiL6ZmQ5Y+q55So5LqO5pi+56S677yb5puy57q/5Zyo5a6e6ZmF57uI5q2i5aSE5oiq5q2i77yM5LiN55So5pyr5YC85bu26ZW/77yM5LiN5Yig6Zmk5aSx6LSl6L2o6L+544CCCuemu+e6vyBIZXNzaWFuIOS4juWFtuS7luiviuaWreS4jeiuoeWFpeaxguino+mihOeul+OAggoK5aaC6ZyA6YeN5paw55Sf5oiQ57uf6K6h5ZKM5YWo6YeP5Zu+77yM5YWI5aSN5Yi25Yiw5paw55qE5bel5L2c55uu5b2V77yM6YG/5YWN5YaZ5YWl5Lqk5LuY5Y+C6ICD5qCR77yaCgpgYGBiYXNoCnB5dGhvbiAtYyAiaW1wb3J0IHNodXRpbDsgc2h1dGlsLmNvcHl0cmVlKCdyZXN1bHRzL2Z1bGxfc3R1ZHknLCAnd29yay9vZmZsaW5lX3JlYnVpbGQnKSIKcHl0aG9uIGFuYWx5emVfcmVzdWx0cy5weSAtLXJlc3VsdHMgd29yay9vZmZsaW5lX3JlYnVpbGQgLS1wbG90CnB5dGhvbiBtYWtlX3BhcGVyX2ZpZ3VyZXMucHkgLS1yZXN1bHRzIHdvcmsvb2ZmbGluZV9yZWJ1aWxkIC0tb3V0cHV0IHdvcmsvb2ZmbGluZV9yZWJ1aWxkL2FuYWx5c2lzL3BhcGVyX2ZpZ3VyZXMKYGBgCgpgY29weXRyZWVgIOaLkue7neimhuebluW3suWtmOWcqOeahOebruagh+ebruW9le+8m+WGjeasoeaJp+ihjOivt+WPpumAieebruW9leOAggrov5nkupvlkb3ku6Tlj6rlr7nkv53lrZjmlbDmja7lgZrliIbmnpDkuI7nu5jlm77vvIzkuI3ov5DooYzmsYLop6PlmajjgIIKCiMjIDUuIOWPr+mAie+8muWcqOaWsOebruW9lemHjeaWsOaxguinowoK5Lul5LiL5piv6K+76ICF5Y+v5omn6KGM55qE5aSN546w5q2l6aqk77yMKirmnKzova7kv67orqLmnKrmiafooYzov5nkupvmraPlvI/msYLop6Plkb3ku6QqKu+8mgoKYGBgYmFzaApweXRob24gcnVuX2V4cGVyaW1lbnRzLnB5IC0tY29uZmlnIGNvbmZpZ3MvZnVsbF9zdHVkeS5qc29uIC0tb3V0cHV0IHJlc3VsdHMvZnVsbF9zdHVkeV9yZXBlYXQwMSAtLXRocmVhZHMgMQpweXRob24gdmFsaWRhdGVfc3R1ZHkucHkgLS1yZXN1bHRzIHJlc3VsdHMvZnVsbF9zdHVkeV9yZXBlYXQwMSAtLW91dHB1dCBhdWRpdHMvbG9jYWxfY2hlY2svcmVwZWF0ZWRfdmFsaWRhdGlvbi5qc29uCnB5dGhvbiBwYXBlcl9zb3VyY2UvdmVyaWZ5X3JlcHJvZHVjdGlvbi5weSAtLXJlZmVyZW5jZSByZXN1bHRzL2Z1bGxfc3R1ZHkgLS1jYW5kaWRhdGUgcmVzdWx0cy9mdWxsX3N0dWR5X3JlcGVhdDAxIC0tb3V0cHV0IGF1ZGl0cy9sb2NhbF9jaGVjay9yZXByb2R1Y3Rpb25fY29tcGFyaXNvbi5qc29uCmBgYAoK6L+Q6KGM5Zmo5ouS57ud6KaG55uW6Z2e56m66L6T5Ye655uu5b2V77yb5bey5a2Y5Zyo5pe25o2i5paw5ZCN56ew44CC5LqM57u06K+V6LeR5Y+v5pS555SoIGBjb25maWdzL2RlbW9fMmQuanNvbmAK5bm26YCJ5oup5Y+m5LiA5paw55uu5b2V77yM5YWx5Lik5Liq5Ye95pWw44CB5ZCE5LiA5Liq5LqM57u06LW354K544CB5LiJ56eN5pa55rOV77yM5YWt5qyh5rGC6Kej44CCCuS4peagvOavlOi+g+WZqOaMiSBgcnVuX2lkYCDmr5TovoPlt7Lkv53lrZjnmoTmlbDlgLznu5PmnpzkuI7ovajov7nvvIzmjpLpmaTogJfml7blkozml7bpl7TmiLPjgIIK5paw546v5aKD5Y+q5pyJ5Zyo5a6e6ZmF6L+Q6KGM5bm25a6M5oiQ5q+U6L6D5ZCO77yM5omN5pyJ55u45bqU5aSN546w6K+B5o2u77yb5LiN6aKE6K6+6YCQ5L2N5LiA6Ie044CCCmAtLXRocmVhZHMgMWAg5Zyo5a+85YWlIE51bVB5IOWJjeiuvue9ruivpei/m+eoi+eahCBCTEFT77yPT3Blbk1QIOe6v+eoi+WPmOmHj++8jOS4jeaUueezu+e7n+iuvue9ru+8m+aWueazlemhuuW6j+aJp+ihjOOAggoKIyMgNi4g5Zu65a6a5Y2P6K6u44CB5pel5b+X5LiO5oiQ5pys6Kej6YeKCgp8IOmhueebriB8IOWbuuWumuiuvue9riB8CnwtLS18LS0tfAp8IOWHveaVsO+8j+e7tOW6piB8IFJvc2VuYnJvY2vjgIFSYXN0cmlnaW7vvJsy44CBMTDjgIEyMCDnu7QgfAp8IOWIneWAvCB8IOavj+e7hOS6lOeCue+8m+WfuuehgOenjeWtkCBgMjAyNjExMDVg77ybYFBDRzY0IC8gU2VlZFNlcXVlbmNlKFtzZWVkLCBvYmplY3RpdmVfaW5kZXgsIGRpbWVuc2lvbl0pYCB8Cnwg5Yid5YC85YiG5biDIHwgUm9zZW5icm9jayDmr4/lnZDmoIcgYFVuaWZvcm1bLTIsMl1g77ybUmFzdHJpZ2luIOavj+WdkOaghyBgVW5pZm9ybVstMywzXWDvvJvku4XnlKjkuo7nlJ/miJDotbfngrnvvIzkuI3nuqbmnZ/lkI7nu63ov63ku6MgfAp8IOWBnOatoiB8IGZsb2F0NjTvvJvmoq/luqbkuozojIPmlbAgYDw9MWUtNmDvvJvmnIDlpJogNTAwMCDkuKrmjqXlj5fmm7TmlrAgfAp8IOeLrOeri+WFqOWxgOebruagh+agh+etviB8IOaciemZkOe7k+aenOS4lCBgYWJzKGZfZmluYWwtZl9zdGFyKTw9MWUtNmDvvJvkuKTlh73mlbAgYGZfc3Rhcj0wYCB8CgotICoqR0TvvJoqKiDoh6rlhpkgQXJtaWpvIOWbnua6r++8jGBhbHBoYTA9MSwgYzE9MWUtNCwgdGF1PTAuNWDvvIzmnIDlsI/mraXplb8gYDFlLTEyYOOAggogIOWIneasoeivleaOouWQjuacgOWkmue8qeatpSA1MCDmrKHvvIzoh7PlpJogNTEg5qyh6K+V5o6i77yM5Lmf5Y+v6IO95YWI6L6+5Yiw5pyA5bCP5q2l6ZW/44CC5aSx6LSl5q2l5LiN5pu05paw5Z2Q5qCH77yb6Z2e5pyJ6ZmQ5YC85ZKM5rWu54K55YGc5rue5piO56Gu6K6w5b2V44CCCi0gKipDR++8mioqIFNjaVB5IDEuMTMuMSDpnZ7nur/mgKcgUFIrIENH77yM6Kej5p6Q5qKv5bqm77yMYG5vcm09MiwgZ3RvbD0xZS02LCBjMT0xZS00LCBjMj0wLjRg44CCCiAgUFIrIOS5i+Wklui/mOacieS4i+S4gOaWueWQkeeahOWFheWIhuS4i+mZjeS/nemanO+8m+WFt+S9k+ihjOS4uuS7peivpeeJiOacrOa6kOeggeS4uuWHhuOAggotICoqQkZHU++8mioqIFNjaVB5IDEuMTMuMSDmma7pgJrlhajlhoXlrZggQkZHU++8jOino+aekOair+W6puOAgeWNleS9jeWIneWni+mAhiBIZXNzaWFu77yMCiAgYG5vcm09MiwgZ3RvbD0xZS02LCBjMT0xZS00LCBjMj0wLjQsIHhydG9sPTBg77yb6KaG55uW5bqT6buY6K6k55qEIGBjMj0wLjlg44CCCgpSb3NlbmJyb2NrIOS9v+eUqCBTY2lQeSBgcm9zZW4vcm9zZW5fZGVyYOOAglJhc3RyaWdpbiDkvb/nlKjmlbDlrabnrYnku7fnmoTnqLPlrprlvaLlvI8KYHN1bSh4X2kqKjIgKyAyMCpzaW4ocGkqeF9pKSoqMilg77yM5qKv5bqm5Li6IGAyKnhfaSArIDIwKnBpKnNpbigyKnBpKnhfaSlg44CCCuS4reW/g+W3ruWIhuajgOafpemHh+eUqCBgaF9pPTFlLTYqbWF4KDEsYWJzKHhfaSkpYOOAgeWIhumHjyBgYXRvbD1ydG9sPTFlLTVg77yM5LiN6L+b5YWl5rGC6Kej6aKE566X44CCCuino+aekOaOqOWvvOWSjOeLrOeri+ajgOafpeacquaPkOS+m+air+W6puWunueOsOmUmeivr+eahOivgeaNru+8m+aciemZkOajgOafpeS4jeiDveaOkumZpOaJgOacieaVsOWAvOmXrumimOOAggoK5omA5pyJ5a6e6ZmF5rGC6Kej5Ye95pWw77yP5qKv5bqm6LCD55So6YO957uP6L+H6K6h5pWw5Zmo77yM5YyF5ous5ouS57ud6K+V5o6i5ZKM5aSx6LSl55qE57uI5q2i5pCc57Si44CCClNjaVB5IOe8k+WtmOmBv+WFjeeahOWOn+Wni+iwg+eUqOS4jeiZmuWinu+8m+WMheijheWZqOiuoeaVsOmhu+S4juW6k+i/lOWbnueahCBgbmZldi9uamV2YCDkuIDoh7TjgIIKCnwg5LqL5Lu2IHwg5ZCr5LmJIHwKfC0tLXwtLS18CnwgYGluaXRpYWxgIHwgYGl0ZXJhdGlvbj1uZmV2PW5qZXY9MGDvvJvlm77npLror4rmlq3nprvnur/ooaXnrpfvvIzmsYLop6Plmajoh6rouqvliJ3lgLzor4TkvLDku43mraPluLjorqHmlbAgfAp8IGBhY2NlcHRlZGAgfCDkuIDmrKHmjqXlj5fmm7TmlrDvvIzlpI3liLblnZDmoIfkuI7lt7LmnInntK/orqHorqHmlbDvvJvlm57osIPkuI3pop3lpJbor4TkvLDlh73mlbDvvI/moq/luqYgfAp8IGB0ZXJtaW5hbGAgfCDmnIDnu4jlnZDmoIflj4rlhajpg6jorqHmlbDvvIzkuI3lop7liqAgYG5pdGDvvJvlpLHotKXor5XmjqLlj6/og73lop7orqHmlbDogIzkuI3mlLnlj5jlnZDmoIcgfAoK6K6h5pe25YyF5ZCr5rGC6Kej5Yid5aeL5YyW44CB6K+V5o6i44CB5pu05paw5ZKM57uf5LiA5LqL5Lu26K6w5b2V77yM5LiN5ZCr5a+85YWl44CB56a757q/6K+K5pat44CB57uY5Zu+5Y+K5paH5Lu25YaZ5YWl44CCCueLrOeri+S/neeVmeWOn+WniyBgc29sdmVyX3N1Y2Nlc3Mvc29sdmVyX3N0YXR1cy9zb2x2ZXJfbWVzc2FnZWDjgIHlhazlhbEgYHN0YXRpb25hcnlgIOWSjCBgZ2xvYmFsX2hpdGDjgIIK5Y6fIFdpbmRvd3Mg5om55qyh5LitIGBzb2x2ZXJfc3VjY2Vzc2Ag5LiOIGBzdGF0aW9uYXJ5YCDmgbDlpb3lnYfkuLogNzMg5qyh77yM5L2G5Lik6ICF5ZCr5LmJ5LiN5ZCM44CCCjE1IOasoSBSb3NlbmJyb2NrLUdEIOeUqOWwveabtOaWsOmihOeul++8m+S4pOasoSBSYXN0cmlnaW4gMjAg57u0IEJGR1Mg57K+5bqm5o2f5aSx57uI5q2i77yM5Z2H5pyq6L6+5YWs5YWx5qKv5bqm6ZiI5YC844CCCuWwj+air+W6puS4jeS/neivgeWFqOWxgOacgOS8mO+8m+WRveS4reebruagh+mYiOWAvOS5n+S4jeaYr+eyvuehruacgOS8mOaAp+eahOaVsOWtpuivgeS5puOAggoKR0TvvI9DRyDnmoTmlrnlkJHkuI7nirbmgIHmiJDmnKzkuLogYE8oZClg44CC5qCH5YeG6auY5pWIIEJGR1Mg55qE5pa55ZCR5ZKM5L2O56ep5pu05paw5Li6IGBPKGTCsilg77ybCioq5pys5qyhIFNjaVB5IDEuMTMuMSoqIOS9v+eUqOmAmueUqOeooOWvhuS5mOenryBgQTEgQCBIIEAgQTJgIOabtOaWsO+8jOaMieW4uOinhOeooOWvhueul+acr+S4uiBgTyhkwrMpYO+8jOeKtuaAgeWSjOaWueWQkeS7jeS4uiBgTyhkwrIpYOOAggrov5nkupvmiJDmnKzkuI3lkKvnur/mkJzntKLor4TkvLDkuI7ml6Xlv5fvvJvkuKTmqKHlnovmr4/mrKHlh73mlbDvvI/moq/luqbor4TkvLDkuLogYE8oZClg77yM5L+d5a2YIEsg5LiqIGQg57u054K55Y+m6ZyAIGBPKEtkKWAg56m66Ze05LiO5aSN5Yi25bel5L2c44CCCuebuOWQjOi/reS7o+S4iumZkOS4jeetieS6juebuOWQjOiuoeeul+mihOeul++8jOWwj+e7tOW6puiuoeaXtuS5n+S4jei2s+S7pemqjOivgea4kOi/kemYtuaIlue7meWHuuaZrumBjeacgOW/q+aWueazleaOkuWQjeOAggoKIyMgNy4g5a6Y5pa55qC35byP5oql5ZGK55qE6YeN5bu65LiO5omT5YyFCgrmlbDlgLzlrp7pqozkuI3pnIDopoHmlofmoaPkvp3otZbjgILph43lu7rmiqXlkYrpnIDlronoo4XvvJoKCmBgYGJhc2gKcHl0aG9uIC1tIHBpcCBpbnN0YWxsIC1yIHJlcXVpcmVtZW50cy1yZXBvcnQudHh0CmBgYAoK5Y+m5a6J6KOFIFhlTGFUZVjvvIhUZVggTGl2Ze+8j01pS1RlWO+8ieaIliBUZWN0b25pY++8jOW5tuS9v+W8leaTjuWRveS7pOWPr+eUqO+8m+W8leaTjueoi+W6j+S4jemaj+WMheWIhuWPke+8jOmmluasoee8luivkeWPr+iDveS4i+i9veWuj+WMheOAggpgcGFwZXJfc291cmNlL3RlbXBsYXRlL25ldXJpcHNfMjAyNS5zdHlgIOS/neaMgeWumOaWueWOn+agt++8jOS4u+aWh+aho+imhuebluivvueoi+ivtOaYjuOAggpQREYg5L2/55SoIFVTIExldHRlcuOAgTUuNSDDlyA5IOiLseWvuOato+aWh+WMuuOAgTEwIHB077yPMTEgcHQg5q2j5paH77yb6aqM5pS25Lul5a6e6ZmF57yW6K+R57uT5p6c5Li65YeG44CCCgrmraPmlofkv67mlLnlhaXlj6PkuLogYHBhcGVyX3NvdXJjZS9jcmVhdGVfY29udGVudC5weWDvvIznlJ/miJAgYGNvbnRlbnQuanNvbmDvvJvlhazlvI/mupDkuLogYGVxdWF0aW9ucy5qc29uYOOAggrnlJ/miJDmraPmlofml7bvvIzohJrmnKzopoHmsYLlt7LmnInnmoQgYGF1ZGl0cy9yZXZpc2lvbl8yMDI2MTEwNS91bml0X3Rlc3RzLmpzb25gIOS4uumAmui/h+iusOW9le+8jArkuJTlhbbkuK0gYHRlc3Rfc291cmNlc2Ag5ZOI5biM5LiO5b2T5YmN5rWL6K+V5LiA6Ie077yM5YaN6K+75Y+W5a6e6ZmF5rWL6K+V5pWw6YeP77yb57y65aSx5oiW6L+H5pyf6K6w5b2V5Lya5YGc5q2i55Sf5oiQ44CCCuesrCAzIOiKguacrOWcsOajgOafpeWPpuWGmSBgYXVkaXRzL2xvY2FsX2NoZWNrL2DvvIzkuI3kvJrmgoTmgoTmm7/mjaLkuqTku5jlrqHorqHjgIIKCuS7pSBUZWN0b25pYyDkuLrkvovvvIzku47pobnnm67moLnnm67lvZXmiafooYzvvJoKCmBgYGJhc2gKcHl0aG9uIHBhcGVyX3NvdXJjZS9jcmVhdGVfY29udGVudC5weQpweXRob24gcGFwZXJfc291cmNlL2dlbmVyYXRlX2xhdGV4LnB5CnB5dGhvbiAtYyAiZnJvbSBwYXRobGliIGltcG9ydCBQYXRoOyBQYXRoKCdzdWJtaXNzaW9uL19sYXRleCcpLm1rZGlyKHBhcmVudHM9VHJ1ZSwgZXhpc3Rfb2s9VHJ1ZSkiCnRlY3RvbmljIC0ta2VlcC1sb2dzIC0tb3V0ZGlyIHN1Ym1pc3Npb24vX2xhdGV4IHBhcGVyX3NvdXJjZS90ZW1wbGF0ZS9yZXBvcnQudGV4CnB5dGhvbiBwYXBlcl9zb3VyY2UvcGFja2FnZV9yZXByb2R1Y2liaWxpdHkucHkgLS1kcnktcnVuCnB5dGhvbiBwYXBlcl9zb3VyY2UvcGFja2FnZV9yZXByb2R1Y2liaWxpdHkucHkgLS12ZXJpZmljYXRpb24tb3V0cHV0IHN1Ym1pc3Npb24vcGFja2FnaW5nX3ZlcmlmaWNhdGlvbi5qc29uCnB5dGhvbiBwYXBlcl9zb3VyY2UvcGFja2FnZV9yZXByb2R1Y2liaWxpdHkucHkgLS12ZXJpZnktb25seSAtLXZlcmlmaWNhdGlvbi1vdXRwdXQgc3VibWlzc2lvbi9wYWNrYWdpbmdfdmVyaWZpY2F0aW9uLmpzb24KcHl0aG9uIHBhcGVyX3NvdXJjZS9idWlsZF9maW5hbF9yZXBvcnQucHkgLS1sYXRleC1wZGYgc3VibWlzc2lvbi9fbGF0ZXgvcmVwb3J0LnBkZiAtLXBhY2thZ2luZy1yZXBvcnQgc3VibWlzc2lvbi9wYWNrYWdpbmdfdmVyaWZpY2F0aW9uLmpzb24KYGBgCgpMYVRlWCDnlJ/miJDlmajmoLjlr7nkv53lrZjmlbDmja7mnaXmupDvvJvmnIDnu4jmnoTlu7rlmajmoLjlr7nnvJbor5EgUERGIOeahOa6kOeggeaMh+e6ueOAgemhteaVsOOAgeWkp+Wwj+OAgeW9kuaho+WFqOmDqOaIkOWRmOS4juW9k+WJjemhueebrueahOWtl+iKguS4gOiHtOaAp++8jOS7peWPiumZhOS7tuWtl+iKguOAggrlhYjlrozmiJDmraPmlofjgIFSRUFETUUg5ZKM6aKE5omT5YyF5a6h6K6h77yM5YaN5omT5YyF77yM5YaN5bWM5YWl5Luj56CBIFpJUCDkuI7mnKzmrKHmiZPljIXorrDlvZXvvIzpgb/lhY3oh6rljIXlkKvkvp3otZbjgIIK5omT5YyF5bel5YW35L+d55WZ5YWl5YyF5paH5Lu25Y6f5aeL5a2X6IqC77yM5bm25oyJ5Y6G5Y+y5Y6f5aeL5pGY6KaB6YCQ5a2X6IqC5qC45a+55LiD5Lu95Y6f5rGC6Kej5rqQ56CB44CCCuiLpeWPquivu+aguOmqjOiupOWumuS4uuaNouihjOetieS7t+OAgeS9huaJk+WMheimgeaxgueahOWOn+Wni+Wtl+iKguS4jeespu+8jOW6lOS/neeVmeW3ruW8guW5tuaBouWkjeWPr+S/oeWOn+Wni+Wtl+iKgu+8jOS4jeiDveaUueWGmemihOacn+WTiOW4jOOAggrmnKzmrKHljIXnmoTmoLjpqozorrDlvZXkuI3ov5vlhaXku6PnoIHljIXoh6rouqvjgIIK5L+u6K6i5a6h6K6h5YyF5pS26ZuG5a6M5oiQ5ZCO55qE5aSW5bGC5omT5YyF5ZKM5Lqk5LuY5qOA5p+l77yM5LiN6IO955So5L+u6K6i5YmN5Y6G5Y+y6K6w5b2V5Luj5pu/44CCCgrku4Xmo4Dmn6XniYjpnaLml7bkvb/nlKjni6znq4vpooTop4jnm67lvZXvvJoKCmBgYGJhc2gKcHl0aG9uIHBhcGVyX3NvdXJjZS9idWlsZF9maW5hbF9yZXBvcnQucHkgLS1uby1hdHRhY2htZW50IC0tbGF0ZXgtcGRmIHN1Ym1pc3Npb24vX2xhdGV4L3JlcG9ydC5wZGYKYGBgCgrpooTop4jlhpnlhaUgYHN1Ym1pc3Npb24vX3ByZXZpZXcvYO+8jOS4jeS8muimhuebluato+W8j+S6pOS7mOOAguacgOe7iCBQREYg55qE5bWM5YWl6ZmE5Lu26K6h5YWlIDIwIE1CIOmZkOWItuOAggrkuIrov7DliIbmnpDjgIHmoLjpqozjgIHmlofmoaPmnoTlu7rlkozmiZPljIXmraXpqqTlnYfkuI3ph43mlrDov5DooYzmsYLop6PlmajjgIIKCiMjIDguIOS4u+imgeWFpeWPowoKfCDot6/lvoQgfCDogYzotKMgfAp8LS0tfC0tLXwKfCBgY3B1X29wdGltaXphdGlvbi9vYmplY3RpdmVzLnB5YOOAgWBjcHVfb3B0aW1pemF0aW9uL3NvbHZlcnMucHlg44CBYGNwdV9vcHRpbWl6YXRpb24vZXhwZXJpbWVudC5weWAgfCDnm67moIfkuI7moq/luqbjgIHnrpfms5XvvI/orqHmlbDjgIHphY3lr7nliJ3lgLzkuI7ljp/lp4vovpPlh7ogfAp8IGBjcHVfb3B0aW1pemF0aW9uL2FuYWx5c2lzLnB5YCDlj4rnu5jlm77mqKHlnZcgfCDkv53lrZjmlbDmja7nmoTnu5/orqHjgIHnu4jmraLor4rmlq3lkozlm77ooaggfAp8IGBydW5fZXhwZXJpbWVudHMucHlgIHwg5paw55uu5b2V5rGC6Kej5YWl5Y+jIHwKfCBgcnVuX3Rlc3RzX2F1ZGl0LnB5YOOAgWB0ZXN0cy9gIHwg5Y2V5YWD5rWL6K+V5Y+K5oyB5LmF5a6h6K6hIHwKfCBgdmFsaWRhdGVfc3R1ZHkucHlg44CBYHByb3ZlbmFuY2VfaW50ZWdyaXR5LnB5YCB8IOS4ieWfn+WPquivu+aguOmqjOS4juS4peagvOa6kOegge+8j+aNouihjOivgeaYjiB8CnwgYGFuYWx5emVfcmVzdWx0cy5weWDjgIFgcGxvdF9yZXN1bHRzLnB5YOOAgWBtYWtlX3BhcGVyX2ZpZ3VyZXMucHlgIHwg56a757q/5YiG5p6Q5LiO57uY5Zu+IHwKfCBgY29uZmlncy9g44CBYHJlcXVpcmVtZW50cyoudHh0YCB8IOWbuuWumuWNj+iuruS4juS+nei1liB8CnwgYHJlc3VsdHMvZnVsbF9zdHVkeS9g44CBYGF1ZGl0cy9g44CBYHBhcGVyX3NvdXJjZS9gIHwg5Y6f5aeL57uT5p6c44CB5YiG6IyD5Zu06K+B5o2u44CB5oql5ZGK5rqQIHwKCueQhuiuuuS4jui/keacn+eglOeptuingeiLseaWh+aKpeWRiuOAguWunueOsOS+neaNruWMheaLrCBTY2lQeSAxLjEzLjEg55qECltDRyDmlofmoaNdKGh0dHBzOi8vZG9jcy5zY2lweS5vcmcvZG9jL3NjaXB5LTEuMTMuMS9yZWZlcmVuY2Uvb3B0aW1pemUubWluaW1pemUtY2cuaHRtbCnjgIEKW0JGR1Mg5paH5qGjXShodHRwczovL2RvY3Muc2NpcHkub3JnL2RvYy9zY2lweS0xLjEzLjEvcmVmZXJlbmNlL29wdGltaXplLm1pbmltaXplLWJmZ3MuaHRtbCnlj4oKW+WvueW6lOa6kOeggV0oaHR0cHM6Ly9naXRodWIuY29tL3NjaXB5L3NjaXB5L2Jsb2IvdjEuMTMuMS9zY2lweS9vcHRpbWl6ZS9fb3B0aW1pemUucHkp44CCCg==",
+      "text_utf8": "# COMP6704 个人作业：无约束优化 CPU 实验\n\n姓名：Yangxiao Cai；学号：26023041r。  \n**一级方向：Unconstrained Optimization（无约束优化）。**  \n主题：GD、非线性 PR+ 共轭梯度和 BFGS 在非凸 Rosenbrock、Rastrigin 函数上的驻点收敛、评估成本与终点质量。\n\n保存的 Windows 正式实验包含两个函数、2／10／20 维、每组五个配对起点、三种方法，共 **90 次求解**。\n参考结果为 **73/90 驻点达标、26/90 全局目标阈值命中**；另有 47 次只满足驻点指标，17 次两项均未满足。\n本轮修订更新报告、核验和交付工具，未新增或重跑 90 次正式实验；原始结果、初值、配置及统计表保留。\n\n## 1. 本轮交付与证据边界\n\n| 最终交付路径 | 内容 |\n|---|---|\n| `submission/Yangxiao Cai+26023041r.pdf` | 官方 NeurIPS 2025 样式的英文报告，含参考文献不超过 10 页，小于 20 MB |\n| `submission/COMP6704_reproducibility.zip` | 可运行源码、90 次原始结果、分析、测试、报告源和重建材料；与 PDF 中的同名附件逐字节相同 |\n| `submission/修改说明.txt` | 本轮修改范围与主要修正 |\n| `submission/COMP6704_revision_audits.zip` | 本轮核验记录、交付检查和外层打包核验记录 |\n\nPDF 附件恰为 `COMP6704_reproducibility.zip` 和 `packaging_verification.json`。\n下载原始 PDF 后，可通过支持附件的阅读器提取；浏览器预览可能不显示附件。\n`packaging_verification.json` 在打包完成后生成，随 PDF 和修订审计包交付，**不放入它所核验的代码 ZIP 自身**。\n源码包排除 `.venv`、缓存、交付 PDF、ZIP 自身、旧版本目录和额外重跑目录。\n\n证据按用途区分：\n\n| 路径 | 含义与适用范围 |\n|---|---|\n| `results/full_study/metadata.json` | 原始 Windows 90 次求解的环境、线程、初值方式和原始源码 SHA-256 |\n| `audits/history/windows_exact_reproduction_20261105.json` | 原有 Windows 到 Windows 的 90 次精确比较记录，原始字节保留；当时临时候选目录现已不存在 |\n| `audits/history/packaging_before_revision_20261105.json` | 修订前的打包核验历史记录，原始字节保留；不用于证明本轮代码包 |\n| `audits/final_review_20261105/`、`paper_source/review_record.json` | 此前审阅快照，保留当时的范围、源码哈希和测试数量；不能当作本轮通过记录 |\n| `audits/revision_20261105/unit_tests.json`、`.log` | 本轮单元测试结果、实际数量、测试源码哈希和日志 |\n| `audits/revision_20261105/current_validation.json` | 本轮只读数据、源码和环境核验，使用第 3 节的新格式 |\n| `audits/revision_20261105/source_hash_probe.json` | 本轮源码字节与换行等价判定的核对记录 |\n| `audits/revision_20261105/preservation_check.json` | 本轮原始结果与受保护统计材料的保留核对 |\n| `audits/revision_20261105/baseline_evidence/evidence_inventory.json` | 修订前实际证据文件的存在性、来源和范围索引 |\n| `submission/packaging_verification.json` | 当前代码 ZIP 的临时解包、成员与哈希核验；外层工作文件，同样收入修订审计包和 PDF 附件 |\n\n历史 Windows 比较不能当作本轮重新运行或跨平台验证。当前核验是否通过，应读取相应 JSON，\n而非用旧日志、文件名或历史通过次数替代。源码 ZIP 的 `archive_manifest.json` 记录成员大小和 SHA-256。\n\n## 2. 安装与解释器\n\n将代码 ZIP 解压到新目录，进入包含本 README、`configs/`、`cpu_optimization/` 的项目根目录。\n所有命令均从这里执行。正式参考环境为 Python **3.12.8**、NumPy **1.26.4**、SciPy **1.13.1**、Matplotlib **3.10.0**。\n`requirements-lock.txt` 保存原环境依赖；`requirements.txt` 固定三个主要数值／绘图依赖。\n\nWindows PowerShell：\n\n```powershell\npython --version\npython -m venv .venv\n.\\.venv\\Scripts\\python.exe -m pip install -r requirements-lock.txt\n```\n\nLinux／macOS，使用已安装的 Python 3.12.8：\n\n```bash\npython3.12 --version\npython3.12 -m venv .venv\n.venv/bin/python -m pip install -r requirements-lock.txt\n```\n\n以下 `python` 均指该虚拟环境的解释器；未激活环境时，Windows 使用\n`.\\.venv\\Scripts\\python.exe`，Linux／macOS 使用 `.venv/bin/python`。\nWSL 调用现有 Windows 环境可使用 `.venv/Scripts/python.exe`。\n如锁定依赖无法安装，可改用 `requirements.txt` 并保留实际环境记录；版本差异须在核验结果中体现。\n原机器的绝对路径仅作来源记录，不是运行依赖。\n\n固定 NumPy／SciPy 版本不能保证不同操作系统、Python 构建、处理器或数值库具有相同浮点路径。\n微小算术差异可能改变线搜索、评估次数及严格 `1e-6` 阈值附近的终止分类；本项目未隔离其具体平台成因。\n环境版本匹配、已保存数据完整与新环境重新求解一致，是不同证据。\n\n## 3. 单元测试与只读核验\n\n```bash\npython run_tests_audit.py --output audits/local_check/unit_tests.json\npython validate_study.py --results results/full_study --output audits/local_check/current_validation.json\n```\n\n测试数量以 `unit_tests.json` 中的 **`tests_run`** 为准，同时检查 `passed`、`failures`、`errors`、`skipped` 和同名 `.log`。\n测试覆盖梯度、Armijo、预算与失败状态、计数、配对初值、结果保护，以及原始哈希和换行等价判断。\n单元测试的临时小型夹具不属于新增正式实验。\n\n`validate_study.py` 不调用求解器，不写入参考结果目录。\n默认输出为 `audits/current_validation.json`；显式指定 `audits/local_check/` 可避免覆盖交付的审计证据。\n核验器拒绝把输出放入 `results/` 或受保护源码树。新报告的 `schema_version=2`：\n\n| 核验域 | 主要内容 | 通过条件 |\n|---|---|---|\n| `data_internal_integrity` | 90 条汇总、单次 JSON、轨迹、完整组合、30 组配对起点、12 项梯度检查、`nit`／累计计数、GD 更新及 Armijo、终点诊断和独立标签 | 该域 `passed=true`，无数据错误 |\n| `source_integrity` | 元数据已记录的项目源码及安装环境的 SciPy `_optimize.py`，保留原始 SHA-256 比较并核对换行等价证明 | 每个记录符合原始字节或得到严格换行等价证明；缺文件或真实内容差异均失败 |\n| `environment_match` | Python 补丁版本、NumPy、SciPy 与历史版本匹配；另记录系统、构建、CPU、线程上下文 | 必需版本匹配；上下文差异单列，不解释为已复现求解路径或计时 |\n\n顶层 `passed` 是三个域全部通过的合取，顶层 `errors` 带域名前缀。\n系统／CPU／线程上下文不同不会被当作原始数据损坏，但应审阅 `platform_context`。\n只读核验通过不表示完成了新的 90 次求解，也不证明墙钟时间一致。\n`results/full_study/analysis/validation.json` 若存在，是保留的旧版记录，不能替代本轮输出。\n\n源码核验首先比较当前原始字节与历史可信 SHA-256，保留 `raw_comparison`。\n若不一致，仅尝试由当前字节重建统一 LF 或 CRLF；只有某个重建结果的 SHA-256\n**恰好等于历史原始摘要**，才记为 `eol_equivalent`。\n这不是忽略所有哈希差异，也不改写预期摘要：BOM、空白、末尾换行和代码内容仍受检查；\n原始字节不匹配且包含孤立 CR 时不接受换行回退。SciPy 源码与必需版本错误仍会使相应域失败。\n\n## 4. 保存数据与离线分析\n\n| 路径（相对 `results/full_study/`） | 内容 |\n|---|---|\n| `summary.csv`、`runs/`、`traces/` | 90 次汇总、单次 JSON 与逐事件 CSV |\n| `initial_points.json` | 30 组实际起点，三种方法共享 |\n| `gradient_checks.json` | 12 项非驻点中心差分检查 |\n| `config_resolved.json`、`metadata.json` | 冻结协议、历史环境、来源及完成状态 |\n| `analysis/grouped_results.csv` | 18 组统计，五起点中位数与范围，包含失败样本 |\n| `analysis/initial_point_comparison.csv`、`paired_comparisons.csv` | 配对终点及成本比较 |\n| `analysis/run_diagnostics.csv` | 全部终点、末步与离线曲率诊断 |\n| `analysis/nonstationary_runs.csv`、`analysis/stationary_non_global_runs.csv` | 17 次未达驻点阈值及 47 次驻点达标但未命中全局目标的案例 |\n| `analysis/analysis_summary.json` | 完整精度汇总 |\n| `analysis/analysis_provenance.json`、绘图目录中的元数据 | 后续分析／图表的源码、输入和显示参数来源 |\n\n正式数据有 **80,605 条事件、80,425 个接受更新**。\n图示对数下限只用于显示；曲线在实际终止处截止，不用末值延长，不删除失败轨迹。\n离线 Hessian 与其他诊断不计入求解预算。\n\n如需重新生成统计和全量图，先复制到新的工作目录，避免写入交付参考树：\n\n```bash\npython -c \"import shutil; shutil.copytree('results/full_study', 'work/offline_rebuild')\"\npython analyze_results.py --results work/offline_rebuild --plot\npython make_paper_figures.py --results work/offline_rebuild --output work/offline_rebuild/analysis/paper_figures\n```\n\n`copytree` 拒绝覆盖已存在的目标目录；再次执行请另选目录。\n这些命令只对保存数据做分析与绘图，不运行求解器。\n\n## 5. 可选：在新目录重新求解\n\n以下是读者可执行的复现步骤，**本轮修订未执行这些正式求解命令**：\n\n```bash\npython run_experiments.py --config configs/full_study.json --output results/full_study_repeat01 --threads 1\npython validate_study.py --results results/full_study_repeat01 --output audits/local_check/repeated_validation.json\npython paper_source/verify_reproduction.py --reference results/full_study --candidate results/full_study_repeat01 --output audits/local_check/reproduction_comparison.json\n```\n\n运行器拒绝覆盖非空输出目录；已存在时换新名称。二维试跑可改用 `configs/demo_2d.json`\n并选择另一新目录，共两个函数、各一个二维起点、三种方法，六次求解。\n严格比较器按 `run_id` 比较已保存的数值结果与轨迹，排除耗时和时间戳。\n新环境只有在实际运行并完成比较后，才有相应复现证据；不预设逐位一致。\n`--threads 1` 在导入 NumPy 前设置该进程的 BLAS／OpenMP 线程变量，不改系统设置；方法顺序执行。\n\n## 6. 固定协议、日志与成本解释\n\n| 项目 | 固定设置 |\n|---|---|\n| 函数／维度 | Rosenbrock、Rastrigin；2、10、20 维 |\n| 初值 | 每组五点；基础种子 `20261105`；`PCG64 / SeedSequence([seed, objective_index, dimension])` |\n| 初值分布 | Rosenbrock 每坐标 `Uniform[-2,2]`；Rastrigin 每坐标 `Uniform[-3,3]`；仅用于生成起点，不约束后续迭代 |\n| 停止 | float64；梯度二范数 `<=1e-6`；最多 5000 个接受更新 |\n| 独立全局目标标签 | 有限结果且 `abs(f_final-f_star)<=1e-6`；两函数 `f_star=0` |\n\n- **GD：** 自写 Armijo 回溯，`alpha0=1, c1=1e-4, tau=0.5`，最小步长 `1e-12`。\n  初次试探后最多缩步 50 次，至多 51 次试探，也可能先达到最小步长。失败步不更新坐标；非有限值和浮点停滞明确记录。\n- **CG：** SciPy 1.13.1 非线性 PR+ CG，解析梯度，`norm=2, gtol=1e-6, c1=1e-4, c2=0.4`。\n  PR+ 之外还有下一方向的充分下降保障；具体行为以该版本源码为准。\n- **BFGS：** SciPy 1.13.1 普通全内存 BFGS，解析梯度、单位初始逆 Hessian，\n  `norm=2, gtol=1e-6, c1=1e-4, c2=0.4, xrtol=0`；覆盖库默认的 `c2=0.9`。\n\nRosenbrock 使用 SciPy `rosen/rosen_der`。Rastrigin 使用数学等价的稳定形式\n`sum(x_i**2 + 20*sin(pi*x_i)**2)`，梯度为 `2*x_i + 20*pi*sin(2*pi*x_i)`。\n中心差分检查采用 `h_i=1e-6*max(1,abs(x_i))`、分量 `atol=rtol=1e-5`，不进入求解预算。\n解析推导和独立检查未提供梯度实现错误的证据；有限检查不能排除所有数值问题。\n\n所有实际求解函数／梯度调用都经过计数器，包括拒绝试探和失败的终止搜索。\nSciPy 缓存避免的原始调用不虚增；包装器计数须与库返回的 `nfev/njev` 一致。\n\n| 事件 | 含义 |\n|---|---|\n| `initial` | `iteration=nfev=njev=0`；图示诊断离线补算，求解器自身初值评估仍正常计数 |\n| `accepted` | 一次接受更新，复制坐标与已有累计计数；回调不额外评估函数／梯度 |\n| `terminal` | 最终坐标及全部计数，不增加 `nit`；失败试探可能增计数而不改变坐标 |\n\n计时包含求解初始化、试探、更新和统一事件记录，不含导入、离线诊断、绘图及文件写入。\n独立保留原始 `solver_success/solver_status/solver_message`、公共 `stationary` 和 `global_hit`。\n原 Windows 批次中 `solver_success` 与 `stationary` 恰好均为 73 次，但两者含义不同。\n15 次 Rosenbrock-GD 用尽更新预算；两次 Rastrigin 20 维 BFGS 精度损失终止，均未达公共梯度阈值。\n小梯度不保证全局最优；命中目标阈值也不是精确最优性的数学证书。\n\nGD／CG 的方向与状态成本为 `O(d)`。标准高效 BFGS 的方向和低秩更新为 `O(d²)`；\n**本次 SciPy 1.13.1** 使用通用稠密乘积 `A1 @ H @ A2` 更新，按常规稠密算术为 `O(d³)`，状态和方向仍为 `O(d²)`。\n这些成本不含线搜索评估与日志；两模型每次函数／梯度评估为 `O(d)`，保存 K 个 d 维点另需 `O(Kd)` 空间与复制工作。\n相同迭代上限不等于相同计算预算，小维度计时也不足以验证渐近阶或给出普遍最快方法排名。\n\n## 7. 官方样式报告的重建与打包\n\n数值实验不需要文档依赖。重建报告需安装：\n\n```bash\npython -m pip install -r requirements-report.txt\n```\n\n另安装 XeLaTeX（TeX Live／MiKTeX）或 Tectonic，并使引擎命令可用；引擎程序不随包分发，首次编译可能下载宏包。\n`paper_source/template/neurips_2025.sty` 保持官方原样，主文档覆盖课程说明。\nPDF 使用 US Letter、5.5 × 9 英寸正文区、10 pt／11 pt 正文；验收以实际编译结果为准。\n\n正文修改入口为 `paper_source/create_content.py`，生成 `content.json`；公式源为 `equations.json`。\n生成正文时，脚本要求已有的 `audits/revision_20261105/unit_tests.json` 为通过记录，\n且其中 `test_sources` 哈希与当前测试一致，再读取实际测试数量；缺失或过期记录会停止生成。\n第 3 节本地检查另写 `audits/local_check/`，不会悄悄替换交付审计。\n\n以 Tectonic 为例，从项目根目录执行：\n\n```bash\npython paper_source/create_content.py\npython paper_source/generate_latex.py\npython -c \"from pathlib import Path; Path('submission/_latex').mkdir(parents=True, exist_ok=True)\"\ntectonic --keep-logs --outdir submission/_latex paper_source/template/report.tex\npython paper_source/package_reproducibility.py --dry-run\npython paper_source/package_reproducibility.py --verification-output submission/packaging_verification.json\npython paper_source/package_reproducibility.py --verify-only --verification-output submission/packaging_verification.json\npython paper_source/build_final_report.py --latex-pdf submission/_latex/report.pdf --packaging-report submission/packaging_verification.json\n```\n\nLaTeX 生成器核对保存数据来源；最终构建器核对编译 PDF 的源码指纹、页数、大小、归档全部成员与当前项目的字节一致性，以及附件字节。\n先完成正文、README 和预打包审计，再打包，再嵌入代码 ZIP 与本次打包记录，避免自包含依赖。\n打包工具保留入包文件原始字节，并按历史原始摘要逐字节核对七份原求解源码。\n若只读核验认定为换行等价、但打包要求的原始字节不符，应保留差异并恢复可信原始字节，不能改写预期哈希。\n本次包的核验记录不进入代码包自身。\n修订审计包收集完成后的外层打包和交付检查，不能用修订前历史记录代替。\n\n仅检查版面时使用独立预览目录：\n\n```bash\npython paper_source/build_final_report.py --no-attachment --latex-pdf submission/_latex/report.pdf\n```\n\n预览写入 `submission/_preview/`，不会覆盖正式交付。最终 PDF 的嵌入附件计入 20 MB 限制。\n上述分析、核验、文档构建和打包步骤均不重新运行求解器。\n\n## 8. 主要入口\n\n| 路径 | 职责 |\n|---|---|\n| `cpu_optimization/objectives.py`、`cpu_optimization/solvers.py`、`cpu_optimization/experiment.py` | 目标与梯度、算法／计数、配对初值与原始输出 |\n| `cpu_optimization/analysis.py` 及绘图模块 | 保存数据的统计、终止诊断和图表 |\n| `run_experiments.py` | 新目录求解入口 |\n| `run_tests_audit.py`、`tests/` | 单元测试及持久审计 |\n| `validate_study.py`、`provenance_integrity.py` | 三域只读核验与严格源码／换行证明 |\n| `analyze_results.py`、`plot_results.py`、`make_paper_figures.py` | 离线分析与绘图 |\n| `configs/`、`requirements*.txt` | 固定协议与依赖 |\n| `results/full_study/`、`audits/`、`paper_source/` | 原始结果、分范围证据、报告源 |\n\n理论与近期研究见英文报告。实现依据包括 SciPy 1.13.1 的\n[CG 文档](https://docs.scipy.org/doc/scipy-1.13.1/reference/optimize.minimize-cg.html)、\n[BFGS 文档](https://docs.scipy.org/doc/scipy-1.13.1/reference/optimize.minimize-bfgs.html)及\n[对应源码](https://github.com/scipy/scipy/blob/v1.13.1/scipy/optimize/_optimize.py)。\n"
+    },
+    "workspace_readme_at_capture": {
+      "size_bytes": 17823,
+      "sha256": "e0cafbb1a6797c7e195b374589ae031d9e94f9ff1b6c20ab584c21fce370e042"
+    }
+  },
+  "document_source_before": {
+    "paper_source/content.json": {
+      "size_bytes": 42278,
+      "sha256": "87d4f73821f8f9f325aa84c0f7202d2513f266e00808e0e1b05b1bea4a62f2ba"
+    },
+    "paper_source/create_content.py": {
+      "size_bytes": 33738,
+      "sha256": "e4d7f11da098c853ba1a81d8af4db9e309a6a025b6080ecc9db5a4f6af51c0ad"
+    },
+    "paper_source/generate_latex.py": {
+      "size_bytes": 17936,
+      "sha256": "e0dfd91a8003dfa67f1403242c9a94f88edf1595f87b7486048d7e3827726086"
+    }
+  },
+  "protected_raw_reference_files": {
+    "results/full_study/config_resolved.json": {
+      "size_bytes": 598,
+      "sha256": "e26acdad43528a0f59ccf87dd7aceb291872cbd73ea3157f9b84124f3b80ff1c"
+    },
+    "results/full_study/gradient_checks.json": {
+      "size_bytes": 7788,
+      "sha256": "4ea7fb13161716c4166dab5f93f1ed3be3a44cdd9c48eeb4a3732152aa6ffe34"
+    },
+    "results/full_study/initial_points.json": {
+      "size_bytes": 11815,
+      "sha256": "444d8ae54691a02879aa2858bd78df94a442299b836ed38c03ef9571487f5a97"
+    },
+    "results/full_study/metadata.json": {
+      "size_bytes": 4435,
+      "sha256": "a12f287bd5f87093ccdf0f03ea33a54e512c5662f08cf89bf73e7e2e9c52b725"
+    },
+    "results/full_study/runs/rastrigin_d10_s01_bfgs.json": {
+      "size_bytes": 1473,
+      "sha256": "3e802e069e825d087c67d2f4086c6486f70e16af1f0ee7c17138d535e9faf93e"
+    },
+    "results/full_study/runs/rastrigin_d10_s01_cg.json": {
+      "size_bytes": 1467,
+      "sha256": "6286ca331d715528f5bfd5ce5252091312443a412fe88aa8c08f4c54cc5ebf3f"
+    },
+    "results/full_study/runs/rastrigin_d10_s01_gd.json": {
+      "size_bytes": 1463,
+      "sha256": "812dd011d0eb6c65335b60462f8e4e5e5a52c5a719c0a27a97340c2f9b3f330f"
+    },
+    "results/full_study/runs/rastrigin_d10_s02_bfgs.json": {
+      "size_bytes": 1465,
+      "sha256": "505de97d7a2c5b673c00828a90061a5205358e1a652811bae9cfdc8940639f16"
+    },
+    "results/full_study/runs/rastrigin_d10_s02_cg.json": {
+      "size_bytes": 1469,
+      "sha256": "41465314c01f15e882418089c44232fff730db6c23e17233dc504d31562d741d"
+    },
+    "results/full_study/runs/rastrigin_d10_s02_gd.json": {
+      "size_bytes": 1462,
+      "sha256": "2d8cb9ccf5bf8a4976510aae14dde7dab503dd59d67af7148f2defb15fbd1cff"
+    },
+    "results/full_study/runs/rastrigin_d10_s03_bfgs.json": {
+      "size_bytes": 1480,
+      "sha256": "61b314b77a44a780227e49d927d1277ace8b740ca2079332599e1b816c402d87"
+    },
+    "results/full_study/runs/rastrigin_d10_s03_cg.json": {
+      "size_bytes": 1475,
+      "sha256": "200c645f658e92876895bb32af576ae3279ce4b53259e1431c9f30a75e655fee"
+    },
+    "results/full_study/runs/rastrigin_d10_s03_gd.json": {
+      "size_bytes": 1474,
+      "sha256": "bfbd2aeb21d165159f20a774a9d69f4bb4a6000be0edbfc241e494ed67ad2e7f"
+    },
+    "results/full_study/runs/rastrigin_d10_s04_bfgs.json": {
+      "size_bytes": 1483,
+      "sha256": "6fd32ad224fd561fef392b2d45bb77b14adec7b17df5ac74cb8d1603af00e96c"
+    },
+    "results/full_study/runs/rastrigin_d10_s04_cg.json": {
+      "size_bytes": 1477,
+      "sha256": "57893f8cb68ee4bc8a46c2d9b05bcc637c0ef1c775916cc3f0749fd4de08fced"
+    },
+    "results/full_study/runs/rastrigin_d10_s04_gd.json": {
+      "size_bytes": 1471,
+      "sha256": "bee6b639a63a545bb14b154385e7c099b8834cfe3c716d4ceb732c0d607ceeeb"
+    },
+    "results/full_study/runs/rastrigin_d10_s05_bfgs.json": {
+      "size_bytes": 1488,
+      "sha256": "32a19557ef656e34fe1a643633996dc462be4c340624e855b67e11d566cd83a5"
+    },
+    "results/full_study/runs/rastrigin_d10_s05_cg.json": {
+      "size_bytes": 1480,
+      "sha256": "f02455afee88aa7047c1dc194e510c01d8352a77041408889873b401da54a616"
+    },
+    "results/full_study/runs/rastrigin_d10_s05_gd.json": {
+      "size_bytes": 1479,
+      "sha256": "97372ab8f77dc44c62873aee6e065b0b7ed4fc01747d0f897990f4b8766a2a82"
+    },
+    "results/full_study/runs/rastrigin_d20_s01_bfgs.json": {
+      "size_bytes": 2014,
+      "sha256": "e6cb8e4ea2b30851790a3db7057c46d61d4b1f3d31c38f496833668cf045e477"
+    },
+    "results/full_study/runs/rastrigin_d20_s01_cg.json": {
+      "size_bytes": 2007,
+      "sha256": "dfa585d354741f050aaea2138a299d2065f5fb9f712771ae984f080bd06569d7"
+    },
+    "results/full_study/runs/rastrigin_d20_s01_gd.json": {
+      "size_bytes": 2016,
+      "sha256": "77ff9193c1fac3b611929d261ab0c94a0de34b002542fd9d58590482cadf72a1"
+    },
+    "results/full_study/runs/rastrigin_d20_s02_bfgs.json": {
+      "size_bytes": 2003,
+      "sha256": "36d8269c06e27f97110433a8b1fbe54b0dd41f2bddfdff1d9ee16e862d4d4282"
+    },
+    "results/full_study/runs/rastrigin_d20_s02_cg.json": {
+      "size_bytes": 1993,
+      "sha256": "0c519c563f157d524660ccd7cce558172daf55f2afa84bebfb86f7545afec296"
+    },
+    "results/full_study/runs/rastrigin_d20_s02_gd.json": {
+      "size_bytes": 1996,
+      "sha256": "83c25c784da5f6993995cc67c1bb89c43ebfa578d89e1744417d3d1b0b9c7081"
+    },
+    "results/full_study/runs/rastrigin_d20_s03_bfgs.json": {
+      "size_bytes": 2031,
+      "sha256": "528b36fd478f69a30382b1e9d6d1b6d8450a01b65801343883b19d635555f612"
+    },
+    "results/full_study/runs/rastrigin_d20_s03_cg.json": {
+      "size_bytes": 1993,
+      "sha256": "eb7e657278f627c12901bc8b8c764376261e420e3accb76089afaba51e72baf3"
+    },
+    "results/full_study/runs/rastrigin_d20_s03_gd.json": {
+      "size_bytes": 1994,
+      "sha256": "7d7cf360567e4178f96db3cc1c8cba79f6c48f21fda9288c1804343bd0185843"
+    },
+    "results/full_study/runs/rastrigin_d20_s04_bfgs.json": {
+      "size_bytes": 2021,
+      "sha256": "17b9fbfedcf633a22f34eb445de53c2c0d0520f18a7539b4788a9641973de16e"
+    },
+    "results/full_study/runs/rastrigin_d20_s04_cg.json": {
+      "size_bytes": 1988,
+      "sha256": "6a18748ce0b004875088e2f516f6e71a10b136dafc587a31efc5182a9720a599"
+    },
+    "results/full_study/runs/rastrigin_d20_s04_gd.json": {
+      "size_bytes": 1986,
+      "sha256": "b757679265a160595f9bfed33f0886723991e18ba54d47a0e474778604f2463f"
+    },
+    "results/full_study/runs/rastrigin_d20_s05_bfgs.json": {
+      "size_bytes": 1982,
+      "sha256": "717814f32fce5eb7f4d54867bf8069d4a969b53dccca41f2c24c7912403f185b"
+    },
+    "results/full_study/runs/rastrigin_d20_s05_cg.json": {
+      "size_bytes": 1979,
+      "sha256": "80b3a968f14e568aad91d14665b2f5c3f7ef2bd0afc7fc191a6f458872ccacb9"
+    },
+    "results/full_study/runs/rastrigin_d20_s05_gd.json": {
+      "size_bytes": 1981,
+      "sha256": "ea8bdf919e925e9e266bfcfbb9202d3a07561424866f961e22da5ab38eea914d"
+    },
+    "results/full_study/runs/rastrigin_d2_s01_bfgs.json": {
+      "size_bytes": 1067,
+      "sha256": "e8581daa94f6144470c2dc0c13ce455db1c2075b52c32db81a91a1069d7dd145"
+    },
+    "results/full_study/runs/rastrigin_d2_s01_cg.json": {
+      "size_bytes": 1067,
+      "sha256": "b8f836e9834a26b322dd4ed7b8ef89e278a4ee3b95cfda3cff2e7b239a346a45"
+    },
+    "results/full_study/runs/rastrigin_d2_s01_gd.json": {
+      "size_bytes": 1065,
+      "sha256": "0f7d1b3ae466012ca0812a95164eaab6f81e0825a563a7a1b66b8d92fa7318c9"
+    },
+    "results/full_study/runs/rastrigin_d2_s02_bfgs.json": {
+      "size_bytes": 1064,
+      "sha256": "ebeaf9c985a811ae0a2855c521ece7782c496d1071fd8cacd213afbfcbb1fe85"
+    },
+    "results/full_study/runs/rastrigin_d2_s02_cg.json": {
+      "size_bytes": 1060,
+      "sha256": "41357a7fc07677b8d174b6b412ec223cfa2afb9e4ca2ddec65b86e7faac39024"
+    },
+    "results/full_study/runs/rastrigin_d2_s02_gd.json": {
+      "size_bytes": 1056,
+      "sha256": "06397d8390182aeb769b2904ae0d1d85e7d355569ea95b7c8cf006d0c32646e1"
+    },
+    "results/full_study/runs/rastrigin_d2_s03_bfgs.json": {
+      "size_bytes": 1065,
+      "sha256": "e744c9ac6aa9c4eaa017cedeb04a75b10ac54eb3108e75ef3ab0f12c84e8bb85"
+    },
+    "results/full_study/runs/rastrigin_d2_s03_cg.json": {
+      "size_bytes": 1060,
+      "sha256": "d5be62fb8321e0fb5f10b4adbfb2936916431cc553c925febd8290a208a54e80"
+    },
+    "results/full_study/runs/rastrigin_d2_s03_gd.json": {
+      "size_bytes": 1058,
+      "sha256": "ab3ce89bab95cd7762f6d9265d4bd2818b5fd2ede6e9409360741cea59b60b00"
+    },
+    "results/full_study/runs/rastrigin_d2_s04_bfgs.json": {
+      "size_bytes": 1073,
+      "sha256": "d645ee0a27ac2254f87c5665127e8bc9313b98da359916c5cca28b1a9a802063"
+    },
+    "results/full_study/runs/rastrigin_d2_s04_cg.json": {
+      "size_bytes": 1068,
+      "sha256": "27be612836f7788385f65bc551e7d1c2462dcda0d8af0b2883828940827af478"
+    },
+    "results/full_study/runs/rastrigin_d2_s04_gd.json": {
+      "size_bytes": 1062,
+      "sha256": "3e5aeea6dea91917432151ea705ef597cc205d6a495519da0b2c478be6de319e"
+    },
+    "results/full_study/runs/rastrigin_d2_s05_bfgs.json": {
+      "size_bytes": 1060,
+      "sha256": "047ae70540cbbfc65ccfc5046c4d724d573df4b1d592877532c1cf7542b537f1"
+    },
+    "results/full_study/runs/rastrigin_d2_s05_cg.json": {
+      "size_bytes": 1060,
+      "sha256": "ef1c068ad24e0170e53551661be5947112936dc54830856b6ced8199489712e8"
+    },
+    "results/full_study/runs/rastrigin_d2_s05_gd.json": {
+      "size_bytes": 1058,
+      "sha256": "26caab8f7a8ca031e7bef15bcd21911dc4a338ed4508f8215405f5b2c3218d2c"
+    },
+    "results/full_study/runs/rosenbrock_d10_s01_bfgs.json": {
+      "size_bytes": 1481,
+      "sha256": "c86aa297ee9ea910451299c249975a000c08dd5c743d4592fe46ee68fc4387b7"
+    },
+    "results/full_study/runs/rosenbrock_d10_s01_cg.json": {
+      "size_bytes": 1481,
+      "sha256": "b826d96c305396a2abc672f4672925bd1ec7e073ef6c47ce7d20ca83fba1bb7e"
+    },
+    "results/full_study/runs/rosenbrock_d10_s01_gd.json": {
+      "size_bytes": 1482,
+      "sha256": "f332e39e1fa93eedfaa5a62876ad0f8393e2398334cf45f902334dc3396d5fda"
+    },
+    "results/full_study/runs/rosenbrock_d10_s02_bfgs.json": {
+      "size_bytes": 1480,
+      "sha256": "4195cee35de89315c2e2b7f8d0ffd3a2f9c049e6423efc5b00e90c808cc96cc5"
+    },
+    "results/full_study/runs/rosenbrock_d10_s02_cg.json": {
+      "size_bytes": 1481,
+      "sha256": "355f732e96ee2a2ace4557af48a82cf901f77f6a9ed84bb3137d839d2b37a11a"
+    },
+    "results/full_study/runs/rosenbrock_d10_s02_gd.json": {
+      "size_bytes": 1483,
+      "sha256": "cc05fdb3663a2d36e06e3a4b935dc264640791ed413405114ccb108ac6b31442"
+    },
+    "results/full_study/runs/rosenbrock_d10_s03_bfgs.json": {
+      "size_bytes": 1489,
+      "sha256": "f76c3b0e9f1f9c6ed39dfae8f08c033024233ce61f44216716d732f9a3c97d65"
+    },
+    "results/full_study/runs/rosenbrock_d10_s03_cg.json": {
+      "size_bytes": 1486,
+      "sha256": "7d737a9fa91be157e28561e359ebf1f77146e21579e7bbdcfd8f93e17c05f8e5"
+    },
+    "results/full_study/runs/rosenbrock_d10_s03_gd.json": {
+      "size_bytes": 1489,
+      "sha256": "3b64e2cecf407ab0107c134fc1440f19a27e9698b560d3c1fb1f09aa238aa9a9"
+    },
+    "results/full_study/runs/rosenbrock_d10_s04_bfgs.json": {
+      "size_bytes": 1476,
+      "sha256": "0fc77524fae67e4ca6d6c25853f9fb42de8c2f1f89d89a951f0182f209cd986f"
+    },
+    "results/full_study/runs/rosenbrock_d10_s04_cg.json": {
+      "size_bytes": 1472,
+      "sha256": "e4c562369f10d4f12fe2a8329cdd19c7e40b27a0099b52e85b9e4c218157c0d2"
+    },
+    "results/full_study/runs/rosenbrock_d10_s04_gd.json": {
+      "size_bytes": 1487,
+      "sha256": "366e4527f9faf20a500cc8828251ad86609c15c6ebe6624984a08ed3b4019fda"
+    },
+    "results/full_study/runs/rosenbrock_d10_s05_bfgs.json": {
+      "size_bytes": 1481,
+      "sha256": "d1ba114c5472666665f7f93eadfd2c87490b6332709d50874b3b5a3f3d0f9b91"
+    },
+    "results/full_study/runs/rosenbrock_d10_s05_cg.json": {
+      "size_bytes": 1485,
+      "sha256": "8d01fb20d620b17d8d4fc76531f2a0b4bff2867a2c8887586c8ec1ba813cfecb"
+    },
+    "results/full_study/runs/rosenbrock_d10_s05_gd.json": {
+      "size_bytes": 1487,
+      "sha256": "6242e4eee99194d42b7ddf3a936ff5160d8cebd3445cd043c4172ae7898ef8f0"
+    },
+    "results/full_study/runs/rosenbrock_d20_s01_bfgs.json": {
+      "size_bytes": 1984,
+      "sha256": "e49e7635da354c1ee049ac01ac75f69a06907c0c1bbee3b2118a490546e9de7e"
+    },
+    "results/full_study/runs/rosenbrock_d20_s01_cg.json": {
+      "size_bytes": 1984,
+      "sha256": "f64e4cd2980515f4996a14d738a08c6eee9f024232c39d2cf717942acd355a14"
+    },
+    "results/full_study/runs/rosenbrock_d20_s01_gd.json": {
+      "size_bytes": 1990,
+      "sha256": "ca717293946636eea81449405210363f1ea0ed5a70af3b239d9b88f6d45ccaef"
+    },
+    "results/full_study/runs/rosenbrock_d20_s02_bfgs.json": {
+      "size_bytes": 1986,
+      "sha256": "579050f02801a787e5d117e155d64cb9d5ba5b741f7649741bacf1b4b590133c"
+    },
+    "results/full_study/runs/rosenbrock_d20_s02_cg.json": {
+      "size_bytes": 1976,
+      "sha256": "941e556790ad312cab8b8525f2627674849af5bced602de0066c491b8892782a"
+    },
+    "results/full_study/runs/rosenbrock_d20_s02_gd.json": {
+      "size_bytes": 1981,
+      "sha256": "8af33fafe34bd66b3f2d17f97f469a88ab38deb1d07d056cafb330e720893c07"
+    },
+    "results/full_study/runs/rosenbrock_d20_s03_bfgs.json": {
+      "size_bytes": 1988,
+      "sha256": "1fff2c7f411f01e02d67e2bdd0f8b4615ae436cedb649aba6154d3b496130c28"
+    },
+    "results/full_study/runs/rosenbrock_d20_s03_cg.json": {
+      "size_bytes": 1984,
+      "sha256": "d979b548cf0cf4c7f95a66d1d8d70c16c5a64a0231c7257522ca3060fbc6964d"
+    },
+    "results/full_study/runs/rosenbrock_d20_s03_gd.json": {
+      "size_bytes": 1984,
+      "sha256": "c8939e838f11123c8e47b4196ea80a9f9452cf0d321cf6d30c2c56d594fc320b"
+    },
+    "results/full_study/runs/rosenbrock_d20_s04_bfgs.json": {
+      "size_bytes": 1991,
+      "sha256": "a1c4d4118cc73bd85a3f56913be522746c8b1e69718ba5e0e5d5e5ff6a59044a"
+    },
+    "results/full_study/runs/rosenbrock_d20_s04_cg.json": {
+      "size_bytes": 1988,
+      "sha256": "ab9eb6bc0d687b1d8198f57225b733ffcdc88bd092e358c14fa7c6ef65992edb"
+    },
+    "results/full_study/runs/rosenbrock_d20_s04_gd.json": {
+      "size_bytes": 1991,
+      "sha256": "8603cbd8a85d0efe955ed151fe64631a200d34e5818d3504b952a2b6ed187a66"
+    },
+    "results/full_study/runs/rosenbrock_d20_s05_bfgs.json": {
+      "size_bytes": 1989,
+      "sha256": "14551e2405147322881308806ced2ddedede81cf05656afe73968deca3616d1e"
+    },
+    "results/full_study/runs/rosenbrock_d20_s05_cg.json": {
+      "size_bytes": 1984,
+      "sha256": "39150f81c32ba714e5d6df2ee64b55ecf634dc8b65637ddf620c6050bdc656e1"
+    },
+    "results/full_study/runs/rosenbrock_d20_s05_gd.json": {
+      "size_bytes": 1987,
+      "sha256": "4c2afc621e708be34aa86831165ba7724ce2212f89b5e92e03befb6683f50d17"
+    },
+    "results/full_study/runs/rosenbrock_d2_s01_bfgs.json": {
+      "size_bytes": 1078,
+      "sha256": "ba3441891380cce27e9497753166c56eddcc858ad50c115f45597bf256a5bace"
+    },
+    "results/full_study/runs/rosenbrock_d2_s01_cg.json": {
+      "size_bytes": 1072,
+      "sha256": "871d378d8ef61762c5d9c03ea94ee2e5834eab7d2800b5d2e8ed0ebb0cd17985"
+    },
+    "results/full_study/runs/rosenbrock_d2_s01_gd.json": {
+      "size_bytes": 1081,
+      "sha256": "52e87cfc724176ee2ca38b98b1e353aced5c69bb1ee031396d2e16b2d8ed27b6"
+    },
+    "results/full_study/runs/rosenbrock_d2_s02_bfgs.json": {
+      "size_bytes": 1074,
+      "sha256": "0bd9917a78a2837151107b31a62ad24e587d6567f685db46da4e0603389e0777"
+    },
+    "results/full_study/runs/rosenbrock_d2_s02_cg.json": {
+      "size_bytes": 1072,
+      "sha256": "af93b6d7c42203028d8702ca7de8477d5dd3d8706ad4db18953ce780008c90b8"
+    },
+    "results/full_study/runs/rosenbrock_d2_s02_gd.json": {
+      "size_bytes": 1080,
+      "sha256": "a55812d87eadb978a105c95fe8fdda85c07220f99d547a4482e5589c83af61e3"
+    },
+    "results/full_study/runs/rosenbrock_d2_s03_bfgs.json": {
+      "size_bytes": 1076,
+      "sha256": "50463c90b12687dfde5b150c163564380d2d473b0e0d8279d5dc63880c07c738"
+    },
+    "results/full_study/runs/rosenbrock_d2_s03_cg.json": {
+      "size_bytes": 1070,
+      "sha256": "8cf7ff53c69a231efb4393ce79dc40f476349c21fface16cb6222196bfa7d207"
+    },
+    "results/full_study/runs/rosenbrock_d2_s03_gd.json": {
+      "size_bytes": 1080,
+      "sha256": "517cac1174f54885bce89f70dd62fa8bb1f044f518ec4085ec372911a31d5afd"
+    },
+    "results/full_study/runs/rosenbrock_d2_s04_bfgs.json": {
+      "size_bytes": 1077,
+      "sha256": "f1b08ab16992223ee461f872ca5772a1d11ad546ee486b65b81addc2403d931b"
+    },
+    "results/full_study/runs/rosenbrock_d2_s04_cg.json": {
+      "size_bytes": 1072,
+      "sha256": "8bcdd15c83168729c0d623dcebfac62b75af885ee81c02a49e72b734bc5d7a43"
+    },
+    "results/full_study/runs/rosenbrock_d2_s04_gd.json": {
+      "size_bytes": 1082,
+      "sha256": "f461a78a9c355a480972a055d57192339386bb26c5d434cbc9c058ab0faa0bc2"
+    },
+    "results/full_study/runs/rosenbrock_d2_s05_bfgs.json": {
+      "size_bytes": 1078,
+      "sha256": "76b6d4fe7a43adbed10e3e490be82bfa097d37d058fd2263b6091ace8e102c45"
+    },
+    "results/full_study/runs/rosenbrock_d2_s05_cg.json": {
+      "size_bytes": 1074,
+      "sha256": "758a7ab5bcac7097991425c78d439496ec492205c8debe48aa41f665e2dcff4d"
+    },
+    "results/full_study/runs/rosenbrock_d2_s05_gd.json": {
+      "size_bytes": 1083,
+      "sha256": "51739fa3afc5ac60240307c82b697ebc2ef6752d71c6e219323298b6068eb516"
+    },
+    "results/full_study/summary.csv": {
+      "size_bytes": 59677,
+      "sha256": "c50d4efacbd7851ba42aac512fd212b0f5e1197e4d9c28a06a43919a3d7abc6c"
+    },
+    "results/full_study/summary.txt": {
+      "size_bytes": 9064,
+      "sha256": "66540ec42b615d27caccb955b4cee1c903522ad6c1442917dfbda147e6b2e334"
+    },
+    "results/full_study/traces/rastrigin_d10_s01_bfgs.csv": {
+      "size_bytes": 6630,
+      "sha256": "629cacee3cd23dd7a09fcb36fdab8f139cb3db11906693ea3a44e815f98638ca"
+    },
+    "results/full_study/traces/rastrigin_d10_s01_cg.csv": {
+      "size_bytes": 3204,
+      "sha256": "4030fc68bb749f76f60017d2459ccdf18efc33fbf9137a966d30ec1e01900b0e"
+    },
+    "results/full_study/traces/rastrigin_d10_s01_gd.csv": {
+      "size_bytes": 11996,
+      "sha256": "f609c33a8e575e7054286872ea1d32da42b5cf6fb42e5617cae26a6c3543bb68"
+    },
+    "results/full_study/traces/rastrigin_d10_s02_bfgs.csv": {
+      "size_bytes": 6552,
+      "sha256": "f55b5d477c17162d279860de7751ea35f70abaf8e2b5da3f6cd4ff07a80ec359"
+    },
+    "results/full_study/traces/rastrigin_d10_s02_cg.csv": {
+      "size_bytes": 2854,
+      "sha256": "8bcf3b7c133b2b3ca889ce31cc340916bc80c2f2c2be87a8527dacd5dc72f2fc"
+    },
+    "results/full_study/traces/rastrigin_d10_s02_gd.csv": {
+      "size_bytes": 12830,
+      "sha256": "b8ee45a492d15df8583cec99ad0a0fef9a5e49e3e5ceb4251ce01100210b3ed0"
+    },
+    "results/full_study/traces/rastrigin_d10_s03_bfgs.csv": {
+      "size_bytes": 7647,
+      "sha256": "753834a48cca08a71d0b0ed9ee6086319e5c028cc0a40dc0fc32016361e60515"
+    },
+    "results/full_study/traces/rastrigin_d10_s03_cg.csv": {
+      "size_bytes": 4211,
+      "sha256": "3ce3953394477d897704b15f2e3135f351f987e7af18fc1eeeeabcd2942a04b1"
+    },
+    "results/full_study/traces/rastrigin_d10_s03_gd.csv": {
+      "size_bytes": 12754,
+      "sha256": "07828cca20a800edb28f9b27ce7860d7cecd66c4f149d81d1d1cbf6fac9b85a4"
+    },
+    "results/full_study/traces/rastrigin_d10_s04_bfgs.csv": {
+      "size_bytes": 7989,
+      "sha256": "df926068d8c32ad775e3aecb97275d218df25d16dd4b8d2b41709e2706d08b46"
+    },
+    "results/full_study/traces/rastrigin_d10_s04_cg.csv": {
+      "size_bytes": 3879,
+      "sha256": "1648b438f396eea8cd05a9d29a2a157eeaf502faf62531cc4b18ba4e5c2e6f2d"
+    },
+    "results/full_study/traces/rastrigin_d10_s04_gd.csv": {
+      "size_bytes": 12750,
+      "sha256": "a755941048c5e4eead6756d5f4cd5b795571f6e18a6aa6b3a47b77a0261b5aa5"
+    },
+    "results/full_study/traces/rastrigin_d10_s05_bfgs.csv": {
+      "size_bytes": 8696,
+      "sha256": "1f16f4c6c8c11522f4761eb4cd74ec235fc025a3208c276b2afbcf1a796f0b1d"
+    },
+    "results/full_study/traces/rastrigin_d10_s05_cg.csv": {
+      "size_bytes": 4217,
+      "sha256": "cd2235d946740f8562b6323e58a7fdd1ae081b921f71501d4caba2efd12d03e7"
+    },
+    "results/full_study/traces/rastrigin_d10_s05_gd.csv": {
+      "size_bytes": 12788,
+      "sha256": "bc2fc06119f69c6638a126d346b66fad197f0b2cf217dd4413fbdcb4827f35ef"
+    },
+    "results/full_study/traces/rastrigin_d20_s01_bfgs.csv": {
+      "size_bytes": 13352,
+      "sha256": "4f5085363cf7000f9a40b76e113e1c26036b5dc90e07b3dbf031378af58dba1c"
+    },
+    "results/full_study/traces/rastrigin_d20_s01_cg.csv": {
+      "size_bytes": 5123,
+      "sha256": "c7b138aafcdf5a380cbd9ab69264da7a11030631c339ffdf2c1ecf0bfd511f55"
+    },
+    "results/full_study/traces/rastrigin_d20_s01_gd.csv": {
+      "size_bytes": 19807,
+      "sha256": "a8bdaefbba104557c3b4b54a4ca98db9988c1f0dacddf2eb74b341520937916b"
+    },
+    "results/full_study/traces/rastrigin_d20_s02_bfgs.csv": {
+      "size_bytes": 19155,
+      "sha256": "8d2bf49e0bf3c8ed4f895fbdd5323a54f41bb68c7ab46114a5ec41468057b924"
+    },
+    "results/full_study/traces/rastrigin_d20_s02_cg.csv": {
+      "size_bytes": 6119,
+      "sha256": "e90a4b2adaa9f974e19ae3e32075604c994596e010c4aee240880fa3b1a33542"
+    },
+    "results/full_study/traces/rastrigin_d20_s02_gd.csv": {
+      "size_bytes": 19403,
+      "sha256": "5c0563ff756b710f946d70b0b2926fa8f38747906b0d6e00721d0666588c3372"
+    },
+    "results/full_study/traces/rastrigin_d20_s03_bfgs.csv": {
+      "size_bytes": 15487,
+      "sha256": "9bc17c80314ab46dc7106a931059f5c5269695059c334be0d2b0f7d7b7645080"
+    },
+    "results/full_study/traces/rastrigin_d20_s03_cg.csv": {
+      "size_bytes": 6688,
+      "sha256": "11d885ba560756aac0e874b81b92b9c9c72adcf29f6434cd191365829014583e"
+    },
+    "results/full_study/traces/rastrigin_d20_s03_gd.csv": {
+      "size_bytes": 20296,
+      "sha256": "e6cc0a93f9e66b565bb33ba1b256eff29d34d25ced44220fa9cde1486486c93c"
+    },
+    "results/full_study/traces/rastrigin_d20_s04_bfgs.csv": {
+      "size_bytes": 12552,
+      "sha256": "4927fa741cec7ce71f0150cde3ca22e708f16c61b5a44bb9a5fdcc0bc6e2ef36"
+    },
+    "results/full_study/traces/rastrigin_d20_s04_cg.csv": {
+      "size_bytes": 6078,
+      "sha256": "c944e87d15087728e154c97006df4920769f80a2d22048446c0a267afe16427f"
+    },
+    "results/full_study/traces/rastrigin_d20_s04_gd.csv": {
+      "size_bytes": 19898,
+      "sha256": "441b054a324cbdd49d4ba4904b5a596481e6803d1bcf3599c54424236e184a01"
+    },
+    "results/full_study/traces/rastrigin_d20_s05_bfgs.csv": {
+      "size_bytes": 19885,
+      "sha256": "61aa4e85b4782631e12754ba19a0b16eaa1d79c868fee5d0196217e7c8cc57d0"
+    },
+    "results/full_study/traces/rastrigin_d20_s05_cg.csv": {
+      "size_bytes": 7090,
+      "sha256": "16278dfb114a4204599ea23d68edc3a2023fe92013b61d1baa00ac8c43d53066"
+    },
+    "results/full_study/traces/rastrigin_d20_s05_gd.csv": {
+      "size_bytes": 20190,
+      "sha256": "23aebfad556057f8a5f55b356431a8065583711b8e26bfc8fc6985a93ed5118d"
+    },
+    "results/full_study/traces/rastrigin_d2_s01_bfgs.csv": {
+      "size_bytes": 1773,
+      "sha256": "05d96a2aca710ff3145419b93486777cbb9b6ce2d4fcfa3c8463033be87dce23"
+    },
+    "results/full_study/traces/rastrigin_d2_s01_cg.csv": {
+      "size_bytes": 2100,
+      "sha256": "d522ef1b4358b092415442d214b61ff8746861468acfe04169b53b417ddc24e4"
+    },
+    "results/full_study/traces/rastrigin_d2_s01_gd.csv": {
+      "size_bytes": 7396,
+      "sha256": "618f2e6bedcc2b34765ed08d721613fe417acf7abbb47a56981b48c5c40397b4"
+    },
+    "results/full_study/traces/rastrigin_d2_s02_bfgs.csv": {
+      "size_bytes": 1762,
+      "sha256": "c4fa4f68c8e68f61a5337f4880d365f431bb1b4910c2c5e764f040aae982357f"
+    },
+    "results/full_study/traces/rastrigin_d2_s02_cg.csv": {
+      "size_bytes": 1730,
+      "sha256": "23ab6694650ab323e13e626bea0752f90243fd080f479b6201475fc94aeee26d"
+    },
+    "results/full_study/traces/rastrigin_d2_s02_gd.csv": {
+      "size_bytes": 5765,
+      "sha256": "39a9bcca9f76746406af86ae2986719a85e7519d08acbc153c97b3f15e080e71"
+    },
+    "results/full_study/traces/rastrigin_d2_s03_bfgs.csv": {
+      "size_bytes": 1606,
+      "sha256": "a363b88f0370a97e2c81682accd9e768666e9172fe80d60fd073f986a39a28f4"
+    },
+    "results/full_study/traces/rastrigin_d2_s03_cg.csv": {
+      "size_bytes": 1750,
+      "sha256": "ff6cd5350405b53b2222175783f7fbc81213c758410678e7b785053e6d5a40c3"
+    },
+    "results/full_study/traces/rastrigin_d2_s03_gd.csv": {
+      "size_bytes": 6742,
+      "sha256": "b3d5abd4c7e3f450991688f8b364d89d1ad6a8d308dc7f171110b08e21a5aff1"
+    },
+    "results/full_study/traces/rastrigin_d2_s04_bfgs.csv": {
+      "size_bytes": 1625,
+      "sha256": "828c62ea566f2715ab533270628ac6544bd0009091254de67fab03bf6f1fa5df"
+    },
+    "results/full_study/traces/rastrigin_d2_s04_cg.csv": {
+      "size_bytes": 1412,
+      "sha256": "a1278939a77304329aa77391dd98baebafbb9ae96cffadae35a302927575f065"
+    },
+    "results/full_study/traces/rastrigin_d2_s04_gd.csv": {
+      "size_bytes": 6382,
+      "sha256": "b384b21af89a978593d66f8d623ed1d338f55b962de9df57f71af9bfe0749505"
+    },
+    "results/full_study/traces/rastrigin_d2_s05_bfgs.csv": {
+      "size_bytes": 1409,
+      "sha256": "1d26f097eea1e3cd97ba91b6f592342cb0500d5c45ba91aa99e9f8b9f24becff"
+    },
+    "results/full_study/traces/rastrigin_d2_s05_cg.csv": {
+      "size_bytes": 1211,
+      "sha256": "d4d5f0be423602150639e7bbb146982b80f66f783a7d8707b6c9fd2f7884d753"
+    },
+    "results/full_study/traces/rastrigin_d2_s05_gd.csv": {
+      "size_bytes": 5923,
+      "sha256": "cf873bd7096c86c317a68d447c4d443655f4094dfe7554b984fa446b371c1026"
+    },
+    "results/full_study/traces/rosenbrock_d10_s01_bfgs.csv": {
+      "size_bytes": 29784,
+      "sha256": "d5c09454cd96fe8682e902425f63f58d7e75168bf2d4838bc9afa506cedb1c41"
+    },
+    "results/full_study/traces/rosenbrock_d10_s01_cg.csv": {
+      "size_bytes": 84824,
+      "sha256": "1ebdefce255f99abddca8499cc5372f078617cdc2a4c9fbbf3fae34f117f0e39"
+    },
+    "results/full_study/traces/rosenbrock_d10_s01_gd.csv": {
+      "size_bytes": 1770987,
+      "sha256": "f869f1c2ef5c69ca88df8ebcb5c097caeb0dd7ff0d94b41d537ec8c0a6193ef3"
+    },
+    "results/full_study/traces/rosenbrock_d10_s02_bfgs.csv": {
+      "size_bytes": 21260,
+      "sha256": "f4524656daff8b41d8f6f191feba9f7b106ef0ed6a4de3b4c8d658b4a3e6b138"
+    },
+    "results/full_study/traces/rosenbrock_d10_s02_cg.csv": {
+      "size_bytes": 56078,
+      "sha256": "0c028be1bb6f90e5aeaf237cbe889700bf2db98b38c9dfb045cdede6e4a6197b"
+    },
+    "results/full_study/traces/rosenbrock_d10_s02_gd.csv": {
+      "size_bytes": 1770126,
+      "sha256": "4f83f1ef1c922b7f5a42d7738d6a559f9a3c18571584ae2a38e15f1be77682ad"
+    },
+    "results/full_study/traces/rosenbrock_d10_s03_bfgs.csv": {
+      "size_bytes": 24830,
+      "sha256": "558592bb149c2008ff7ee78803147d0f637d5673ba2d8565a60ba59dd037df80"
+    },
+    "results/full_study/traces/rosenbrock_d10_s03_cg.csv": {
+      "size_bytes": 102916,
+      "sha256": "8f1ce4303638bb87b7ace845ef5a5d7611d99f9abead708396f0eeef77624bac"
+    },
+    "results/full_study/traces/rosenbrock_d10_s03_gd.csv": {
+      "size_bytes": 1770899,
+      "sha256": "0b5797b72111bea6db8cb5089d0b44ee9491862185fb4dc420fabc5a289e8409"
+    },
+    "results/full_study/traces/rosenbrock_d10_s04_bfgs.csv": {
+      "size_bytes": 27957,
+      "sha256": "9e5743d20e0a47b36f370bd883056eafd63331b54318ca57cf4a1aca1eb51278"
+    },
+    "results/full_study/traces/rosenbrock_d10_s04_cg.csv": {
+      "size_bytes": 70004,
+      "sha256": "e1cf97d7c998661688d884be3e9d23eb6da49607236ad9bdb47ef38ff771e946"
+    },
+    "results/full_study/traces/rosenbrock_d10_s04_gd.csv": {
+      "size_bytes": 1771600,
+      "sha256": "f574be25fc8188ffebde5cb4e8aa0ef8c2b655c338a8d034e5b59566672debfc"
+    },
+    "results/full_study/traces/rosenbrock_d10_s05_bfgs.csv": {
+      "size_bytes": 20430,
+      "sha256": "48e63b6d08eb89f7d12291cc8b04d00fc39779e93e7ca4974173037c6876583f"
+    },
+    "results/full_study/traces/rosenbrock_d10_s05_cg.csv": {
+      "size_bytes": 113378,
+      "sha256": "e663b2f959488c23cec60f7d81562eed80cac4e3e517c91583d3fcedc9cdd5f9"
+    },
+    "results/full_study/traces/rosenbrock_d10_s05_gd.csv": {
+      "size_bytes": 1771080,
+      "sha256": "fc0efc1197f5162e77a59343d0ce4b7431589190eface4d7e6143a0630c6ffd2"
+    },
+    "results/full_study/traces/rosenbrock_d20_s01_bfgs.csv": {
+      "size_bytes": 73617,
+      "sha256": "5f3a91ae12e283e219b8d88d13b40edb9a9c1e330c3f601fb874de761f95dd83"
+    },
+    "results/full_study/traces/rosenbrock_d20_s01_cg.csv": {
+      "size_bytes": 237755,
+      "sha256": "e194453af49e08550d8f427d012e941f23e1bf8365c7ee9a003f2007f8f05d02"
+    },
+    "results/full_study/traces/rosenbrock_d20_s01_gd.csv": {
+      "size_bytes": 2732942,
+      "sha256": "d61e974ff997e7a0c921245d5015e1d725b73419c71dd700508ab79c034fabfa"
+    },
+    "results/full_study/traces/rosenbrock_d20_s02_bfgs.csv": {
+      "size_bytes": 58107,
+      "sha256": "6502808bc2b3b63b543d272211a34e53e752fe08475085dbc39365fd3432d64e"
+    },
+    "results/full_study/traces/rosenbrock_d20_s02_cg.csv": {
+      "size_bytes": 298626,
+      "sha256": "c7d6165bafb46c66f77b1c432355831352f9119fdd36463cc04015852aae8fa2"
+    },
+    "results/full_study/traces/rosenbrock_d20_s02_gd.csv": {
+      "size_bytes": 2731646,
+      "sha256": "0cea3bacd17162875394794aac291fd53e4537f0e7a2e9f87b6c5a196071c428"
+    },
+    "results/full_study/traces/rosenbrock_d20_s03_bfgs.csv": {
+      "size_bytes": 60731,
+      "sha256": "1ce645f41a5e0e583702b93354896b9880ab85429537a54b4ea7465618b37ac5"
+    },
+    "results/full_study/traces/rosenbrock_d20_s03_cg.csv": {
+      "size_bytes": 156360,
+      "sha256": "f34738ed276f6b118e2409115d6ce881de0ff23ca857305ff85132651da428bf"
+    },
+    "results/full_study/traces/rosenbrock_d20_s03_gd.csv": {
+      "size_bytes": 2732209,
+      "sha256": "3dca308519b235a9f5599b2dd0cc0ab1f3382fb569cf2b9efd5b3c779f98fbef"
+    },
+    "results/full_study/traces/rosenbrock_d20_s04_bfgs.csv": {
+      "size_bytes": 64680,
+      "sha256": "c0d06e395ae6e3392f5c8f8e5ef58318ada944b2bb39b20f1688e245ebbcd0f1"
+    },
+    "results/full_study/traces/rosenbrock_d20_s04_cg.csv": {
+      "size_bytes": 215158,
+      "sha256": "e9a01ebb2c4511f30be2c70b167ff1113ef187604c56658cc062fca47748bdcd"
+    },
+    "results/full_study/traces/rosenbrock_d20_s04_gd.csv": {
+      "size_bytes": 2735352,
+      "sha256": "6ca6cf9a58b74f39598507c95971cee7575d0ecde014bc6cf3a0a1a6a5ab9741"
+    },
+    "results/full_study/traces/rosenbrock_d20_s05_bfgs.csv": {
+      "size_bytes": 58081,
+      "sha256": "58dd8f583ca21674243df0a0368389e25875197b7fff8bc30566a8ca77952808"
+    },
+    "results/full_study/traces/rosenbrock_d20_s05_cg.csv": {
+      "size_bytes": 236888,
+      "sha256": "7429b7a23676cf474c9283e731a1678f100d9644c4a04ff23d4b1c7a2ffba864"
+    },
+    "results/full_study/traces/rosenbrock_d20_s05_gd.csv": {
+      "size_bytes": 2733043,
+      "sha256": "37f06bd9d9cc7491d275c7a6d84329ac3e55bdb28dca6373ff0a64bd144bc79f"
+    },
+    "results/full_study/traces/rosenbrock_d2_s01_bfgs.csv": {
+      "size_bytes": 5339,
+      "sha256": "574f233118e6ff75f077ddd6a3cbdb488398b25f9bc172f64cbd83829c658196"
+    },
+    "results/full_study/traces/rosenbrock_d2_s01_cg.csv": {
+      "size_bytes": 4188,
+      "sha256": "fefa2bf18be8ad239a7572af8b1488525e77dabdec49816d3b609f096ecfd041"
+    },
+    "results/full_study/traces/rosenbrock_d2_s01_gd.csv": {
+      "size_bytes": 997231,
+      "sha256": "9b7fc1aee9fd7512ab2a473b0fe3c58862a59686673e5a6ffc198368b500c85e"
+    },
+    "results/full_study/traces/rosenbrock_d2_s02_bfgs.csv": {
+      "size_bytes": 2770,
+      "sha256": "b9ff5d2719347dd80346a681d4c928248fde99f116f5c50f7ae8120b83286802"
+    },
+    "results/full_study/traces/rosenbrock_d2_s02_cg.csv": {
+      "size_bytes": 3100,
+      "sha256": "8af7abb8a55b92f3dd35e96f2fcb4c689b5bf7399b77914c928985ced4b823ab"
+    },
+    "results/full_study/traces/rosenbrock_d2_s02_gd.csv": {
+      "size_bytes": 1010070,
+      "sha256": "878dbf3dd1436c52cf4aeb2d9d2d529e1be9016b6fdc2e094c03271281640be5"
+    },
+    "results/full_study/traces/rosenbrock_d2_s03_bfgs.csv": {
+      "size_bytes": 6218,
+      "sha256": "3e8d1f1fc5c0e1f62d05fff758e27e14bc9cee2bdefbde713620477832c73db7"
+    },
+    "results/full_study/traces/rosenbrock_d2_s03_cg.csv": {
+      "size_bytes": 5558,
+      "sha256": "2a6c0b1a256c296a37ffca7342a1b3317a9ed3957c402a72e9778b7666045ed6"
+    },
+    "results/full_study/traces/rosenbrock_d2_s03_gd.csv": {
+      "size_bytes": 1004135,
+      "sha256": "cb5d764ed233411bd8223ef39fe3a3bff1bd250ec5928061157d23498a3a4a44"
+    },
+    "results/full_study/traces/rosenbrock_d2_s04_bfgs.csv": {
+      "size_bytes": 4057,
+      "sha256": "1a3531dd3df7f3188389b2b31dcbaa0e2a4faf26b9226a6e4d7b1ad9a10681a8"
+    },
+    "results/full_study/traces/rosenbrock_d2_s04_cg.csv": {
+      "size_bytes": 4691,
+      "sha256": "36d0ba7e810129a1bcdb7b3c74bc840af35759607e00ddebb8214daa6a6a76f4"
+    },
+    "results/full_study/traces/rosenbrock_d2_s04_gd.csv": {
+      "size_bytes": 1010708,
+      "sha256": "8d4b6c0d02635d4c9b3e3b60e41f892a7f7cf90f00c7294c65db404f02a65e40"
+    },
+    "results/full_study/traces/rosenbrock_d2_s05_bfgs.csv": {
+      "size_bytes": 5101,
+      "sha256": "18367a6fb86df9afca303a3005eef22a589e25b963d37fe35a2b948640418424"
+    },
+    "results/full_study/traces/rosenbrock_d2_s05_cg.csv": {
+      "size_bytes": 4876,
+      "sha256": "3b5e59c9c5ca86b0111e24b4fd1339c5a334e4c34bf93249ecfe0f399b83bf12"
+    },
+    "results/full_study/traces/rosenbrock_d2_s05_gd.csv": {
+      "size_bytes": 1010886,
+      "sha256": "4efa553b12812618162b965ff0dbcb7c019685f66b4cf660a89e12be75c7a438"
+    }
+  },
+  "protected_original_source_files": {
+    "cpu_optimization/__init__.py": {
+      "size_bytes": 235,
+      "sha256": "e927c6d0dd3ead9248c9e3f814ea80198cdb9ad9482e5ac06459b624279c6a4e"
+    },
+    "cpu_optimization/experiment.py": {
+      "size_bytes": 12842,
+      "sha256": "c9b3f653503a3bf589c8ab0f5b2c0193bb48fd7da046c0ed1109bf509e340244"
+    },
+    "cpu_optimization/objectives.py": {
+      "size_bytes": 5569,
+      "sha256": "a719e6d965c924be7b21f5c1ef6e8bcf5c34ae08c70e4540f23af56f8f0cbddf"
+    },
+    "cpu_optimization/plotting.py": {
+      "size_bytes": 12163,
+      "sha256": "3593805a25c0f6415756084145062ad013baee71dc26deb047c046cd2e1b7b1e"
+    },
+    "cpu_optimization/solvers.py": {
+      "size_bytes": 10036,
+      "sha256": "dec57377948567b2928b32116ca035e74b3e6b943048539a51dc7fc3890ac812"
+    },
+    "run_experiments.py": {
+      "size_bytes": 1632,
+      "sha256": "e9c6fe4196e9ce61c085d00bf26582f6fa26407c1e0088c0624c787169771a04"
+    },
+    "plot_results.py": {
+      "size_bytes": 769,
+      "sha256": "f3017d4c3354370545a80ac93f26f656192df46619a4f19b0375822ad61ede23"
+    }
+  },
+  "protected_raw_manifest_sha256": "9dfcb785f18f92ba14323c13b833545bb0838929f9b86d05332b7576a9d5629e",
+  "protected_original_source_manifest_sha256": "cb5ca0cb8bdbc374103784ee5ce9f2c4640c14d648376453e103a18b2150cb46",
+  "protected_tables_2_3_4": {
+    "2": {
+      "page_number": 6,
+      "full_value_block": {
+        "kind": "table",
+        "text": "",
+        "headers": [
+          "d",
+          "Method",
+          "S/G",
+          "Updates\nmedian",
+          "nfev\nmedian [range]",
+          "njev\nmedian [range]",
+          "Final f\nmedian [range]"
+        ],
+        "rows": [
+          [
+            "2",
+            "GD",
+            "0/0",
+            "5000",
+            "49290\n[49090, 51127]",
+            "5001\n[5001, 5001]",
+            "4.64e-06\n[3.35e-06, 5.07e-05]"
+          ],
+          [
+            "2",
+            "CG",
+            "5/5",
+            "23",
+            "56\n[32, 72]",
+            "56\n[32, 72]",
+            "2.49e-16\n[4.24e-20, 3.03e-13]"
+          ],
+          [
+            "2",
+            "BFGS",
+            "5/5",
+            "25",
+            "48\n[20, 58]",
+            "48\n[20, 58]",
+            "1.33e-17\n[8.99e-21, 8.49e-15]"
+          ],
+          [
+            "10",
+            "GD",
+            "0/0",
+            "5000",
+            "53100\n[53063, 53339]",
+            "5001\n[5001, 5001]",
+            "4.91e-04\n[4.14e-04, 4.99e-04]"
+          ],
+          [
+            "10",
+            "CG",
+            "5/4",
+            "249",
+            "434\n[282, 553]",
+            "434\n[282, 553]",
+            "9.47e-14\n[2.11e-14, 3.99]"
+          ],
+          [
+            "10",
+            "BFGS",
+            "5/3",
+            "70",
+            "114\n[100, 146]",
+            "114\n[100, 146]",
+            "3.08e-17\n[2.80e-18, 3.99]"
+          ],
+          [
+            "20",
+            "GD",
+            "0/0",
+            "5000",
+            "53289\n[53071, 53376]",
+            "5001\n[5001, 5001]",
+            "0.00353\n[0.00339, 0.004]"
+          ],
+          [
+            "20",
+            "CG",
+            "5/5",
+            "444",
+            "709\n[482, 900]",
+            "709\n[482, 900]",
+            "1.10e-13\n[5.87e-16, 1.35e-13]"
+          ],
+          [
+            "20",
+            "BFGS",
+            "5/4",
+            "110",
+            "175\n[166, 203]",
+            "175\n[166, 203]",
+            "3.72e-16\n[4.74e-18, 3.99]"
+          ]
+        ],
+        "widths": [
+          0.045,
+          0.1,
+          0.065,
+          0.105,
+          0.205,
+          0.18,
+          0.3
+        ]
+      },
+      "headers_rows_canonical_sha256": "2e757065ca16457f18be472ba717748d27022594b75198594c27727b6e5f5426",
+      "full_block_canonical_sha256": "22c0029bf037465d00e36eb5625dcb7dc63fd61b7188a9e242cab78afb76f21b"
+    },
+    "3": {
+      "page_number": 7,
+      "full_value_block": {
+        "kind": "table",
+        "text": "",
+        "headers": [
+          "d",
+          "Method",
+          "S/G",
+          "Updates\nmedian",
+          "nfev\nmedian [range]",
+          "njev\nmedian [range]",
+          "Final f\nmedian [range]"
+        ],
+        "rows": [
+          [
+            "2",
+            "GD",
+            "5/0",
+            "31",
+            "276\n[249, 313]",
+            "32\n[29, 37]",
+            "4.97\n[0.995, 12.9]"
+          ],
+          [
+            "2",
+            "CG",
+            "5/0",
+            "7",
+            "19\n[10, 24]",
+            "19\n[10, 24]",
+            "9.95\n[3.98, 16.9]"
+          ],
+          [
+            "2",
+            "BFGS",
+            "5/0",
+            "6",
+            "12\n[9, 16]",
+            "12\n[9, 16]",
+            "9.95\n[3.98, 16.9]"
+          ],
+          [
+            "10",
+            "GD",
+            "5/0",
+            "34",
+            "305\n[288, 312]",
+            "35\n[33, 36]",
+            "35.8\n[25.9, 37.8]"
+          ],
+          [
+            "10",
+            "CG",
+            "5/0",
+            "9",
+            "19\n[14, 24]",
+            "19\n[14, 24]",
+            "27.9\n[23.9, 37.8]"
+          ],
+          [
+            "10",
+            "BFGS",
+            "5/0",
+            "20",
+            "39\n[32, 43]",
+            "39\n[32, 43]",
+            "27.9\n[23.9, 37.8]"
+          ],
+          [
+            "20",
+            "GD",
+            "5/0",
+            "34",
+            "305\n[293, 312]",
+            "35\n[34, 36]",
+            "64.7\n[41.8, 126]"
+          ],
+          [
+            "20",
+            "CG",
+            "5/0",
+            "9",
+            "19\n[15, 22]",
+            "19\n[15, 22]",
+            "63.7\n[41.8, 69.6]"
+          ],
+          [
+            "20",
+            "BFGS",
+            "3/0",
+            "26",
+            "86\n[45, 117]",
+            "86\n[45, 105]",
+            "62.7\n[41.8, 68.7]"
+          ]
+        ],
+        "widths": [
+          0.045,
+          0.1,
+          0.065,
+          0.105,
+          0.205,
+          0.18,
+          0.3
+        ]
+      },
+      "headers_rows_canonical_sha256": "d490872c55d2ce9fe8eeeb498db9ae522f2ee71c3b7428f26b7dd624f70609c0",
+      "full_block_canonical_sha256": "e27cbd5c77b1dba35ea32ffc5d5a0f4ebc65cf7e53a568429f2a580033841a4f"
+    },
+    "4": {
+      "page_number": 8,
+      "full_value_block": {
+        "kind": "table",
+        "text": "",
+        "headers": [
+          "d / start / method",
+          "Final f",
+          "Gradient norm",
+          "Minimum Hessian eigenvalue"
+        ],
+        "rows": [
+          [
+            "10 / 4 / CG",
+            "3.9865791123",
+            "9.56589e-7",
+            "0.501273"
+          ],
+          [
+            "10 / 4 / BFGS",
+            "3.9865791123",
+            "9.63817e-7",
+            "0.501273"
+          ],
+          [
+            "10 / 5 / BFGS",
+            "3.9865791123",
+            "8.78814e-8",
+            "0.501273"
+          ],
+          [
+            "20 / 1 / BFGS",
+            "3.9866238543",
+            "4.44622e-7",
+            "0.498755"
+          ]
+        ],
+        "widths": [
+          0.28,
+          0.22,
+          0.2,
+          0.3
+        ]
+      },
+      "headers_rows_canonical_sha256": "9471043f5a33d7ad3e75c7e6e1fd5f5b19ee5120664bd1c4c9c49595d309e23c",
+      "full_block_canonical_sha256": "e94f271db57169b0cd681ae1bed43ca90d5e695b470a61ec224d87ebb568e6c3"
+    }
+  },
+  "protected_equations": {
+    "source_path": "paper_source/equations.json",
+    "size_bytes": 1492,
+    "sha256": "72b461aadda8819655da7ef95ab44c143542f1a78f0884f5a8a6231305787c25",
+    "value": {
+      "models_R": [
+        "$f_R(x)=\\sum_{i=1}^{d-1}\\left[100(x_{i+1}-x_i^2)^2+(1-x_i)^2\\right]$"
+      ],
+      "models_A": [
+        "$f_A(x)=\\sum_{i=1}^{d}\\left[x_i^2+20\\sin^2(\\pi x_i)\\right]$"
+      ],
+      "gradients_R": [
+        "$[\\nabla f_R(x)]_1=-400x_1(x_2-x_1^2)+2(x_1-1)$",
+        "$[\\nabla f_R(x)]_j=200(x_j-x_{j-1}^2)-400x_j(x_{j+1}-x_j^2)+2(x_j-1),\\quad 2\\leq j\\leq d-1$",
+        "$[\\nabla f_R(x)]_d=200(x_d-x_{d-1}^2)$"
+      ],
+      "gradients_A": [
+        "$[\\nabla f_A(x)]_i=2x_i+20\\pi\\sin(2\\pi x_i)$"
+      ],
+      "gd_armijo": [
+        "$g_k=\\nabla f(x_k),\\qquad x_{k+1}=x_k-\\alpha_k g_k$",
+        "$f(x_k-\\alpha_k g_k)\\leq f(x_k)-c_1\\alpha_k\\|g_k\\|_2^2$"
+      ],
+      "cg": [
+        "$p_0=-g_0,\\qquad p_k=-g_k+\\beta_k^{\\mathrm{PR+}}p_{k-1}\\quad(k\\geq1)$",
+        "$\\beta_k^{\\mathrm{PR+}}=\\max\\left\\{0,\\frac{g_k^\\top(g_k-g_{k-1})}{g_{k-1}^\\top g_{k-1}}\\right\\}$"
+      ],
+      "wolfe": [
+        "$f(x_{k+1})\\leq f(x_k)+c_1\\alpha_k g_k^\\top p_k$",
+        "$|g_{k+1}^\\top p_k|\\leq c_2|g_k^\\top p_k|,\\qquad 0<c_1<c_2<1$"
+      ],
+      "bfgs": [
+        "$H_{k+1}=(I-\\rho_k s_k y_k^\\top)H_k(I-\\rho_k y_k s_k^\\top)+\\rho_k s_k s_k^\\top$",
+        "$s_k=x_{k+1}-x_k,\\quad y_k=g_{k+1}-g_k,\\quad\\rho_k=(y_k^\\top s_k)^{-1}$"
+      ],
+      "curvature": [
+        "$s_k^\\top y_k\\geq\\alpha_k(1-c_2)(-g_k^\\top p_k)>0$"
+      ],
+      "gd_bound": [
+        "$\\alpha_{\\mathrm{low}}=\\min\\left\\{1,\\frac{2\\tau(1-c_1)}{L}\\right\\}>0$",
+        "$\\min_{0\\leq k<K}\\|g_k\\|_2^2\\leq\\frac{f(x_0)-f_{\\inf}}{c_1\\alpha_{\\mathrm{low}}K}$"
+      ]
+    }
+  },
+  "protected_two_paper_pngs": {
+    "paper_source/assets/paper_rosenbrock_convergence.png": {
+      "size_bytes": 287430,
+      "sha256": "32a5eed867315bf503ee774d8a3a69fee7ac3e9794854bd0eb5ea24212a8a4db"
+    },
+    "paper_source/assets/paper_rastrigin_quality_convergence.png": {
+      "size_bytes": 377070,
+      "sha256": "b13ad8ca45929a0c8d60ffc6a1b55b6795c8c69c719e0c69fa13ce224a8fa931"
+    }
+  },
+  "protected_references": {
+    "count": 8,
+    "value_blocks": [
+      {
+        "kind": "reference",
+        "text": "[1] J. Nocedal and S. J. Wright. Numerical Optimization, 2nd ed. Springer, 2006. DOI: 10.1007/978-0-387-40065-5.",
+        "url": "https://link.springer.com/book/10.1007/978-0-387-40065-5"
+      },
+      {
+        "kind": "reference",
+        "text": "[2] L. Armijo. Minimization of functions having Lipschitz continuous first partial derivatives. Pacific Journal of Mathematics, 16(1):1–3, 1966.",
+        "url": "https://msp.org/pjm/1966/16-1/pjm-v16-n1-p01-p.pdf"
+      },
+      {
+        "kind": "reference",
+        "text": "[3] J. C. Gilbert and J. Nocedal. Global convergence properties of conjugate gradient methods for optimization. SIAM Journal on Optimization, 2(1):21–42, 1992. DOI: 10.1137/0802003.",
+        "url": "https://doi.org/10.1137/0802003"
+      },
+      {
+        "kind": "reference",
+        "text": "[4] R. Fletcher. A new approach to variable metric algorithms. The Computer Journal, 13(3):317–322, 1970. DOI: 10.1093/comjnl/13.3.317.",
+        "url": "https://doi.org/10.1093/comjnl/13.3.317"
+      },
+      {
+        "kind": "reference",
+        "text": "[5] Q. Jin, R. Jiang, and A. Mokhtari. Non-asymptotic global convergence analysis of BFGS with the Armijo-Wolfe line search. Advances in Neural Information Processing Systems 37:16810–16851, 2024. DOI: 10.52202/079017-0536. Author version: arXiv:2404.16731, revised January 8, 2025.",
+        "url": "https://arxiv.org/abs/2404.16731"
+      },
+      {
+        "kind": "reference",
+        "text": "[6] F. Mannel. A globalization of L-BFGS and the Barzilai–Borwein method for nonconvex unconstrained optimization. Journal of Optimization Theory and Applications, 204, Article 47, 2025. DOI: 10.1007/s10957-024-02565-5.",
+        "url": "https://link.springer.com/article/10.1007/s10957-024-02565-5"
+      },
+      {
+        "kind": "reference",
+        "text": "[7] SciPy developers. SciPy 1.13.1: minimize-CG and minimize-BFGS reference documentation and optimization tutorial; scipy/optimize/_optimize.py, tag v1.13.1. Version-specific implementation and stopping/line-search options. Accessed November 5, 2026.",
+        "url": "https://github.com/scipy/scipy/blob/v1.13.1/scipy/optimize/_optimize.py"
+      },
+      {
+        "kind": "reference",
+        "text": "[8] S. Surjanovic and D. Bingham. Virtual Library of Simulation Experiments: Test Functions and Datasets—Rastrigin Function. Simon Fraser University. Accessed November 5, 2026.",
+        "url": "https://www.sfu.ca/~ssurjano/rastr.html"
+      }
+    ],
+    "canonical_sha256": "4c03e57d63a7443144260e69735a2fa83cd3a53f53d8948941a85e81173144ea"
+  },
+  "historical_fifty_test_audit": {
+    "source_path": "audits/revision_20261105/unit_tests.json",
+    "size_bytes": 6672,
+    "sha256": "282a54e1fa557ebc6e65ac3a1185e9d4155ee4bc5bd62b7861b7780361ff1245",
+    "executed_at": "2026-11-05T22:41:45.858471+08:00",
+    "scope_of_record": "Existing and source-hash unit tests; no new formal benchmark runs",
+    "payload": {
+      "schema_version": 1,
+      "scope": "Existing and source-hash unit tests; no new formal benchmark runs",
+      "started_at": "2026-11-05T22:41:44.730645+08:00",
+      "finished_at": "2026-11-05T22:41:45.858471+08:00",
+      "timezone": "Asia/Shanghai",
+      "environment": {
+        "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+        "executable": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\.venv\\Scripts\\python.exe",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "package_versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.13.1",
+          "matplotlib": "3.10.0"
+        }
+      },
+      "passed": true,
+      "tests_discovered": 50,
+      "tests_run": 50,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_ids": [
+        "tests.test_analysis.AnalysisTests.test_completed_study_produces_group_and_provenance_files",
+        "tests.test_analysis.AnalysisTests.test_failed_runs_remain_in_medians_ranges_and_denominators",
+        "tests.test_analysis.AnalysisTests.test_incomplete_study_is_rejected",
+        "tests.test_experiment.ExperimentTests.test_demo_points_are_a_stable_subset_of_full_study",
+        "tests.test_experiment.ExperimentTests.test_existing_results_are_not_silently_overwritten",
+        "tests.test_experiment.ExperimentTests.test_invalid_protocol_is_rejected_before_running",
+        "tests.test_experiment.ExperimentTests.test_pipeline_preserves_all_runs_and_event_costs",
+        "tests.test_objectives.GradientDiagnosticTests.test_incorrect_gradient_fails",
+        "tests.test_objectives.GradientDiagnosticTests.test_invalid_steps_and_nonfinite_points_are_rejected",
+        "tests.test_objectives.GradientDiagnosticTests.test_unknown_objective_and_frozen_metadata",
+        "tests.test_objectives.ObjectiveTests.test_analytic_gradients_match_central_differences",
+        "tests.test_objectives.ObjectiveTests.test_both_functions_have_negative_directional_curvature",
+        "tests.test_objectives.ObjectiveTests.test_gradient_is_float64_and_input_is_unchanged",
+        "tests.test_objectives.ObjectiveTests.test_invalid_shapes_and_dimensions_are_rejected",
+        "tests.test_objectives.ObjectiveTests.test_known_global_minima_and_gradients",
+        "tests.test_objectives.ObjectiveTests.test_rastrigin_matches_definition_away_from_minimum",
+        "tests.test_objectives.ObjectiveTests.test_rastrigin_stays_positive_very_close_to_minimum",
+        "tests.test_packaging.DeliverySnapshotTests.test_matching_report_snapshot_is_accepted",
+        "tests.test_packaging.DeliverySnapshotTests.test_old_archive_cannot_be_attached_to_new_report_sources",
+        "tests.test_packaging.DeliverySnapshotTests.test_required_report_source_missing_from_archive_is_rejected",
+        "tests.test_packaging.PackagingSelectionTests.test_current_report_is_excluded_but_history_remains_accessible",
+        "tests.test_packaging.PackagingSelectionTests.test_outer_delivery_records_are_not_code_archive_members",
+        "tests.test_solvers.SolverTests.test_both_benchmark_functions_run_through_all_methods",
+        "tests.test_solvers.SolverTests.test_failed_line_search_counts_trials_without_accepting_them",
+        "tests.test_solvers.SolverTests.test_gd_accepted_steps_satisfy_armijo_and_converge",
+        "tests.test_solvers.SolverTests.test_global_target_can_be_hit_without_stationarity",
+        "tests.test_solvers.SolverTests.test_nonfinite_trial_point_is_not_evaluated_or_accepted",
+        "tests.test_solvers.SolverTests.test_one_iteration_budget_permits_exactly_one_accepted_update",
+        "tests.test_solvers.SolverTests.test_optimal_initial_point_needs_no_update",
+        "tests.test_solvers.SolverTests.test_rounded_zero_step_is_stagnation_rather_than_convergence",
+        "tests.test_solvers.SolverTests.test_scipy_native_and_wrapper_evaluation_counts_agree",
+        "tests.test_solvers.SolverTests.test_stationarity_does_not_imply_global_target_hit",
+        "tests.test_solvers.SolverTests.test_zero_iteration_budget_only_evaluates_initial_point",
+        "tests.test_source_hashes.EnvironmentAndOutputTests.test_cli_refusal_does_not_validate_or_overwrite_history",
+        "tests.test_source_hashes.EnvironmentAndOutputTests.test_default_output_is_a_separate_current_audit",
+        "tests.test_source_hashes.EnvironmentAndOutputTests.test_eol_proof_does_not_replace_raw_equality",
+        "tests.test_source_hashes.EnvironmentAndOutputTests.test_matching_versions_keep_platform_differences_explicit",
+        "tests.test_source_hashes.EnvironmentAndOutputTests.test_numerical_version_mismatches_are_errors",
+        "tests.test_source_hashes.EnvironmentAndOutputTests.test_output_is_refused_inside_reference_or_any_results_directory",
+        "tests.test_source_hashes.EnvironmentAndOutputTests.test_source_or_version_failure_keeps_data_passed_and_cli_nonzero",
+        "tests.test_source_hashes.SourceHashTests.test_bare_cr_is_rejected_when_raw_bytes_differ",
+        "tests.test_source_hashes.SourceHashTests.test_bom_whitespace_and_trailing_newline_are_not_discarded",
+        "tests.test_source_hashes.SourceHashTests.test_code_edit_is_rejected_even_when_eol_also_changes",
+        "tests.test_source_hashes.SourceHashTests.test_crlf_actual_proves_identity_to_historical_lf_bytes",
+        "tests.test_source_hashes.SourceHashTests.test_exact_bytes_take_priority_over_eol_fallback",
+        "tests.test_source_hashes.SourceHashTests.test_invalid_historical_digest_cannot_be_accepted",
+        "tests.test_source_hashes.SourceHashTests.test_lf_actual_proves_identity_to_historical_crlf_bytes",
+        "tests.test_source_hashes.SourceHashTests.test_missing_file_has_no_fabricated_actual_hash",
+        "tests.test_source_hashes.SourceHashTests.test_mixed_actual_eol_requires_a_matching_reconstructed_historical_hash",
+        "tests.test_source_hashes.SourceHashTests.test_mixed_historical_eol_is_not_invented_from_an_unmatched_digest"
+      ],
+      "failure_details": [],
+      "error_details": [],
+      "test_sources": {
+        "tests/__init__.py": "3970c5e9afbc75c30a091f48a9c88652c4f7e987907575f9e1b5030d7df3429c",
+        "tests/test_analysis.py": "9287fdc8e0a7362e26e91d520bbb325d97c769c2ceda1d3115e943ffb4ef445f",
+        "tests/test_experiment.py": "7a43a195ac5532ccb2df1298091bfa1bfbf139561466e1440980cdfc9aa9a077",
+        "tests/test_objectives.py": "85ab33cd58f95c30ca53b8e31e9900dd8a2e5c9f3bf11693cef57171566e1491",
+        "tests/test_packaging.py": "3bc3c160901505a6ae872c71a0031e43eccbaaed54d67a5570e154c64f9b149c",
+        "tests/test_solvers.py": "99a324885c257f9a8bc81c65bee59b3c688b96697a74324a8f66a4ad709fa8a4",
+        "tests/test_source_hashes.py": "1ebe83f48340362c08c6522bd6ab8bb3cf1fe6ae82c6409036eb55d679d50038"
+      },
+      "runner_sha256": "aff028da13c3c113504d825617780ae8b8f3065fe9225582e6787ff6abc3ecc8"
+    },
+    "new_tests_executed_for_this_baseline": false
+  },
+  "page_seven_requested_edit": {
+    "source_path": "paper_source/content.json",
+    "page_number": 7,
+    "content_block_index": 4,
+    "old_full_paragraph": "The paired final objectives in Figure 2 show how rankings depend on the outcome. At d=2, GD obtains a lower f than both other methods on four of the five starts, despite taking more evaluations. On start 1 it returns f=0.994959 with 313 function evaluations, compared with CG's 4.974790 using 24 and BFGS's 7.959662 using 10. All three pass S. Thus quicker local convergence can lead to a less favorable basin, and a single cost ranking would conceal that tradeoff. Raw Rastrigin objectives add contributions across coordinates; their increase across dimensions alone is not evidence of worsening per-coordinate quality.",
+    "old_exact_two_sentence_span": "All three pass S. Thus quicker local convergence can lead to a less favorable basin, and a single cost ranking would conceal that tradeoff.",
+    "requested_exact_two_sentence_replacement": "All three methods meet the gradient criterion. For this starting point, GD achieves the lowest final objective value but requires the most function evaluations.",
+    "unchanged_paragraph_prefix": "The paired final objectives in Figure 2 show how rankings depend on the outcome. At d=2, GD obtains a lower f than both other methods on four of the five starts, despite taking more evaluations. On start 1 it returns f=0.994959 with 313 function evaluations, compared with CG's 4.974790 using 24 and BFGS's 7.959662 using 10. ",
+    "unchanged_paragraph_suffix": " Raw Rastrigin objectives add contributions across coordinates; their increase across dimensions alone is not evidence of worsening per-coordinate quality.",
+    "old_span_occurrence_count": 1
+  },
+  "additional_provenance": {
+    "archive_manifest": {
+      "size_bytes": 51589,
+      "sha256": "513f76bfb56ef7f776677f465436a043f4a0e686d089768e5553caaa257e4707"
+    },
+    "official_style": {
+      "size_bytes": 13023,
+      "sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2"
+    }
+  },
+  "checks": {
+    "input_pdf_ten_pages": true,
+    "exactly_two_expected_attachments": true,
+    "embedded_zip_byte_identical_to_external": true,
+    "embedded_packaging_json_byte_identical_to_external": true,
+    "abstract_explicit_recorded_windows_reference_73_90": true,
+    "packaging_certificate_matches_input_zip": true,
+    "archive_manifest_members_exact": true,
+    "archive_all_payload_hashes_and_sizes_match_manifest": true,
+    "current_tree_only_expected_in_progress_readme_edit": true,
+    "report_content_not_yet_modified": true,
+    "reference_count_eight": true,
+    "protected_raw_file_count_186": true,
+    "protected_original_source_count_seven": true,
+    "recorded_original_source_hashes_match_input_zip": true,
+    "protected_raw_and_original_sources_match_current_tree": true,
+    "old_requested_span_occurs_exactly_once": true,
+    "old_span_visible_on_pdf_page_seven": true,
+    "existing_fifty_test_history_reports_passed": true,
+    "fifty_test_record_current_bytes_unchanged": true,
+    "test_record_source_hashes_match_input_archive": true
+  },
+  "all_checks_passed": true,
+  "new_formal_experiment_runs": 0,
+  "new_unit_test_runs": 0
+}

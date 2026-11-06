@@ -1,0 +1,22 @@
+test_cli_refusal_does_not_validate_or_overwrite_history (tests.test_source_hashes.EnvironmentAndOutputTests.test_cli_refusal_does_not_validate_or_overwrite_history) ... ok
+test_default_output_is_a_separate_current_audit (tests.test_source_hashes.EnvironmentAndOutputTests.test_default_output_is_a_separate_current_audit) ... ok
+test_eol_proof_does_not_replace_raw_equality (tests.test_source_hashes.EnvironmentAndOutputTests.test_eol_proof_does_not_replace_raw_equality) ... ok
+test_matching_versions_keep_platform_differences_explicit (tests.test_source_hashes.EnvironmentAndOutputTests.test_matching_versions_keep_platform_differences_explicit) ... ok
+test_numerical_version_mismatches_are_errors (tests.test_source_hashes.EnvironmentAndOutputTests.test_numerical_version_mismatches_are_errors) ... ok
+test_output_is_refused_inside_reference_or_any_results_directory (tests.test_source_hashes.EnvironmentAndOutputTests.test_output_is_refused_inside_reference_or_any_results_directory) ... ok
+test_source_or_version_failure_keeps_data_passed_and_cli_nonzero (tests.test_source_hashes.EnvironmentAndOutputTests.test_source_or_version_failure_keeps_data_passed_and_cli_nonzero) ... ok
+test_bare_cr_is_rejected_when_raw_bytes_differ (tests.test_source_hashes.SourceHashTests.test_bare_cr_is_rejected_when_raw_bytes_differ) ... ok
+test_bom_whitespace_and_trailing_newline_are_not_discarded (tests.test_source_hashes.SourceHashTests.test_bom_whitespace_and_trailing_newline_are_not_discarded) ... ok
+test_code_edit_is_rejected_even_when_eol_also_changes (tests.test_source_hashes.SourceHashTests.test_code_edit_is_rejected_even_when_eol_also_changes) ... ok
+test_crlf_actual_proves_identity_to_historical_lf_bytes (tests.test_source_hashes.SourceHashTests.test_crlf_actual_proves_identity_to_historical_lf_bytes) ... ok
+test_exact_bytes_take_priority_over_eol_fallback (tests.test_source_hashes.SourceHashTests.test_exact_bytes_take_priority_over_eol_fallback) ... ok
+test_invalid_historical_digest_cannot_be_accepted (tests.test_source_hashes.SourceHashTests.test_invalid_historical_digest_cannot_be_accepted) ... ok
+test_lf_actual_proves_identity_to_historical_crlf_bytes (tests.test_source_hashes.SourceHashTests.test_lf_actual_proves_identity_to_historical_crlf_bytes) ... ok
+test_missing_file_has_no_fabricated_actual_hash (tests.test_source_hashes.SourceHashTests.test_missing_file_has_no_fabricated_actual_hash) ... ok
+test_mixed_actual_eol_requires_a_matching_reconstructed_historical_hash (tests.test_source_hashes.SourceHashTests.test_mixed_actual_eol_requires_a_matching_reconstructed_historical_hash) ... ok
+test_mixed_historical_eol_is_not_invented_from_an_unmatched_digest (tests.test_source_hashes.SourceHashTests.test_mixed_historical_eol_is_not_invented_from_an_unmatched_digest) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.127s
+
+OK

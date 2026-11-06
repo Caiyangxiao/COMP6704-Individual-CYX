@@ -1,0 +1,23 @@
+COMP6704 英文润色修改清单（2026-11-06）
+Yangxiao Cai / 26023041r
+
+1. 第7页：二维Rastrigin第一个起点
+修改前：
+All three pass S. Thus quicker local convergence can lead to a less favorable basin, and a single cost ranking would conceal that tradeoff.
+
+修改后：
+All three methods meet the gradient criterion. For this starting point, GD achieves the lowest final objective value but requires the most function evaluations.
+
+前一句的313、24、10次函数评估和0.994959、4.974790、7.959662均保持原样；删除了“较快局部收敛导致较差吸引域”的因果暗示。
+
+2. 其他小幅润色
+摘要及第2、6、7、8、9页/结论统一S/G术语。第7页明确nfev不是运行时间；第8页保留相同初值、CG与BFGS均满足G的5/3/4组配对（d=2/10/20），以及函数评估比值1.24、2.97、3.91，未解释成墙钟时间加速。原论证结构不变。
+README第1节表头改为“本地构建产物”，加入指定Canvas两个附件说明；只拿到PDF时，提取第一个ZIP，从其根目录README.md开始复现。重复提取说明已合并。
+
+3. 本轮实际检查
+从create_content.py生成正文，再生成LaTeX并编译、重新打包；核对最终PDF第7页实际文字、README原文、表2–4及全部表格、公式、两张图和8项引用。原186份结果文件及7份原求解源码字节不变。
+最终PDF为10页（含参考文献），含两个附件共13,112,291字节，小于20MB。两个附件实际提取成功；提取ZIP与单独提供ZIP逐字节一致，301个归档成员的CRC、大小及SHA核验通过。最终10页栅格与已检查版面一致，无新增溢出。
+
+历史与本轮范围
+历史Windows实验及2026-11-05的50项单元测试/数据核验记录保留。本轮只做文字和文件验收，未新增实验，未重跑90次求解或历史50项测试。
+本轮记录：ZIP内paper_source/polish_record_20261106.json；本地最终文件检查submission/polish_file_checks.json。当前packaging_verification.json作为PDF第二个附件提供，不放入它自身核验的代码ZIP。

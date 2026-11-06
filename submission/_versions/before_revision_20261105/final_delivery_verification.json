@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "review_date": "2026-11-05",
+  "pdf_pages_including_references": 10,
+  "native_word_pages": 10,
+  "pdf_bytes": 13050552,
+  "pdf_under_20MB": true,
+  "pdf_format": "Official unmodified NeurIPS 2025 style; course notice in main TeX",
+  "word_format": "Same-content editable course adaptation; no claim of an official Word template",
+  "attachment_byte_identical_to_zip": true,
+  "independent_raw_numerical_checks_passed": 782401,
+  "independent_raw_numerical_check_failures": 0,
+  "unit_tests_passed_in_clean_extraction": 28,
+  "unchanged_original_experiment_files": 186,
+  "unchanged_original_source_files": 7,
+  "prior_exact_90_run_reproduction_preserved": true,
+  "new_full_90_solve_performed_in_this_review": false,
+  "new_archive_document_rebuild_verified": true,
+  "standalone_template_compiles_to_matching_ten_pages": true,
+  "compiled_source_fingerprint": "86cfbd941b4af9cc3c6efdf22e35f92610301f272363b6739088e96b5461fa49",
+  "primary_direction": "Unconstrained Optimization",
+  "files": {
+    "Yangxiao Cai+26023041r.pdf": {
+      "bytes": 13050552,
+      "sha256": "47e49cbd989e99eb5f203ff1851affbd0b39cc6bba25caab7bf2c50391c21469"
+    },
+    "Yangxiao Cai+26023041r.docx": {
+      "bytes": 833937,
+      "sha256": "e1e6f2b9af6272c38fd5650e353afd87264bdb43c3b153dd61394d882d195061"
+    },
+    "COMP6704_reproducibility.zip": {
+      "bytes": 12274213,
+      "sha256": "813dbbca5315ea8c692bf318b3b45b5c9c7383c4f3912b1ae9544c7c4573ee2e"
+    },
+    "COMP6704_NeurIPS2025_\u8bba\u6587\u6a21\u677f.zip": {
+      "bytes": 1027472,
+      "sha256": "a7d6b38709971c67dfce221fdfd8580a49a302d6974cd0a926a69c93c55f8d38"
+    }
+  }
+}

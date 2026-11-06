@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "validation_file": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\_revision_rebuild_wl9v5epi\\audits\\local_check\\current_validation.json",
+  "data_internal_integrity": true,
+  "source_integrity": true,
+  "environment_match": true,
+  "counts": {
+    "expected_runs": 90,
+    "summary_rows": 90,
+    "run_json_files": 90,
+    "trace_csv_files": 90,
+    "expected_initial_points": 30,
+    "initial_points": 30,
+    "trace_events": 80605,
+    "accepted_updates": 80425,
+    "gradient_checks": 12,
+    "gradient_checks_passed": 12
+  },
+  "result_label_totals": {
+    "solver_success": 73,
+    "stationary": 73,
+    "global_hit": 26
+  },
+  "errors": []
+}
+

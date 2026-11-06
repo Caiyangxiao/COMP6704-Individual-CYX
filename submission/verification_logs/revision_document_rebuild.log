@@ -1,0 +1,61 @@
+{
+  "page_count": 10,
+  "includes_references": true,
+  "pdf_bytes": 13106707,
+  "pdf_under_20MB": true,
+  "embedded_archive_verified": true,
+  "page_source": "report.pdf",
+  "packaging_report_attached_separately": true,
+  "attachment_names": [
+    "COMP6704_reproducibility.zip",
+    "packaging_verification.json"
+  ],
+  "archive_sources_match_current_project": {
+    "passed": true,
+    "members_matching_current_project": 300,
+    "bytes_matching_current_project": 33415600,
+    "required_report_files": [
+      "README.md",
+      "paper_source/content.json",
+      "paper_source/equations.json",
+      "paper_source/generate_latex.py",
+      "paper_source/build_final_report.py",
+      "paper_source/template/report.tex",
+      "paper_source/template/neurips_2025.sty",
+      "provenance_integrity.py",
+      "validate_study.py",
+      "run_tests_audit.py",
+      "audits/revision_20261105/unit_tests.json"
+    ]
+  },
+  "pdf_format": "Official NeurIPS 2025 style with a course notice",
+  "word_format": "Editable course adaptation; not an official NeurIPS Word template",
+  "compiled_source_fingerprint": "d01955a5461c9973920ab7541436a7e18bc35f68c52c2c4ffba852c828b33b83",
+  "files": {
+    "Yangxiao Cai+26023041r.docx": {
+      "bytes": 833308,
+      "sha256": "3a43107845b4b791fa45d9f9402470eafe784ccafcad8cf7a8925bd312fb34bf"
+    },
+    "Yangxiao Cai+26023041r.pdf": {
+      "bytes": 13106707,
+      "sha256": "84a80d0f214a8f21af2a2f83f81eebccfe09a7d3ef25bb720dac74f7e114a04a"
+    },
+    "COMP6704_reproducibility.zip": {
+      "bytes": 12328615,
+      "sha256": "5b23d06807479e4289e675a02c5047b9e7856fbd6251b8e0c7b7a78409fbec79"
+    }
+  },
+  "planned_page_word_counts": [
+    395,
+    416,
+    448,
+    373,
+    347,
+    194,
+    392,
+    279,
+    492,
+    215
+  ]
+}
+

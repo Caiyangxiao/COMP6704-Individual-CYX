@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-05T22:35:44.485850+08:00",
+  "capture_timezone": "Asia/Shanghai",
+  "copies": {
+    "audits/history/windows_exact_reproduction_20261105.json": {
+      "scope": "Historical Windows exact numerical comparison, not a new solve in this revision.",
+      "original_source_path_at_capture": "submission/reproduction_verification.json",
+      "original_absolute_path_at_capture": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\submission\\reproduction_verification.json",
+      "size_bytes": 1904,
+      "sha256": "8eb14b0036c52d8869e756d51ed630f6dbc8a797748099a8005b4b7f9e349c77",
+      "copy_verified_byte_identical": true
+    },
+    "audits/history/packaging_before_revision_20261105.json": {
+      "scope": "Packaging verification for pre-revision ZIP 813dbb..., not a numerical rerun.",
+      "original_source_path_at_capture": "submission/packaging_verification.json",
+      "original_absolute_path_at_capture": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\submission\\packaging_verification.json",
+      "size_bytes": 2617,
+      "sha256": "cb730fd7d20f92453675d599c9016a10dbdc972aa1a6974038d7c1d65abdb298",
+      "copy_verified_byte_identical": true
+    }
+  },
+  "new_full_90_solve_performed_for_capture": false,
+  "historical_environment": {
+    "candidate": {
+      "numpy": "1.26.4",
+      "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+      "scipy": "1.13.1"
+    },
+    "reference": {
+      "numpy": "1.26.4",
+      "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+      "scipy": "1.13.1"
+    }
+  },
+  "historical_exact_comparison": {
+    "status": "passed",
+    "difference_count": 0,
+    "run_files_matching_exactly": 90,
+    "trace_files_matching_exactly": 90,
+    "trace_rows_compared": 80605,
+    "initial_points_match": true,
+    "resolved_config_match": true
+  },
+  "historical_candidate_path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\_clean_reproduction_vhye53f_\\results\\full_study_repeat01",
+  "historical_candidate_path_currently_available": false,
+  "historical_reference_temp_path_currently_available": false,
+  "historical_reproduction_archive_sha256": "ac23c99c114b037d2ab030f775acabf10c3dbfd9d20c2befd52f875711d8f26f",
+  "historical_reproduction_context_source_path": "submission/_versions/before_review_20261105/clean_delivery_verification.json",
+  "pre_revision_archive_sha256": "813dbbca5315ea8c692bf318b3b45b5c9c7383c4f3912b1ae9544c7c4573ee2e",
+  "pre_revision_archive_size_bytes": 12274213,
+  "preservation": {
+    "raw_reference_files_byte_identical_to_both_archives": 186,
+    "original_solver_source_files_byte_identical_to_both_archives": 7,
+    "historical_test_source_files_byte_identical_to_both_archives": 5,
+    "historical_test_methods": 28,
+    "current_static_test_method_definitions": 47,
+    "new_test_sources_since_historical_record": [
+      "tests/test_packaging.py",
+      "tests/test_source_hashes.py"
+    ],
+    "reference_counts": {
+      "runs": 90,
+      "stationary": 73,
+      "global_hit": 26,
+      "trace_events": 80605,
+      "accepted_updates": 80425
+    }
+  },
+  "linux_reproduction_claim": "No actual Linux S=72/G=26 run artifact found in targeted searched locations; no such outcome asserted.",
+  "packaging_record_policy": "NEW packaging_verification.json remains outside its own code ZIP; historical copy applies only to pre-revision archive.",
+  "limitations": [
+    "Historical candidate temporary path is currently unavailable; its original candidate files cannot be rechecked now.",
+    "Existing Windows comparison JSON/logs are retained historical evidence; capture is not a fresh 90-solve reproduction.",
+    "Historical 28-test pass record does not cover the two newly present test source files.",
+    "No cross-platform bitwise-equivalence claim."
+  ]
+}

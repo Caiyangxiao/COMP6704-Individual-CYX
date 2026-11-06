@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-05T22:52:09.946824+08:00",
+  "timezone": "Asia/Shanghai",
+  "review_method": "Actual vision-assisted inspection of the five PNG renderings using view_image; not merely PDF text extraction or source review.",
+  "passed": true,
+  "must_fix_issues": [],
+  "preview_document": {
+    "verification_path": "submission/_preview/report_verification.json",
+    "verification_sha256": "ed3be95ee58d3008d7de8e369661f04c5ff112268b2ee106f48303738ca0e855",
+    "compiled_source_fingerprint": "d01955a5461c9973920ab7541436a7e18bc35f68c52c2c4ffba852c828b33b83",
+    "page_source": "report.pdf",
+    "recorded_page_count": 10
+  },
+  "reviewed_pages": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "artifacts": [
+    {
+      "page": 4,
+      "path": "submission/_preview/_page_previews/page_04.png",
+      "sha256": "240c30bf0741193caa72a46f189e53e7420569f708772c7403c5d791f849ebf4",
+      "bytes": 238021,
+      "width_pixels": 918,
+      "height_pixels": 1188,
+      "file_modified_at": "2026-11-05T22:45:47.964026+08:00"
+    },
+    {
+      "page": 5,
+      "path": "submission/_preview/_page_previews/page_05.png",
+      "sha256": "50b99837fbb289ddf22ccbc90336a6496f8796c0e7d11e4750bc9bb7883ff8a7",
+      "bytes": 264286,
+      "width_pixels": 918,
+      "height_pixels": 1188,
+      "file_modified_at": "2026-11-05T22:45:47.988464+08:00"
+    },
+    {
+      "page": 6,
+      "path": "submission/_preview/_page_previews/page_06.png",
+      "sha256": "49642882556b11594761bfe150911f15d498ddeb219e8c420032df005a434688",
+      "bytes": 217821,
+      "width_pixels": 918,
+      "height_pixels": 1188,
+      "file_modified_at": "2026-11-05T22:45:48.031018+08:00"
+    },
+    {
+      "page": 7,
+      "path": "submission/_preview/_page_previews/page_07.png",
+      "sha256": "0d546577e25e2dec1a7f8354906442f5349bb497f84c625154d77bf8741054ec",
+      "bytes": 251784,
+      "width_pixels": 918,
+      "height_pixels": 1188,
+      "file_modified_at": "2026-11-05T22:45:48.052763+08:00"
+    },
+    {
+      "page": 8,
+      "path": "submission/_preview/_page_previews/page_08.png",
+      "sha256": "1bc7388e9c32ac41213178cf675c1333ea5ff7562a33d9a172a4ccb5f4355c9b",
+      "bytes": 256283,
+      "width_pixels": 918,
+      "height_pixels": 1188,
+      "file_modified_at": "2026-11-05T22:45:48.108531+08:00"
+    }
+  ],
+  "observed_findings": [
+    {
+      "page": 4,
+      "status": "passed",
+      "observed": [
+        "Actually viewed PR+ recurrence and denominator, strong-Wolfe inequalities, inverse-BFGS update and definitions; symbols, superscripts, subscripts and equation tags (5)–(9) are legible and within the text area.",
+        "Heading 4.4 explicitly says Ideal Armijo GD stationarity bound; the BFGS curvature implication is separately headed 4.5.",
+        "The minimum-step lower bound and min-gradient complexity bound are visibly intact. The sTy inequality has the correct descent-direction sign.",
+        "The [3,7], [1,4] and [5] citations are visible. The last paragraph and page number do not collide."
+      ],
+      "must_fix": []
+    },
+    {
+      "page": 5,
+      "status": "passed",
+      "observed": [
+        "Protocol table and complexity table are fully visible, including the two independent S/G criteria, fixed SciPy parameter settings, and the O(d^3) tested-SciPy update qualification.",
+        "The final paragraph visibly states All 50 unit tests and the independent full-study validator pass; it does not retain the old 28/47 count.",
+        "The 80,605 events, 80,425 accepted updates and 26.915 s measured-solver scope are legible.",
+        "No table cell, caption or body paragraph is clipped or outside the text area."
+      ],
+      "must_fix": []
+    },
+    {
+      "page": 6,
+      "status": "passed",
+      "observed": [
+        "Table 2 contains all nine Rosenbrock rows and separate nfev/njev ranges, S/G counts, and final-objective ranges. Scientific exponents remain readable.",
+        "Figure 1 visibly shows all three dimensions, method-color legend, circle/cross outcome legend, symlog nfev labels and dashed gradient-tolerance line.",
+        "Blue GD endpoints terminate at crosses; the orange/green successful endpoints use circles. The saved curves visually end at their markers.",
+        "Table caption, figure caption and the budget/convergence paragraph fit without overlap or clipping."
+      ],
+      "must_fix": []
+    },
+    {
+      "page": 7,
+      "status": "passed",
+      "observed": [
+        "Table 3 contains all nine Rastrigin rows, including the 20D BFGS S/G=3/0 row and different nfev/njev ranges.",
+        "The precision-loss detail table includes both start 3 (117/105, 8.73821e-6) and start 4 (45/45, 1.00023457e-6) without truncating the significant threshold digits.",
+        "The paragraph retains the 58/46 extra-terminal-call distinction and the 0.02346% threshold excess, and retains the fixed-rule failure classification.",
+        "The qualified wording about derivative checks not excluding every numerical problem is visible. No bottom-page overflow is observed."
+      ],
+      "must_fix": []
+    },
+    {
+      "page": 8,
+      "status": "passed",
+      "observed": [
+        "Figure 2 shows paired final objectives and gradient-versus-nfev curves for d=2,10,20; legend, axis labels and the within-dimension additive-objective warning are visible.",
+        "The green 20D BFGS failure crosses near the tolerance remain distinguishable from successful circles; endpoints are not visibly carried forward after termination.",
+        "Table 4 includes all four non-global Rosenbrock endpoints, gradient norms and positive minimum-Hessian eigenvalues.",
+        "The local-minimum interpretation is qualified as numerical evidence, and the matched-global-subset cost paragraph remains complete below it.",
+        "Plot labels, table headings, captions and text do not overlap or extend beyond the text area."
+      ],
+      "must_fix": []
+    }
+  ],
+  "readability_scope": {
+    "render_dimensions_pixels": [
+      918,
+      1188
+    ],
+    "observation": "Body, equations, tables, main plot labels and marker shapes are readable in the supplied renderings. Some chart annotations and table entries are smaller than body text; no universal minimum-font-size claim is made.",
+    "observed_overflow": false,
+    "observed_clipping": false,
+    "observed_figure_text_overlap": false
+  },
+  "limits": [
+    "This record covers only preview pages 4–8, not pages 1–3 or 9–10 or the editable Word rendering.",
+    "Visual inspection does not replace the independent numerical audit, current unit-test record, or raw-trajectory checks. No solver or test was executed for this review.",
+    "No final PDF byte-size, final embedded-attachment equivalence or final archive checksum is asserted by this preview-image review."
+  ],
+  "files_modified_by_this_task": [
+    "audits/revision_20261105/visual_pages_4_5_6_7_8.json"
+  ]
+}

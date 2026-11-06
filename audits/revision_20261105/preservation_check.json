@@ -1,0 +1,60 @@
+{
+  "scope": "Saved Windows data/source byte preservation and Tables 2/3/4 before/after; no solver execution",
+  "started_at": "2026-11-05T22:44:35.530892+08:00",
+  "finished_at": "2026-11-05T22:44:36.173638+08:00",
+  "environment": {
+    "python_version": "3.12.8",
+    "python_build": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+    "python_implementation": "CPython",
+    "python_executable": "C:\\users\\25244\\desktop\\codex\\comp6704\\individual assignment\\.venv\\Scripts\\python.exe",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "matplotlib": "3.10.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+    "logical_cpu_count": 24,
+    "thread_environment": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "BLIS_NUM_THREADS": null
+    }
+  },
+  "baseline_manifest_sha256": "4683b69d4e00d90d27529410f223f20c86c0c5c1ceb8e7c08b190a6b3cf762fb",
+  "checked": {
+    "raw_reference_files": 186,
+    "original_solver_source_files": 7,
+    "historical_test_source_files": 5
+  },
+  "changed_protected_files": [],
+  "tables_2_3_4_unchanged": {
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "original_windows_counts": {
+    "runs": 90,
+    "S": 73,
+    "G": 26,
+    "S_and_G": 26,
+    "S_only": 47,
+    "neither": 17,
+    "accepted_updates": 80425,
+    "trace_events": 80605
+  },
+  "expected_counts": {
+    "runs": 90,
+    "S": 73,
+    "G": 26,
+    "S_and_G": 26,
+    "S_only": 47,
+    "neither": 17,
+    "accepted_updates": 80425,
+    "trace_events": 80605
+  },
+  "counts_match": true,
+  "content_sha256": "87d4f73821f8f9f325aa84c0f7202d2513f266e00808e0e1b05b1bea4a62f2ba",
+  "passed": true
+}

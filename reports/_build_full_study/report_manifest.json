@@ -1,0 +1,33 @@
+{
+  "input_sha256": {
+    "results/full_study/summary.csv": "c50d4efacbd7851ba42aac512fd212b0f5e1197e4d9c28a06a43919a3d7abc6c",
+    "results/full_study/analysis/grouped_results.csv": "6618ba3b877534f13181fdf5840567c58c0de8de199aaa2fb68c0fcc6dc5144a",
+    "results/full_study/analysis/run_diagnostics.csv": "bcd1d2e88ee3fca683528fc59fca8cb6e32f346bc170abf184d6349b18416bdd",
+    "results/full_study/analysis/validation.json": "b6d09dacba3fc0143d8fc3c8e573aba78fbcb20b20fb6f4c99929b861d5a0678",
+    "results/full_study/analysis/figures/outcome_matrix.png": "1ca2218c66742e0cb2ce42b53157538ec33bfce88a25f0a88158b512f38103c2",
+    "results/full_study/analysis/figures/rastrigin_convergence_all_starts.png": "7fe9d9a2cadb3a2476bc4aa7e56322b94ca469a813fe92fa63a97f330db4cb84",
+    "results/full_study/analysis/figures/rastrigin_cost_quality_by_dimension.png": "7ec0721e19fc0d0d2269dea3c5e61f279c5d531cbbf08c78c613018ed9a9eac5",
+    "results/full_study/analysis/figures/rastrigin_trajectories_all_starts.png": "bb793e091e1890c5010cbf6c60f3fe908f0d74ef5ebfa167c5d2934b1d3453f6",
+    "results/full_study/analysis/figures/rosenbrock_convergence_all_starts.png": "a754f340f5427a8ddb10a962febda5974f05ee39a7d6f49b86fe3a69ca08bd97",
+    "results/full_study/analysis/figures/rosenbrock_cost_quality_by_dimension.png": "575424c91e621246c2dfb98d4f1ef396d3429bc1ab1cc81dce7ba5709eec8ac5",
+    "results/full_study/analysis/figures/rosenbrock_trajectories_all_starts.png": "153dd39c2745f61ac3a09b2fddad652f2466d25fab793a3f816c03bb2490dd2c"
+  },
+  "generator_sha256": "eb6f6f2ca3c1cb7e8600b891e73073fd6d92db334b517fbdf182c5310b9e343c",
+  "planned_pages": 9,
+  "pdf_bytes": 4258256,
+  "docx_bytes": 3767233,
+  "pdf_pages": 9,
+  "page_text_lengths": [
+    889,
+    1413,
+    1235,
+    420,
+    347,
+    260,
+    988,
+    799,
+    305
+  ],
+  "docx_tables": 6,
+  "docx_figures": 7
+}

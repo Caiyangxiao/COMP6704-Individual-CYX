@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-11-06T17:35:18.687946+08:00",
+  "source_fingerprint": "1ad8650adfb43f74b0beffe57dde1b0bca50f4a5efe94ad688fde58892385eb2",
+  "generator_sha256": "e0dfd91a8003dfa67f1403242c9a94f88edf1595f87b7486048d7e3827726086",
+  "content_sha256": "d2ba5ea70c6152364a8ba2320a3e6b60243098af1eff2a47af1d4869eea58a00",
+  "equations_sha256": "72b461aadda8819655da7ef95ab44c143542f1a78f0884f5a8a6231305787c25",
+  "style_sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
+  "official_style_modified": false,
+  "latex_source": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\paper_source\\template\\report.tex",
+  "latex_sha256": "bd82362856688a6dc70234566819f5aa33ce09bebdf6a77a842527b20dac7e97",
+  "planned_pages": 10,
+  "manual_page_breaks": 9,
+  "native_equation_blocks": 9,
+  "normalized_legacy_equations": [],
+  "figure_sha256": {
+    "paper_rastrigin_quality_convergence.png": "b13ad8ca45929a0c8d60ffc6a1b55b6795c8c69c719e0c69fa13ce224a8fa931",
+    "paper_rosenbrock_convergence.png": "32a5eed867315bf503ee774d8a3a69fee7ac3e9794854bd0eb5ea24212a8a4db"
+  },
+  "omitted_blocks": [
+    {
+      "kind": "subtitle",
+      "text": "A controlled CPU comparison of GD, PR+ conjugate gradient, and BFGS",
+      "reason": "Optional subtitle omitted; title and author use official maketitle."
+    }
+  ],
+  "compilation_performed": false,
+  "limitations": [
+    "Planned page breaks do not prove that compiled output fits ten pages; compile and inspect it.",
+    "Only the course notice is overridden in the main document; official style geometry is retained.",
+    "The reproducibility ZIP must be attached by the final PDF builder after compilation."
+  ]
+}
