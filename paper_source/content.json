@@ -42,8 +42,13 @@
         "text": "Three questions guide the comparison. First, which methods reach the common gradient tolerance within a fixed accepted-update budget? Second, what function and gradient evaluation costs accompany their outcomes across dimensions and paired starts? Third, when termination is unsuccessful or non-global, what do the saved traces and endpoint curvature actually support? The design fixes the implementations and settings before comparing all 90 outcomes, including failures."
       },
       {
+        "kind": "url",
+        "text": "Code and data",
+        "url": "https://github.com/Caiyangxiao/COMP6704-Individual-CYX"
+      },
+      {
         "kind": "small",
-        "text": "Code availability. The PDF embeds COMP6704_reproducibility.zip as a file attachment. Extract it through a PDF reader's attachment panel; README.md provides setup, verification, and reproduction commands."
+        "text": "The repository's README.md provides setup, verification, and reproduction commands. The PDF also embeds an offline snapshot as COMP6704_reproducibility.zip."
       }
     ],
     [
@@ -746,7 +751,7 @@
       },
       {
         "kind": "p",
-        "text": "The archive's README gives file access, exact commands, and audit scopes. Historical Windows-to-Windows comparison records are labelled separately from the archived unit tests and read-only data/source checks. These records establish neither a new formal experiment nor cross-platform numerical identity."
+        "text": "Start with README.md in the GitHub repository linked on page 1. The PDF also embeds an offline snapshot as COMP6704_reproducibility.zip, with packaging_verification.json attached separately. Historical Windows-to-Windows comparisons, archived unit tests, and read-only data/source checks are dated and scoped separately; they establish neither a new formal experiment nor cross-platform numerical identity."
       },
       {
         "kind": "h",

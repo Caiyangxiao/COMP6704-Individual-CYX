@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "checked_at": "2026-11-06T10:47:31.807665+00:00",
+  "scope": "Current GitHub-link and academic English README revision: delivered-file, attachment, layout, byte-preservation and saved-count checks only; no new solver runs or unit tests.",
+  "check_environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "pdf_filename": "Yangxiao Cai+26023041r.pdf",
+  "pdf_pages_including_references": 10,
+  "pdf_bytes_including_attachments": 13119895,
+  "pdf_sha256": "b55425225a03fdf6bd8f16a9c2f57254ccd74a5f3b58e971a9bf7731810b0784",
+  "under_20MB": true,
+  "code_zip_bytes": 12339877,
+  "code_zip_sha256": "aa2fda6b207846670668592cd9316a79e4e3df2788b0ffa3cc76e505093f46ae",
+  "primary_repository_url": "https://github.com/Caiyangxiao/COMP6704-Individual-CYX",
+  "clickable_github_annotation_verified": true,
+  "author_student_id_reference_results_verified": true,
+  "exact_page7_replacement_preserved": true,
+  "text_search_normalization": "NFKC for ligatures, whitespace and end-of-line word hyphenation; visual inspection separately performed",
+  "pdf_attachment_names": [
+    "COMP6704_reproducibility.zip",
+    "packaging_verification.json"
+  ],
+  "extraction_checks": [
+    {
+      "name": "COMP6704_reproducibility.zip",
+      "size_bytes": 12339877,
+      "sha256": "aa2fda6b207846670668592cd9316a79e4e3df2788b0ffa3cc76e505093f46ae",
+      "matches_supplied_file": true
+    },
+    {
+      "name": "packaging_verification.json",
+      "size_bytes": 3017,
+      "sha256": "777cc74be4ca75062f15279c868a1dbc42e7bc51c6b42db385e6d37ca0622ec1",
+      "matches_supplied_file": true
+    }
+  ],
+  "temporary_extracted_files_removed": true,
+  "all_manifest_payload_members_crc_hash_size_and_current_bytes_verified": 302,
+  "current_packaging_record_outside_its_own_zip": true,
+  "all_ten_final_page_renders_match_reviewed_compilation": {
+    "1": {
+      "matches_reviewed_compiled_page": true,
+      "sha256": "b06c47f9bfb4c9ddf2b46d7d49acaaab876a1cab99b03d7c6ecf6ccd6567e643"
+    },
+    "2": {
+      "matches_reviewed_compiled_page": true,
+      "sha256": "9880823b45e253a112184b7dce9f3b0281951b7f1a38adb9267009a3c52278c7"
+    },
+    "3": {
+      "matches_reviewed_compiled_page": true,
+      "sha256": "2a20e6ff99a7a9077857beef828dfb65dc2b4b6d2cac163466869e3c4c56836f"
+    },
+    "4": {
+      "matches_reviewed_compiled_page": true,
+      "sha256": "240c30bf0741193caa72a46f189e53e7420569f708772c7403c5d791f849ebf4"
+    },
+    "5": {
+      "matches_reviewed_compiled_page": true,
+      "sha256": "50b99837fbb289ddf22ccbc90336a6496f8796c0e7d11e4750bc9bb7883ff8a7"
+    },
+    "6": {
+      "matches_reviewed_compiled_page": true,
+      "sha256": "bf3e37d7505d69c4487dfe22219da90b9b28bd1d70d105305846deef1410b9da"
+    },
+    "7": {
+      "matches_reviewed_compiled_page": true,
+      "sha256": "06a6f2d77d9096d8c5f2e8f8bac75011c06e31f16d190f6c12d3cddfb355445b"
+    },
+    "8": {
+      "matches_reviewed_compiled_page": true,
+      "sha256": "d3647acecd2d9874d06bcc57af079e08b7c9ce08287d5738be45bda9efb4f5a7"
+    },
+    "9": {
+      "matches_reviewed_compiled_page": true,
+      "sha256": "1917b2559f91e7650d3baae5b53e63d2bb86483f860db81a3d45aa411be05651"
+    },
+    "10": {
+      "matches_reviewed_compiled_page": true,
+      "sha256": "b29fb5493e979f680f6199c2a88118af28909b54cb341003053893ad59a455d4"
+    }
+  },
+  "scientific_preservation": {
+    "recorded_utc": "2026-11-06T10:40:26.008691+00:00",
+    "scope": "Read-only byte preservation and count checks against previous delivered archive; no numerical solvers or unit tests executed",
+    "previous_archive_sha256": "a514e2e1d5d525e82b0d7984bf1f99a26662dda8a43c0ad9358f29c2381ef6ff",
+    "preservation": {
+      "protected_files_verified": 257,
+      "changed_protected_files": [],
+      "table_blocks_identical": true,
+      "equation_blocks_identical": true,
+      "reference_blocks_identical": true,
+      "figure_blocks_identical": true,
+      "figure_asset_bytes_identical": true,
+      "unchanged_page_content": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "non_page_content_identical": true
+    },
+    "saved_reference_counts": {
+      "runs": 90,
+      "S": 73,
+      "G": 26,
+      "S_and_G": 26,
+      "S_only": 47,
+      "neither": 17,
+      "accepted_updates": 80425,
+      "trace_events": 80605
+    }
+  },
+  "readme_checks": {
+    "recorded_at": "2026-11-06T10:43:29.710112+00:00",
+    "checks": {
+      "root_readme_sha256": "dc83c12de7ee74c6e680b0579527dbee33d5699d2fbef620abb0e4223547e9f6",
+      "cjk_characters": 0,
+      "existing_command_blocks": 8,
+      "all_existing_command_blocks_identical": true,
+      "new_optional_git_clone_blocks": 1,
+      "primary_repository_url_present": true,
+      "offline_pdf_attachment_names_present": true,
+      "local_build_artifact_heading_present": true,
+      "historical_and_current_scope_separated": true,
+      "independent_read_only_review": "Completed by audit_requirements; no corrections outstanding; no experiments or tests run"
+    }
+  },
+  "pre_attachment_record_sha256": "c74eb59153312b7c88d84c5590bcb2cfca0cb88388d4134afd40e89843f61e17",
+  "compiled_source_subject": "COMP6704 source fingerprint: f74b038af7cab6bffb0888556a5016ccbae5756c2a476e1c1f6eeb270b953025",
+  "new_formal_experiment_runs": 0,
+  "new_unit_test_runs": 0,
+  "historical_numerical_and_test_records_preserved": true,
+  "remote_updates_committed_or_pushed": false,
+  "remote_access_evidence": "paper_source/repository_record_20261106.json: repository_access_and_git_eol_review; public repository observed at the recorded commit, not a claim that these local revisions were uploaded"
+}

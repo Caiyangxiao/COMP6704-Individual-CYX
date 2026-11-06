@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-11-06T10:43:29.710112+00:00",
+  "checks": {
+    "root_readme_sha256": "dc83c12de7ee74c6e680b0579527dbee33d5699d2fbef620abb0e4223547e9f6",
+    "cjk_characters": 0,
+    "existing_command_blocks": 8,
+    "all_existing_command_blocks_identical": true,
+    "new_optional_git_clone_blocks": 1,
+    "primary_repository_url_present": true,
+    "offline_pdf_attachment_names_present": true,
+    "local_build_artifact_heading_present": true,
+    "historical_and_current_scope_separated": true,
+    "independent_read_only_review": "Completed by audit_requirements; no corrections outstanding; no experiments or tests run"
+  }
+}

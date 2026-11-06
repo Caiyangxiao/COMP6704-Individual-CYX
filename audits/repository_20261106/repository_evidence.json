@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-06",
+  "timezone": "Asia/Shanghai",
+  "scope": "Read-only repository availability and byte/line-ending assessment. No clone, checkout, fetch, generator, experiment, unit test, or document build was performed.",
+  "repository": {
+    "url": "https://github.com/Caiyangxiao/COMP6704-Individual-CYX",
+    "local_origin": "https://github.com/Caiyangxiao/COMP6704-Individual-CYX.git",
+    "public_access_observed": true,
+    "anonymous_repository_api_status": 200,
+    "api_private": false,
+    "api_visibility": "public",
+    "default_branch": "main",
+    "local_branch": "main",
+    "local_upstream": "origin/main",
+    "local_HEAD_at_initial_observation": "e47c26d40d088a37c1cfb0253bc37288672849f4",
+    "remote_refs_heads_main_at_observation": "e47c26d40d088a37c1cfb0253bc37288672849f4",
+    "local_and_observed_remote_commit_match": true,
+    "commit_subject": "first",
+    "commit_author_date": "2026-11-06T18:28:37+08:00",
+    "api_pushed_at": "2026-11-06T10:29:27Z",
+    "api_updated_at": "2026-11-06T10:29:33Z",
+    "root_contents_api_result": "HTTP 403: rate limit exceeded",
+    "root_listing_evidence": "Local git ls-tree at the identical API-verified public commit; selected raw paths separately returned HTTP 200.",
+    "api_urls": [
+      "https://api.github.com/repos/Caiyangxiao/COMP6704-Individual-CYX",
+      "https://api.github.com/repos/Caiyangxiao/COMP6704-Individual-CYX/git/ref/heads/main",
+      "https://api.github.com/repos/Caiyangxiao/COMP6704-Individual-CYX/contents/?ref=main"
+    ]
+  },
+  "root_entries_at_verified_commit": [
+    ".gitignore", "README.md", "analyze_results.py", "audits", "configs",
+    "cpu_optimization", "delivery_integrity.py", "make_paper_figures.py",
+    "paper_source", "plot_results.py", "provenance_integrity.py", "reports",
+    "requirements-lock.txt", "requirements-report.txt", "requirements.txt",
+    "results", "run_experiments.py", "run_tests_audit.py", "submission",
+    "tests", "validate_study.py"
+  ],
+  "public_raw_paths_observed": {
+    "base_url": "https://raw.githubusercontent.com/Caiyangxiao/COMP6704-Individual-CYX/e47c26d40d088a37c1cfb0253bc37288672849f4/",
+    "README.md": {
+      "method": "GET",
+      "status": 200,
+      "size_bytes": 18495,
+      "sha256": "ba6129e37291b25708aeedd62bdc2a2b2400707c9c38d5505fcb3530d2ce1226",
+      "language_at_observation": "Chinese",
+      "first_line": "# COMP6704 个人作业：无约束优化 CPU 实验"
+    },
+    "run_experiments.py": {"method": "HEAD", "status": 200, "content_length": 1632},
+    "requirements.txt": {"method": "HEAD", "status": 200, "content_length": 132},
+    "configs/full_study.json": {"method": "HEAD", "status": 200, "content_length": 462},
+    "paper_source/template/report.tex": {"method": "HEAD", "status": 200, "content_length": 40117},
+    "submission/Yangxiao Cai+26023041r.pdf": {"method": "HEAD", "status": 200, "content_length": 13112291},
+    "submission/COMP6704_reproducibility.zip": {"method": "HEAD", "status": 200, "content_length": 12334163},
+    "large_remote_report_and_zip_bodies_downloaded": false
+  },
+  "working_tree_observation": {
+    "initial_porcelain_status_entries": 283,
+    "git_read_operations_used_no_optional_locks": true,
+    "core_autocrlf_from_this_git_process": "unset",
+    "core_eol_from_this_git_process": "unset",
+    "core_safecrlf_from_this_git_process": "unset",
+    "gitattributes_present": false,
+    "cause_of_normalization_not_assumed": true,
+    "documentation_edits_were_in_progress_after_initial_observation": true
+  },
+  "local_numerical_bytes_vs_current_submitted_zip": {
+    "zip_path": "submission/COMP6704_reproducibility.zip",
+    "zip_size_bytes": 12334163,
+    "zip_sha256": "a514e2e1d5d525e82b0d7984bf1f99a26662dda8a43c0ad9358f29c2381ef6ff",
+    "raw_reference_files_compared": 186,
+    "original_numerical_source_files_compared": 7,
+    "total_files_compared": 193,
+    "exact_byte_matches": 193,
+    "byte_differences": [],
+    "passed": true
+  },
+  "git_commit_blobs_vs_working_tree": {
+    "method": "Read git cat-file --batch blobs at HEAD without checkout or index mutation; compare raw bytes, then only CRLF-to-LF conversion with bare-CR exclusion.",
+    "commit": "e47c26d40d088a37c1cfb0253bc37288672849f4",
+    "raw_reference_files": {
+      "files": 186,
+      "exact_byte_matches": 0,
+      "LF_CRLF_only_differences": 186,
+      "other_content_differences": 0
+    },
+    "original_numerical_sources": {
+      "files": 7,
+      "exact_byte_matches": 7,
+      "LF_CRLF_only_differences": 0,
+      "other_content_differences": 0,
+      "paths": [
+        "cpu_optimization/__init__.py", "cpu_optimization/experiment.py",
+        "cpu_optimization/objectives.py", "cpu_optimization/plotting.py",
+        "cpu_optimization/solvers.py", "run_experiments.py", "plot_results.py"
+      ]
+    },
+    "test_sources": {
+      "files": 7,
+      "exact_byte_matches": 7,
+      "LF_CRLF_only_differences": 0,
+      "other_content_differences": 0
+    },
+    "historical_unit_test_audit_JSON": {
+      "path": "audits/revision_20261105/unit_tests.json",
+      "LF_CRLF_only_difference": true,
+      "parsing_preserves_recorded_source_hash_values": true
+    }
+  },
+  "create_content_test_source_gate_assessment": {
+    "generator_path": "paper_source/create_content.py",
+    "audited_logic_lines_at_observation": "27-38",
+    "method": "Read the HEAD audit JSON and each HEAD test blob, then simulate the generator's inventory and SHA-256 comparisons only.",
+    "required_test_source_count": 7,
+    "HEAD_test_source_hash_failures": [],
+    "working_tree_test_source_hash_failures": [],
+    "inferred_HEAD_raw_hash_gate_passes": true,
+    "inferred_working_tree_raw_hash_gate_passes": true,
+    "generator_actually_executed": false,
+    "actual_clone_test_or_build_trial_performed": false,
+    "limitation": "This verifies the inferred raw test-source gate, not dependency installation or end-to-end document compilation."
+  },
+  "interpretation": [
+    "The hundreds of dirty paths must not be treated as evidence that numerical outcomes changed.",
+    "All 186 numerical raw files differ between the committed Git tree and the working/reference archive only in LF versus CRLF line endings.",
+    "The 7 original solver/source files and the 7 test source files are byte-identical between the committed tree and the working tree.",
+    "The submitted code ZIP remains the byte-preserving historical raw-data snapshot; a Git checkout can have different raw text-file hashes even when content differs only by line endings.",
+    "The current public commit was accessible, but the academic-English README and newly edited paper sources were local work in progress during this audit; their publication was not verified."
+  ],
+  "mutations_performed": {
+    "original_results": false,
+    "historical_audit_records": false,
+    "README_or_paper_sources": false,
+    "git_index_or_commits": false,
+    "remote_repository": false
+  },
+  "experiments_run": 0,
+  "unit_tests_run": 0,
+  "document_builds_run": 0
+}

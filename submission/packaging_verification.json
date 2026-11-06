@@ -1,11 +1,11 @@
 {
   "archive_path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\COMP6704_reproducibility.zip",
-  "archive_sha256": "a514e2e1d5d525e82b0d7984bf1f99a26662dda8a43c0ad9358f29c2381ef6ff",
-  "archive_size_bytes": 12334163,
+  "archive_sha256": "aa2fda6b207846670668592cd9316a79e4e3df2788b0ffa3cc76e505093f46ae",
+  "archive_size_bytes": 12339877,
   "current_verification_report_in_archive": false,
   "environment": {
     "platform": "Windows-11-10.0.26200-SP0",
-    "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]"
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
   },
   "full_study_metadata": {
     "completed_runs": 90,
@@ -61,8 +61,8 @@
         "size_bytes": 88083
       },
       "paper_source": {
-        "files": 32,
-        "size_bytes": 1496380
+        "files": 33,
+        "size_bytes": 1512715
       },
       "results/demo_2d": {
         "files": 19,
@@ -74,21 +74,21 @@
       },
       "root": {
         "files": 12,
-        "size_bytes": 63723
+        "size_bytes": 69264
       },
       "tests": {
         "files": 7,
         "size_bytes": 41979
       }
     },
-    "selected_file_count": 301,
-    "source_size_bytes": 33433992,
-    "source_size_mib": 31.88513946533203
+    "selected_file_count": 302,
+    "source_size_bytes": 33455868,
+    "source_size_mib": 31.906002044677734
   },
   "status": "passed",
   "temporary_extraction_removed": true,
   "timezone": "Asia/Shanghai",
-  "verified_at": "2026-11-06T17:43:15.903067+08:00",
-  "verified_file_count": 301,
-  "verified_source_size_bytes": 33433992
+  "verified_at": "2026-11-06T18:44:47.853423+08:00",
+  "verified_file_count": 302,
+  "verified_source_size_bytes": 33455868
 }

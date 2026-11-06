@@ -1,0 +1,34 @@
+{
+  "recorded_utc": "2026-11-06T10:34:48.876554+00:00",
+  "scope": "Read-only pre-revision snapshot; no numerical experiments executed",
+  "files": {
+    "submission/Yangxiao Cai+26023041r.pdf": {
+      "bytes": 13112291,
+      "sha256": "41f4d9fdef74cd73f7a6f99e14a1065c3d7b55674b65f7ba9e86c7bb8f19ff6b"
+    },
+    "submission/COMP6704_reproducibility.zip": {
+      "bytes": 12334163,
+      "sha256": "a514e2e1d5d525e82b0d7984bf1f99a26662dda8a43c0ad9358f29c2381ef6ff"
+    },
+    "submission/packaging_verification.json": {
+      "bytes": 3031,
+      "sha256": "59188a68c2e786f957c718f468589e741ea717e93dc53cf69289e7447898728d"
+    },
+    "README.md": {
+      "bytes": 18495,
+      "sha256": "ba6129e37291b25708aeedd62bdc2a2b2400707c9c38d5505fcb3530d2ce1226"
+    },
+    "paper_source/create_content.py": {
+      "bytes": 33989,
+      "sha256": "7cf842620d4a94276d6b73530aeacc3354cb2aa4115f8a8ad0abca5145c236e2"
+    },
+    "paper_source/content.json": {
+      "bytes": 42529,
+      "sha256": "d2ba5ea70c6152364a8ba2320a3e6b60243098af1eff2a47af1d4869eea58a00"
+    },
+    "paper_source/template/report.tex": {
+      "bytes": 40513,
+      "sha256": "bd82362856688a6dc70234566819f5aa33ce09bebdf6a77a842527b20dac7e97"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+COMP6704 GitHub 复现入口与英文 README 更新说明（2026-11-06）
+
+实际修改
+1. 从 paper_source/create_content.py 修改正文生成源：第 1 页新增 GitHub 可点击复现入口，第 9 页说明先阅读仓库根目录 README.md，并保留 PDF 的离线复现 ZIP 与独立打包核验 JSON。
+2. 根目录 README.md 全文改为正式学术英语；保留原有 8 组命令，新增可选 Git clone 命令，说明 Git 工作树与保留原始字节的 ZIP 的区别。
+3. 重建正文、报告模板、复现 ZIP、打包核验记录及 PDF。原始结果、公式、表格、引用和图像未修改；本轮未运行新的正式求解或重跑历史 50 项单元测试。
+
+核验范围
+核验原始记录的字节保留与 90 次运行的已保存计数，检查实际 PDF 页数、大小、GitHub 超链接、全部附件的提取及字节一致性。详细结果见 submission/repository_file_checks.json；打包前检查见 paper_source/repository_record_20261106.json。本轮文件检查与历史实验核验分别记录。
+
+GitHub 同步（与构建时的历史状态区分）
+文件重建核验完成时，指定仓库公开可访问，本地修订尚未提交或推送；这是 paper_source/repository_record_20261106.json 和 submission/repository_file_checks.json 所记录时间的历史状态。后续按用户要求同步本次 README、报告生成源、新版 PDF、ZIP 和独立核验 JSON；实际推送状态以 GitHub 提交历史及后续推送核验记录为准。
+
+本轮最终文件检查已执行并通过：PDF 共 10 页，含附件 13,119,895 字节；两份附件均已实际提取，提取 ZIP 与独立交付 ZIP 完全一致。302 个载荷文件的 CRC、清单哈希、大小和当前源文件字节均一致；第 7 页原有指定英文保留；表格、公式、引用、图像及原始实验记录保持一致。
