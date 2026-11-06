@@ -92,7 +92,7 @@ class NumberedCanvas(pdfcanvas.Canvas):
             self.setFont("Times-Roman", 8)
             self.setFillColor(colors.HexColor("#576472"))
             self.drawCentredString(PAGE_SIZE[0] / 2, 36,
-                                   f"Yangxiao Cai  |  26023041r     {self._pageNumber} / {total}")
+                                   f"CAI Yangxiao  |  26023041r     {self._pageNumber} / {total}")
             super().showPage()
         super().save()
 
@@ -122,7 +122,7 @@ def build_word(content, path):
     header.runs[0].font.size = Pt(8)
     header.runs[0].font.color.rgb = RGBColor.from_string("576472")
     footer = sec.footer.paragraphs[0]; footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    footer.add_run("Yangxiao Cai  |  26023041r     ").font.size = Pt(8)
+    footer.add_run(f"{content['author']}  |  {content['student_id']}     ").font.size = Pt(8)
     word_field(footer, "PAGE"); footer.add_run(" / "); word_field(footer, "NUMPAGES")
     for page_index, blocks in enumerate(content["pages"]):
         if page_index:

@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-11-06T11:10:52.177496+00:00",
+  "scope": "Read-only author-only source and scientific preservation checks; no experiments or unit-test executions",
+  "author_before": "Yangxiao Cai",
+  "author_after": "CAI Yangxiao",
+  "only_paper_content_changes": "Author metadata and the author block on the first page",
+  "other_content_identical": true,
+  "local_result_files_verified_unchanged": 242,
+  "protected_archive_files_identical": 254,
+  "changed_protected_files": [],
+  "all_tables_equations_figures_references_and_source_data_hashes_unchanged": true
+}

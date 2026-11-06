@@ -82,7 +82,7 @@ def grouped(problem):
 b = page()
 add(b, "title", "Stationarity, Evaluation Cost, and Solution Quality\nin Nonconvex Unconstrained Optimization")
 add(b, "subtitle", "A controlled CPU comparison of GD, PR+ conjugate gradient, and BFGS")
-add(b, "author", "Yangxiao Cai  |  Student ID: 26023041r\nCOMP6704 Individual Assignment, Fall 2026\nPrimary direction: Unconstrained Optimization")
+add(b, "author", "CAI Yangxiao  |  Student ID: 26023041r\nCOMP6704 Individual Assignment, Fall 2026\nPrimary direction: Unconstrained Optimization")
 h(b, "Abstract")
 p(b, "We compare Armijo gradient descent (GD), safeguarded nonlinear conjugate gradient (CG), and BFGS on Rosenbrock and Rastrigin through 90 controlled CPU solves. Dimensions 2, 10, and 20 each use five paired initial points and fixed stopping criteria. In the recorded Windows reference run, 73/90 runs meet the gradient tolerance and 26/90 meet the global-objective tolerance: 47 meet only the gradient criterion, while 17 meet neither. On Rosenbrock, CG and BFGS attain the global-objective target in 14/15 and 12/15 cases; GD reaches the iteration cap in all 15 cases. On Rastrigin, 43/45 runs meet the gradient tolerance, but none meets the global-objective target. Endpoint diagnostics and comparisons conditional on CG and BFGS both meeting the global-objective target separate local convergence, evaluation cost, and final objective quality. Complete traces support this empirical distinction.")
 h(b, "1. Introduction and scope")
@@ -234,6 +234,6 @@ for key in ("paper_rosenbrock_convergence", "paper_rastrigin_quality_convergence
     if source.is_file():
         shutil.copyfile(source, ASSETS / source.name)
 inputs = [DATA / "summary.csv", DATA / "analysis/grouped_results.csv", DATA / "analysis/run_diagnostics.csv", DATA / "metadata.json", TEST_AUDIT]
-content = {"title": "Stationarity, Evaluation Cost, and Solution Quality in Nonconvex Unconstrained Optimization", "author": "Yangxiao Cai", "student_id": "26023041r", "track": "Unconstrained Optimization", "pages": pages, "source_sha256": {str(f.relative_to(ROOT)).replace("\\", "/"): sha256(f.read_bytes()).hexdigest() for f in inputs}}
+content = {"title": "Stationarity, Evaluation Cost, and Solution Quality in Nonconvex Unconstrained Optimization", "author": "CAI Yangxiao", "student_id": "26023041r", "track": "Unconstrained Optimization", "pages": pages, "source_sha256": {str(f.relative_to(ROOT)).replace("\\", "/"): sha256(f.read_bytes()).hexdigest() for f in inputs}}
 (HERE / "content.json").write_text(json.dumps(content, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(f"Created English paper content: {len(pages)} planned pages")

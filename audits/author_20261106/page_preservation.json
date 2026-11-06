@@ -1,0 +1,48 @@
+{
+  "recorded_at": "2026-11-06T11:10:31.202680+00:00",
+  "method": "Rendered both PDFs at 1.5x and compared every pixel on all ten pages",
+  "new_author_in_visible_text": true,
+  "new_author_in_pdf_metadata": true,
+  "pages": {
+    "1": {
+      "raster_identical_to_previous_pdf": false,
+      "render_sha256": "f057653e24e5e9bf9fed7c90721cc5048900f10e816597c11a20f834c71527e2"
+    },
+    "2": {
+      "raster_identical_to_previous_pdf": true,
+      "render_sha256": "9880823b45e253a112184b7dce9f3b0281951b7f1a38adb9267009a3c52278c7"
+    },
+    "3": {
+      "raster_identical_to_previous_pdf": true,
+      "render_sha256": "2a20e6ff99a7a9077857beef828dfb65dc2b4b6d2cac163466869e3c4c56836f"
+    },
+    "4": {
+      "raster_identical_to_previous_pdf": true,
+      "render_sha256": "240c30bf0741193caa72a46f189e53e7420569f708772c7403c5d791f849ebf4"
+    },
+    "5": {
+      "raster_identical_to_previous_pdf": true,
+      "render_sha256": "50b99837fbb289ddf22ccbc90336a6496f8796c0e7d11e4750bc9bb7883ff8a7"
+    },
+    "6": {
+      "raster_identical_to_previous_pdf": true,
+      "render_sha256": "bf3e37d7505d69c4487dfe22219da90b9b28bd1d70d105305846deef1410b9da"
+    },
+    "7": {
+      "raster_identical_to_previous_pdf": true,
+      "render_sha256": "06a6f2d77d9096d8c5f2e8f8bac75011c06e31f16d190f6c12d3cddfb355445b"
+    },
+    "8": {
+      "raster_identical_to_previous_pdf": true,
+      "render_sha256": "d3647acecd2d9874d06bcc57af079e08b7c9ce08287d5738be45bda9efb4f5a7"
+    },
+    "9": {
+      "raster_identical_to_previous_pdf": true,
+      "render_sha256": "1917b2559f91e7650d3baae5b53e63d2bb86483f860db81a3d45aa411be05651"
+    },
+    "10": {
+      "raster_identical_to_previous_pdf": true,
+      "render_sha256": "b29fb5493e979f680f6199c2a88118af28909b54cb341003053893ad59a455d4"
+    }
+  }
+}

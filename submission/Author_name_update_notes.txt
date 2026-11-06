@@ -1,0 +1,5 @@
+Author-name correction, 2026-11-06
+
+The report author is now CAI Yangxiao in the visible author block and PDF metadata. The report-generating sources, editable report, README, reproducibility archive, and separate packaging certificate are synchronized. The existing submission filename is retained.
+
+The saved experimental records and all scientific content are unchanged. No numerical experiments or unit tests were rerun. Pre-attachment checks are in paper_source/author_record_20261106.json; final delivered-file checks are in submission/author_file_checks.json. Earlier repository and polish records retain their historical scope.

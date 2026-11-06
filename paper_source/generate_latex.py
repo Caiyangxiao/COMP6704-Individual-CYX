@@ -214,7 +214,7 @@ def generate(content_path: Path, equations_path: Path, output: Path, keep_subtit
     lines = [r"\documentclass[10pt]{article}", r"\usepackage[preprint,nonatbib]{neurips_2025}",
              r"\usepackage[T1]{fontenc}", r"\usepackage{amsmath,amssymb,graphicx,booktabs,array}",
              r"\usepackage{hyperref,url,microtype}",
-             r"\hypersetup{hidelinks,pdfauthor={Yangxiao Cai},pdfsubject={COMP6704 source fingerprint: " + fingerprint + "}}",
+             r"\hypersetup{hidelinks,pdfauthor={" + escape_tex(content["author"]) + r"},pdfsubject={COMP6704 source fingerprint: " + fingerprint + "}}",
              r"\makeatletter", r"\renewcommand{\@noticestring}{COMP6704 Individual Assignment, Fall 2026. Unconstrained Optimization.}",
              r"\makeatother", r"\newlength{\paperfigurewidth}",
              r"\title{" + escape_tex(title).replace("\n", r"\\ ") + "}",

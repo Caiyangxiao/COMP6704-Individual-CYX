@@ -1,7 +1,7 @@
 {
   "archive_path": "C:\\Users\\25244\\Desktop\\Codex\\COMP6704\\Individual Assignment\\submission\\COMP6704_reproducibility.zip",
-  "archive_sha256": "aa2fda6b207846670668592cd9316a79e4e3df2788b0ffa3cc76e505093f46ae",
-  "archive_size_bytes": 12339877,
+  "archive_sha256": "6b08f309aaeab88312fbfea778e0937baa001f0dca4e55efb1bac29b2474e372",
+  "archive_size_bytes": 12341951,
   "current_verification_report_in_archive": false,
   "environment": {
     "platform": "Windows-11-10.0.26200-SP0",
@@ -61,8 +61,8 @@
         "size_bytes": 88083
       },
       "paper_source": {
-        "files": 33,
-        "size_bytes": 1512715
+        "files": 34,
+        "size_bytes": 1516902
       },
       "results/demo_2d": {
         "files": 19,
@@ -74,21 +74,21 @@
       },
       "root": {
         "files": 12,
-        "size_bytes": 69264
+        "size_bytes": 69661
       },
       "tests": {
         "files": 7,
         "size_bytes": 41979
       }
     },
-    "selected_file_count": 302,
-    "source_size_bytes": 33455868,
-    "source_size_mib": 31.906002044677734
+    "selected_file_count": 303,
+    "source_size_bytes": 33460452,
+    "source_size_mib": 31.91037368774414
   },
   "status": "passed",
   "temporary_extraction_removed": true,
   "timezone": "Asia/Shanghai",
-  "verified_at": "2026-11-06T18:44:47.853423+08:00",
-  "verified_file_count": 302,
-  "verified_source_size_bytes": 33455868
+  "verified_at": "2026-11-06T19:11:43.230219+08:00",
+  "verified_file_count": 303,
+  "verified_source_size_bytes": 33460452
 }
